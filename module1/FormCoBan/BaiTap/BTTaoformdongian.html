@@ -34,9 +34,10 @@
         .ten1
         {
             font-size: 30px;
-            display: flex;
+            display:flex;
             justify-content: center;
             color: whitesmoke;
+
         }
         .chimuc
         {
@@ -73,7 +74,7 @@
             text-align: left;
 
         }
-        input[type="button"]
+        input[type="submit"],input[type="reset"]
         {
             width: 170px;
             height: 40px;
@@ -105,7 +106,7 @@
                     Họ và tên :
                 </td>
                 <td colspan="3">
-                     <input name="name"  type="text" />
+                     <input name="yourname"  type="text" />
                 </td>
             </tr>
                 <tr colspan="3">
@@ -113,7 +114,7 @@
                     Email :
                 </td>
                 <td colspan="3">
-                     <input name="name"  type="text" />
+                     <input name="email"  type="text" />
                 </td>
             </tr>
             <tr >
@@ -121,26 +122,27 @@
                     Sở thích :
                 </td>
               <td class="sothich">
-                  <input name="thethao" value="sport" type="checkbox"/> Thể thao<br/>
-                  <input name="luotweb" value="web" type="checkbox"/> Lướt Web <br/>
-                  <input name="dulich" value="travel" type="checkbox"/> Du lịch <br/>
+                  <input name="hobby" value="sport" type="checkbox"/> Thể thao<br/>
+                  <input name="hobby" value="web" type="checkbox"/> Lướt Web <br/>
+                  <input name="hobby" value="travel" type="checkbox"/> Du lịch <br/>
                 </td>
 
                 <td class="sothich">
-                    <label><input name="amnhac" value="music" type="checkbox"/> Âm nhạc</label> <br/>
-                    <label><input name="choigame" value="game" type="checkbox"/> Chơi game</label> <br/>
+                    <label><input name="hobby" value="music" type="checkbox"/> Âm nhạc</label> <br/>
+                    <label><input name="hobby" value="game" type="checkbox"/> Chơi game</label> <br/>
 
                 </td>
                 <td class="sothich">
-                    <input name="docsach" value="book" type="checkbox"/> Đọc sách <br/>
-                    <input name="dienanh" value="movie" type="checkbox"/> Điện ảnh <br/>
+                    <input name="hobby" value="book" type="checkbox"/> Đọc sách <br/>
+                    <input name="hobby" value="movie" type="checkbox"/> Điện ảnh <br/>
                 </td>
 
             </tr >
+            <tr>
                 <td style="text-align: center"; colspan="6">
-                    <input name="submit" value="Gửi thông tin" type="button"> <input name="reset" value="Nhập lại" type="button">
+                    <input name="submit" value="Gửi thông tin" type="submit"> <input name="reset" value="Nhập lại" type="reset">
                 </td>
-
+            </tr>
         </table>
     </form>
 </div>

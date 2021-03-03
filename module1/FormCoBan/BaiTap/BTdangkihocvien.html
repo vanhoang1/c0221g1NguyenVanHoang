@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí học viên</title>
+ <style>
+
+     #main{
+         width: 600px;
+         padding: 0;
+         margin-left: auto;
+         margin-right: auto;
+         background-color: #00f0ff;
+         font-family: Arial;
+     }
+     #bang{
+         height: 600px;
+         background-color: #ffec6a;
+         border: 1px solid #CDCDCD;
+         margin-bottom:5px;
+         margin-top:100px;
+         box-shadow: 0px 0px 14px 0px grey;
+
+     }
+     #ten{
+         height: 35px;
+         background-color: #a1d9ff;
+         margin-top:5px;
+         margin-left:10px;
+         margin-right: 10px;
+
+     }
+
+     .ten2
+     {
+        margin-top: 3px;
+         font-size: 30px;
+         display: flex;
+         justify-content: Left;
+         color: #0a41f5;
+         display: inline-block;
+     }
+     .chimuc
+     {
+         font-size: 25px;
+         color: blue;
+     }
+     table
+     {
+         width: 100%;
+
+     }
+     input[type="text"] {
+         padding: 5px;
+         width: 70%;
+         display: block;
+     }
+     input[type="submit"],input[type="reset"]
+     {
+         width: 170px;
+         height: 40px;
+         color: black;
+         border-radius: 5px;
+         padding: 10px 25px;
+         font-family: 'Lato', sans-serif;
+         font-size: 20px;
+         font-weight: 500;
+         transition: all 0.3s ease;
+         position: relative;
+         box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+         7px 7px 20px 0px rgba(0,0,0,.1),
+         4px 4px 5px 0px rgba(0,0,0,.1);
+     }
+ </style>
+</head>
+<body id="main">
+<div id="bang">
+    <div id="ten">
+        <span class="ten2">
+            ĐĂNG KÍ HỌC VIÊN
+        </span>
+    </div>
+    <form action="/action_page.php" class="chimuc">
+        <table>
+            <tr>
+            <td>
+                Họ và tên
+            </td>
+            <td>
+                <input type="text">
+            </td>
+             </tr>
+            <tr>
+                <td>
+                    Ngày sinh
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Giới tính
+                </td>
+                <td style="color: black;">
+                    <input type="radio" name="gioitinh">Nam
+                    <input type="radio" name="gioitinh">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Địa chỉ
+                </td>
+                <td>
+                    <input type="text" style="width: 200px ; height: 80px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lớp
+                </td>
+                <td>
+                    <select  style="padding: 9px; width: 35%; font-size: 20px">
+                        <option >-chọn lớp-</option>
+                        <option >2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Điện thoại
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center"; colspan="2">
+                    <input name="submit" value="Gửi thông tin" type="submit"> <input name="reset" value="Nhập lại" type="reset">
+                </td>
+            <tr>
+        </table>
+
+    </form>
+
+</div>
+
+</body>
+</html>
