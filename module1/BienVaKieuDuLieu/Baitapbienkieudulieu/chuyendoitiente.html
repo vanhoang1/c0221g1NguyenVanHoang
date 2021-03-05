@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+    <style>
+        .doitien1{
+            width: 1000px;
+            height: 300px;
+            background-color: whitesmoke;
+            font-size: 25px;
+        }
+        table{
+            width: 100%;
+        }
+        select{
+            width: 200px;
+            height: 30px;
+            font-size: 23px;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            font-size: 25px;
+        }
+        button{
+            font-size: 25px;
+            background-color: #0a41f5;
+            color: #dddddd;
+        }
+        p{
+            display: inline;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="doitien1">
+    <form>
+    <table>
+        <tr>
+            <th> Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+
+            <td>
+                <input type="text" id="tiennhap">
+            </td>
+            <td>
+                <select id="from" name="vao">
+                    <option value="1">Việt Nam</option>
+                    <option value="2">Hoa kì</option>
+                </select>
+            </td>
+            <td>
+                <select id="to" name="ra">
+                    <option  value="1">tiền việt nam</option>
+                    <option  value="2">đô la mĩ</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="doitien()">Convent</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: #0a41f5">
+                Result : <p id="result">------</p> <p id="donvi">------</p>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+<script src="chuyendoitiente.js"></script>
+</body>
+</html>

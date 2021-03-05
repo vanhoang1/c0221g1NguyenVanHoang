@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ungdungmaytinh</title>
+    <style>
+        .maytinh{
+            width: 600px;
+            height: 170px;
+            background-color: whitesmoke;
+
+        }
+        p{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div class="maytinh">
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="so1"> &nbsp;<input type="text" id="so2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="cong" onclick="pcong()">Addition(+)</button>
+                <button id="tru" onclick="ptru()">Subtraction(-)</button>
+                <button id="nhan" onclick="pnhan()">Multiplication(X)</button>
+                <button id="chia" onclick="pchia()">Division(/)</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Result &nbsp;<p id="phep">----</p>&nbsp;<p id="result">-------</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="maytinh.js"></script>
+</body>
+</html>

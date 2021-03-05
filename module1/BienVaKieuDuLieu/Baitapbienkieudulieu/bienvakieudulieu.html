@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap bien va kieu du lieu</title>
+    <style>
+        .bt1{
+            background-color: whitesmoke ;
+            width: 250px; height: 300px;
+            border: 1px solid black;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="bt1">
+    <h2>Tính điểm TB</h2>
+    Nhập điểm Toán: <input type="text" name="toan" id="toan"><br>
+    Nhập điểm Lý :<input type="text" name="li" id="ly"><br>
+    Nhập điểm Hóa: <input type="text" name="hoa" id="hoa"><br>
+    <button type="submit" onclick="tinhdtb()">Tính</button><br>
+    Điểm TB : <input type="text" name="diemtb" id="diemtb">
+</div>
+<div class="bt1" >
+<h2>Đổi nhiệt độ</h2>
+    Nhập độ C : <input type="text" id="doc"><br>
+    <button type="submit" onclick="csangf()">Đổi</button><br>
+    Sang độ F : <input type="text" id="dof"><br>
+
+</div>
+<div class="bt1">
+    <h2>Tính Diện tích và Chu vi hình tròn</h2>
+    Nhập bán kính : <input type="text" id="bankinh"><br>
+    <button type="submit" onclick="tinhdientich()">Tính</button><br>
+    Diện tích : <input type="text" id="dientich"><br>
+    Chu vi : <input type="text" id="chuvi">
+</div>
+
+</body>
+<script src="bienvakieudulieu.js"></script>
+</html>

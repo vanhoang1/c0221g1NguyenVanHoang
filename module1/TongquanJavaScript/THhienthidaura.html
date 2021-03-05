@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH Hiển thị đầu ra</title>
+</head>
+<body>
+<div id="messageDiv1">
+    <button type="button" onclick="showMessage1();">Click Me!</button>
+</div>
+<div id="messageDiv2">
+    <button type="button" onclick="showMessage2();">Click me</button>
+</div>
+<div id="messageDiv3">
+    <button type="button" onclick="showMessage3();">Click me</button>
+</div>
+<div id="messageDiv4">
+    <button type="button" onclick="showMessage4();">Click me</button>
+</div>
+</body>
+<script>
+    function showMessage1(){
+        alert('Xin chào!');
+    }
+    function showMessage2(){
+        document.getElementById('messageDiv2').innerHTML = 'Xin Chào !';
+    }
+    function showMessage3(){
+        document.write('Xin chào!');
+    }
+    function showMessage4() {
+        console.log('Xin chào!');
+    }
+</script>
+
+</html>
