@@ -11,13 +11,10 @@
 <input id="so5" type="button" value="5" onclick="daygiatri()">
 <script type="text/javascript">
     var giatri=0;
-    function getVal(valu)
-    {
-        let a= parseInt(valu)+1;
-        alert(a);
-    }
+
     function daygiatri() {
-        giatri=parseInt(document.getElementById("nhap").value + document.getElementById("so3").value);
+
+        giatri=document.getElementById("so3").id;
         document.getElementById("nhap").value=giatri;
     }
 </script>

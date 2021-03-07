@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ungdungmaytinh</title>
+    <style>
+        .maytinh{
+            width: 750px;
+            height: 300px;
+            background-color: whitesmoke;
+
+        }
+        table{
+            width: 100%;
+        }
+        p{
+            display: inline;
+        }
+        input[type="button"], input[type="reset"]{
+            height: 40px;
+           padding:  1px 10px 1px 10px;
+        }
+        input[type="text"]{
+            height: 30px;
+            text-align: center;
+            font-size: 23px
+        }
+        .ketqua{
+            font-size: 40px;
+            color: #0a41f5;
+        }
+    </style>
+</head>
+<body>
+<div class="maytinh" id="">
+    <form>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="so1">&nbsp;&nbsp;<input  type="text" id="pheptinh" value="" style="width: 50px ; "> &nbsp;&nbsp;<input type="text" id="so2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="cong" type="button" value="Additilion(+)" onclick="doipheptinh(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)" >
+                <input id="tru" type="button" value="Subtraction(-)" onclick="doipheptinh(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)" >
+                <input id="nhan" type="button" value="Multipcation(X)" onclick="doipheptinh(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)" >
+                <input id="chia" type="button" value="Division(/)" onclick="doipheptinh(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)" >
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <input type="button" id="s1" value="1" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)" >
+                <input type="button" id="s2" value="2" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)" >
+                <input type="button" id="s3" value="3" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s4" value="4" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s5" value="5" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s6" value="6" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s7" value="7" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s8" value="8" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s9" value="9" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+                <input type="button" id="s0" value="0" onclick="daygiatri(this.value)" onmouseover="chuottoi(this.value)" onmouseout="chuotdi(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Ket Qua" id="ketqua" onclick="tinhtoan()">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+        <tr>
+            <td class="ketqua">
+                Result <p id="result">-------</p>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+<script src="maytinhmorong.js" ></script>
+</body>
+</html>
