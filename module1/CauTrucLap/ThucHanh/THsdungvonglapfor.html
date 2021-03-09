@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sử dụng vòng lặp for</title>
+</head>
+<body>
+<h2>JavaScript Loops</h2>
+<p id="demo"></p>
+<script>
+    //bai1
+    let text = "";
+    let i;
+    for (i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    //bai2
+    let num = prompt("Enter your number: ");
+    let total = 0;
+    let a = 1;
+    for (; a <= num; a += 1) {
+        total = total + a;
+        alert(total);
+    }
+</script>
+</body>
+</html>

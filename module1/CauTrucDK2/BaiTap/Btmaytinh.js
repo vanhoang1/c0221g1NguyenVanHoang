@@ -1,6 +1,6 @@
 var soThu1=null;
 var soThu2=null;
-var tinh=null
+var tinh=null;
 function daygiatri(soNhapVao) {
     let sodc = soNhapVao;
     let xem=document.getElementById("oNhapSo").value;
@@ -72,7 +72,6 @@ function tinhToan() {
          ketQua = soThu1;
          soThu1=0;
     }
-    console.log(tinh);
     switch (tinh) {
         case '+':{
             ketQua= parseInt(ketQua )+soThu2;

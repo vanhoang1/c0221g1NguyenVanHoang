@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sử dụng vòng lặp lồng nhau</title>
+</head>
+<body>
+
+</body>
+<script>
+    //bai1
+    // let sout;
+    // sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    // for (i = 1; i <= 20; i++) {
+    //     sout = sout + "<tr>";
+    //     for (j = 1; j <= 10; j++) {
+    //         sout = sout + "<td>" + i * j + "</td>";
+    //     }
+    //     sout = sout + "</tr>";
+    // }
+    // sout = sout + "</table>";
+    // document.write(sout);
+    //bai2
+
+    let bang, a, b;
+    bang = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    a = b = 1;
+    while (a <= 10) {
+        bang = bang + "<tr>";
+        while (b <= 10) {
+            bang = bang + "<td>" + a * b + "</td>";
+            b++;
+        }
+        bang = bang + "</tr>";
+        b = 1;
+        a++;
+    }
+    bang = bang + "</table>";
+    document.write(bang);
+
+</script>
+</html>
