@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+
+    let x = prompt("nhạp chiều dài");
+    let y = prompt("nhạp chiều rộng");
+    for (let i=0;i<x;i++){
+        for ( let j=0;j<y;j++){
+            if (i-j>0){
+                document.write("&nbsp&nbsp")
+            }
+            else {
+                document.write("*");
+            }
+            console.log(i+j);
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

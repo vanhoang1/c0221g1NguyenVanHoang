@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let x = prompt("nhạp chiều dài");
+    let y = prompt("nhạp chiều rộng");
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < y; j++) {
+            a = (0 < i && i < x - 1);
+            b = (0 < j && j < y - 1);
+            if (a) {
+                if (b) {
+                    document.writeln("&nbsp&nbsp")
+                }
+                else {
+                    document.writeln("*")
+                }
+            } else {
+                document.writeln("*")
+            }
+        }
+        document.write("<br>");
+    }
+
+
+</script>
+</body>
+</html>

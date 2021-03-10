@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai3</title>
+    <title>bai4</title>
 </head>
 <body>
 <script>
     let a = 1, b = 0, sFibo;
-    for (let i = 1; i < 20; i++) {
+    let dem = 0
+    while (dem < 1) {
         sFibo = a;
         a = a + b;
         b = sFibo;
-        document.writeln(sFibo + '<br>');
+        if (sFibo%5==0){
+            document.writeln(sFibo);
+            dem++;
+        }
+
     }
 </script>
 </body>

@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai3</title>
+    <title>bai1</title>
 </head>
 <body>
 <script>
+    let n=prompt("bạn muốn in bao nhiêu sô");
     let a = 1, b = 0, sFibo;
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i <=n; i++) {
         sFibo = a;
         a = a + b;
         b = sFibo;
-        document.writeln(sFibo + '<br>');
+        document.writeln(sFibo + "&nbsp");
     }
 </script>
 </body>

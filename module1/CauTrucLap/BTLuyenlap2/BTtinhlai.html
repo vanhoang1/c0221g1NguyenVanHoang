@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhlai</title>
+</head>
+<body>
+<script>
+    let tien=parseInt(prompt("nhập số tiền ban đầu"));
+    let thang=parseInt(prompt("nhập số tháng"));
+    let ls=parseFloat(prompt("nhập lãi xuất"));
+    let tienLs=0,tong=0;
+    for (let i=1;i<thang;i++){
+        tienLs=tien*ls;
+        tong+=tienLs;
+    }
+        document.writeln(tong);
+
+</script>
+</body>
+</html>

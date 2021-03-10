@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<input type="button" value="Chơi" onclick="ngauNhien()">
+<script>
+    function ngauNhien() {
+        let so1 = parseInt(prompt("Giá trị đầu"));
+        let so2 = parseInt(prompt("Giá trị cuối"));
+        let dung = 0;
+        if (so1 < so2) {
+            while (dung < 1) {
+                let soNgauNhien = parseInt(Math.random() * so2) + so1;
+                let nhap = prompt("Đoán số :");
+                if (parseInt(nhap - soNgauNhien) === 0) {
+                    alert("Đoán đúng")
+                    dung++;
+                }
+                else {
+                    alert("Đoán sai . số đó là :"+soNgauNhien)
+                }
+            }
+        } else {
+            alert("Số đầu phải nhỏ hơn số cuối")
+        }
+    }
+
+</script>
+</body>
+</html>

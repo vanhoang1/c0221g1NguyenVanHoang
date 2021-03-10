@@ -7,17 +7,17 @@
 <body>
 <script>
 
-    let ketQua=false;
-    while (ketQua=true){
-        let nhietDo=prompt("nhập nhiệt độ");
-        if (nhietDo>=20&&nhietDo<=100){
+    let ketQua = 0;
+    while (ketQua <1) {
+        let nhietDo = prompt("nhập nhiệt độ");
+        if (nhietDo >= 20 && nhietDo <= 100) {
             alert("bình thường");
-            break;
-        }else {
-            if (nhietDo<20){
+            ketQua++
+        } else {
+            if (nhietDo < 20) {
                 alert("tăng nhiệt độ");
             }
-            if (nhietDo>100)
+            if (nhietDo > 100)
                 alert("giảm nhiệt độ")
         }
     }
