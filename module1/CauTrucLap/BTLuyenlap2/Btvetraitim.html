@@ -5,16 +5,65 @@
     <title>vetraitim</title>
 </head>
 <body>
+
 <script>
+    let sout;
+
     let x = prompt("nhạp chiều dài");
-    let y = prompt("nhạp chiều rộng");
-    for (let i=0;i<x;i++){
-        for ( let j=0;j<i;j++){{
+    document.write("<table>");
+    document.write("<tr>");
+    document.write("<td>");
+    let giua = Math.floor((2 * x - 1) / 2);
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < (2 * x - 1); j++) {
+            if (giua - j <= i && giua + i >= j) {
+                if (i < x / 2) {
+                    document.write("&nbsp&nbsp");
+                } else {
+                    document.write("*");
+                }
+
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+    for (let i = 0; i < (2 * x); i++) {
+        for (let j = 0; j < (2 * x); j++) {
+            if (i - j > 0) {
+                document.write("&nbsp&nbsp")
+            } else {
                 document.write("*");
             }
         }
         document.write("<br>");
     }
+    document.write("</td>");
+    document.write("<td>");
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < (2 * x - 1); j++) {
+            if (giua - j <= i && giua + i >= j) {
+                if (i < x / 2) {
+                    document.write("&nbsp&nbsp");
+                } else {
+                    document.write("*");
+                }
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+    for (let i = 0; i < (2 * x); i++) {
+        for (let j = 0; j < ((2 * x) - i); j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("</td>");
+    document.write("</tr>");
+
 </script>
 </body>
 </html>
