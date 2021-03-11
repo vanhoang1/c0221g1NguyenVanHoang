@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let luong = parseInt( prompt("Nhập vào lương : "));
+    let trieu=1000000;
+    let thucNhan;
+    if(luong>=7*trieu){
+        if (luong>15*trieu){
+            thucNhan=luong-(luong*20/100);
+        }
+        else {
+            thucNhan=luong-(luong*10/100);
+        }
+    }else{
+        thucNhan=luong-(luong*5/100);
+    }
+    alert("Tiền nhận được là:"+thucNhan);
+</script>
+
+</body>
+</html>

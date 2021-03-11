@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let x = prompt("nhạp chiều cao  ");
+    let giua = Math.floor((2 * x - 1) / 2);
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < (2 * x - 1); j++) {
+            if (giua - j <= i && giua + i >= j) {
+                    document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

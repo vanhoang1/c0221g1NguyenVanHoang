@@ -10,24 +10,30 @@
     function ngauNhien() {
         let so1 = parseInt(prompt("Giá trị đầu"));
         let so2 = parseInt(prompt("Giá trị cuối"));
+        let soNgauNhien = parseInt(Math.random() * (so2 - so1 + 1)) + so1;
         let dung = 0;
         if (so1 < so2) {
-            while (dung < 1) {
-                let soNgauNhien = parseInt(Math.random() * so2) + so1;
-                let nhap = prompt("Đoán số :");
-                if (parseInt(nhap - soNgauNhien) === 0) {
-                    alert("Đoán đúng")
-                    dung++;
+                while (dung < 3) {
+                    let nhap = prompt("Đoán số :");
+                    if (parseInt(nhap - soNgauNhien) === 0) {
+                        alert("Đoán đúng")
+                        break;
+                    } else {
+                        if (soNgauNhien > nhap)
+                            alert("Đoán sai . lớn hơn");
+                        else {
+                            alert("Đoán sai . bé hơn");
+                        }
+                    }
+                    dung++
                 }
-                else {
-                    alert("Đoán sai . số đó là :"+soNgauNhien)
-                }
+            if(dung==3){
+                alert("chúc bạn may mắn lần sau")
             }
         } else {
             alert("Số đầu phải nhỏ hơn số cuối")
         }
     }
-
 </script>
 </body>
 </html>

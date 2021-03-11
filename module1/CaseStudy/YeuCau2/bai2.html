@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let nhap= prompt("nhập vào kí tự kiểm tra:");
+    if (nhap.length<=1){
+        switch (nhap) {
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+            case 'O':
+            case 'U':
+            case 'I':
+            case 'A':
+            case 'E':
+            {
+                alert("kí tự bạn nhập vào nguyên âm");
+                break;
+            }
+            default :{
+                alert("kí tự bạn nhập vào không nguyên âm");
+                break;
+            }
+
+        }
+    }
+    else {
+        alert("nhập quá nhiều");
+    }
+</script>
+</body>
+</html>

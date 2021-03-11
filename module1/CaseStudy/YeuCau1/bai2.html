@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let x = prompt("nhạp chiều dài");
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < x; j++) {
+            if (j > 0 && i < x - 1) {
+                if (j == i) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp&nbsp")
+                }
+
+            } else {
+                document.write("*");
+            }
+
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
