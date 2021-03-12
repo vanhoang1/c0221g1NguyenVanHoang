@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let chuoi1=prompt(" nhập vào chuỗi thứ nhất :");
+    let chuoi2=prompt(" nhập vào chuỗi thứ hai :");
+    let arr=[];
+    let arr2=[];
+    let xem=true;
+    if (chuoi1.length!==chuoi2.length){
+       xem=false
+    }else {
+        for (let i=0;i<chuoi1.length;i++){
+            arr.push(chuoi1[i])
+        }
+        for (let i=0;i<chuoi2.length;i++){
+            arr2.push(chuoi2[i])
+        }
+        for (let i=0;i<chuoi1.length;i++){
+            if(arr.indexOf(arr2[i])===-1){
+                xem=false;
+                break
+            }
+        }
+    }
+    if (xem){
+        alert("2 chuỗi giống nhau")
+    }else {
+        alert("2 chuỗi không giống nhau")
+    }
+
+</script>
+</body>
+</html>

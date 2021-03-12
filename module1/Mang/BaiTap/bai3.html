@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    document.write("Bài 3 :&nbsp");
+    document.write("<br>");
+    let nhapVao = prompt("nhập vào chuỗi");
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZI';
+    let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+    let arr3 = [];
+    for (let i = 0; i < nhapVao.length; i++) {
+        if (chuHoa.indexOf(nhapVao[i]) !== -1) {
+            arr3.push(nhapVao[i].toLowerCase());
+        } else if (chuThuong.indexOf(nhapVao[i]) !== -1) {
+            arr3.push(nhapVao[i].toUpperCase());
+        } else {
+            arr3.push(nhapVao[i]);
+        }
+    }
+    document.writeln(arr3.join(''));
+</script>
+</body>
+</html>

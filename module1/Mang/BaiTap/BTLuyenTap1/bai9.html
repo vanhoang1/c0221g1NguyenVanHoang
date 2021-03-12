@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let arr = [], arr2=[];
+    for (let i = 0; i < 10; i++) {
+        let nhap = prompt("nhập vào số nguyên của mảng 1");
+        if (parseInt(nhap) - nhap <0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(parseInt(nhap));
+    }
+    for (let i = 0; i < 10; i++) {
+        let nhap = prompt("nhập vào số nguyên của mảng 2");
+        if (parseInt(nhap) - nhap <0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr2.push(parseInt(nhap));
+    }
+    document.writeln("Dãy [" + arr.join() + "] và dãy :["+ arr2.join()+" ] được gộp lại là :"+arr.concat(arr2).join() )
+</script>
+</body>
+</html>

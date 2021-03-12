@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let arr = [], max = 0;
+    for (let i = 0; i < 10; i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap != 0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        if (arr.indexOf(parseInt(nhap)) >= 0 && i > 0) {
+            alert("bạn phải nhập số khác với số trước ");
+            i--;
+            continue
+        }
+        arr.push(parseInt(nhap));
+        console.log(arr.indexOf(parseInt(nhap)));
+        if (max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    document.writeln("Dãy [" + arr.join() + "] có số lớn nhất là :" + max + " tại vị ví là :" + (arr.indexOf(max) + 1))
+</script>
+</body>
+</html>

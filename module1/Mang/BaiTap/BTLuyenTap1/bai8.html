@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    let arr = [], arr2=[];
+    let n = prompt("nhập số phần tử của mảng");
+    for (let i = 0; i < n; i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap <0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(parseInt(nhap));
+      arr2=  arr.sort(((a, b) => {return b-a}))
+    }
+    document.writeln("Dãy [" + arr.join() + "] Được sắp xếp lại là :["+ arr2.join()+" ]" )
+</script>
+</body>
+</html>

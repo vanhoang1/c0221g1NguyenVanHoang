@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let arr=[],arr2=[];
+    for (let i=0;i<10;i++){
+        let nhap=prompt("nhập vào số nguyên");
+        if (parseInt(nhap)-nhap!=0){
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(nhap);
+        if(nhap>=10)
+        {
+            arr2.push(arr[i])
+        }
+    }
+    document.writeln("mảng["+arr.join()+"] có :"+arr2.length+"&nbsp phần tử lớn hơn 10 đó là :["+arr2.join()+"]")
+
+</script>
+</body>
+</html>

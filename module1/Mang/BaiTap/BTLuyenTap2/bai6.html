@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let n=prompt("nhập vào số phần tử của mảng");
+    for (let i=0; i<n;i++){
+        let nhap=prompt("nhập vào phần tử thứ"+i);
+        arr.push(nhap);
+        if (nhap.length>1){
+            alert("chỉ đc nhập 1 kí tự");
+            i--;
+            continue
+        }
+        if(nhap==="-"){
+            arr.pop();
+            arr.push("_");
+        }
+    }
+    document.writeln(arr.join(""));
+</script>
+</body>
+</html>

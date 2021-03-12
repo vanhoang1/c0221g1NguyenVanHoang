@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    document.write("Bài 2: &nbsp");
+    document.write("<br>");
+    let arr2 = prompt("nhập vào số cần chuyển");
+    let arr3 = [];
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr2[i] % 2 == 0 && arr2[i - 1] % 2 == 0) {
+            arr3.push('-');
+        }
+        arr3.push(arr2[i])
+    }
+    document.write(arr3.join(""));
+</script>
+</body>
+</html>

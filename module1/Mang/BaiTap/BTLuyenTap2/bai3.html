@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let arr = [],dem=0;
+    let n = prompt("nhập số phần tử của mảng");
+    for (let i = 0; i < n; i++) {
+        let nhap = prompt("nhập vào phần tử của mảng");
+        if (parseFloat(nhap) - nhap === 0) {
+            dem++
+        }
+        arr.push(nhap);
+    }
+    document.writeln("Dãy [" + arr.join() + "] có số kí tự Số là : ["+dem+"]"  )
+</script>
+</body>
+</html>

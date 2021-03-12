@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    for (let i=0;i<10;i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap != 0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(nhap);
+    }
+    let v= parseInt( prompt("nhập vào V"));
+    if ( arr.indexOf(v)>=0){
+        alert("V is in the array");
+    }else {
+        alert("V is not in the array");
+    }
+
+</script>
+</body>
+</html>

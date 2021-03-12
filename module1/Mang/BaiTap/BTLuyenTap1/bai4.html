@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = prompt("nhập số phần tử của mảng");
+    for (let i = 0; i < n; i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap <0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(parseInt(nhap));
+
+    }
+    document.writeln("Dãy [" + arr.join() + "] đảo ngược là : ["+arr.reverse().join()+"]"  )
+</script>
+</body>
+</html>

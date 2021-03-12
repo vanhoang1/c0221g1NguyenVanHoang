@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let arr = [],dem=0;
+    let n = prompt("nhập số phần tử của mảng")
+    for (let i = 0; i < n; i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap <0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(parseInt(nhap));
+        if(arr[i]<0){
+            dem++
+        }
+
+    }
+    document.writeln("Dãy [" + arr.join() + "] Có : "+ dem +" &nbsp Số âm"  )
+</script>
+</body>
+</html>

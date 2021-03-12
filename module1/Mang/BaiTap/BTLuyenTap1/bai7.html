@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    for (let i=0;i<10;i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap != 0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(nhap);
+    }
+    let v= prompt("nhập vào V");
+    let viTri=arr.indexOf(v);
+    if ( viTri>=0){
+        for (let i=viTri;i<arr.length;i++){
+            arr[viTri]=arr[viTri+1];
+            viTri++
+        }
+        arr.pop();
+        arr.push(0);
+        document.writeln(arr.join())
+    }else {
+        alert("V is not in the array");
+    }
+</script>
+</body>
+</html>

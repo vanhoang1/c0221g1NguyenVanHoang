@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input type="text" id="tuNhapVao"><br>
+<input type="button" onclick="tuDien()" value="Chuyển">
+<p id="ketQua">----</p>
+<script>
+    function tuDien() {
+        let ketQua = document.getElementById("ketQua");
+        let nhap = document.getElementById("tuNhapVao").value;
+        let tuTiengAnh = Array("Banana", "Cat", "Dog");
+        let tuTiengViet = Array("Chuối", "Mèo", "Chó");
+        let a = tuTiengAnh.indexOf(nhap);
+        if (a != -1) {
+            ketQua.innerText = tuTiengViet[a];
+        } else {
+            ketQua.innerText = "không tìm thấy kết quả"
+        }
+
+
+    }
+
+</script>
+
+</body>
+</html>
