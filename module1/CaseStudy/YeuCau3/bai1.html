@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let arr=[],arr2=[],sum=0;
+    let n = prompt("nhập độ dài của mảng");
+    for (let i=0;i<n;i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap != 0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(parseInt(nhap));
+        sum+=arr[i];
+        arr2.push(sum);
+    }
+
+    document.writeln("mảng a  :"+arr.join());
+    document.writeln("<br>");
+    document.writeln(" prefixSums(a) =  :"+arr2.join());
+</script>
+</body>
+</html>

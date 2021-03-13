@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <title>Ứng dụng vui Faking Textarea on Typing</title>
 </head>
-<body >
+<body>
 <h1>Type anthing slowly</h1>
 <textarea id="textArena" onkeyup="troll()"></textarea>
 <script>
     function troll() {
-        let ngu=Array["T","ô","i"];
-        let nhapVao=document.getElementById("textArena").value;
+        let arr = [];
+        let arr2 = [];
+        let goc = 'Tôi là người ngu ngốc !';
+        let nhapVao = document.getElementById("textArena").value;
+        for (i = 0; i < goc.length; i++) {
+            arr2.push(goc[i])
+        }
+        for (i = 0; i < nhapVao.length; i++) {
+            arr.push(nhapVao[i]);
+        }
+        arr.pop();
 
-
-
-
-        document.getElementById("textArena").value=nhapVao
-
+        let soLan = parseInt(nhapVao.length / arr2.length) + 1;
+        for (let i = 0; i < soLan - 1; i++) {
+            arr2 = arr2.concat(arr2)
+        }
+        for (j = 0; j < nhapVao.length; j++) {
+            arr[j] = arr2[j]
+        }
+        let xuat = arr.join("");
+        document.getElementById("textArena").value = xuat;
     }
 </script>
 </body>

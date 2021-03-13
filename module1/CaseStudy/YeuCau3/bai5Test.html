@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+    <style>
+        .menu {
+            height: 240px;
+            width: 300px;
+            background-color: whitesmoke;
+            float: left;
+        }
+
+        .bangGia, .thanhTien {
+            height: 240px;
+            width: 300px;
+            float: left;
+            background-color: #6d87cd;
+            text-align: center;
+            font-size: 20px ;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <p id="menu"></p>
+</div>
+<div id="bangGia" class="bangGia" hidden>
+    <h2 id="bangTen">---</h2>
+    <p id="donGia"></p>
+    <p>Nhập số lượng cần mua</p>
+    <input id="soLuong" type="number"><input type="button" onclick="hienGia()" value="Mua">
+</div>
+<div id="thanhTien" class="thanhTien" hidden>
+    <h2>Tổng tiền là</h2><br>
+    <p id="tongTien"></p>
+</div>
+<script>
+    let menu = ["Cà phê", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Thoát menu"];
+    let giaTien = [10000, 15000, 16000, 20000, 7000];
+    let hienMenu = document.getElementById("menu");
+    let data = "";
+    for (let i = 0; i < menu.length; i++) {
+        data += "<p onclick='hienSoLuong(this.innerText)'>" + menu[i] + "</p>";
+    }
+    hienMenu.innerHTML = data;
+
+    function hienSoLuong(chon) {
+        if(chon!=="Thoát menu"){
+            let viTri = menu.indexOf(chon);
+            document.getElementById("bangTen").innerText = chon + "có đơn giá là:";
+            document.getElementById("donGia").innerText = giaTien[viTri];
+            document.getElementById("bangGia").hidden = false;
+            document.getElementById("thanhTien").hidden = true;
+        }
+        else {
+            document.getElementById("bangGia").hidden = true;
+            document.getElementById("thanhTien").hidden = true;
+            alert("thank");
+        }
+    }
+
+    function hienGia() {
+        let tongTien = parseInt(document.getElementById("donGia").innerText) * parseInt(document.getElementById("soLuong").value);
+        document.getElementById("tongTien").innerText = tongTien;
+        document.getElementById("bangGia").hidden = true;
+        document.getElementById("thanhTien").hidden = false;
+    }
+</script>
+</body>
+</html>

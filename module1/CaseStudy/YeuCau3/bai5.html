@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let menu = ["Cà phê", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Thoát menu"];
+    let giaTien = [10000, 15000, 16000, 20000, 7000];
+    let nhap=0;
+    do {
+         nhap= parseInt(prompt("1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)")) ;
+         if(nhap<7){
+             let viTri=nhap-1;
+             alert("đơn giá của"+menu[viTri]+"là :"+giaTien[viTri]);
+             let donGia=parseInt(prompt(" mời bạn nhập số lượng"));
+             alert("Tổng tiền là : "+donGia*giaTien[viTri]);
+         }
+            else {
+                alert("cảm ơn quý khác đã xem")
+         }
+    }while (nhap<7)
+</script>
+</body>
+</html>

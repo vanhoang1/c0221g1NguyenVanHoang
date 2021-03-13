@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let arr2 = [];
+    let khac=[];
+    for (let i=0;i<6;i++){
+        let nhap=prompt("nhập vào phần tử thứ ["+i+"] của mảng A:")
+        if(parseInt(nhap)-nhap!==0){
+            alert("chỉ được nhập số nguyên");
+            i--;
+            continue
+        }
+    arr.push(nhap);
+    }
+    for (let i=0;i<9;i++){
+        let nhap=prompt("nhập vào phần tử thứ ["+i+"] của mảng B:")
+        if(parseInt(nhap)-nhap!==0){
+            alert("chỉ được nhập số nguyên");
+            i--;
+            continue
+        }
+        arr2.push(nhap);
+    }
+//vì mảng 2 lớn hơn mảng 1
+        for (let i=0;i<arr2.length;i++){
+            if (arr.indexOf(arr2[i])===-1){
+                if(khac.indexOf(arr2[i])===-1){
+                    khac.push(arr2[i]) ;
+                }
+
+            }
+        }
+document.writeln("Mảng A:"+arr.join()+"và mảng B :"+arr2.join()+"có các phần tử khác nhau là :" +khac.sort(((a, b) => {return a-b})).join());
+
+
+</script>
+</body>
+</html>

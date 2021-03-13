@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let chu=["Một","Hai","Ba","Bốn","Năm","Sáu","Bảy","Tám","Chín","Không"];
+    let so=[1,2,3,4,5,6,7,8,9,0];
+    let nhap=prompt("nhập vào dãy sô:");
+    let day=[];
+    for (let i=0;i<nhap.length;i++){
+      let viTri= so.indexOf(parseInt(nhap[i])) ;
+      day.push(chu[viTri]);
+    }
+    document.writeln(day.join(" "));
+
+</script>
+</body>
+</html>
