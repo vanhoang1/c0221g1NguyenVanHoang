@@ -11,18 +11,15 @@
 
 <script>
     let menu = ["cafe", "sữa"];
+    let cam=["chuoi"];
+       a= menu.join("");
+        cam.push(a);
 
-        let a = document.getElementById("menu");
-        let data = "";
-        for (let i = 0; i<menu.length; i++) {
-            data += "<p onclick='abc(this.innerText)'>"+menu[i]+"</p>";
 
-        }
 
-    a.innerHTML=data;
-  function abc(b) {
-        document.writeln(b);
-  }
+
+        document.writeln(cam.join());
+
 
 </script>
 </body>

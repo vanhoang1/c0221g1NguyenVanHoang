@@ -9,38 +9,50 @@
     let nhapVao = prompt("nhập vào chuỗi");
     let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZI';
     let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
-    let dauCach='';
+    let max = 0, arr2 = [], arrMax = [];
     let arr = [];
-    let dem = false;
+    let dem = 0;
+    nhapVao += " ";
     for (let i = 0; i < nhapVao.length; i++) {
-        if (nhapVao[i]!==" ")
-        {
-        if (dem === false) {
-            if (chuThuong.indexOf(nhapVao[i] )!== -1) {
-                arr.push(nhapVao[i].toUpperCase());
-            }else {
-                arr.push(nhapVao[i]);
+        if (nhapVao[i] !== " ") {
+            if (dem === 0) {
+                if (chuThuong.indexOf(nhapVao[i]) !== -1) {
+                    arr.push(nhapVao[i].toUpperCase());
+                    arr2.push(nhapVao[i].toUpperCase());
+                } else {
+                    arr.push(nhapVao[i]);
+                    arr2.push(nhapVao[i]);
+                }
+                dem++;
+            } else {
+                if (chuHoa.indexOf(nhapVao[i]) !== -1) {
+                    arr.push(nhapVao[i].toLowerCase());
+                    arr2.push(nhapVao[i].toLowerCase());
+                } else {
+                    arr.push(nhapVao[i]);
+                    arr2.push(nhapVao[i]);
+                }
             }
-            dem =true;
-        }
-        else {
-            if (chuHoa.indexOf(nhapVao[i]) !== -1) {
-                arr.push(nhapVao[i].toLowerCase());
-            }else {
-                arr.push(nhapVao[i]);
-            }
-        }
+            dem++
         } else {
-            if (nhapVao[i]===nhapVao[i-1])
-            {
+            if (nhapVao[i] === nhapVao[i - 1]) {
                 continue
             }
-           dem=false;
+            if (max < dem) {
+                max = dem;
+                arrMax = arr2;
+                arr2 = [];
+            } else {
+                arr2 = [];
+            }
+            dem = 0;
             arr.push(" ");
         }
 
     }
-    document.writeln(arr.join(''));
+    document.writeln("Dãy :" + arr.join(""));
+    document.writeln("<br>");
+    document.writeln("Có từ dài nhất là :" + arrMax.join(""))
 </script>
 </body>
 </html>
