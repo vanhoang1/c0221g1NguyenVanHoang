@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let nhapVao = prompt("nhập vào chuỗi");
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZI';
+    let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+    let dauCach='';
+    let arr = [];
+    let dem = false;
+    for (let i = 0; i < nhapVao.length; i++) {
+        if (nhapVao[i]!==" ")
+        {
+        if (dem === false) {
+            if (chuThuong.indexOf(nhapVao[i] )!== -1) {
+                arr.push(nhapVao[i].toUpperCase());
+            }else {
+                arr.push(nhapVao[i]);
+            }
+            dem =true;
+        }
+        else {
+            if (chuHoa.indexOf(nhapVao[i]) !== -1) {
+                arr.push(nhapVao[i].toLowerCase());
+            }else {
+                arr.push(nhapVao[i]);
+            }
+        }
+        } else {
+            if (nhapVao[i]===nhapVao[i-1])
+            {
+                continue
+            }
+           dem=false;
+            arr.push(" ");
+        }
+
+    }
+    document.writeln(arr.join(''));
+</script>
+</body>
+</html>
