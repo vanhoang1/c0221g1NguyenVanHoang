@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập n:");
+    let m = prompt("nhập m:");
+    let arr = [];
+    let max = 0, min = 0;
+    for (let i = 0; i < n; i++) {
+        arr.push([]);
+        for (let j = 0; j < m; j++) {
+            let nhap = parseInt(prompt("nhập vào pt hàng :" + (i - -1) + "cột :" + (j - -1)));
+            arr[i].push(nhap);
+            if (j === 0 && i === 0) {
+                max = arr[i][j];
+                min = arr[i][j];
+                continue
+            }
+            if ( arr[i][j]-max>0) {
+                max = arr[i][j];
+            }
+            if (arr[i][j]-min<0) {
+                min = arr[i][j];
+            }
+
+        }
+
+    }
+    document.writeln("số lớn nhất là :" + max + "số nhỏ nhất là :" + min);
+</script>
+</body>
+</html>

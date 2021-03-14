@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bai2</title>
 </head>
 <body>
+<script>
+    let nhap = prompt("nhập chuỗi");
+    let arr = [], arr2 = [];
+    let dem = 0;
+    for (let i = 0; i < nhap.length; i++) {
+        arr.push(nhap[i]);
+    }
+    arr.sort();
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[i - 1]) {
+            dem++;
+            arr2.push(arr[i])
 
+        }
+    }
+    document.write("Có :" + dem + "kí tự khác nhau đó là :" + arr2.join());
+</script>
 </body>
 </html>

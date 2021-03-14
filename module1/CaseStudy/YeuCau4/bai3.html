@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let nhap = prompt("nhập chuỗi thứ nhất");
+    let nhap2 = prompt("nhập chuỗi thứ hai");
+    let arr = [], arr2 = [];
+    let data = "", demA = 1, demB = 0, soPTChung = 0;
+    for (let i = 0; i < nhap.length; i++) {
+        arr.push(nhap[i]);
+    }
+    for (let i = 0; i < nhap2.length; i++) {
+        arr2.push(nhap2[i]);
+    }
+    arr.sort();
+    arr2.sort();
+
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i + 1]) {
+            demA++;
+            continue
+        }
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr[i] === arr2[j]) {
+                demB++;
+                soPTChung++;
+            }
+        }
+        if (demB === 0) {
+            demA = 1;
+            continue
+        }
+
+        if (demA < demB) {
+            data += " " + arr[i] + " " + "có :" + demA + "kí tự ,"
+        } else {
+            data += " " + arr[i] + " " + "có :" + demB + "kí tự  ,"
+        }
+        demA = 1;
+        demB = 0;
+    }
+    document.write("2 dãy có :" + soPTChung + " kí tự chung là :" + data);
+</script>
+</body>
+</html>

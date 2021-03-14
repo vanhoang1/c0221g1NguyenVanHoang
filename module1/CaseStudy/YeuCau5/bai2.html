@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let m = prompt("nhập m:");
+    let n = prompt("nhập n:");
+    let arr = [], arrSNT = [];
+    for (let i = 0; i < m; i++) {
+        arr.push([]);
+        for (let j = 0; j < n; j++) {
+            let nhap = prompt("nhập vào phần tử hàng :" + (i - -1) + "cột : " + (j - -1));
+            arr[i].push(nhap);
+            if (arr[i][j] <= 1) {
+                continue
+            }
+            let dem = true;
+            for (let k = 2; k <= Math.sqrt(arr[i][j]); k++) {
+                if (arr[i][j] % k === 0) {
+                    dem = false;
+                }
+            }
+            if (dem) {
+                arrSNT.push(arr[i][j]);
+            }
+        }
+    }
+    document.write("có "+arrSNT.length+"số nguyên tố . đó là :"+arrSNT.join(" "))
+</script>
+</body>
+</html>

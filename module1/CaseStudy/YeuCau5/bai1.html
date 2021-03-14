@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let nhapM = prompt("nhập vào m :");
+    let nhapN = prompt("nhập vào n :");
+    let arr = [];
+    let sum = 0;
+    let data = "";
+    for (let i = 0; i < nhapM; i++) {
+        arr.push([]);
+        for (let j = 0; j < nhapN; j++) {
+            let nhap = prompt("nhập vào phân tử ở hàng " + (i - -1) + "cột" + (j - -1));
+            arr[i].push(nhap);
+            if (arr[i][j] % 2 === 0) {
+                sum += parseInt(arr[i][j]);
+
+            }
+            data += arr[i][j] + "&nbsp&nbsp";
+        }
+        data += "<br>"
+    }
+    document.write("ma trận :");
+    document.write("<br>");
+    document.write(data);
+    document.write("<br>");
+    document.write("có tổng các số chẳn là :" + sum);
+</script>
+</body>
+</html>
