@@ -10,16 +10,12 @@
 </div>
 
 <script>
-    let menu = ["cafe", "sữa"];
-    let cam=["chuoi"];
-       a= menu.join("");
-        cam.push(a);
-
-
-
-
-        document.writeln(cam.join());
-
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
+    }
+    document.writeln(func1(5))
 
 </script>
 </body>

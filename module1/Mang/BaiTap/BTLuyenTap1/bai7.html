@@ -19,16 +19,20 @@
     let v= prompt("nhập vào V");
     let viTri=arr.indexOf(v);
     if ( viTri>=0){
-        for (let i=viTri;i<arr.length;i++){
-            arr[viTri]=arr[viTri+1];
-            viTri++
-        }
-        arr.pop();
-        arr.push(0);
-        document.writeln(arr.join())
+        do{
+            viTri=arr.indexOf(v);
+            for (let i=viTri;i<arr.length;i++){
+                arr[viTri]=arr[viTri+1];
+                viTri++
+            }
+            arr.pop();
+            arr.push(0);
+        }while (arr.indexOf(v)>=0)
+
     }else {
         alert("V is not in the array");
     }
+    document.writeln(arr.join())
 </script>
 </body>
 </html>

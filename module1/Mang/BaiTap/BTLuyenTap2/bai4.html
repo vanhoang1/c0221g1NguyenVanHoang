@@ -7,16 +7,14 @@
 <body>
 <script>
     let nhap=  prompt("nhập vào 1 chuỗi");
-    let dem=0,dem2=0;
+    let dem=1;
     for (let i=0; i<nhap.length;i++){
-        if ( parseInt(nhap[i])- nhap[i]!==0){
-            dem++
-        }
-        else {
-            dem2++
+
+        if(nhap[i]===" "&&nhap[i]!==nhap[i-1]){
+           dem++
         }
     }
-    alert("chuỗi :"+nhap+"có :"+dem+" từ và :"+dem2+"số");
+    alert("chuỗi :"+nhap+"có :"+dem+" từ ")
 </script>
 </body>
 </html>

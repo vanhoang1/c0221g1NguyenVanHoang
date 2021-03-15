@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+    <style>
+        td{
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+<body>
+<h3>Tic tac toe Game Simple</h3>
+<p id="dau" hidden>x</p>
+<p id="ticTacToeGame">
+
+    <script>
+
+    let arr= new Array(12);
+    for (let i=0; i<12;i++){
+        arr[i]=new Array(12);
+        for (let j=0;j<12;j++){
+            arr[i][j]=".";
+        }
+    }
+    display();
+    function display(){
+        let data='';
+        data+='<table>';
+        for (let i=0;i<10;i++){
+            data+='<tr>';
+            for (let j=0;j<10;j++){
+                data+='<td onclick="tick('+i+','+j+')" >'+arr[i][j]+'</td>'
+                win(i,j);
+            }
+            data+='</tr>'
+        }
+        data+='</table>';
+
+        document.getElementById("ticTacToeGame").innerHTML=data;
+
+    }
+    let luot=true;
+    function tick(i,j) {
+
+        if(kiemTra(i,j)){
+            if(luot){
+                arr[i][j]='x';
+
+                luot=false
+            }else {
+                arr[i][j]='o';
+                luot=true
+            }
+        }
+
+        display();
+    }
+     function kiemTra(i,j) {
+        if (arr[i][j]==="."){
+            return true
+        }else {
+            alert("có rồi");
+            return false
+        }
+
+     }
+     function win(i,j) {
+        if (arr[i][j]==='x'){
+            if(arr[i][j+1]==='x'&&arr[i][j+2]==='x'){
+                alert('x win')
+            }
+            if(arr[i+1][j]==='x'&&arr[i+2][j]==='x'){
+                alert('x win')
+            }
+            if(arr[i+1][j+1]==='x'&&arr[i+2][j+2]==='x'){
+                alert('x win')
+            }
+            if(arr[i-1][j+1]==='x'&&arr[i-2][j+2]==='x'){
+                alert('x win')
+            }
+        }
+         if (arr[i][j]==='o'){
+             if(arr[i][j+1]==='o'&&arr[i][j+2]==='o'){
+                 alert('o win')
+             }
+             if(arr[i+1][j]==='o'&&arr[i+2][j]==='o'){
+                 alert('o win')
+             }
+             if(arr[i+1][j+1]==='o'&&arr[i+2][j+2]==='o'){
+                 alert('o win')
+             }
+             if(arr[i-1][j+1]==='o'&&arr[i-2][j+2]==='o'){
+                 alert('o win')
+             }
+         }
+
+
+     }
+    </script>
+</body>
+</html>
