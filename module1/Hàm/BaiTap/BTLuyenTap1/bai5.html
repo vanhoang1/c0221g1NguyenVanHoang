@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body onload="timSao()" >
+<script>
+    let arr1= Array('Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus');
+    let arr2=Array('Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo');
+
+    function timSao() {
+        let nhap=prompt("nhap vao ten sao");
+       let viTri=arr1.indexOf(nhap);
+       if (viTri!==-1){
+           alert(arr2[viTri]);
+       }else {
+           alert("không tìm thấy")
+       }
+
+    }
+</script>
+</body>
+</html>

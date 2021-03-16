@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    let n=prompt('số phần tử của mảng');
+    let arr=[];
+    for (let i=0;i<n;i++){
+
+        arr[i]=prompt('nhập vào số phần tử thứ' +i);
+        if (parseInt(arr[i]) - arr[i] !== 0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+        }
+    }
+    alert(dao(arr));
+    function dao(mang) {
+        return mang.reverse()
+    }
+</script>
+</body>
+</html>

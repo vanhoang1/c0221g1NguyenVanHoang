@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let nhapA=parseInt(prompt("nhập a:"));
+    let nhapB=parseInt(prompt("nhập b:"));
+    let nhapC=parseInt(prompt("nhập c:"));
+    alert("số nhỏ nhất là :"+timMin(nhapA,nhapB,nhapC));
+    function timMin(a,b,c) {
+        let min=a;
+        if(min>b){
+            if (c<b){
+                min=c
+            }else {
+                min=b
+            }
+        }else {
+            if (min>c){
+                min=c
+            }
+        }
+        return min
+    }
+</script>
+</body>
+</html>

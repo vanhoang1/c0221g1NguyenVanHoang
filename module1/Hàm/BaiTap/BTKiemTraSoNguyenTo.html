@@ -5,6 +5,29 @@
     <title>kiemtrasonguyento</title>
 </head>
 <body>
-
+<script>
+    let arr=[];
+    for (let i=0;i<10000;i++){
+        if (isPrime(i)){
+            arr.push(i);
+        }
+    }
+    document.writeln(arr.join(" "));
+    function isPrime(number) {
+        let kiemTra=true;
+        if(number<2){
+            kiemTra=false
+        }else {
+            for (let i=2; i<number;i++){
+                if(number%i===0)
+                {
+                    kiemTra=false;
+                    break
+                }
+            }
+        }
+        return kiemTra;
+    }
+</script>
 </body>
 </html>

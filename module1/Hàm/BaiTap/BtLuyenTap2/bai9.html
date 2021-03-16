@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let nhap=prompt("nhap vao mang ki tu");
+    let arr=[];
+    for (let i=0;i<nhap.length;i++){
+        arr.push(nhap[i]);
+    }
+    let v=prompt("nhập vào kí tự cần kiểm tra");
+    alert(kiemTra(arr,v));
+
+    function kiemTra(mang,kiTu) {
+        let dem=0;
+        for (let i=0;i<mang.length;i++){
+            if (kiTu===mang[i]){
+                dem++
+            }
+        }
+        if (dem>0){
+            return dem
+        }else {
+            return -1
+        }
+    }
+</script>
+</body>
+</html>

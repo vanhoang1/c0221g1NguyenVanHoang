@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+        table,td,tr{
+            border: 1px solid black;
+        }
+        th{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input id="addNewProductText" type="text"><input type="button" id="add" value="Add" onclick="addSanPham()"><br>
+<input id="editText" type="text" hidden><input type="button" id="edit" value="Edit" onclick="editMenu()" hidden><br>
+<h3>Display All Product</h3>
+<p id="menu"></p>
+</body>
+<script>
+    let arrSanPham=['kem','chuoi'];
+    let arrEdit=[];
+
+    displayMenu();
+    function displayMenu(){
+        let data='';
+        data+='<table>';
+        data+='<th >Product Name</th>';
+        data+='<th >'+arrSanPham.length+'</th>';
+        data+='<th >product</th>';
+        for (let i=0;i<arrSanPham.length;i++){
+            data+='<tr>';
+            data+='<td>';
+            data+='<p>'+arrSanPham[i]+'</p>';
+            data+='</td>';
+            data+='<td>';
+            data+='<input id="e'+i+'" type="button" value="Edit" onclick="editSanPham(this.id)">';
+            data+='</td>';
+            data+='<td>';
+            data+='<input id="d'+i+'" type="button" value="Delete" onclick="delSanPham(this.id)">';
+            data+='</td>';
+            data+='</tr>';
+
+        }
+        data+='</table>';
+        document.getElementById("menu").innerHTML=data;
+    }
+    function addSanPham(){
+        let sanPham=document.getElementById("addNewProductText").value;
+        arrSanPham.push(sanPham);
+        displayMenu();
+        alert("đã thêm :"+sanPham+"vào danh sách");
+    }
+    function editSanPham(e) {
+        let a=e.replace(/\D/g, "");
+        console.log(a);
+
+       arrEdit.push(arrSanPham[a]);
+       document.getElementById("editText").value=arrSanPham[a];
+       document.getElementById("addNewProductText").hidden=true;
+       document.getElementById("add").hidden=true;
+       document.getElementById("editText").hidden=false;
+       document.getElementById("edit").hidden=false;
+    }
+    function editMenu() {
+        let sanPham=document.getElementById("editText").value;
+        arrEdit.push(sanPham);
+        let viTri=arrSanPham.indexOf(arrEdit[0]);
+        arrSanPham[viTri]=arrEdit[1];
+        document.getElementById("addNewProductText").hidden=false;
+        document.getElementById("add").hidden=false;
+        document.getElementById("editText").hidden=true;
+        document.getElementById("edit").hidden=true;
+        displayMenu();
+        arrEdit.pop();
+        arrEdit.pop();
+    }
+    function delSanPham(d) {
+        let b=d.replace(/\D/g, "");
+        for (let i=b;i<arrSanPham.length;i++){
+            arrSanPham[i]=arrSanPham[i- -1];
+        }
+        arrSanPham.pop();
+        displayMenu();
+
+    }
+</script>
+</html>

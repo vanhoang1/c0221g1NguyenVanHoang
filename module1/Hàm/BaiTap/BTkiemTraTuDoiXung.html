@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let nhap=prompt("nhập vào 1 từ");
+    let arr=[];
+    for (let i=0;i<nhap.length;i++){
+        arr.push(nhap[i]);
+    }
+    alert(isPalindrome(arr));
+    function isPalindrome(s){
+        let check=true;
+        while (s.length>=1){
+            if(s[0]!==s[s.length-1]){
+                check=false;
+            }
+            s.shift();
+            s.pop();
+        }
+    return check
+
+    }
+</script>
+
+</body>
+</html>
