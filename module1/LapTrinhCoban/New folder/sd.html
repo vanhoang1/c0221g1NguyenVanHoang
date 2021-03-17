@@ -10,12 +10,22 @@
 </div>
 
 <script>
-    function func1(a){
-        if(a == 2)
-            return 2;
-        return a * func1(a - 1);
-    }
-    document.writeln(func1(5))
+    let person = {
+        name: ['Bob', 'Smith'],
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+        bio: function() {
+            alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },
+        greeting: function() {
+            alert('Hi! I\'m ' + this.name[0] + '.');
+        }
+    };
+    let mname = 'height';
+    let myDataValue = '1.75m';
+    person[mname]= myDataValue;
+    console.log(person.height)
 
 </script>
 </body>

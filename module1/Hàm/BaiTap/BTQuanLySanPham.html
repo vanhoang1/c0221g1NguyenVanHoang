@@ -5,19 +5,58 @@
     <title> Ứng dụng quản lý sản phẩm sử dụng hàm</title>
     <style>
         table,td,tr{
-            border: 1px solid black;
+
+            width: 100%;
+            font-size: 20px;
         }
         th{
-            text-align: right;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .nhap,.sua{
+            background-color: #f2f2f2;
+            width: 450px;
+            height: 50px;
+            padding: 15px 15px 15px 15px;
+            border-radius: 5px;
+        }
+
+        .menu{
+            width: 550px;
+
+
+        }
+        input[type="text"]{
+         width: 300px;
+            height: 35px;
+        }
+        input[type="button"]{
+            height: 40px;
+            background-color: #50af50;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            width: 70px;
+            margin-left: 15px
         }
     </style>
 </head>
 <body>
-<h3>Add New Product</h3>
-<input id="addNewProductText" type="text"><input type="button" id="add" value="Add" onclick="addSanPham()"><br>
-<input id="editText" type="text" hidden><input type="button" id="edit" value="Edit" onclick="editMenu()" hidden><br>
-<h3>Display All Product</h3>
-<p id="menu"></p>
+<h2>Add New Product</h2>
+<div class="nhap" id="nhap">
+    <input id="addNewProductText" type="text" ><input  type="button" id="add" value="Add" onclick="addSanPham()">
+</div>
+<div class="sua" id="sua" hidden>
+    <input id="editText" type="text" ><input type="button" id="edit" value="Edit" onclick="editMenu()" ><br>
+</div>
+<h2>Display All Product</h2>
+<div class="menu">
+    <p id="menu"></p>
+</div>
+
+
 </body>
 <script>
     let arrSanPham=['kem','chuoi'];
@@ -28,8 +67,7 @@
         let data='';
         data+='<table>';
         data+='<th >Product Name</th>';
-        data+='<th >'+arrSanPham.length+'</th>';
-        data+='<th >product</th>';
+        data+='<th style="text-align: right;color: red" colspan="2">'+arrSanPham.length+'&nbsp product</th>';
         for (let i=0;i<arrSanPham.length;i++){
             data+='<tr>';
             data+='<td>';
@@ -59,20 +97,24 @@
 
        arrEdit.push(arrSanPham[a]);
        document.getElementById("editText").value=arrSanPham[a];
-       document.getElementById("addNewProductText").hidden=true;
-       document.getElementById("add").hidden=true;
-       document.getElementById("editText").hidden=false;
-       document.getElementById("edit").hidden=false;
+       document.getElementById("addNewProductText").value="";
+       document.getElementById("nhap").hidden=true;
+       document.getElementById("sua").hidden=false;
+
     }
     function editMenu() {
         let sanPham=document.getElementById("editText").value;
         arrEdit.push(sanPham);
         let viTri=arrSanPham.indexOf(arrEdit[0]);
         arrSanPham[viTri]=arrEdit[1];
-        document.getElementById("addNewProductText").hidden=false;
-        document.getElementById("add").hidden=false;
-        document.getElementById("editText").hidden=true;
-        document.getElementById("edit").hidden=true;
+        if(arrEdit[0]!==arrEdit[1]){
+            alert("bạn đã thay đổi :"+arrEdit[0]+"thành :"+arrEdit[1]);
+        }else {
+            alert("bạn không thay đổi giá trị nào")
+        }
+
+        document.getElementById("nhap").hidden=false;
+        document.getElementById("sua").hidden=true;
         displayMenu();
         arrEdit.pop();
         arrEdit.pop();
