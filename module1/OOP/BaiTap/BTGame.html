@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000px" height="700px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Xe {
+        constructor(viTriX, viTriY, tocDo,) {
+            this._viTriX = viTriX;
+            this._viTriY = viTriY;
+            this._tocDo = tocDo;
+        }
+
+
+        get viTriX() {
+            return this._viTriX;
+        }
+
+        set viTriX(value) {
+            this._viTriX = value;
+        }
+
+        get viTriY() {
+            return this._viTriY;
+        }
+
+        set viTriY(value) {
+            this._viTriY = value;
+        }
+
+        get tocDo() {
+            return this._tocDo;
+        }
+
+        set tocDo(value) {
+            this._tocDo = value;
+        }
+
+        moveXe(huong) {
+            switch (huong) {
+                case 'tren':
+                    this.viTriX -= this.tocDo;
+
+                    break;
+                case 'duoi':
+                    this.viTriX += this.tocDo;
+                    break;
+                case 'trai':
+                    this.viTriY -= this.tocDo;
+                    break;
+                case 'phai':
+                    this.viTriY += this.tocDo;
+                    break;
+
+            }
+        }
+    }
+
+    function taoXe() {
+        let image = new Image();
+        image.src = 'abc.png';
+        let honda = new Xe(450, 550, 3);
+        image.onload = function () {
+            let cvn = document.getElementById("myCanvas").getContext("2d");
+            cvn.drawImage(image, honda.viTriX, honda.viTriY);
+            cvn.fill();
+        }
+
+
+    }
+
+    window.setInterval(function () { taoXe();
+
+</script>
+</body>
+</html>

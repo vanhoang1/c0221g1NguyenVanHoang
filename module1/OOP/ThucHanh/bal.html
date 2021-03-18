@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var _canvas;
+        var _context;
+        var _ball;
+        var _balls = [];
+        var _counter = 0;
+        function draw(){
+
+            _context.clearRect(0,0,_canvas.width,_canvas.height);
+
+            for(var i = 0; i < _balls.length; i++){
+                _balls[i].draw(_context,(i+1)/10);
+            }
+            _ball.draw(_context);
+        }
+        function update(){
+            _counter++;
+            if(_counter == 5){
+                traceBall(_ball);
+                _counter = 0;
+            }
+            draw();
+            _ball.move();
+            _ball.checkCollision();
+
+        }
+        function traceBall(ball){
+            var b = new Ball;
+            b.cx = ball.cx;
+            b.cy = ball.cy;
+
+            _balls.push(b);
+            if(_balls.length>10)
+                _balls.splice(0,1);
+        }
+        window.onload = function(){
+
+            var interval = 10;
+            _canvas = document.getElementById("canvas");
+            _context = _canvas.getContext("2d");
+            _ball = new Ball(_canvas.width,_canvas.height);
+
+            window.setInterval(function(){
+                update();
+            },interval);
+
+        };
+        function Ball(mapWidth, mapHeight){
+            this.mapWidth = mapWidth;
+            this.mapHeight = mapHeight;
+            this.radius = 20;
+            this.speedX = 3;
+            this.speedY = 3;
+
+            this.cx = Math.floor(Math.random()*(this.mapWidth-2*this.radius)) + this.radius;
+            this.cy = Math.floor(Math.random()*(this.mapHeight-2*this.radius)) + this.radius;
+        }
+        Ball.prototype.draw = function(context,alpha){
+            if(!alpha)
+                alpha = 255;
+            context.beginPath();
+            context.fillStyle = "rgba(255, 100, 100," + alpha + ")";
+            context.arc(this.cx,this.cy,this.radius,0,Math.PI*2,true);
+            context.closePath();
+            context.fill();
+        };
+        Ball.prototype.move = function(){
+            this.cx += this.speedX;
+            this.cy += this.speedY;
+
+            this.left = this.cx - this.radius;
+            this.top = this.cy - this.radius;
+            this.right = this.cx + this.radius;
+            this.bottom = this.cy + this.radius;
+        };
+        Ball.prototype.checkCollision = function(shapes) {
+
+            if(this.left <= 0 || this.right >= this.mapWidth) this.speedX = -this.speedX;
+            if(this.top <= 0 || this.bottom >= this.mapHeight) this.speedY = -this.speedY;
+        }
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="400px" height="300px" style="border: 1px solid gray;"></canvas>
+</body>
+
+</body>
+</html>

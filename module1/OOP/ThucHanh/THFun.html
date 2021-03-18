@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let x = 155;
+    let y = 105;
+    let radius = 25;
+
+    function Circle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColor() {
+        let red = getRandomHex();
+        let green = getRandomHex();
+        let blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+
+    function createCircle() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+
+        let color = getRandomColor();
+
+        let circle = new Circle(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+        move()
+    }
+
+    function move() {
+        let speedX = 5;
+        let speedY = 5;
+
+        let left = x - radius;
+        let top = y - radius;
+        let right = x + radius;
+        let bottom = y + radius;
+        if(left <= 0 || right >= 1368) {
+            speedX = -speedX;
+        }
+        if(top <= 0 || bottom >= 768) {
+            speedY = -speedY;
+        }
+        x += speedX;
+        y += speedY;
+    }
+
+    window.setInterval(function () {
+        createCircle()
+    }, 10);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DienThoai</title>
+</head>
+
+<body>
+<script>
+    class Mobile {
+        constructor(nameMobile, congTac, pin, luuTinSoanThao, luuHopThuDen, luuTinDaGui) {
+            this._nameMobile = nameMobile;
+            this._congTac = congTac;
+            this._pin = pin;
+            this._luuTinSoanThao = luuTinSoanThao;
+
+            this._luuHopThuDen = luuHopThuDen;
+            this._luuTinDaGui = luuTinDaGui;
+
+
+        }
+
+        get nameMobile() {
+            return this._nameMobile;
+        }
+
+        set nameMobile(value) {
+            this._nameMobile = value;
+        }
+
+        checkOnOff() {
+            return this.congTac;
+        }
+
+        turnOnOff() {
+            this.congTac = confirm("bật nguồn");
+
+
+        }
+
+
+        sacPin() {
+            if (this.congTac) {
+                let nhapGio = prompt("pin yếu . sac pin");
+                this.pin = parseInt(nhapGio)
+            }
+
+        }
+
+        soanTinNhan() {
+            if (this.congTac) {
+                if (this.pin > 0) {
+                    this.luuTinSoanThao = prompt(this.nameMobile + "nhập tin nhắn soạn thảo");
+                    this.pin--
+                } else {
+                    this.sacPin();
+                    return this.soanTinNhan()
+                }
+
+            }
+        }
+
+        nhanTinNhan(tinNhan) {
+            if (this.congTac) {
+                if (this.pin > 0) {
+                    this.luuHopThuDen = tinNhan;
+                    this.pin--
+                } else {
+                    this.sacPin();
+                    return this.nhanTinNhan()
+                }
+            }
+        }
+
+        guiTinNhan() {
+            if (this.congTac) {
+                if (this.pin > 0) {
+                    this.luuTinDaGui = this.luuTinSoanThao ;
+                    this.pin--;
+                    return this.luuTinDaGui +"từ "+this.nameMobile;
+                } else {
+                    this.sacPin();
+                    return this.guiTinNhan()
+                }
+            }
+        }
+
+        xemTinHopThuDen() {
+            if (this.checkOnOff()) {
+                if (this.pin > 0) {
+                    return alert(this.nameMobile + " đã nhận được tin là :" + this.luuHopThuDen)
+                } else {
+                    this.sacPin();
+                    return this.xemTinHopThuDen
+                }
+            } else {
+                this.turnOnOff();
+                return this.xemTinHopThuDen()
+            }
+        }
+
+        xemTinDaGui() {
+            if (this.congTac) {
+                return alert(this.nameMobile + "đã gửi tin :" + this.luuTinDaGui);
+            } else {
+                let nhapGio = prompt("pin yếu . sac pin");
+                this.sacPin(nhapGio)
+            }
+        }
+
+        get pin() {
+            return this._pin;
+        }
+
+        set pin(value) {
+            this._pin = value;
+        }
+
+        get luuTinSoanThao() {
+            return this._luuTinSoanThao;
+        }
+
+        set luuTinSoanThao(value) {
+            this._luuTinSoanThao = value;
+        }
+
+        get luuHopThuDen() {
+            return this._luuHopThuDen;
+        }
+
+        set luuHopThuDen(value) {
+            this._luuHopThuDen = value;
+        }
+
+        get luuTinDaGui() {
+            return this._luuTinDaGui;
+        }
+
+        set luuTinDaGui(value) {
+            this._luuTinDaGui = value;
+        }
+
+        get congTac() {
+            return this._congTac;
+        }
+
+        set congTac(value) {
+            this._congTac = value;
+        }
+    }
+
+    let nokia = new Mobile('nokiaMobile', false, 0);
+    let iphone = new Mobile('iphoneMobile', true, 2);
+    nokia.turnOnOff();
+    nokia.soanTinNhan();
+    iphone.nhanTinNhan(nokia.guiTinNhan());
+    iphone.xemTinHopThuDen();
+
+</script>
+</body>
+</html>

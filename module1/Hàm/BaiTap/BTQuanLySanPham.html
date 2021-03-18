@@ -15,7 +15,7 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        .nhap,.sua{
+        .nhap,.sua,.seach{
             background-color: #f2f2f2;
             width: 450px;
             height: 50px;
@@ -45,6 +45,9 @@
 </head>
 <body>
 <h2>Add New Product</h2>
+<div class="seach">
+    <input id="seachText" type="text"><input type="button" id="seachButton" value="Tìm Kiếm"  onclick="seachSanPham()">
+</div>
 <div class="nhap" id="nhap">
     <input id="addNewProductText" type="text" ><input  type="button" id="add" value="Add" onclick="addSanPham()">
 </div>
@@ -59,19 +62,20 @@
 
 </body>
 <script>
-    let arrSanPham=['kem','chuoi'];
+    let arrSanPham=  Array(['oppo','f5'],['samsung','galaxy']);
     let arrEdit=[];
+    let arrSeach=[];
 
-    displayMenu();
-    function displayMenu(){
+    displayMenu(arrSanPham);
+    function displayMenu(mang){
         let data='';
         data+='<table>';
         data+='<th >Product Name</th>';
-        data+='<th style="text-align: right;color: red" colspan="2">'+arrSanPham.length+'&nbsp product</th>';
-        for (let i=0;i<arrSanPham.length;i++){
+        data+='<th style="text-align: right;color: red" colspan="2">'+mang.length+'&nbsp product</th>';
+        for (let i=0;i<mang.length;i++){
             data+='<tr>';
             data+='<td>';
-            data+='<p>'+arrSanPham[i]+'</p>';
+            data+='<p>'+mang[i].join(" ")+'</p>';
             data+='</td>';
             data+='<td>';
             data+='<input id="e'+i+'" type="button" value="Edit" onclick="editSanPham(this.id)">';
@@ -87,8 +91,9 @@
     }
     function addSanPham(){
         let sanPham=document.getElementById("addNewProductText").value;
-        arrSanPham.push(sanPham);
-        displayMenu();
+        let arrAdd= sanPham.split(" ");
+        arrSanPham.push(arrAdd);
+        displayMenu(arrSanPham);
         alert("đã thêm :"+sanPham+"vào danh sách");
     }
     function editSanPham(e) {
@@ -115,7 +120,7 @@
 
         document.getElementById("nhap").hidden=false;
         document.getElementById("sua").hidden=true;
-        displayMenu();
+        displayMenu(arrSanPham);
         arrEdit.pop();
         arrEdit.pop();
     }
@@ -125,8 +130,24 @@
             arrSanPham[i]=arrSanPham[i- -1];
         }
         arrSanPham.pop();
-        displayMenu();
+        displayMenu(arrSanPham);
+    }
+    function seachSanPham() {
+     let arrTam=  document.getElementById("seachText").value.split(" ");
+     do {
+         for (let i=0; i<arrSanPham.length;i++){
+             for (let j=0;j<arrSanPham[i].length;j++){
+                 if (arrTam[0]===arrSanPham[i][j]){
+                     if(arrSeach.indexOf(arrSanPham[i])!==0&&arrSeach.indexOf(arrSanPham[i][j])!==0)
+                     arrSeach.push(arrSanPham[i])
+                 }
+             }
+         }
+         arrTam.shift();
+     }while (arrTam.length>0);
 
+        displayMenu(arrSeach);
+     arrSeach=[] ;
     }
 </script>
 </html>

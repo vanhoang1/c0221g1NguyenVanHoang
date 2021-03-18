@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class  Temperature{
+        constructor(doC) {
+            this._doC = doC;
+        }
+
+        get doC() {
+            return this._doC;
+        }
+
+        set doC(value) {
+            this._doC = value;
+        }
+
+        doiCSangF(){
+            return   this.doC+ "Từ C Sang F là :"+( (this._doC*1.8)- -32)
+        }
+        doiCSangK(){
+            return  this.doC+ "Từ C sang K là"+( this._doC- -273.15)
+        }
+    }
+    let nhap= new  Temperature();
+    nhap.doC=25;
+   document.writeln( nhap.doiCSangF()+"<br>"+nhap.doiCSangK())
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>làm thêm cho vui</title>
+</head>
+<body>
+<script>
+    let nhap = prompt("nhâp vào mang");
+   let arr= nhap.split("");
+   alert( deQuy(arr));
+
+    function deQuy(mang) {
+        if (mang.length <= 1) {
+            return true
+        } else {
+            if (mang[0] === mang[mang.length - 1]) {
+                mang.shift();
+                mang.pop();
+                return deQuy(mang);
+            } else {
+                return false
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
