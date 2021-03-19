@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bong den</title>
+</head>
+<body>
+<script>
+    class Button{
+        constructor(status,lamp) {
+            this._status = status;
+
+        }
+
+        get status() {
+            return this._status;
+        }
+
+        set status(value) {
+            this._status = value;
+        }
+
+        switchButton(){
+            this.status= !this.status;
+        }
+
+    }
+    class ElectricLamp{
+        constructor(status,congTac) {
+            this._status = status;
+            this.congTac=congTac;
+        }
+
+        get status() {
+            return this._status;
+        }
+
+        set status(value) {
+            this._status = value;
+        }
+
+        switchLamp(){
+            if(this.congTac.status){
+                alert("đèn sáng")
+            }else {
+                alert("đèn tắt")
+            }
+
+        }
+    }
+
+    let congTac=new Button(false,false);
+    let bongDen=new ElectricLamp(false,congTac);
+    function batDen() {
+        congTac.switchButton();
+        bongDen.switchLamp();
+    }
+    window.setInterval(function () { batDen()},1000)
+</script>
+</body>
+</html>

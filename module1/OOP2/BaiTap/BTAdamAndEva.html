@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Eva</title>
+    <style>
+        .adam,.eva{
+            width: 300px;
+            height: 200px;
+            float: left;
+            border: solid 1px black;
+        }
+        .tao{
+            width: 100px;
+            height: 70px;
+            float: left;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+<div class="adam">
+Adam<br>
+    <p id="adamStatus">-------</p>
+    <button onclick="speaking(1)">nói</button>
+    <button onclick="an(1)" >ăn</button>
+</div>
+<div class="tao">
+Quả táo
+
+    <p id="tao">-------</p>
+</div>
+<div class="eva">
+    Eva<br>
+    <p id="evaStatus">-------</p>
+    <button onclick="speaking(2)">nói</button>
+    <button onclick="an(2)">ăn</button>
+</div>
+
+<script>
+class Apple{
+    constructor(weight) {
+        this._weight = weight;
+    }
+
+    get weight() {
+        return this._weight;
+    }
+
+    set weight(value) {
+        this._weight = value;
+    }
+
+    checkApple(){
+        if(this.weight>0){
+            return "có cân nặng là :"+ this.weight
+        }
+        else {
+            return "nothing !"
+        }
+    }
+
+}
+class Human{
+    constructor(name,gender,weight,apple) {
+        this._name = name;
+        this._gender = gender;
+        this._weight = weight;
+        this.apple = apple;
+    }
+
+
+    get name() {
+        return this._name;
+    }
+
+    set name(value) {
+        this._name = value;
+    }
+
+    get gender() {
+        return this._gender;
+    }
+
+    set gender(value) {
+        this._gender = value;
+    }
+
+    get weight() {
+        return this._weight;
+    }
+
+    set weight(value) {
+        this._weight = value;
+    }
+    say(){
+        return "Tên :"+ this.name+"giới tính :"+this.gender+"có cân nặng là :"+this.weight;
+    }
+    anTao(){
+        if(this.apple.weight>0){
+            this.weight++;
+            this.apple.weight--;
+            return this.name+ "đã ăn táo , có cân nặng hiện tại là"+this.weight
+        }
+        else return " Không còn gì để ăn"
+    }
+}
+let apple= new Apple(10);
+let adam=new Human('adam','male',80,apple);
+let eva=new Human('eva','female',80,apple);
+let nhapA=document.getElementById("adamStatus");
+let nhapB=document.getElementById("evaStatus");
+function speaking(a){
+    if(a===1){
+        nhapA.innerText=adam.say()
+    }else
+        nhapB.innerText=eva.say();
+
+}
+function an(b) {
+        if (b===1){
+           nhapA.innerText= adam.anTao();
+
+        }else {
+           nhapB.innerText= eva.anTao();
+        }
+    document.getElementById("tao").innerText=apple.checkApple()
+}
+document.getElementById("tao").innerText=apple.checkApple()
+</script>
+</body>
+</html>

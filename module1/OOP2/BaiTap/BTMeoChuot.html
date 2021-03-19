@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mèo bắt chuột và ăn chuột.</title>
+</head>
+<body>
+<script>
+class   Chuot{
+    constructor(ratName,ratWeight,ratSpeed,ratStatus) {
+        this._ratName = ratName;
+        this._ratheight = ratWeight;
+        this._ratSpeed = ratSpeed;
+        this._ratStatus = ratStatus;
+        this._ratWeight = ratWeight;
+    }
+
+    get ratName() {
+        return this._ratName;
+    }
+
+    set ratName(value) {
+        this._ratName = value;
+    }
+
+
+    get ratWeight() {
+        return this._ratWeight;
+    }
+
+    set ratWeight(value) {
+        this._ratWeight = value;
+    }
+
+    get ratSpeed() {
+        return this._ratSpeed;
+    }
+
+    set ratSpeed(value) {
+        this._ratSpeed = value;
+    }
+
+    get ratStatus() {
+        return this._ratStatus;
+    }
+
+    set ratStatus(value) {
+        this._ratStatus = value;
+    }
+    say(){
+        if(this.ratStatus){
+            return this.ratName+ " kêu chít chít"
+        }
+        else return this.ratName+"đã chết"
+    }
+
+}
+let arrRat=[];
+class Meo{
+    constructor(catName,catWeight,speed,rat) {
+        this.catName=catName;
+        this.catWeight=catWeight;
+        this.speed=speed;
+        this.rat=rat;
+    }
+    say(){
+        if(this.rat.length>0){
+            return this.catName+"Meo Meo chưa hết chuột. mèo đang có cân nặng là :"+this.catWeight
+        }else return this.catName+"Meo Meo no bụng . đã hết chuột"
+    }
+    timChuot(){
+        if (this.speed>this.rat[this.rat.length -1].ratSpeed){
+            this.checkRat()
+        }else this.say()
+
+    }
+    checkRat(){
+        if(this.rat[this.rat.length -1].ratStatus){
+            this.catWeight++;
+            this.rat.pop();
+        }
+        alert(this.rat[this.rat.length -1].say());
+    }
+
+}
+let jerry=new Chuot('jerry',12,120,true);
+let jerry2=new Chuot('jerry2',12,120,true);
+arrRat.push(jerry);
+arrRat.push(jerry2);
+
+
+let tom= new Meo('Tom',20,20,arrRat);
+tom.timChuot();
+alert(tom.say());
+</script>
+</body>
+</html>

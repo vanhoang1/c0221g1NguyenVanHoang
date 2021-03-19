@@ -7,6 +7,10 @@
 <body>
 <canvas id="myCanvas" width="1000px" height="700px" style="border:1px solid #d3d3d3;"></canvas>
 <script>
+    let arrXe=[];
+    let x=450;
+    let y=550;
+    let speed=5;
     class Xe {
         constructor(viTriX, viTriY, tocDo,) {
             this._viTriX = viTriX;
@@ -38,41 +42,53 @@
         set tocDo(value) {
             this._tocDo = value;
         }
-
+        chayXe(){
+            this.viTriY-=this.tocDo;
+        }
         moveXe(huong) {
             switch (huong) {
-                case 'tren':
+                case 'ArrowLeft':
                     this.viTriX -= this.tocDo;
-
                     break;
-                case 'duoi':
+                case 'ArrowRight':
                     this.viTriX += this.tocDo;
-                    break;
-                case 'trai':
-                    this.viTriY -= this.tocDo;
-                    break;
-                case 'phai':
-                    this.viTriY += this.tocDo;
                     break;
 
             }
         }
     }
-
-    function taoXe() {
-        let image = new Image();
-        image.src = 'abc.png';
-        let honda = new Xe(450, 550, 3);
-        image.onload = function () {
-            let cvn = document.getElementById("myCanvas").getContext("2d");
-            cvn.drawImage(image, honda.viTriX, honda.viTriY);
-            cvn.fill();
+    function chiNamXe(xe){
+        let a= new Xe();
+        a.viTriX=xe.viTriX;
+        a.viTriY=xe.viTriY;
+        arrXe.push(a);
+        if(arrXe.length>5){
+            arrXe.splice(0,1);
         }
 
 
     }
 
-    window.setInterval(function () { taoXe();
+    let honda = new Xe(x, y, speed);
+    function taoXe() {
+        let image = new Image();
+        image.src = 'abc.png';
+        honda.chayXe();
+        image.onload = function () {
+            let cvn = document.getElementById("myCanvas").getContext("2d");
+            cvn.drawImage(image, honda.viTriX, honda.viTriY);
+            cvn.fill();
+
+        };
+        document.addEventListener('keydown',logKey);
+        function logKey(a) {
+            honda.moveXe(a.code)
+        }
+        console.log(honda.viTriX);
+
+    }
+
+    window.setInterval(function () { taoXe()},300)
 
 </script>
 </body>
