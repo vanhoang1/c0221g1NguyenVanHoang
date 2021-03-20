@@ -4,24 +4,260 @@
     <meta charset="UTF-8">
     <title>Remote </title>
     <style>
-        .tivi,.remote{
-            width: 200px;
-            height: 100px;
+        .tivi {
+            width: 550px;
+            height: 300px;
+            margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
             border: solid black 1px;
+            text-align: center;
+        }
+
+        .remote {
+            width: 350px;
+            height: 130px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid black 1px;
+            text-align: center;
+        }
+
+        .kenh {
+            width: 130px;
+            height: 100px;
+            margin-top: 1px;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid black 1px;
+            text-align: center;
+
+        }
+
+        button {
+            width: 61px;
+            height: 30px;
+
         }
     </style>
 </head>
 <body>
+<div class="kenh">
+    <p id="kenh">Không có tín hiệu</p>
+    <p id="vol">Không có tín hiệu</p>
+</div>
 <div class="tivi">
-<img src="pikachu.png" style="width: 100% ;height: 100%" >
+
+    <img id="anhTivi" src="black.png" style="width: 100% ;height: 100%">
+
 </div>
 <div class="remote">
-
+    Remote<br>
+    <button onclick="onOff()">On/Off</button>
+    <br>
+    <button onclick="amThanh('cong')">Vol+</button>
+    <button onclick="amThanh('tru')">Vol-</button>
+    <button onclick="doiKenh('cong')">CN+</button>
+    <button onclick="doiKenh('tru')">CN-</button>
+    <br>
+    <button onclick="doiKenh('1')">1</button>
+    <button onclick="doiKenh('3')">3</button>
+    <button onclick="doiKenh('7')">7</button>
 </div>
 <script>
+    class Tivi {
+        constructor(status, kenh, amLuong, remote) {
+            this._status = status;
+            this._kenh = kenh;
+            this._amLuong = amLuong;
+            this._remote = remote;
+        }
 
+        get remote() {
+            return this._remote;
+        }
+
+        set remote(value) {
+            this._remote = value;
+        }
+
+        get status() {
+            return this._status;
+        }
+
+        set status(value) {
+            this._status = value;
+        }
+
+        get kenh() {
+            return this._kenh;
+        }
+
+        set kenh(value) {
+            this._kenh = value;
+        }
+
+        get amLuong() {
+            return this._amLuong;
+        }
+
+        set amLuong(value) {
+            this._amLuong = value;
+        }
+
+        hienThiKenh() {
+            this.checkOnOff();
+            if (this.status) {
+                if (this.remote.ma !== true) {
+                    if (this.remote.ma > 0) {
+                        this.kenh = this.remote.ma;
+                    } else {
+                        parseInt(this.kenh += (this.remote.ma + 1));
+                        if (this.kenh > 7) {
+                            this.kenh = 1
+                        }
+                        if (this.kenh < 1) {
+                            this.kenh = 7;
+                        }
+                    }
+                }
+
+                document.getElementById("kenh").innerText = "kenh" + this.kenh;
+                this.hienthiHinhanh(this.kenh)
+            } else {
+                document.getElementById("kenh").innerText = "Không có tín hiệu";
+                this.hienthiHinhanh(this.kenh)
+            }
+
+        }
+
+        hienThiVol() {
+            this.checkOnOff();
+            if (this.status) {
+                if (this.remote.ma !== true) {
+                    if (this.amLuong > 0 && this.amLuong < 100 || this.amLuong === 0 && this.remote.ma > 0 || this.amLuong === 100 && this.remote.ma < 0) {
+                        parseInt(this.amLuong += this.remote.ma);
+                    }
+                }
+                document.getElementById("vol").innerText = "am" + this.amLuong
+            } else
+                document.getElementById("vol").innerText = "Không có tín hiệu"
+
+
+        }
+
+        hienthiHinhanh(anh) {
+            let anhTivi = document.getElementById("anhTivi");
+            this.checkOnOff();
+            if (this.status) {
+                switch (anh) {
+                    case 1:
+                        anhTivi.src = 'kenh1.jpg';
+                        break;
+                    case 3:
+                        anhTivi.src = 'kenh3.jpeg';
+                        break;
+                    case 7:
+                        anhTivi.src = 'kenh7.jpg';
+                        break;
+                    default :
+                        anhTivi.src = 'pikachu.png'
+                }
+            } else anhTivi.src = 'black.png'
+
+
+        }
+
+        checkOnOff() {
+            this.status = this.remote.ma !== false;
+        }
+    }
+
+    class Remote {
+        constructor(ma) {
+            this._ma = ma;
+        }
+
+        get ma() {
+            return this._ma;
+        }
+
+        set ma(value) {
+            this._ma = value;
+        }
+
+        kiemTra(a) {
+            switch (a) {
+                case '3': {
+                    this.ma = 3;
+                    break
+                }
+                case '7': {
+                    this.ma = 7;
+                    break
+                }
+                case '1': {
+                    this.ma = 1;
+                    break
+                }
+                case 'cong': {
+                    this.ma++;
+                    break;
+                }
+                case 'tru': {
+                    this.ma--;
+                    break
+                }
+
+            }
+
+        }
+
+        remoteSwitchKenh(kenh) {
+            if (this.ma !== false) {
+                if (kenh > 0) {
+                    this.kiemTra(kenh);
+                } else {
+                    this.ma = -1;
+                    this.kiemTra(kenh)
+                }
+            }
+
+
+        }
+
+        remoteVol(am) {
+            if (this.ma !== false) {
+                this.ma = 0;
+                this.kiemTra(am)
+            }
+        }
+
+        turnOnOff() {
+            this.ma = this.ma === false;
+        }
+    }
+
+    let remote = new Remote(false);
+    let sony = new Tivi(false, 1, 97, remote);
+
+    function doiKenh(kenh) {
+        remote.remoteSwitchKenh(kenh);
+        sony.hienThiKenh()
+    }
+
+    function amThanh(am) {
+        remote.remoteVol(am);
+        sony.hienThiVol()
+
+    }
+
+    function onOff() {
+        remote.turnOnOff();
+        sony.hienThiKenh();
+        sony.hienThiVol();
+    }
 </script>
 </body>
 </html>

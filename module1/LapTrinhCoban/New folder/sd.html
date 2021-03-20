@@ -10,22 +10,17 @@
 </div>
 
 <script>
-    let person = {
-        name: ['Bob', 'Smith'],
-        age: 32,
-        gender: 'male',
-        interests: ['music', 'skiing'],
-        bio: function() {
-            alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
-        },
-        greeting: function() {
-            alert('Hi! I\'m ' + this.name[0] + '.');
+    var x = [1,3,5,8];
+
+    for (var i=0; i<x.length; i++)
+    {
+        if(x[i] > 4)
+        {
+            x[i] = 0;
         }
-    };
-    let mname = 'height';
-    let myDataValue = '1.75m';
-    person[mname]= myDataValue;
-    console.log(person.height)
+    }
+
+    console.log(x);;
 
 </script>
 </body>
