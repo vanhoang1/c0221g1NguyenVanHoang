@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển trò chơi cờ ca-ro</title>
+    <style>
+        table,tr,td{
+            border: solid 1px black;
+        }
+        td{
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<p id="oBanCo"></p>
+<script>
+  let  arrBanCo=[];
+  for (let i=0;i<25;i++){
+      arrBanCo[i]=[];
+      for (let j=0;j<25;j++){
+          arrBanCo[i][j]='';
+      }
+  }
+  function displayBanCo(mang){
+      let data='';
+      data+='<table>';
+      for (let i=0;i<20;i++)
+      {
+          data+='<tr>';
+          for (let j=0;j<20;j++){
+              data+='<td>';
+              data+='<p onclick="clickO('+i+','+j+')">'+mang[i][j]+'</p>';
+              data+='</td>'
+          }
+          data+='</tr>'
+      }
+      data+='</table>'
+      document.getElementById('oBanCo').innerHTML=data;
+  }
+  displayBanCo(arrBanCo);
+  class NguoiChoi{
+      constructor(trangThai,dauTich,oChonX,oChonY) {
+          this._trangThai = trangThai;
+          this._dauTich = dauTich;
+          this._oChonX = oChonX;
+          this._oChonY = oChonY;
+      }
+
+      get oChonY() {
+          return this._oChonY;
+      }
+
+      set oChonY(value) {
+          this._oChonY = value;
+      }
+
+      get trangThai() {
+          return this._trangThai;
+      }
+
+      set trangThai(value) {
+          this._trangThai = value;
+      }
+
+      get dauTich() {
+          return this._dauTich;
+      }
+
+      set dauTich(value) {
+          this._dauTich = value;
+      }
+
+      get oChonX() {
+          return this._oChonX;
+      }
+
+      set oChonX(value) {
+          this._oChonX = value;
+      }
+      checkTrangThai(){
+          if(arrBanCo[this.oChonX][this.oChonY]!==''){
+              alert("đã có người tích rồi");
+              this.trangThai= !this.trangThai
+          }
+
+      }
+      tichO(x,y){
+          this.checkTrangThai();
+          if(!this.trangThai){
+              this.oChonX=x;
+              this.oChonY=y;
+              arrBanCo[this.oChonX][this.oChonY]=this.dauTich;
+          }else this.tichO(x,y)
+      }
+      chienThang(){
+
+      }
+  }
+  let nguoiChoi1=new NguoiChoi(true,'X');
+  let nguoiChoi2=new NguoiChoi(false,'O');
+  function choiCo() {
+
+      do {
+          nguoiChoi1.tichO(a,b);
+          nguoiChoi2.tichO(a,b);
+      }while (nguoiChoi1.chienThang()||nguoiChoi2.chienThang())
+
+  }
+  let a=0;
+  let b=0;
+
+choiCo()
+</script>
+</body>
+</html>

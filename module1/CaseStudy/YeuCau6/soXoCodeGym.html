@@ -23,33 +23,191 @@
             margin-right: 20px;
 
         }
+
+        table, tr, td {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
 <h2>Xổ Số CodeGym</h2>
 <div id="oChon">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2"><br>
+    <p id="oNguoiChoi"></p>
 
 </div>
-<div id="bangChonSo" hidden>
-    <p id="bangChon">--</p>
+<div id="bangChonSo">
+    <p id="bangChon" onmouseover="this.hidden=false" onmouseout="this.hidden=true"></p>
 </div>
 <div id="ketQua">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2">
-    <input type="text" required minlength="1" maxlength="2"><br>
-
+    <p id="oketQua"></p><br>
+    <p id="result"></p>
 </div>
 
-<button>Mua vé</button>
-<button>Xem kết quả</button>
+<button onclick="muaVe()">Mua vé</button>
+<button onclick="xemKetQua()">Xem kết quả</button>
 <script>
+    let arrSoXo = [];
+    let arrSoDuocChon = [];
+    let arrKetQua=[];
+    for (let i = 0; i < 10; i++) {
+        arrSoXo[i] = [];
+        for (let j = 0; j < 10; j++) {
+            arrSoXo[i][j] = i * 10 - -j;
+        }
+    }
+
+    class NguoiChoi {
+        constructor(cachChoi, soOChon, oChon) {
+            this._cachChoi = cachChoi;
+            this._soOChon = soOChon;
+            this._oChon = oChon;
+        }
+
+        get oChon() {
+            return this._oChon;
+        }
+
+        set oChon(value) {
+            this._oChon = value;
+        }
+
+        get cachChoi() {
+            return this._cachChoi;
+        }
+
+        set cachChoi(value) {
+            this._cachChoi = value;
+        }
+
+        get soOChon() {
+            return this._soOChon;
+        }
+
+        set soOChon(value) {
+            this._soOChon = value;
+        }
+
+        displayBangSoXo() {
+            let data = '';
+            data += '<table>';
+            for (let i = 0; i < arrSoXo.length; i++) {
+                data += '<tr>';
+                for (let j = 0; j < arrSoXo[i].length; j++) {
+                    data += '<td style="width: 35px;height: 25px" >';
+                    if (arrSoXo[i][j] !== 0) {
+                        data += '<p onclick="chonSo(' + (i * 10 - -j) + ')">' + arrSoXo[i][j] + '</p>';
+                    } else
+                        data += '<p >$</p>';
+                    data += '</td>';
+                }
+                data += '</tr>';
+            }
+            data += '</table>';
+            document.getElementById('bangChon').innerHTML = data;
+            document.getElementById('bangChon').hidden=false;
+        }
+
+        displayOChon() {
+            this.checkCachChoi();
+            let data = '';
+            for (let i = 0; i < this.soOChon; i++) {
+                data += '<input id="oChon' + i + '" type="text" onclick="chonO(' + i + ')" value="' + arrSoDuocChon[i] + '" required minlength="1" maxlength="2">'
+            }
+            console.log(data);
+            document.getElementById("oNguoiChoi").innerHTML = data;
+
+        }
+
+        chonO(oDuocChon) {
+            this.displayBangSoXo();
+            this.oChon = oDuocChon;
+        }
+
+        chonSo(soDuocChon) {
+            if(arrSoDuocChon.indexOf(soDuocChon)<0){
+                arrSoDuocChon[this.oChon] = soDuocChon;
+            }else alert("bạn đã chọn số này rồi");
+
+            this.displayOChon();
+        }
+
+        checkCachChoi() {
+            if (this.cachChoi && this.oChon===true) {
+                for (let i = 0; i < this.soOChon; i++) {
+                    arrSoDuocChon[i] = '';
+                }
+            }
+        }
+        xemKetQua(){
+          for (let i=0;i<this.soOChon;i++){
+              let k=  Math.floor(Math.random() * 99) + 1;
+              if(arrKetQua.indexOf(k)===-1){
+                  arrKetQua.push(k);
+              }else i--
+          }
+          arrKetQua.sort(((a, b) => {return a-b}));
+          this.displayKetQua();
+          arrSoDuocChon.sort(((a, b) => {return a-b}));
+          let result=0;
+          let bangKQ=document.getElementById("result");
+            for (let i=0;i<this.soOChon;i++){
+                if (arrKetQua.indexOf( arrSoDuocChon[i])>0){
+                    result++
+                }
+            }
+            if (result>2){
+                if(result>4){
+                    if (result>5){
+                        bangKQ.innerHTML="giải nhất"
+                    }else {
+                        bangKQ.innerHTML="giải nhì"
+                    }
+                }else {
+                    bangKQ.innerHTML="giải khuyến khích";
+                }
+            }else bangKQ.innerHTML="Chúc bạn may mắn lần sau";
+            bangKQ.hidden=false;
+            arrKetQua=[];
+        }
+        displayKetQua(){
+            let data = '';
+            for(let i=0;i<this.soOChon;i++){
+                data+='<input type="text"  id="oKetQua'+i+'" value="'+arrKetQua[i]+'" disabled>'
+            }
+            document.getElementById("oketQua").innerHTML = data;
+        }
+        muaVe(){
+            this.cachChoi=false;
+            for (let i=0;i<this.soOChon;i++){
+                let k=  Math.floor(Math.random() * 99) + 1;
+                if(arrSoDuocChon.indexOf(k)===-1){
+                    arrSoDuocChon[i]=k;
+                }else i--
+            }
+            arrSoDuocChon.sort(((a, b) => {return a-b}));
+            this.displayOChon()
+
+        }
+
+    }
+
+    let nguoiChoi1 = new NguoiChoi(true,5, true);
+    nguoiChoi1.displayOChon();
+    function chonO(a) {
+        nguoiChoi1.chonO(a)
+    }
+    function chonSo(b) {
+        nguoiChoi1.chonSo(b)
+    }
+    function xemKetQua() {
+        nguoiChoi1.xemKetQua()
+    }
+    function muaVe() {
+        nguoiChoi1.muaVe()
+
+    }
 
 </script>
 </body>

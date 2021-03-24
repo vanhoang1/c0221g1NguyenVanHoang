@@ -8,23 +8,16 @@
 <script>
     let tuSo=[2,3,5,6,7,8,9,3,4,12,3,42];
     let mauSo=[3,4,5,72,3,3,6,4,6,8,3,8];
-    let maxTu=0;minMau=0;
+    let maxi=0;
+    let max=tuSo[0]/mauSo[0];
     for (let i=0;i<tuSo.length;i++){
-        if(maxTu<=tuSo[i]){
-            maxTu=tuSo[i]
+        if(tuSo[i]/mauSo[i]>max){
+           max=tuSo[i]/mauSo[i];
+            maxi=i
         }
     }
-    for (let i=0;i<mauSo.length;i++){
-        if (minMau>0){
-            if (minMau>mauSo[i]){
-                minMau=mauSo[i]
-            }
-        }
-       else {
-           minMau=mauSo[i]
-        }
-    }
-    document.writeln("phân số lớn nhất là :"+maxTu+"/"+minMau+"có chỉ số là :"+maxTu/minMau)
+
+    document.writeln("phân số lớn nhất là :"+tuSo[maxi]+"/"+mauSo[maxi]+"có chỉ số là :"+maxi)
 
 </script>
 </body>

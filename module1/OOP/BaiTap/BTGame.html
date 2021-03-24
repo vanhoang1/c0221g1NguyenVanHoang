@@ -57,30 +57,21 @@
             }
         }
     }
-    function chiNamXe(xe){
-        let a= new Xe();
-        a.viTriX=xe.viTriX;
-        a.viTriY=xe.viTriY;
-        arrXe.push(a);
-        if(arrXe.length>5){
-            arrXe.splice(0,1);
-        }
 
 
-    }
 
     let honda = new Xe(x, y, speed);
     function taoXe() {
         let image = new Image();
         image.src = 'abc.png';
         honda.chayXe();
+        let cvn = document.getElementById("myCanvas").getContext("2d");
         image.onload = function () {
-            let cvn = document.getElementById("myCanvas").getContext("2d");
             cvn.drawImage(image, honda.viTriX, honda.viTriY);
             cvn.fill();
-
         };
-        document.addEventListener('keydown',logKey);
+        cvn.clearRect(0,0,1000,700);
+        document.addEventListener('keyup',logKey);
         function logKey(a) {
             honda.moveXe(a.code)
         }
