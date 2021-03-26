@@ -44,13 +44,13 @@
     <p id="oketQua"></p><br>
     <p id="result"></p>
 </div>
-
-<button onclick="muaVe()">Mua vé</button>
+<button onclick="xoa()" >Xóa Số</button>
+<button onclick="muaVe()">Mua vé Auto</button>
 <button onclick="xemKetQua()">Xem kết quả</button>
 <script>
     let arrSoXo = [];
     let arrSoDuocChon = [];
-    let arrKetQua=[];
+    let arrKetQua = [];
     for (let i = 0; i < 10; i++) {
         arrSoXo[i] = [];
         for (let j = 0; j < 10; j++) {
@@ -59,10 +59,19 @@
     }
 
     class NguoiChoi {
-        constructor(cachChoi, soOChon, oChon) {
+        constructor(cachChoi, soOChon, oChon, soVe) {
             this._cachChoi = cachChoi;
             this._soOChon = soOChon;
             this._oChon = oChon;
+            this._soVe = soVe;
+        }
+
+        get soVe() {
+            return this._soVe;
+        }
+
+        set soVe(value) {
+            this._soVe = value;
         }
 
         get oChon() {
@@ -106,16 +115,20 @@
             }
             data += '</table>';
             document.getElementById('bangChon').innerHTML = data;
-            document.getElementById('bangChon').hidden=false;
+            document.getElementById('bangChon').hidden = false;
         }
 
         displayOChon() {
             this.checkCachChoi();
             let data = '';
-            for (let i = 0; i < this.soOChon; i++) {
-                data += '<input id="oChon' + i + '" type="text" onclick="chonO(' + i + ')" value="' + arrSoDuocChon[i] + '" required minlength="1" maxlength="2">'
+            for (let k = 0; k < this.soVe; k++) {
+                for (let i = 0; i < this.soOChon; i++) {
+                    data += '<input id="oChon' +k+''+i + '" type="text" onclick="chonO(' +k+''+ i + ')" value="' + arrSoDuocChon[k][i] + '" required minlength="1" maxlength="2">'
+                }
+                data += '<br>'
             }
-            console.log(data);
+
+
             document.getElementById("oNguoiChoi").innerHTML = data;
 
         }
@@ -126,86 +139,129 @@
         }
 
         chonSo(soDuocChon) {
-            if(arrSoDuocChon.indexOf(soDuocChon)<0){
-                arrSoDuocChon[this.oChon] = soDuocChon;
-            }else alert("bạn đã chọn số này rồi");
+            if (arrSoDuocChon[parseInt(this.oChon/10)].indexOf(soDuocChon) < 0) {
+                arrSoDuocChon[parseInt(this.oChon/10)][this.oChon%10] = soDuocChon;
+
+            } else alert("bạn đã chọn số này rồi");
 
             this.displayOChon();
         }
 
         checkCachChoi() {
-            if (this.cachChoi && this.oChon===true) {
-                for (let i = 0; i < this.soOChon; i++) {
-                    arrSoDuocChon[i] = '';
-                }
-            }
-        }
-        xemKetQua(){
-          for (let i=0;i<this.soOChon;i++){
-              let k=  Math.floor(Math.random() * 99) + 1;
-              if(arrKetQua.indexOf(k)===-1){
-                  arrKetQua.push(k);
-              }else i--
-          }
-          arrKetQua.sort(((a, b) => {return a-b}));
-          this.displayKetQua();
-          arrSoDuocChon.sort(((a, b) => {return a-b}));
-          let result=0;
-          let bangKQ=document.getElementById("result");
-            for (let i=0;i<this.soOChon;i++){
-                if (arrKetQua.indexOf( arrSoDuocChon[i])>0){
-                    result++
-                }
-            }
-            if (result>2){
-                if(result>4){
-                    if (result>5){
-                        bangKQ.innerHTML="giải nhất"
-                    }else {
-                        bangKQ.innerHTML="giải nhì"
+            if (this.cachChoi && this.oChon === true) {
+                for (let k = 0; k < this.soVe; k++) {
+                    arrSoDuocChon[k]=[];
+                    for (let i = 0; i < this.soOChon; i++) {
+                        arrSoDuocChon[k][i] = '';
                     }
-                }else {
-                    bangKQ.innerHTML="giải khuyến khích";
                 }
-            }else bangKQ.innerHTML="Chúc bạn may mắn lần sau";
-            bangKQ.hidden=false;
-            arrKetQua=[];
+
+            }
         }
-        displayKetQua(){
+
+        xemKetQua() {
+            for (let i = 0; i < this.soOChon; i++) {
+                let k = Math.floor(Math.random() * 99) + 1;
+                if (arrKetQua.indexOf(k) === -1) {
+                    arrKetQua.push(k);
+                } else i--
+            }
+            arrKetQua.sort(((a, b) => {
+                return a - b
+            }));
+            this.displayKetQua();
+            for (let k = 0; k < this.soVe; k++) {
+                arrSoDuocChon[k].sort(((a, b) => {
+                    return a - b
+                }));
+            }
+
+
+            let bangKQ = document.getElementById("result");
+            bangKQ.innerHTML="";
+            for (let k=0;k<this.soVe;k++){
+                let result = 0;
+                for (let i = 0; i < this.soOChon; i++) {
+                    if (arrKetQua.indexOf(arrSoDuocChon[i]) > 0) {
+                        result++
+                    }
+
+                }
+                if (result > 2) {
+                    if (result > 4) {
+                        if (result > 5) {
+                            bangKQ.innerHTML += "giải nhất"
+                        } else {
+                            bangKQ.innerHTML += "giải nhì"
+                        }
+                    } else {
+                        bangKQ.innerHTML += "giải khuyến khích";
+                    }
+                } else bangKQ.innerHTML += "Chúc bạn may mắn lần sau";
+                bangKQ.hidden = false;
+            }
+
+
+            arrKetQua = [];
+        }
+
+        displayKetQua() {
             let data = '';
-            for(let i=0;i<this.soOChon;i++){
-                data+='<input type="text"  id="oKetQua'+i+'" value="'+arrKetQua[i]+'" disabled>'
+            for (let i = 0; i < this.soOChon; i++) {
+                data += '<input type="text"  id="oKetQua' + i + '" value="' + arrKetQua[i] + '" disabled>'
             }
             document.getElementById("oketQua").innerHTML = data;
         }
-        muaVe(){
-            this.cachChoi=false;
-            for (let i=0;i<this.soOChon;i++){
-                let k=  Math.floor(Math.random() * 99) + 1;
-                if(arrSoDuocChon.indexOf(k)===-1){
-                    arrSoDuocChon[i]=k;
-                }else i--
+
+        muaVe() {
+            this.cachChoi = false;
+            for (let j = 0; j < this.soVe; j++) {
+                arrSoDuocChon[j]=[];
+                for (let i = 0; i < this.soOChon; i++) {
+                    let k = Math.floor(Math.random() * 99) + 1;
+                    if (arrSoDuocChon[j].indexOf(k) === -1) {
+                        arrSoDuocChon[j][i] = k;
+                    } else i--
+                }
+                arrSoDuocChon[j].sort(((a, b) => {
+                    return a - b
+                }));
             }
-            arrSoDuocChon.sort(((a, b) => {return a-b}));
+
             this.displayOChon()
 
         }
 
     }
-
-    let nguoiChoi1 = new NguoiChoi(true,5, true);
+    // let nhap = parseInt( prompt("nhập số lượng vé"));
+    // let chon=confirm("chọn cách chơi");
+    let nguoiChoi1 = new NguoiChoi(true, 7, true, 5);
+    // if(!chon){
+    //     nguoiChoi1.muaVe();
+    // }
     nguoiChoi1.displayOChon();
+
     function chonO(a) {
         nguoiChoi1.chonO(a)
     }
+
     function chonSo(b) {
         nguoiChoi1.chonSo(b)
     }
+
     function xemKetQua() {
         nguoiChoi1.xemKetQua()
     }
+
     function muaVe() {
         nguoiChoi1.muaVe()
+
+    }
+    function xoa() {
+        nguoiChoi1.cachChoi=true;
+        arrSoDuocChon=[];
+        arrKetQua=[];
+        nguoiChoi1.displayOChon();
 
     }
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <style>
+        .menu{
+            width: 600px;
+            background-color: #6d87cd;
+            margin: auto;
+        }
+        table,th{
+            width: 100%;
+            height: 100%;
+           font-size: 40px;
+            border: 1px solid black;
+        }
+        tr,td{
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+
+        }
+        html {
+            height:100%;
+        }
+
+        body {
+            margin:0;
+        }
+
+        .bg {
+            animation:slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+            bottom:0;
+            left:-50%;
+            opacity:.5;
+            position:fixed;
+            right:-50%;
+            top:0;
+            z-index:-1;
+        }
+
+        .bg2 {
+            animation-direction:alternate-reverse;
+            animation-duration:4s;
+        }
+
+        .bg3 {
+            animation-duration:5s;
+        }
+
+        .content {
+            background-color:rgba(255,255,255,.8);
+            border-radius:.25em;
+            box-shadow:0 0 .25em rgba(0,0,0,.25);
+            box-sizing:border-box;
+            left:50%;
+            padding:10vmin;
+            position:fixed;
+            text-align:center;
+            top:50%;
+            transform:translate(-50%, -50%);
+        }
+
+        h1 {
+            font-family:monospace;
+        }
+
+        @keyframes slide {
+            0% {
+                transform:translateX(-25%);
+            }
+            100% {
+                transform:translateX(25%);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <div class="menu">
+        <p id="menu"></p>
+    </div>
+</div>
+
+<script>
+    let arrMenu='Cafe  Cam vắt  Nước ép cà rốt  Nước ép cà chua  Nước lọc  Nước dừa'.split('  ');
+    let data='';
+    data+='<table>\n' +
+        '        <tr>\n' +
+        '            <th>\n' +
+        '                Tên món ăn\n' +
+        '            </th>\n' +
+        '        </tr>\n'
+    for (let i=0;i<arrMenu.length;i++){
+        data+=' <tr>\n' +
+            '           <td>\n' +
+            '               <p >'+arrMenu[i]+'</p>\n' +
+            '           </td>\n' +
+            '        </tr>'
+    }
+    data+='</table>';
+    document.getElementById('menu').innerHTML=data
+</script>
+</body>
+</html>
