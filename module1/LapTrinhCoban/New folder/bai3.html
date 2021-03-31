@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let n = prompt("nhập độ dài của mảng");
+    for (let i=0;i<n;i++) {
+        let nhap = prompt("nhập vào số nguyên");
+        if (parseInt(nhap) - nhap !==0) {
+            alert("bạn phải nhập số nguyên ");
+            i--;
+            continue
+        }
+        arr.push(nhap);
+    }
+  soNguyenTo(arr);
+    function soNguyenTo(mang) {
+        let arr2=[];
+        for(let i=0;i<mang.length;i++){
+            let kiemTra=true;
+            if(mang[i]<2){
+                kiemTra=false
+            }else {
+                for (let j=2; j<mang[i];j++){
+                    if(mang[i]%j===0)
+                    {
+                        kiemTra=false;
+                        break
+                    }
+                }
+            }
+             if(kiemTra){
+                     arr2.push(mang[i])
+             }
+        }
+        return alert('các số nguyên tố là:'+ arr2.sort((a,b)=>{return a-b}))
+
+    }
+
+</script>
+</body>
+</html>

@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bai1</title>
 </head>
 <body>
-<div id="">
-    <p id="menu"></p>
-</div>
+
 
 <script>
-
-
-
+    let a='qw';
+    let b='qw';
+    let c=6;
+   alert( appendAndDelete(a,b,c));
+    function appendAndDelete(s, t, k) {
+        let m='Yes';
+        for(let i=0;i<s.length-k;i++){
+            if(s[i]!==t[i]){
+                m='No';
+                break;
+            }
+        }
+        return m
+    }
 
 
 

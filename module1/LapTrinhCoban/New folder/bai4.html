@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<button onclick="themDienThoai()">Thêm điện thoại</button>
+<p id="hienThi"></p>
+<script>
+
+    class DienThoai {
+        constructor(ma, ten, hang, gia) {
+            this.ma = ma;
+            this.ten = ten;
+            this.hang = hang;
+            this.gia = gia;
+        }
+
+        getMa() {
+            return this.ma;
+        }
+
+        setMa(value) {
+            this.ma = value;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        setHang(value) {
+            this.hang = value;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setGia(value) {
+            this.gia = value;
+        }
+        soSanh(dienThoai){
+            return this.getTen() > dienThoai.getTen();
+        }
+
+        toString() {
+            return '\n Mã điện thoại :' + this.getMa() + '\n Tên :' + this.getTen() + '\n Hãng:' + this.getHang() + '\n Giá:' + this.getGia()
+        }
+    }
+
+    let dt1 = new DienThoai('1', 'Nokia n1234', 'Nokia', 200000);
+    let dt2 = new DienThoai('2', 'Oppo n1234', 'Oppo', 400000);
+    let dt3 = new DienThoai('2', 'Apple n1234', 'Aple', 400000);
+    let arr = [dt1,dt2,dt3];
+    displayHienThi(arr);
+
+    function displayHienThi(mang) {
+        let data = '';
+        data += '<table>\n' +
+            '    <tr>' +
+            '    <th>' +
+            '        Mã điện thoại' +
+            '    </th>' +
+            '    <th>' +
+            '     <p onclick="sapXepTen()">Tên</p>   ' +
+            '    </th>' +
+            '    <th>' +
+            '        Hãng Điện Thoại' +
+            '    </th>' +
+            '    <th>' +
+            '        Giá' +
+            '    </th>' +
+            '    </tr>' ;
+
+        for (let i = 0; i < mang.length; i++) {
+            data += '    <tr>' +
+                '        <td>' +
+                mang[i].getMa() +
+                '        </td>' +
+                '        <td>' +
+                mang[i].getTen() +
+                '        </td>' +
+                '        <td>' +
+                mang[i].getHang() +
+                '        </td>' +
+                '        <td>' +
+                mang[i].getGia() +
+                '        </td>' +
+
+                '        </tr>'
+
+        }
+        data+= '</table>';
+        document.getElementById('hienThi').innerHTML = data;
+    }
+
+    function themDienThoai() {
+        let ma = prompt('Nhập vào mã điện thoại:');
+        let ten = prompt('Nhập vào tên điện thoại:');
+        let hang = prompt('Nhập vào hãng điện thoại:');
+        let gia = prompt('Nhập vào giá điện thoại:');
+        let dienThoaiMoi = new DienThoai(ma, ten, hang, gia);
+        arr.push(dienThoaiMoi);
+        alert("bạn vừa thêm điện thoại"+dienThoaiMoi.toString());
+        displayHienThi(arr);
+    }
+    let arrSX=[];
+    let arr2=[];
+    function sapXepTen() {
+        for (let i=0;i<arr.length;i++){
+           arrSX.push(arr[i].getTen())
+            }
+
+        arrSX.sort();
+        for (let i=0;i<arrSX.length;i++){
+            for (let j=0;j<arr.length;j++){
+                if(arr[j].getTen()===arrSX[i]){
+                    arr2.push(arr[j]);
+                }
+            }
+
+        }
+        displayHienThi(arr2);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let nhap=prompt("nhập vào 1 chuỗi:");
+    let thuong=nhap.toLowerCase();
+    let dem=0;
+    for (let i=0;i<nhap.length;i++){
+        if(nhap[i]!==thuong[i]){
+            dem++;
+        }
+    }
+   if(dem>0){
+       alert(dem);
+   }else alert("The String is not contain char");
+</script>
+</body>
+</html>

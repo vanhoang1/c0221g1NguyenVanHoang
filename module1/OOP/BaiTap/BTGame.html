@@ -7,17 +7,26 @@
 <body>
 <canvas id="myCanvas" width="1000px" height="700px" style="border:1px solid #d3d3d3;"></canvas>
 <script>
-    let arrXe=[];
-    let x=450;
-    let y=550;
-    let speed=5;
+
+    let x = 450;
+    let y = 550;
+    let speed = 5;
+
     class Xe {
-        constructor(viTriX, viTriY, tocDo,) {
+        constructor(viTriX, viTriY, speed) {
             this._viTriX = viTriX;
             this._viTriY = viTriY;
-            this._tocDo = tocDo;
+            this._speed = speed;
         }
 
+
+        get speed() {
+            return this._speed;
+        }
+
+        set speed(value) {
+            this._speed = value;
+        }
 
         get viTriX() {
             return this._viTriX;
@@ -35,51 +44,131 @@
             this._viTriY = value;
         }
 
-        get tocDo() {
-            return this._tocDo;
+        chayXe() {
+            this.viTriY -= this.speed;
         }
 
-        set tocDo(value) {
-            this._tocDo = value;
-        }
-        chayXe(){
-            this.viTriY-=this.tocDo;
-        }
         moveXe(huong) {
             switch (huong) {
                 case 'ArrowLeft':
-                    this.viTriX -= this.tocDo;
+                    this.viTriX -= this.speed;
                     break;
                 case 'ArrowRight':
-                    this.viTriX += this.tocDo;
+                    this.viTriX += this.speed;
                     break;
-
+                case 'ArrowUp':
+                    this.viTriY += this.speed;
+                    break;
+                case 'ArrowDown':
+                    this.viTriY += this.speed;
+                    break;
+                case 'ControlLeft':
+                    this.speed += 20;
+                    break;
+                default:
+                    break;
             }
         }
     }
 
+    class Vat {
+        constructor(viTriX, viTriY, speed) {
+            this._viTriX = viTriX;
+            this._viTriY = viTriY;
+            this._speed = speed;
 
+        }
 
+        get viTriX() {
+            return this._viTriX;
+        }
+
+        set viTriX(value) {
+            this._viTriX = value;
+        }
+
+        get viTriY() {
+            return this._viTriY;
+        }
+
+        set viTriY(value) {
+            this._viTriY = value;
+        }
+
+        get speed() {
+            return this._speed;
+        }
+
+        set speed(value) {
+            this._speed = value;
+        }
+
+        move(xe) {
+            if (this.viTriX + 40 >= xe.viTriX && xe.viTriX <= this.viTriX - 40 && this.viTriY + 40 >= xe.viTriY && xe.viTriY <= this.viTriY - 40) {
+                this.speed = 0;
+                xe.speed = 0;
+            }
+            if (this.viTriX > 950 || this.viTriX < 0) {
+                this.speed = -this.speed;
+            }
+            this.viTriX += this.speed;
+        }
+    }
+
+    let vat1 = new Vat(0, 50, 50);
+    let vat2 = new Vat(0, 200, 30);
+    let vat3 = new Vat(0, 400, 40);
     let honda = new Xe(x, y, speed);
+    document.addEventListener('keyup', logKey);
+
+    function logKey(a) {
+        honda.moveXe(a.code);
+        console.log(a.code);
+    }
+
     function taoXe() {
         let image = new Image();
         image.src = 'abc.png';
-        honda.chayXe();
         let cvn = document.getElementById("myCanvas").getContext("2d");
         image.onload = function () {
+            cvn.beginPath();
             cvn.drawImage(image, honda.viTriX, honda.viTriY);
             cvn.fill();
         };
-        cvn.clearRect(0,0,1000,700);
-        document.addEventListener('keyup',logKey);
-        function logKey(a) {
-            honda.moveXe(a.code)
-        }
-        console.log(honda.viTriX);
+
+        let vat = new Image();
+        vat.src = 'rsz_b.png';
+        vat.onload = function () {
+            cvn.beginPath();
+            cvn.drawImage(vat, vat1.viTriX, vat1.viTriY);
+            cvn.fill();
+        };
+        let c2 = new Image();
+        c2.src = 'rsz_b.png';
+        c2.onload = function () {
+            cvn.beginPath();
+            cvn.drawImage(c2, vat2.viTriX, vat2.viTriY);
+            cvn.fill();
+        };
+        let c3 = new Image();
+        c3.src = 'rsz_b.png';
+        c3.onload = function () {
+            cvn.beginPath();
+            cvn.drawImage(c3, vat3.viTriX, vat3.viTriY);
+            cvn.fill();
+        };
+        vat2.move(honda);
+        vat3.move(honda);
+        vat1.move(honda);
+        cvn.clearRect(0, 0, 1000, 700);
+        honda.chayXe();
 
     }
 
-    window.setInterval(function () { taoXe()},300)
+    window.setInterval(function () {
+        taoXe()
+    }, 300);
+
 
 </script>
 </body>
