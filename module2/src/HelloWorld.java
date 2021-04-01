@@ -1,12 +1,10 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        int[] a = {50, 100};
-        m(a);
-        System.out.println(a[0]);
-    }
+    String a="abc";
+    String b="abc";
+    b="123";
+        System.out.println(a);
 
-    static void m(int[] x) {
-        x[0] = 200;
     }
 
 }
