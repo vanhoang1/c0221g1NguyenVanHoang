@@ -20,12 +20,12 @@ public class StopWatch {
     }
     public void start(){
         Date i= new Date();
-        this.endTime =i.getTime();
+        this.startTime =i.getTime();
     }
 
     public void stop() {
         Date i= new Date();
-        this.startTime =i.getTime();
+        this.endTime =i.getTime();
     }
     public long getElapsedTime(){
         return  this.endTime-this.startTime;
