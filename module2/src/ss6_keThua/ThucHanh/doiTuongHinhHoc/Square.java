@@ -1,6 +1,8 @@
 package ss6_keThua.ThucHanh.doiTuongHinhHoc;
 
-public class Square extends Rectangle {
+import ss7_abstractClass.BaiTap.interfaceResizeable.Colorable;
+
+public class Square extends Rectangle implements Colorable {
     public Square() {
     }
 
@@ -32,10 +34,21 @@ public class Square extends Rectangle {
     }
 
     @Override
+    public void resize(double percent) {
+        setSide(getSide()+getSide()*percent);
+    }
+
+
+    @Override
     public String toString() {
         return "A Square with side="
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides");
     }
 }

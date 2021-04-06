@@ -1,6 +1,8 @@
 package ss6_keThua.ThucHanh.doiTuongHinhHoc;
 
-public class Circle extends Shape {
+import ss7_abstractClass.BaiTap.interfaceResizeable.Resizeable;
+
+public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;
 
     public Circle() {
@@ -24,18 +26,30 @@ public class Circle extends Shape {
     }
 
     public double getArea() {
-        return radius * radius * Math.PI;
+        return Math.round( radius * radius * Math.PI);
     }
 
     public double getPerimeter() {
-        return 2 * radius * Math.PI;
+        return  Math.round(2 * radius * Math.PI);
     }
 
     @Override
     public String toString() {
         return "A Circle with radius="
                 + getRadius()
-                + ", which is a subclass of "
+                +'\n'
+                +"Area : "
+                +getArea()
+                +'\n'
+                +"Perimeter :"
+                +getPerimeter()
+                +'\n'
+                + "which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setRadius(getRadius() +getRadius()*percent);
     }
 }

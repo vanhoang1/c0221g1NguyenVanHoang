@@ -1,10 +1,6 @@
-public class HelloWorld {
-    public static void main(String[] args) {
-    String a="abc";
-    String b="abc";
-    b="123";
-        System.out.println(a);
+import java.util.Date;
+import java.util.Scanner;
 
-    }
-
+public class HelloWorld <Integer> {
+        Integer o
 }

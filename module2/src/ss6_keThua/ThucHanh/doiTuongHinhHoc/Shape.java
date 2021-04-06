@@ -1,6 +1,9 @@
 package ss6_keThua.ThucHanh.doiTuongHinhHoc;
 
-public class Shape {
+
+import ss7_abstractClass.BaiTap.interfaceResizeable.Resizeable;
+
+public class Shape implements Resizeable {
     private String color = "green";
     private boolean filled = true;
 
@@ -28,11 +31,22 @@ public class Shape {
         this.filled = filled;
     }
 
+
     @Override
     public String toString() {
         return "A Shape with color of "
                 + getColor()
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
+    }
+
+    @Override
+    public void resize(double percent) {
+
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }
