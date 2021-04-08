@@ -1,8 +1,7 @@
 package ss6_keThua.ThucHanh.doiTuongHinhHoc;
 
-import ss7_abstractClass.BaiTap.interfaceResizeable.Resizeable;
 
-public class Circle extends Shape implements Resizeable {
+public class Circle extends Shape  {
     private double radius = 1.0;
 
     public Circle() {

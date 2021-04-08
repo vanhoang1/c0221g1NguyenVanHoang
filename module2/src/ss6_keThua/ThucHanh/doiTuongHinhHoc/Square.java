@@ -4,6 +4,7 @@ import ss7_abstractClass.BaiTap.interfaceResizeable.Colorable;
 
 public class Square extends Rectangle implements Colorable {
     public Square() {
+        super();
     }
 
     public Square(double side) {
@@ -19,21 +20,21 @@ public class Square extends Rectangle implements Colorable {
     }
 
     public void setSide(double side) {
-        setWidth(side);
-        setLength(side);
+        super.setWidth(side);
+        super.setLength(side);
     }
 
-    @Override
+
     public void setWidth(double width) {
         setSide(width);
     }
 
-    @Override
+
     public void setLength(double length) {
         setSide(length);
     }
 
-    @Override
+
     public void resize(double percent) {
         setSide(getSide()+getSide()*percent);
     }

@@ -45,7 +45,7 @@ public class Shape implements Resizeable {
 
     }
 
-    @Override
+
     public double getArea() {
         return 0;
     }
