@@ -5,5 +5,6 @@ public class RunBiari {
         StackNhiPhan stackNhiPhan =new StackNhiPhan();
         stackNhiPhan.BiariNum(71);
         stackNhiPhan.prinfBiari();
+
     }
 }

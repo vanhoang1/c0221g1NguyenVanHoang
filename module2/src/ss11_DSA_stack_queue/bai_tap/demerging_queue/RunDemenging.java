@@ -13,6 +13,7 @@ public class RunDemenging {
                 {"nu","4/4"},
                 {"nam","5/5"},
         };
+
         Queue<String[]> nu= new LinkedList<>();
         Queue<String[]> nam= new LinkedList<>();
         for (String[] x :

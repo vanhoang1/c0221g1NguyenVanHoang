@@ -24,6 +24,7 @@ public class StackNhiPhan {
                 num = num/2;
             }
         }
+
         public void prinfBiari(){
             String data="";
             for (int i=index-1;i>=0;i--){
@@ -31,5 +32,7 @@ public class StackNhiPhan {
             }
             System.out.println(data);
         }
+    public  void  BiariNum(double num){
 
+    }
 }

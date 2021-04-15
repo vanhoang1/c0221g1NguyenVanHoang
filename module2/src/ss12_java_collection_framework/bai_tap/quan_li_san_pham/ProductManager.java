@@ -4,6 +4,7 @@ import java.util.*;
 
 public class ProductManager  {
     ArrayList<Product> arrProduct=new ArrayList<Product>();
+
     Scanner scanner= new Scanner(System.in);
     public ProductManager() {
     }
