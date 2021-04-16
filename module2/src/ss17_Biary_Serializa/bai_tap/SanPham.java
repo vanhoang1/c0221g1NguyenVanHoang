@@ -16,6 +16,15 @@ public class SanPham {
         this.gia = gia;
     }
 
+    public SanPham(String splitDatum, String splitDatum1, String splitDatum2, String splitDatum3) {
+        setMaSanPham(Integer.parseInt(splitDatum));
+        setTanSanPham(splitDatum1);
+        setHangSanPham(splitDatum2);
+        setGia(Double.parseDouble(splitDatum3));
+    }
+
+
+
     public int getMaSanPham() {
         return maSanPham;
     }
@@ -50,11 +59,10 @@ public class SanPham {
 
     @Override
     public String toString() {
-        return "SanPham{" +
-                "maSanPham=" + maSanPham +
-                ", tanSanPham='" + tanSanPham + '\'' +
-                ", hangSanPham='" + hangSanPham + '\'' +
-                ", gia=" + gia +
-                '}'+"\n";
+        return
+                 maSanPham +
+                "," + tanSanPham +
+                "," + hangSanPham +
+                "," + gia ;
     }
 }

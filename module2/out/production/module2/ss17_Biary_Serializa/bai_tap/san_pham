@@ -1,1 +1,3 @@
-SanPham{maSanPham=1, tanSanPham='abc', hangSanPham='gg', gia=2333.0}SanPham{maSanPham=2, tanSanPham='abc', hangSanPham='gg', gia=2333.0}SanPham{maSanPham=3, tanSanPham='abc', hangSanPham='gg', gia=2333.0}
+1,abc,gg,2333.0,
+2,abc,gg,2333.0,
+3,abc,gg,2333.0,
