@@ -1,11 +1,14 @@
 package Case_Study.models;
 
 public class Room extends Services {
-    private  String freeService;
+    private String freeService;
 
+    public Room(String freeService) {
+        this.freeService = freeService;
+    }
 
-    public Room( Integer id, String freeService) {
-        super(id);
+    public Room(String id, String serviceName, Double areaOfUse, Integer rentalCosts, Integer maxNumOfPeople, String rentType, String freeService) {
+        super(id, serviceName, areaOfUse, rentalCosts, maxNumOfPeople, rentType);
         this.freeService = freeService;
     }
 
@@ -19,15 +22,25 @@ public class Room extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println( "Room{" +
-                ", id=" + id + '\'' +
-                "freeService='" + freeService +
+        System.out.println("Room{" +
+                "freeService='" + freeService + '\'' +
+                ", id=" + id +
+                ", serviceName='" + serviceName + '\'' +
+                ", areaOfUse=" + areaOfUse +
+                ", rentalCosts=" + rentalCosts +
+                ", MaxNumOfPeople=" + MaxNumOfPeople +
+                ", rentType='" + rentType + '\'' +
                 '}');
     }
 
     @Override
     public String toString() {
         return id +
-                "," + freeService ;
+                "," + serviceName +
+                "," + areaOfUse +
+                "," + rentalCosts +
+                "," + MaxNumOfPeople +
+                "," + rentType +
+                "," + freeService;
     }
 }

@@ -7,6 +7,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public abstract class PushPullVHR<K> {
+    String id;
+    String serviceName ;
+    Double areaOfUse;
+    Integer rentalCosts ;
+    Integer MaxNumOfPeople;
+    String rentType ;
     protected   int num=0;
     protected ArrayList<K> K;
     protected   ArrayList<K> clone;
@@ -19,18 +25,26 @@ public abstract class PushPullVHR<K> {
         K.add(conver(arrayList));
         ReadWrite<K> readWrite= new ReadWrite<>();
         readWrite.write(K,path);
-        moveClone();
+
     }
     public K conver(ArrayList<String> arrayList){
+        this. id = arrayList.get(0);
+        this.serviceName = arrayList.get(1);
+        this.areaOfUse = Double.parseDouble(arrayList.get(2));
+        this.rentalCosts = Integer.parseInt(arrayList.get(3));
+        this. MaxNumOfPeople = Integer.parseInt(arrayList.get(4));
+        this. rentType = arrayList.get(5);
         return null;
     }
     public  void pull(ArrayList<ArrayList<String>> arrayList){
+        ArrayList<K> newA =  new ArrayList<>();
         for (  ArrayList<String>  x:
                 arrayList
         ) {
-            clone.add(conver(x));
+
+            newA.add(conver(x));
         }
-        System.out.println(Arrays.toString(clone.toArray()));
+        clone=newA;
     }
     public  void moveClone(){
         ReadWrite<String> readWrite= new ReadWrite<>();

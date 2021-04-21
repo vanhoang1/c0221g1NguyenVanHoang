@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/MainController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/ValidateInput.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/dataOfFurama/Houses.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/dataOfFurama/ReadWrite.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/dataOfFurama/ReadWrite.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/exception/BirthdayException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/exception/EmailException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/exception/IdCardException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Case_Study/controllers/exception/NameException.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/ss17_Biary_Serializa/bai_tap/san_pham" charset="ISO-8859-1" />
-    <file url="PROJECT" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ss18_Threading/thuc_hanh/Racing_Cars/Car.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ss19_String_vs_regex/bai_tap/name_class/NameClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ss19_String_vs_regex/thuc_hanh/account/AccountExample.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ss19_String_vs_regex/thuc_hanh/crawl_danh_sach_bai_hat/CrawlSongExample.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -4,9 +4,6 @@ public abstract  class Vip extends Services {
     protected String roomStandard;
     protected   String comfortDescription;
     protected   Integer numFloors;
-    public Vip(Integer id) {
-        super(id);
-    }
 
     public String getRoomStandard() {
         return roomStandard;
@@ -32,8 +29,11 @@ public abstract  class Vip extends Services {
         this.numFloors = numFloors;
     }
 
-    public Vip(Integer id, String roomStandard, String comfortDescription, Integer numFloors) {
-        super(id);
+    public Vip() {
+    }
+
+    public Vip(String id, String serviceName, Double areaOfUse, Integer rentalCosts, Integer maxNumOfPeople, String rentType, String roomStandard, String comfortDescription, Integer numFloors) {
+        super(id, serviceName, areaOfUse, rentalCosts, maxNumOfPeople, rentType);
         this.roomStandard = roomStandard;
         this.comfortDescription = comfortDescription;
         this.numFloors = numFloors;

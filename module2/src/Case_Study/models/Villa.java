@@ -1,15 +1,14 @@
 package Case_Study.models;
 
-public  class Villa extends Vip {
+public class Villa extends Vip {
 
     protected Double poolArea;
 
-    public Villa(Integer id, Double poolArea) {
-        super(id);
-        this.poolArea = poolArea;
+    public Villa() {
     }
-    public Villa(Integer id, String roomStandard, String comfortDescription, Integer numFloors, Double poolArea) {
-        super(id, roomStandard, comfortDescription, numFloors);
+
+    public Villa(String id, String serviceName, Double areaOfUse, Integer rentalCosts, Integer maxNumOfPeople, String rentType, String roomStandard, String comfortDescription, Integer numFloors, Double poolArea) {
+        super(id, serviceName, areaOfUse, rentalCosts, maxNumOfPeople, rentType, roomStandard, comfortDescription, numFloors);
         this.poolArea = poolArea;
     }
 
@@ -47,21 +46,34 @@ public  class Villa extends Vip {
 
     @Override
     public void showInfor() {
-        System.out.println( "Villa{" +
-                ", id=" + id + '\'' +
-                "roomStandard='" + roomStandard + '\'' +
+        System.out.println("Villa{" +
+                "poolArea=" + poolArea +
+                ", roomStandard='" + roomStandard + '\'' +
                 ", comfortDescription='" + comfortDescription + '\'' +
-                ", poolArea=" + poolArea  + '\'' +
                 ", numFloors=" + numFloors +
+                ", id=" + id +
+                ", serviceName='" + serviceName + '\'' +
+                ", areaOfUse=" + areaOfUse +
+                ", rentalCosts=" + rentalCosts +
+                ", MaxNumOfPeople=" + MaxNumOfPeople +
+                ", rentType='" + rentType + '\'' +
                 '}');
     }
 
     @Override
     public String toString() {
-        return   id +
+        return id +
+                "," + serviceName +
+                "," + areaOfUse +
+                "," + rentalCosts +
+                "," + MaxNumOfPeople +
+                "," + rentType +
                 "," + roomStandard +
                 "," + comfortDescription +
                 "," + numFloors +
-                "," + poolArea;
+                "," + poolArea
+                ;
     }
+
+
 }

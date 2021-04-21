@@ -34,6 +34,7 @@ class ReadWrite<E> {
             ) {
                 k.append(String.valueOf(x));
                 k.append(DAUPHAI);
+                k.append(XUONGDONG);
             }
 
 

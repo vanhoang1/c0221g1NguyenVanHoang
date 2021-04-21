@@ -14,12 +14,19 @@ public class Villas extends PushPullVHR<Villa> {
 
     @Override
     public Villa conver(ArrayList<String> arrayList){
-        Integer id= Integer.parseInt(arrayList.get(0));
-        String roomStandard=arrayList.get(1);
-        String comfortDescription=arrayList.get(2);
-        Integer numFloors= Integer.parseInt( arrayList.get(3));
-        Double poolArea=Double.parseDouble(arrayList.get(4));
-        return new Villa(id,roomStandard,comfortDescription,numFloors,poolArea);
+        super.conver(arrayList);
+        String roomStandard=arrayList.get(6);
+        String comfortDescription=arrayList.get(7);
+        Integer numFloors= Integer.parseInt( arrayList.get(8));
+        Double poolArea=Double.parseDouble(arrayList.get(9));
+        return new Villa(id,serviceName,areaOfUse,rentalCosts,MaxNumOfPeople,rentType,roomStandard,comfortDescription,numFloors,poolArea);
+    }
+    public void showVilas(){
+        moveClone();
+        for (Villa x :
+                this.clone) {
+            x.showInfor();
+        }
     }
 
 }

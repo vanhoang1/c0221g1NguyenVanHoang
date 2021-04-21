@@ -13,10 +13,18 @@ public class Houses extends PushPullVHR<House> {
     }
    @Override
     public  House conver(ArrayList<String> arrayList){
-        Integer id= Integer.parseInt(arrayList.get(0));
-        String roomStandard=arrayList.get(1);
-        String comfortDescription=arrayList.get(2);
-        Integer numFloors= Integer.parseInt( arrayList.get(3));
-        return  new House(id,roomStandard,comfortDescription,numFloors);
+         super.conver(arrayList);
+       String roomStandard=arrayList.get(6);
+       String comfortDescription=arrayList.get(7);
+       Integer numFloors= Integer.parseInt( arrayList.get(8));
+        return  new House(id,serviceName,areaOfUse,rentalCosts,MaxNumOfPeople,rentType,roomStandard,comfortDescription,numFloors);
     }
+    public void showHouses(){
+        moveClone();
+        for (House x :
+                this.clone) {
+            x.showInfor();
+        }
+    }
+
 }

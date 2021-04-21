@@ -45,6 +45,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\Case_Study\controllers\exception\userException.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\controllers\userException.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\models\Customer.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\Case_Study\models\House.java">
           <value>
             <Attribute>
@@ -74,6 +95,13 @@
           </value>
         </entry>
         <entry key="\src\Case_Study\models\Vip.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\HelloWorld.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -112,6 +140,83 @@
           <value>
             <Attribute>
               <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss18_Threading\bai_tap\in_10_so\Main.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss18_Threading\bai_tap\in_10_so\NumberGenerator.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss18_Threading\thuc_hanh\Racing_Cars\Main.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\bai_tap\SDT\InputPhoneNumber.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\bai_tap\crawl_tin_tuc\CrawlNew.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\bai_tap\name_class\NameClass.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\thuc_hanh\account\AccountExample.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\thuc_hanh\account\AccountExampleTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\thuc_hanh\crawl_danh_sach_bai_hat\CrawlSongExample.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\thuc_hanh\email\EmailExample.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ss19_String_vs_regex\thuc_hanh\email\EmailExampleTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
             </Attribute>
           </value>
         </entry>

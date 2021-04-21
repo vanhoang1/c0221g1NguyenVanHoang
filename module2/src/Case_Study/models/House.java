@@ -1,14 +1,11 @@
 package Case_Study.models;
 
 public class House extends Vip {
-
-
-    public House(Integer id) {
-        super(id);
+    public House() {
     }
 
-    public House(Integer id, String roomStandard, String comfortDescription, Integer numFloors) {
-        super(id, roomStandard, comfortDescription, numFloors);
+    public House(String id, String serviceName, Double areaOfUse, Integer rentalCosts, Integer maxNumOfPeople, String rentType, String roomStandard, String comfortDescription, Integer numFloors) {
+        super(id, serviceName, areaOfUse, rentalCosts, maxNumOfPeople, rentType, roomStandard, comfortDescription, numFloors);
     }
 
     public String getRoomStandard() {
@@ -35,22 +32,34 @@ public class House extends Vip {
         this.numFloors = numFloors;
     }
 
-    @Override
-    public String toString() {
-        return  id +
-                "," + roomStandard +
-                "," + comfortDescription +
-                "," + numFloors ;
-    }
 
     @Override
     public void showInfor() {
         System.out.println("House{" +
-                ", id=" + id +   '\'' +
+                "roomStandard='" + roomStandard + '\'' +
                 ", comfortDescription='" + comfortDescription + '\'' +
                 ", numFloors=" + numFloors +
-                "roomStandard='" + roomStandard +
+                ", id=" + id +
+                ", serviceName='" + serviceName + '\'' +
+                ", areaOfUse=" + areaOfUse +
+                ", rentalCosts=" + rentalCosts +
+                ", MaxNumOfPeople=" + MaxNumOfPeople +
+                ", rentType='" + rentType + '\'' +
                 '}');
 
+    }
+
+    @Override
+    public String toString() {
+        return id +
+                "," + serviceName +
+                "," + areaOfUse +
+                "," + rentalCosts +
+                "," + MaxNumOfPeople +
+                "," + rentType +
+                "," + roomStandard +
+                "," + comfortDescription +
+                "," + numFloors
+                ;
     }
 }
