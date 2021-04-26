@@ -1,6 +1,6 @@
 package Case_Study.models;
 
-public abstract class Services {
+public abstract class Services implements Comparable<Services> ,CSVtoString{
     protected String id;
     protected String serviceName;
     protected Double areaOfUse;
@@ -70,4 +70,11 @@ public abstract class Services {
 
     public abstract void showInfor();
 
+    public int hashCode() {
+        return 31 + serviceName.hashCode();
+    }
+    @Override
+    public int compareTo(Services o) {
+        return this.getServiceName().compareTo(o.getServiceName());
+    }
 }

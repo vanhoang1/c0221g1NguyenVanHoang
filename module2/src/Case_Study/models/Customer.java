@@ -1,6 +1,12 @@
 package Case_Study.models;
 
-public class Customer  {
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Customer implements Comparable<Customer> {
     private  String idCard;
    private String nameCustomer;
    private String dateOfBirth;
@@ -94,6 +100,9 @@ public class Customer  {
         this.typeOfCustomer = typeOfCustomer;
     }
 
+    public Customer() {
+    }
+
     public void showInformationCustomers()  {
         System.out.println( "Customer{" +
                 "idCard='" + idCard + '\'' +
@@ -110,16 +119,29 @@ public class Customer  {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "idCard='" + idCard + '\'' +
-                ", nameCustomer='" + nameCustomer + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", gender='" + gender + '\'' +
-                ", soCMND=" + soCMND +
-                ", SDT=" + SDT +
-                ", Email='" + Email + '\'' +
-                ", typeOfCustomer='" + typeOfCustomer + '\'' +
-                ", services=" + services +
-                '}';
+        return  idCard +
+                "," + nameCustomer +
+                "," + dateOfBirth +
+                "," + gender +
+                "," + soCMND +
+                "," + SDT +
+                "," + Email +
+                "," + typeOfCustomer +
+                "," + services ;
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+       String[] x= o.getDateOfBirth().split("/");
+       int year=Integer.parseInt( x[2]);
+       x= this.getDateOfBirth().split("/");
+        int year2=Integer.parseInt( x[2]);
+       if(year>year2){
+           return -1;
+       }else
+           return 1;
+    }
+    public int hashCode() {
+        return 31 + nameCustomer.hashCode();
     }
 }

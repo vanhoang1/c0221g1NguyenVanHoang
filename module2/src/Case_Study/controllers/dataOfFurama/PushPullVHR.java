@@ -3,8 +3,7 @@ package Case_Study.controllers.dataOfFurama;
 
 import Case_Study.models.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public abstract class PushPullVHR<K> {
     String id;
@@ -51,4 +50,24 @@ public abstract class PushPullVHR<K> {
         ArrayList<ArrayList<String>> x=readWrite.read(this.path);
         pull(x);
     }
+    public int size(){
+        return clone.size();
+    }
+    public K choiceService(int index){
+       return clone.get(index);
+    }
+    public void push(){
+        ReadWrite<K> readWrite= new ReadWrite<>();
+        readWrite.write(clone,path);
+
+    }
+    public  void showAllNameNotDuplicate(){
+        moveClone();
+        TreeSet<K> setA = new TreeSet<K>(clone);
+        Iterator<K> iterator= setA.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+    }
+
 }

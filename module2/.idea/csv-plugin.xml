@@ -3,6 +3,34 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\src\Case_Study\Commons\ServicesCommons.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\Commons\Villas.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\Commons\maind.java">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\Commons\mains.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\Case_Study\controllers\MainController.java">
           <value>
             <Attribute>
@@ -17,7 +45,42 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\Case_Study\controllers\ValidateInput.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\controllers\dataOfFurama\Customers.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\controllers\dataOfFurama\Employees.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\Case_Study\controllers\dataOfFurama\Houses.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\controllers\dataOfFurama\PushPullVHR.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\controllers\dataOfFurama\ReadWrite.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -59,7 +122,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\Case_Study\data\Customer.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\Case_Study\models\Customer.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\Case_Study\models\Employee.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />

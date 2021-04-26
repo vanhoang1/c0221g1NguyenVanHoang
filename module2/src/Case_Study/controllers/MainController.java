@@ -1,9 +1,10 @@
 package Case_Study.controllers;
 
-import Case_Study.controllers.dataOfFurama.Houses;
-import Case_Study.controllers.dataOfFurama.Rooms;
-import Case_Study.controllers.dataOfFurama.Villas;
+import Case_Study.controllers.dataOfFurama.*;
 import Case_Study.controllers.exception.*;
+import Case_Study.models.Customer;
+import Case_Study.models.Services;
+import Case_Study.models.Villa;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,6 +14,8 @@ public class MainController<E> {
     static Villas villas = new Villas();
     static Houses houses = new Houses();
     static Rooms rooms = new Rooms();
+    static Customers customers = new Customers();
+    static Employees employees = new Employees();
     static ValidateInput validateInput = new ValidateInput();
     static boolean check = true;
 
@@ -41,7 +44,16 @@ public class MainController<E> {
                     break;
                 case 3:
                     addNewCustomer();
-
+                    break;
+                case 4:
+                    showcustomer();
+                    break;
+                case 5:
+                    addNewBooking();
+                    break;
+                case 6:
+                    showInformationOfEmployee();
+                    break;
                 case 7:
                     System.exit(0);
                     break;
@@ -50,45 +62,107 @@ public class MainController<E> {
 
     }
 
+    private static void showInformationOfEmployee() {
+        employees.addMap();
+    }
+
+    private static void addNewBooking() {
+        showcustomer();
+        int choiceCus = 0;
+      while (true){
+          try{
+              System.out.println("Choice Customer :");
+               choiceCus=Integer.parseInt( scanner.nextLine());
+              if(choiceCus>customers.size()||choiceCus<0){
+                  throw new Exception("custormer sai!");
+              }
+                break;
+          }catch (Exception e){
+              System.err.println(e.getMessage());
+          }
+
+      }
+        customers.booking(choiceCus-1,choiceService());
+
+
+    }
+    static Services choiceService(){
+        Services e = null;
+        System.out.println("" +
+                "1.\tBooking Villa\n" +
+                "2.\tBooking House\n" +
+                "3.\tBooking Room\n");
+        int choice = Integer.parseInt(scanner.nextLine());
+        try {
+            switch ( choice){
+                case 1:
+                    showAllVilla();
+                    System.out.println("choice Villa :");
+                    int villa=Integer.parseInt(scanner.nextLine());
+                    e=villas.choiceService(villa-1);
+                    break;
+                case 2:
+                    showAllHouse();;
+                    System.out.println("choice Houses");
+                    int house=Integer.parseInt(scanner.nextLine());
+                    e=houses.choiceService(house-1);
+                    break;
+                case 3:
+                    showAllRoom();;
+                    System.out.println("choice Houses");
+                    int room=Integer.parseInt(scanner.nextLine());
+                    e=rooms.choiceService(room-1);
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + choice);
+            }
+        }catch (IllegalStateException m){
+            System.out.println(m.getMessage());
+        }
+
+       return e;
+    }
+
     private static void addNewCustomer() {
         String idCus = null;
         String nameCus = null;
         String dateOfBirth = null;
         String gender = null;
-        Integer soCMND = null;
-        Integer SDT = null;
+        String soCMND = null;
+        String SDT = null;
         String Email = null;
         String typeOfCustomer = null;
-        check = true;
-        while (check) {
-            try {
-                if (idCus == null) {
-                    idCus = validateInput.addIdCard();
-                }
-                if (nameCus == null) {
-                    nameCus = validateInput.addNameCustomer();
-                }
-                if (dateOfBirth == null) {
-                    dateOfBirth = validateInput.addDateOfBirth();
-                }
-
-
-                gender = scanner.nextLine();
-                System.out.println("input CMND :");
-                soCMND = Integer.parseInt(scanner.nextLine());
-                System.out.println("input So dien thoai :");
-                soCMND = Integer.parseInt(scanner.nextLine());
-
-                check = false;
-            } catch (NameException  | IdCardException | BirthdayException e) {
-                System.err.println(e.getMessage());
-
-            } finally {
-                System.out.println(dateOfBirth);
-            }
+        ArrayList<String> arrayList = new ArrayList<String>();
+        try {
+            idCus = validateInput.addIdCard();
+            nameCus = validateInput.addNameCustomer();
+            dateOfBirth = validateInput.addDateOfBirth();
+            gender = validateInput.addGender();
+            soCMND = validateInput.addCMND();
+            SDT = validateInput.addPhone();
+            Email = validateInput.addEmail();
+            System.out.println("type");
+            typeOfCustomer = scanner.nextLine();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
 
         }
+
+        arrayList.add(idCus);
+        arrayList.add(nameCus);
+        arrayList.add(dateOfBirth);
+        arrayList.add(gender);
+        arrayList.add(soCMND);
+        arrayList.add(SDT);
+        arrayList.add(Email);
+        arrayList.add(typeOfCustomer);
+        customers.push(arrayList);
     }
+
+    private static void showcustomer() {
+        customers.showCustomer();
+    }
+
     public static void addNewServies() {
         System.out.println(
                 "1.\tAdd New Villa\n" +
@@ -118,12 +192,25 @@ public class MainController<E> {
 
     private static ArrayList<String> vip(int i) {
         ArrayList<String> arrayList = service(i);
+
         System.out.println("Enter Standard Room:");
         String tc = scanner.nextLine();
         System.out.println("Enter a Description of another facility:");
         String tn = scanner.nextLine();
-        System.out.println("Enter the Floor Number:");
-        String st = scanner.nextLine();
+        String st;
+        while (true) {
+            try {
+                System.out.println("Enter the Floor Number:");
+                st = scanner.nextLine();
+                if (validateInput.check(7, st)) {
+                    throw new userException("phai nhap so dương");
+                }
+                break;
+            } catch (userException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+
         arrayList.add(tc);
         arrayList.add(tn);
         arrayList.add(st);
@@ -258,15 +345,15 @@ public class MainController<E> {
     }
 
     public static void showAllNameHouseNotDuplicate() {
-
+        houses.showAllNameNotDuplicate();
     }
 
     public static void showAllNameVillaNotDuplicate() {
-
+        villas.showAllNameNotDuplicate();
     }
 
     public static void showAllNameRoomNotDuplicate() {
-
+        rooms.showAllNameNotDuplicate();
     }
 
     public static void main(String[] args) {

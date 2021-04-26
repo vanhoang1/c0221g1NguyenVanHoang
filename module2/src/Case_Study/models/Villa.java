@@ -1,6 +1,6 @@
 package Case_Study.models;
 
-public class Villa extends Vip {
+public class Villa extends Vip  {
 
     protected Double poolArea;
 
@@ -11,6 +11,8 @@ public class Villa extends Vip {
         super(id, serviceName, areaOfUse, rentalCosts, maxNumOfPeople, rentType, roomStandard, comfortDescription, numFloors);
         this.poolArea = poolArea;
     }
+
+
 
     public String getRoomStandard() {
         return this.roomStandard;
@@ -76,4 +78,18 @@ public class Villa extends Vip {
     }
 
 
+    @Override
+    public String csv() {
+        return id +
+                "," + serviceName +
+                "," + areaOfUse +
+                "," + rentalCosts +
+                "," + MaxNumOfPeople +
+                "," + rentType +
+                "," + roomStandard +
+                "," + comfortDescription +
+                "," + numFloors +
+                "," + poolArea
+                ;
+    }
 }

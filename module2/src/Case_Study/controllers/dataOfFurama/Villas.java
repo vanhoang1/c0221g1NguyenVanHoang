@@ -28,5 +28,4 @@ public class Villas extends PushPullVHR<Villa> {
             x.showInfor();
         }
     }
-
 }

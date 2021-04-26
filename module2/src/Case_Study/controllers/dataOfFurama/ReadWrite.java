@@ -32,6 +32,7 @@ class ReadWrite<E> {
             for (E x :
                     danhSach
             ) {
+                assert k != null;
                 k.append(String.valueOf(x));
                 k.append(DAUPHAI);
                 k.append(XUONGDONG);
@@ -44,6 +45,7 @@ class ReadWrite<E> {
             try {
                 if (k != null) System.out.println("GHI FILE THANH CONG!");
                 else System.out.println("GHI FILE THAT BAI");
+                assert k != null;
                 k.close();
             } catch (IOException e) {
                 e.printStackTrace();

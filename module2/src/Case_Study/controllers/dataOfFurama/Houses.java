@@ -12,7 +12,7 @@ public class Houses extends PushPullVHR<House> {
         super.path=PathFurama.HOUSEAPATH;
     }
    @Override
-    public  House conver(ArrayList<String> arrayList){
+    public   House conver(ArrayList<String> arrayList){
          super.conver(arrayList);
        String roomStandard=arrayList.get(6);
        String comfortDescription=arrayList.get(7);

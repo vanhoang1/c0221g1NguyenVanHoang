@@ -43,4 +43,15 @@ public class Room extends Services {
                 "," + rentType +
                 "," + freeService;
     }
+
+    @Override
+    public String csv() {
+        return id +
+                "," + serviceName +
+                "," + areaOfUse +
+                "," + rentalCosts +
+                "," + MaxNumOfPeople +
+                "," + rentType +
+                "," + freeService;
+    }
 }

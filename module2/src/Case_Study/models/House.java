@@ -62,4 +62,19 @@ public class House extends Vip {
                 "," + numFloors
                 ;
     }
+
+
+    @Override
+    public String csv() {
+        return id +
+                "," + serviceName +
+                "," + areaOfUse +
+                "," + rentalCosts +
+                "," + MaxNumOfPeople +
+                "," + rentType +
+                "," + roomStandard +
+                "," + comfortDescription +
+                "," + numFloors
+                ;
+    }
 }
