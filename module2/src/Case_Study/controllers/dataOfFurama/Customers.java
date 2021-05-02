@@ -2,7 +2,6 @@ package Case_Study.controllers.dataOfFurama;
 
 import Case_Study.models.Customer;
 import Case_Study.models.Services;
-import javafx.print.Collation;
 
 import java.util.*;
 
@@ -71,6 +70,9 @@ public class Customers extends PushPullVHR<Customer> {
        readWrite.write(booking,PathFurama.BOOKING);
 
 
+    }
+    public Customer cinema4D(int index){
+      return  clone.remove(index);
     }
 
 }

@@ -7,6 +7,8 @@ import Case_Study.models.Services;
 import Case_Study.models.Villa;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class MainController<E> {
@@ -17,6 +19,7 @@ public class MainController<E> {
     static Customers customers = new Customers();
     static Employees employees = new Employees();
     static ValidateInput validateInput = new ValidateInput();
+    static  FilingCabinets filingCabinets= new FilingCabinets();
     static boolean check = true;
 
     public static void displayMainMenu() {
@@ -27,7 +30,9 @@ public class MainController<E> {
                 "4.\tShow Information of Customer\n" +
                 "5.\tAdd New Booking\n" +
                 "6.\tShow Information of Employee\n" +
-                "7.\tExit\n");
+                "7.\t4D cinema\n"+
+                "8.\tFiling cabinets\n"+
+                "9.\tExit\n");
     }
 
     public static void info() {
@@ -55,11 +60,43 @@ public class MainController<E> {
                     showInformationOfEmployee();
                     break;
                 case 7:
+                    cinema4D();
+                    break;
+                case 8:
+                    filingCabinets();
+                case 9:
                     System.exit(0);
                     break;
             }
         } while (true);
 
+    }
+
+    private static void filingCabinets() {
+
+    }
+
+    private static void cinema4D() {
+
+        Queue<Customer> queue= new LinkedList<Customer>();
+        int choice;
+        while (true) {
+            showcustomer();
+            System.out.println(" choice costumer in to cinema (choice 0 :Exit) :");
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice > customers.size()) {
+                    throw new Exception("sai");
+                }
+                queue.add(customers.cinema4D(choice-1));
+                if(choice==0||customers.size()==0)break;
+            } catch (Exception e) {
+                System.out.println("nhạp sai");
+            }
+        }
+        while (!queue.isEmpty()){
+            queue.poll().showInformationCustomers();
+        }
     }
 
     private static void showInformationOfEmployee() {
