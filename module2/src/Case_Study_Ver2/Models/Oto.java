@@ -43,5 +43,11 @@ public class Oto extends Transport {
         setVehicleModel(list[5]);
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString() +"Oto{" +
+                "numberOfSeats=" + numberOfSeats +
+                ", vehicleModel='" + vehicleModel + '\'' +
+                "} " ;
+    }
 }

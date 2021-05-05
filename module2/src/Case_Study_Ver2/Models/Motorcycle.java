@@ -31,5 +31,10 @@ public class Motorcycle extends Transport {
        setWattage(Integer.parseInt(list[4]));
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString()+ "Motorcycle{" +
+                "wattage=" + wattage +
+                "} " ;
+    }
 }

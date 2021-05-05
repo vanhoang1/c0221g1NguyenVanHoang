@@ -33,5 +33,10 @@ public class Truck extends Transport {
         setLimitLoad( Integer.parseInt( list[4]));
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString()+ "Truck{" +
+                "limitLoad=" + limitLoad +
+                "} " ;
+    }
 }

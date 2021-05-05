@@ -82,19 +82,42 @@ public abstract class FactoryManipulation implements Manipulation<Transport> {
             }
         }
     }
-    public Transport search() {
-        Scanner scanner= new Scanner(System.in);
-        System.out.println("nhập biển số xe");
-        String input= scanner.nextLine();
-        setList(ReadWriteOto.read(getPath()));
-        for (Transport transport :
+    public int search(String bxe ) {
+        for (Transport l :
                 getList()) {
-            if(transport.getLicensePlates().equals(input)) return transport;
+            if (l.getLicensePlates().equals(bxe)) return getList().indexOf(l);
         }
-        return null;
+        return -1;
     }
     protected List<String[]> listSanXuat() {
         return WriteRead.toListString(PathFactory.PATHHANGSANXUAT);
     }
+    @Override
+    public void del(int index) {
+        getList().remove(index);
+        WriteRead.write(getPath(), getList());
+    }
+    public void choicedel( int index ) {
+        System.out.println("bạn chọn xóa" + '\n' + getList().get(index).toString() + '\n' +
+                "1.Yes" + '\n' +
+                "2.No");
+        int choice;
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice != 2 && choice != 1) {
+                    throw new Exception("chỉ chọn 1 hoặc 2 ");
+                }
+                break;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if(choice==1){
+            del(index);
 
+        }
+
+    }
 }

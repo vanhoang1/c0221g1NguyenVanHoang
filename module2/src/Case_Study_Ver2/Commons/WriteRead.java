@@ -10,7 +10,6 @@ import java.util.List;
 
 public abstract class WriteRead {
     private static String DAUPHAI = ",";
-    private static String XUONGDUONG = "\n";
 
     public static void write(String path, List<Transport> csv) {
         File file = new File(path);
@@ -37,7 +36,7 @@ public abstract class WriteRead {
                 assert writer != null;
                 writer.append(s.toCsv());
                 writer.append(DAUPHAI);
-                writer.append(XUONGDUONG);
+                writer.newLine();
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());

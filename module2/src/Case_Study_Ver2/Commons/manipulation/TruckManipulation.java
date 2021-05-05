@@ -1,26 +1,23 @@
 package Case_Study_Ver2.Commons.manipulation;
 
 import Case_Study_Ver2.Commons.ReadWriteOto;
+import Case_Study_Ver2.Commons.ReadWriteTruck;
 import Case_Study_Ver2.Commons.Validate;
-import Case_Study_Ver2.Commons.WriteRead;
-import Case_Study_Ver2.Models.Oto;
 import Case_Study_Ver2.Models.Transport;
+import Case_Study_Ver2.Models.Truck;
 import Case_Study_Ver2.data.PathFactory;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
-public class OtoManipulation extends FactoryManipulation {
+public class TruckManipulation extends FactoryManipulation {
     static Scanner scanner = new Scanner(System.in);
 
-    public OtoManipulation() {
-        setPath(PathFactory.PATHOTO);
+    public TruckManipulation() {
+        setPath(PathFactory.PATHTRUCK);
     }
-
     @Override
     public void show() {
-        setList(ReadWriteOto.read(getPath()));
+        setList(ReadWriteTruck.read(getPath()));
         for (Transport t :
                 getList()) {
             System.out.println(t.toString());
@@ -29,54 +26,49 @@ public class OtoManipulation extends FactoryManipulation {
 
     @Override
     public void add() {
-        setList(ReadWriteOto.read(getPath()));
-        Oto oto = new Oto();
+        setList(ReadWriteTruck.read(getPath()));
+        Truck truck= new Truck();
         String input;
         while (true) {
             try {
                 System.out.println(" nhập biển số xe :");
                 input = scanner.nextLine();
-                if (!Validate.CheckBienXeOto(input)) {
+                if (!Validate.CheckBienXeTai(input)) {
                     throw new Exception("bien xe phai dúng dinh dang");
                 }
                 if(search(input)>=0){
                     throw  new Exception("biển bị trùng");
                 }
-                oto.setLicensePlates(input);
+                truck.setLicensePlates(input);
                 break;
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        thongTinChung(oto);
-        input = (oto.getLicensePlates().contains("A")) ? "xe du lịch" : "xe khách";
-        oto.setVehicleModel(input);
+        thongTinChung(truck);
         while (true) {
             try {
-                System.out.println(" nhập số chổ :");
+                System.out.println(" nhập tải trọng:");
                 input = scanner.nextLine();
                 if (!Validate.CheckNumBer(input, 1, 33)) {
                     throw new Exception("nhập số");
                 }
-                oto.setNumberOfSeats(Integer.parseInt(input));
+                truck.setLimitLoad(Integer.parseInt(input));
                 break;
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        getList().add(oto);
-        ReadWriteOto.write(getPath(), getList());
-
+        getList().add(truck);
+        ReadWriteTruck.write(getPath(), getList());
     }
 
     @Override
     public Transport edit(Transport transport) {
         return null;
     }
-
-    @Override
     public int search(String bxe) {
-        setList(ReadWriteOto.read(getPath()));
+        setList(ReadWriteTruck.read(getPath()));
         return super.search(bxe);
     }
 }

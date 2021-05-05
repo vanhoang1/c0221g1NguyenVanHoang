@@ -8,7 +8,7 @@ public interface Manipulation<E> {
 
    void add();
     E edit(E e);
-   void del();
-   E search();
+   void del(int index);
+   int search(String bs);
 
 }

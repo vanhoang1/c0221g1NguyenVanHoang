@@ -66,4 +66,14 @@ public abstract class Transport implements CsvToString {
         setYearOfManufacture( Integer.parseInt( list[2]));
         setOwner(list[3]);
     }
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "licensePlates='" + licensePlates + '\'' +
+                ", manufacturerName='" + manufacturerName + '\'' +
+                ", yearOfManufacture=" + yearOfManufacture +
+                ", owner='" + owner + '\'' +
+                '}';
+    }
 }
