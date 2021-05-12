@@ -1,5 +1,6 @@
 package Case_Study_Ver2.Commons;
 
+import javax.swing.*;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,4 +34,5 @@ public class Validate {
     }
     return validate(NUMBER,input);
   }
+
 }

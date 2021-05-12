@@ -37,6 +37,7 @@ public abstract class PushPullVHR<K> {
     }
     public  void pull(ArrayList<ArrayList<String>> arrayList){
         ArrayList<K> newA =  new ArrayList<>();
+        
         for (  ArrayList<String>  x:
                 arrayList
         ) {
