@@ -40,19 +40,12 @@ CREATE TABLE chi_tiet_phieu_nhap (
     FOREIGN KEY (ma_vat_tu)
         REFERENCES vat_tu (ma_vat_tu)
 );
-create table dien_thoai(
-ma_dien_thoai INT NOT NULL UNIQUE AUTO_INCREMENT,
-so_dien_thoai int,
-PRIMARY KEY (ma_dien_thoai)
-);
 CREATE TABLE nha_cung_cap (
     ma_nha_cung_cap INT NOT NULL UNIQUE AUTO_INCREMENT,
     ten_nha_cung_cap VARCHAR(23),
     dia_chi VARCHAR(45),
-    ma_dien_thoai INT,
-    PRIMARY KEY (ma_nha_cung_cap),
-      FOREIGN KEY (ma_dien_thoai)
-        REFERENCES dien_thoai (ma_dien_thoai)
+    sdt INT,
+    PRIMARY KEY (ma_nha_cung_cap)
 );
 CREATE TABLE don_dat_hang (
     ma_don_dat_hang INT NOT NULL UNIQUE AUTO_INCREMENT,
