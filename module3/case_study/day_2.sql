@@ -30,18 +30,24 @@ ORDER BY dem;
  -- 5.	Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, TongTien (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) cho tất cả các Khách hàng đã từng đặt phỏng. (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
  SELECT 
     k.id_khach_hang,
+    h.id_khach_hang,
     k.ho_ten,
     lk.ten_loai_khach,
     h.id_hop_dong,
     d.ten_dich_vu,
     h.ngay_lam_hop_dong,
     h.ngay_ket_thuc,
-    h.tong_tien
+    SUM(d.chi_phi_thue + ct.so_luong * dvdk.gia) AS 'tong_tien'
 FROM
-    hop_dong as h
-        INNER JOIN
+    khach_hang k
+        left JOIN
+    hop_dong AS h ON h.id_khach_hang = k.id_khach_hang
+        left JOIN
     dich_vu d ON h.id_dich_vu = d.id_dich_vu
-        INNER JOIN
-    khach_hang k ON h.id_khach_hang = k.id_khach_hang
-        INNER JOIN
-    loai_khach lk ON lk.id_loai_khach = k.id_loai_khach;
+        left JOIN
+    loai_khach lk ON lk.id_loai_khach = k.id_loai_khach
+        left JOIN
+    chi_tiet_hop_dong ct ON ct.id_hop_dong = h.id_hop_dong
+        left JOIN
+    dich_vu_di_kem dvdk ON dvdk.id_dich_vu_di_kem = ct.id_dich_vu_di_kem
+GROUP BY h.id_khach_hang;
