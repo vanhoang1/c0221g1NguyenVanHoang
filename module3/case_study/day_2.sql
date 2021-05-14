@@ -1,25 +1,47 @@
 -- DAY 2
 -- 2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.
 use case_study;
-insert into trinh_do(trinh_do)
-value("10/10"),
-("12/12"),
-("đại học");
-insert into bo_phan(ten_bo_phan)
-value ("ban hang"),
-("sale"),
-("kho");
-insert into vi_tri(ten_vi_tri)
-value("boss"),
-("quai"),
-("culi");
-insert into nhan_vien(ho_ten,id_vi_tri,id_trinh_do,id_bo_phan,ngay_sinh,so_cmtdn,luong,sdt)
-value ("Hoàng",1,1,1,"1996-8-2",88898990,2000,1111),
-("Tấn",2,2,2,"1996-8-2",88898990,2000,1112),
-("Thúy",3,3,3,"1991-1-2",88898990,2000,1113),
-("Trang",1,2,3,"1996-5-2",88898990,2000,1114),
-("Khanh",3,2,1,"1988-7-2",88898990,2000,1115);
-
- select * from nhan_vien where ho_ten regexp '^[H|K|T]\\w{0,15}$';
- 
- ;
+SELECT 
+    *
+FROM
+    nhan_vien
+WHERE
+    ho_ten REGEXP '^[H|K|T]\w{0,15}$';
+ -- 3.	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
+SELECT 
+    *
+FROM
+    khach_hang
+WHERE
+    dia_chi REGEXP '^Đà Nẵng|Quảng Trị$'
+        AND 2021 - YEAR(ngay_sinh) < 50
+        AND 2021 - YEAR(ngay_sinh) > 18;
+ -- 4.	Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng. Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”.
+ SELECT 
+    COUNT(h.id_khach_hang) AS dem, h.id_khach_hang
+FROM
+    hop_dong h
+        JOIN
+    khach_hang k ON k.id_khach_hang = h.id_khach_hang
+WHERE
+    k.id_loai_khach = 1
+GROUP BY id_khach_hang
+ORDER BY dem;
+ -- 5.	Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, TongTien (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) cho tất cả các Khách hàng đã từng đặt phỏng. (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
+ SELECT 
+    k.id_khach_hang,
+    k.ho_ten,
+    lk.ten_loai_khach,
+    h.id_hop_dong,
+    d.ten_dich_vu,
+    h.ngay_lam_hop_dong,
+    h.ngay_ket_thuc,
+    h.tong_tien
+FROM
+    hop_dong as h
+        INNER JOIN
+    dich_vu d ON h.id_dich_vu = d.id_dich_vu
+        INNER JOIN
+    khach_hang k ON h.id_khach_hang = k.id_khach_hang
+        INNER JOIN
+    loai_khach lk ON lk.id_loai_khach = k.id_loai_khach;

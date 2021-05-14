@@ -90,7 +90,7 @@ CREATE TABLE dich_vu (
         REFERENCES loai_dich_vu (id_loai_dich_vu)
 );
 CREATE TABLE hop_dong (
-    id_hop_dong INT NOT NULL UNIQUE AUTO_INCREMENT,
+    id_hop_dong INT NOT NULL AUTO_INCREMENT,
     id_nhan_vien INT,
     id_khach_hang INT,
     id_dich_vu INT,
@@ -178,6 +178,14 @@ value ('massage',123123,1,'ok'),
 insert into hop_dong(id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc)
 value(1,1,1,'2021-5-1','2021-6-1',111111),
 (2,2,2,'2021-5-1','2021-6-1',111111),
+(3,3,3,'2021-5-1','2021-6-1',111111),
+(3,3,3,'2021-5-1','2021-6-1',111111),
+(3,3,3,'2021-5-1','2021-6-1',111111),
+(3,3,3,'2021-5-1','2021-6-1',111111),
+(3,3,3,'2021-5-1','2021-6-1',111111),
+(1,1,1,'2021-5-1','2021-6-1',111111),
+(1,1,1,'2021-5-1','2021-6-1',111111),
+(1,1,1,'2021-5-1','2021-6-1',111111),
 (3,3,3,'2021-5-1','2021-6-1',111111),
 (1,2,3,'2021-5-1','2021-6-1',111111),
 (3,2,1,'2021-5-1','2021-6-1',111111);

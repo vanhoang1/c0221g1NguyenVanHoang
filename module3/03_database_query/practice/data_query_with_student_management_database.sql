@@ -9,6 +9,8 @@ select * from student;
 INSERT INTO student (student_name,address,phone,`status`,class_id)
 VALUES ("Hung", "Ha Noi", '0912113113', 1, 1),
 ('Manh', 'HCM', '0123123123', 0, 2);
+INSERT INTO student (student_name, address, `status`, `class_id`)
+VALUES ('Hoa', 'Hai phong', 1, 1);
 INSERT INTO `subject`
 VALUES (1, 'CF', 5, 1),
        (2, 'C', 6, 1),
