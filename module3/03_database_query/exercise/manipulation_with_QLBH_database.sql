@@ -33,5 +33,5 @@ WHERE
 select ct.ma_dat_hang,dh.ngay_dat_hang,sum(sp.gia_san_pham*ct.so_luong) as tong_tien from dat_hang dh join chi_tiet_dat_hang ct 
 on dh.ma_dat_hang=ct.ma_dat_hang join san_pham sp
 on sp.ma_san_pham=ct.ma_san_pham
-group by dh.ngay_dat_hang
+group by ct.ma_dat_hang
 
