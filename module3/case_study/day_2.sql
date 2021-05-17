@@ -50,4 +50,4 @@ FROM
     chi_tiet_hop_dong ct ON ct.id_hop_dong = h.id_hop_dong
         left JOIN
     dich_vu_di_kem dvdk ON dvdk.id_dich_vu_di_kem = ct.id_dich_vu_di_kem
-GROUP BY h.id_khach_hang;
+GROUP BY h.id_khach_hang,ct.id_hop_dong;

@@ -97,9 +97,9 @@ CREATE TABLE dich_vu (
 );
 CREATE TABLE hop_dong (
     id_hop_dong INT NOT NULL UNIQUE AUTO_INCREMENT,
-    id_nhan_vien INT NOT NULL,
-    id_khach_hang INT NOT NULL,
-    id_dich_vu INT NOT NULL,
+    id_nhan_vien INT NULL,
+    id_khach_hang INT NULL,
+    id_dich_vu INT NULL,
     ngay_lam_hop_dong DATE NOT NULL,
     ngay_ket_thuc DATE,
     tien_dat_coc INT,
@@ -165,7 +165,10 @@ insert into loai_khach(ten_loai_khach)
  (1,'trang',"1946-8-2",123456,213,'aaa@gmail.com','Đà Nẵng'),
  (2,'hung',"1997-3-5",234567,123,'aaa@gmail.com','Quảng Trị'),
  (2,'abc',"1986-3-5",345678,123,'aaa@gmail.com','Quảng Trị'),
- (2,'xyz',"1946-3-5",22,567890,'aa2a@gmail.com','Hải Phòng');
+ (2,'xyz',"1946-3-5",22,567890,'aa2a@gmail.com','HCM'),
+ (3,'xyz',"1956-3-5",33,233413,'aa2a@gmail.com','Hải Phòng'),
+ (4,'xyz',"1966-3-5",44,12123,'aa2a@gmail.com','Gia lai'),
+ (5,'xyz',"1976-3-5",55,111111,'aa2a@gmail.com','Kom tum');
 insert into kieu_thue(ten_kieu_thue,gia)
 value ('năm',10000),
 ('tháng',5000),
@@ -203,9 +206,9 @@ value(1,1,1,'2021-05-1','2021-06-1',111111),
 (1,2,3,'2018-05-1','2021-06-01',111111),
 (3,1,3,'2018-05-1','2021-06-01',111111),
 (3,3,3,'2020-01-1','2021-06-01',111111),
-(3,4,3,'2020-02-1','2021-06-01',111111),
-(3,5,3,'2020-03-1','2021-06-01',111111),
-(3,6,3,'2020-04-1','2021-06-01',111111);
+(3,3,3,'2020-02-1','2021-06-01',111111),
+(3,3,3,'2020-03-1','2021-06-01',111111),
+(3,3,3,'2020-04-1','2021-06-01',111111);
 insert into chi_tiet_hop_dong(id_hop_dong,id_dich_vu_di_kem,so_luong)
 value(1,1,123),
 (2,1,123),
@@ -221,7 +224,6 @@ value(1,1,123),
 
 insert into dich_vu(ten_dich_vu,dien_tich,so_tang,so_nguoi_toi_da,chi_phi_thue,id_kieu_thue,id_loai_dich_vu,TrangThai)
 value('nhà lá',123,3,12,'123422',1,1,'off');
-UPDATE `case_study`.`hop_dong` SET `ngay_lam_hop_dong` = '2020-01-01' WHERE (`id_hop_dong` = '3');
 INSERT INTO `case_study`.`hop_dong` (`id_nhan_vien`, `id_khach_hang`, `id_dich_vu`, `ngay_lam_hop_dong`, `ngay_ket_thuc`, `tien_dat_coc`) VALUES ('4', '4', '4', '2019-01-01', '2021-06-01', '111111');
 INSERT INTO `case_study`.`hop_dong` (`id_nhan_vien`, `id_khach_hang`, `id_dich_vu`, `ngay_lam_hop_dong`, `ngay_ket_thuc`, `tien_dat_coc`) VALUES ('5', '5', '5', '2019-02-01', '2021-06-01', '222222');
 INSERT INTO `case_study`.`chi_tiet_hop_dong` (`id_hop_dong`, `id_dich_vu_di_kem`, `so_luong`) VALUES ('11', '1', '12');
