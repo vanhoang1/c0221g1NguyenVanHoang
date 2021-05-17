@@ -52,4 +52,14 @@ WHERE
             GROUP BY h.id_khach_hang
             HAVING SUM(d.chi_phi_thue + ct.so_luong * gia) > 5000) AS t);
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
-delete from khach_hang where id_khach_hang=1
+DELETE FROM khach_hang 
+WHERE
+    id_khach_hang IN (SELECT 
+        h.id_khach_hang
+    FROM
+        hop_dong h
+    
+    WHERE
+        YEAR(h.ngay_lam_hop_dong) < 2016);
+        
+
