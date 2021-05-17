@@ -14,8 +14,8 @@ FROM
     khach_hang
 WHERE
     dia_chi REGEXP '^Đà Nẵng|Quảng Trị$'
-        AND 2021 - YEAR(ngay_sinh) < 50
-        AND 2021 - YEAR(ngay_sinh) > 18;
+        AND 2021 - YEAR(ngay_sinh) <= 50
+        AND 2021 - YEAR(ngay_sinh) >= 18;
  -- 4.	Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng. Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”.
  SELECT 
     COUNT(h.id_khach_hang) AS dem, h.id_khach_hang
