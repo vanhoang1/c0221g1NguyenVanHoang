@@ -36,6 +36,6 @@ FROM
     mark m ON stu.student_id = m.student_id
         JOIN
     `subject` sub ON m.sub_id = sub.sub_id
-    order by m.mark asc, stu.student_name desc
+    order by m.mark desc, stu.student_name  asc
 ;
 

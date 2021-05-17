@@ -2,121 +2,132 @@ drop schema if exists `case_study`;
 CREATE SCHEMA if not exists `case_study` ;
 use `case_study`;
 CREATE TABLE vi_tri (
-    id_vi_tri INT NOT NULL unique AUTO_INCREMENT,
-    ten_vi_tri VARCHAR(45)  NOT NULL,
+    id_vi_tri INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_vi_tri VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_vi_tri)
 );
 CREATE TABLE trinh_do (
-    id_trinh_do INT NOT NULL unique AUTO_INCREMENT,
-    trinh_do VARCHAR(45)  NOT NULL,
+    id_trinh_do INT NOT NULL UNIQUE AUTO_INCREMENT,
+    trinh_do VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_trinh_do)
 );
 CREATE TABLE bo_phan (
-    id_bo_phan INT NOT NULL unique AUTO_INCREMENT,
-    ten_bo_phan VARCHAR(45)  NOT NULL,
+    id_bo_phan INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_bo_phan VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_bo_phan)
 );
 CREATE TABLE nhan_vien (
-    id_nhan_vien INT NOT NULL unique AUTO_INCREMENT,
-    ho_ten VARCHAR(45)  NOT NULL,
-    id_vi_tri INT  NOT NULL,
-    id_trinh_do INT  NOT NULL,
-    id_bo_phan INT  NOT NULL,
-    ngay_sinh DATE  NOT NULL,
-    so_cmtdn VARCHAR(45) ,
+    id_nhan_vien INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ho_ten VARCHAR(45) NOT NULL,
+    id_vi_tri INT NOT NULL,
+    id_trinh_do INT NOT NULL,
+    id_bo_phan INT NOT NULL,
+    ngay_sinh DATE NOT NULL,
+    so_cmtdn VARCHAR(45),
     luong VARCHAR(45),
     sdt VARCHAR(45),
     email VARCHAR(45),
     dia_chi VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_nhan_vien),
-    FOREIGN KEY (id_vi_tri)
-        REFERENCES vi_tri (id_vi_tri),
-    FOREIGN KEY (id_trinh_do)
-        REFERENCES trinh_do (id_trinh_do),
-    FOREIGN KEY (id_bo_phan)
+    CONSTRAINT fk_nv_vt FOREIGN KEY (id_vi_tri)
+        REFERENCES vi_tri (id_vi_tri)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_nv_td FOREIGN KEY (id_trinh_do)
+        REFERENCES trinh_do (id_trinh_do)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_nv_bp FOREIGN KEY (id_bo_phan)
         REFERENCES bo_phan (id_bo_phan)
+        ON DELETE CASCADE
 );
 CREATE TABLE dich_vu_di_kem (
-    id_dich_vu_di_kem INT NOT NULL unique AUTO_INCREMENT,
-    ten_dich_vu_di_kem VARCHAR(45)  NOT NULL,
-    gia INT  NOT NULL,
-    don_vi INT  NOT NULL,
-    trang_thai_kha_dung VARCHAR(45)  NOT NULL,
+    id_dich_vu_di_kem INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_dich_vu_di_kem VARCHAR(45) NOT NULL,
+    gia INT NOT NULL,
+    don_vi INT NOT NULL,
+    trang_thai_kha_dung VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_dich_vu_di_kem)
 );
 CREATE TABLE loai_khach (
-    id_loai_khach INT NOT NULL unique AUTO_INCREMENT,
-    ten_loai_khach VARCHAR(45)  NOT NULL,
+    id_loai_khach INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_loai_khach VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_loai_khach)
 );
 CREATE TABLE khach_hang (
-    id_khach_hang INT NOT NULL unique AUTO_INCREMENT,
-    id_loai_khach INT  NOT NULL,
-    ho_ten VARCHAR(45)  NOT NULL,
-    ngay_sinh DATE  NOT NULL,
-    so_cmtdn VARCHAR(45) unique,
+    id_khach_hang INT NOT NULL UNIQUE AUTO_INCREMENT,
+    id_loai_khach INT NOT NULL,
+    ho_ten VARCHAR(45) NOT NULL,
+    ngay_sinh DATE NOT NULL,
+    so_cmtdn VARCHAR(45) UNIQUE,
     sdt VARCHAR(45),
     email VARCHAR(45),
     dia_chi VARCHAR(45),
     PRIMARY KEY (id_khach_hang),
-    FOREIGN KEY (id_loai_khach)
+    CONSTRAINT fk_kh_lk FOREIGN KEY (id_loai_khach)
         REFERENCES loai_khach (id_loai_khach)
+        ON DELETE CASCADE
 );
 CREATE TABLE kieu_thue (
-    id_kieu_thue INT NOT NULL unique AUTO_INCREMENT,
-    ten_kieu_thue VARCHAR(45)  NOT NULL,
-    gia INT  NOT NULL,
+    id_kieu_thue INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_kieu_thue VARCHAR(45) NOT NULL,
+    gia INT NOT NULL,
     PRIMARY KEY (id_kieu_thue)
 );
 CREATE TABLE loai_dich_vu (
     id_loai_dich_vu INT NOT NULL AUTO_INCREMENT,
-    ten_loai_dich_vu VARCHAR(45)  NOT NULL,
+    ten_loai_dich_vu VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_loai_dich_vu)
 );
 CREATE TABLE dich_vu (
-    id_dich_vu INT NOT NULL unique AUTO_INCREMENT,
-    ten_dich_vu VARCHAR(45)  NOT NULL,
-    dien_tich INT  NOT NULL,
-    so_tang INT  NOT NULL,
-    so_nguoi_toi_da VARCHAR(45)  NOT NULL,
-    chi_phi_thue VARCHAR(45)  NOT NULL,
-    id_kieu_thue INT  NOT NULL,
-    id_loai_dich_vu INT  NOT NULL,
+    id_dich_vu INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_dich_vu VARCHAR(45) NOT NULL,
+    dien_tich INT NOT NULL,
+    so_tang INT NOT NULL,
+    so_nguoi_toi_da VARCHAR(45) NOT NULL,
+    chi_phi_thue VARCHAR(45) NOT NULL,
+    id_kieu_thue INT NOT NULL,
+    id_loai_dich_vu INT NOT NULL,
     TrangThai VARCHAR(45),
     PRIMARY KEY (id_dich_vu),
-    FOREIGN KEY (id_kieu_thue)
-        REFERENCES kieu_thue (id_kieu_thue),
-    FOREIGN KEY (id_loai_dich_vu)
+    CONSTRAINT fk_dv_kt FOREIGN KEY (id_kieu_thue)
+        REFERENCES kieu_thue (id_kieu_thue)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_dv_ldv FOREIGN KEY (id_loai_dich_vu)
         REFERENCES loai_dich_vu (id_loai_dich_vu)
+        ON DELETE CASCADE
 );
 CREATE TABLE hop_dong (
-    id_hop_dong INT NOT NULL unique AUTO_INCREMENT,
-    id_nhan_vien INT  NOT NULL,
-    id_khach_hang INT  NOT NULL,
-    id_dich_vu INT  NOT NULL,
-    ngay_lam_hop_dong DATE  NOT NULL,
-    ngay_ket_thuc DATE ,
+    id_hop_dong INT NOT NULL UNIQUE AUTO_INCREMENT,
+    id_nhan_vien INT NOT NULL,
+    id_khach_hang INT NOT NULL,
+    id_dich_vu INT NOT NULL,
+    ngay_lam_hop_dong DATE NOT NULL,
+    ngay_ket_thuc DATE,
     tien_dat_coc INT,
     tong_tien INT,
     PRIMARY KEY (id_hop_dong),
-    FOREIGN KEY (id_nhan_vien)
-        REFERENCES nhan_vien (id_nhan_vien),
-    FOREIGN KEY (id_khach_hang)
-        REFERENCES khach_hang (id_khach_hang),
-    FOREIGN KEY (id_dich_vu)
+    CONSTRAINT fk_hd_nv FOREIGN KEY (id_nhan_vien)
+        REFERENCES nhan_vien (id_nhan_vien)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_hd_kh FOREIGN KEY (id_khach_hang)
+        REFERENCES khach_hang (id_khach_hang)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_hd_dv FOREIGN KEY (id_dich_vu)
         REFERENCES dich_vu (id_dich_vu)
+        ON DELETE CASCADE
 );
 CREATE TABLE chi_tiet_hop_dong (
-    id_chi_tiet_hop_dong INT NOT NULL unique AUTO_INCREMENT,
-    id_hop_dong INT  NOT NULL,
+    id_chi_tiet_hop_dong INT NOT NULL UNIQUE AUTO_INCREMENT,
+    id_hop_dong INT NOT NULL,
     id_dich_vu_di_kem INT,
     so_luong INT,
-    unique(id_hop_dong,id_dich_vu_di_kem),
+    UNIQUE (id_hop_dong , id_dich_vu_di_kem),
     PRIMARY KEY (id_chi_tiet_hop_dong),
-    FOREIGN KEY (id_dich_vu_di_kem)
-        REFERENCES dich_vu_di_kem (id_dich_vu_di_kem),
-    FOREIGN KEY (id_hop_dong)
+    CONSTRAINT fk_ct_dvdk FOREIGN KEY (id_dich_vu_di_kem)
+        REFERENCES dich_vu_di_kem (id_dich_vu_di_kem)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_ct_hd FOREIGN KEY (id_hop_dong)
         REFERENCES hop_dong (id_hop_dong)
+        ON DELETE CASCADE
 );
 
 insert into trinh_do(trinh_do)

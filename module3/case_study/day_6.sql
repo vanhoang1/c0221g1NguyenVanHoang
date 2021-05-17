@@ -1,27 +1,27 @@
 -- day 6
 use case_study;
 -- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
--- xóa cả nhưng người chưa làm hợp đồng nào
--- DELETE FROM nhan_vien 
--- WHERE
---     (id_nhan_vien IN (SELECT DISTINCT
---         id
---     FROM
---         (SELECT 
---             nv.id_nhan_vien AS id
---         FROM
---             hop_dong h
---         RIGHT JOIN nhan_vien nv ON h.id_nhan_vien = nv.id_nhan_vien
---         
---         WHERE
---             (YEAR(h.ngay_lam_hop_dong) BETWEEN 2017 AND 2019)
---             OR h.ngay_lam_hop_dong IS NULL
---         GROUP BY nv.id_nhan_vien
---         HAVING COUNT(h.id_hop_dong) = 0) AS a))
--- chỉ xóa những người có hợp đồng 
+-- xóa cả nhưng người mới vào năm 2019
+DELETE FROM nhan_vien 
+WHERE
+    (id_nhan_vien IN (SELECT 
+        id
+    FROM
+        (SELECT 
+            nv.id_nhan_vien AS id
+        FROM
+            hop_dong h
+        RIGHT JOIN nhan_vien nv ON h.id_nhan_vien = nv.id_nhan_vien
+        
+        WHERE
+            (YEAR(h.ngay_lam_hop_dong) BETWEEN 2017 AND 2019)
+            OR h.ngay_lam_hop_dong IS NULL
+        GROUP BY nv.id_nhan_vien
+        HAVING COUNT(h.id_hop_dong) = 0) AS a));
+-- chỉ xóa những người từng làm hợp đồng trước 2019
  DELETE FROM nhan_vien 
 WHERE
-    (id_nhan_vien IN (SELECT DISTINCT
+    (id_nhan_vien IN (SELECT 
         id
     FROM
         (SELECT 
@@ -52,4 +52,4 @@ WHERE
             GROUP BY h.id_khach_hang
             HAVING SUM(d.chi_phi_thue + ct.so_luong * gia) > 5000) AS t);
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
-
+delete from khach_hang where id_khach_hang=1
