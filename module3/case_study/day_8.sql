@@ -21,10 +21,35 @@ create procedure sp_1 (in `id` int)
 begin
 	delete from khach_hang where khach_hang.id_khach_hang=`id`;
 end;
-//
+// delimiter ;
 call sp_1(1);
--- 24.	Tạo Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+-- 24.	Tạo Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.alter
 
 delimiter //
-create procedure sp_2()
+create procedure sp_2(in `id` int , in `idnv` int, in `idkh` int, in `iddv` int )
+begin
+	if ((`id` not in (select id_hop_dong from hop_dong )) 
+    and( idnv in (select id_nhan_vien from nhan_vien) ) and (idkh in (select id_khach_hang from khach_hang) ) and (iddv in (select id_dich_vu from dich_vu))) then 
+    insert into hop_dong(id_hop_dong,id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong) 
+    value (id,idnv,idkh,iddv,date(now()));
+    else SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Chưa thêm được';
+    end if;
+end;
+// delimiter ;
+drop procedure if exists sp_2;
+call sp_2(1111,1,1,1);
+-- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại có trong bảng HopDong ra giao diện console của database
+create view dem as select count(h.id_hop_dong) from hop_dong h group by h.id_hop_dong;
+
+delimiter //
+
+//
+create trigger tr_1 after delete on hop_dong 
+for each row 
+begin
+
+end 
+// delimiter ;
+drop trigger tr_1 ;
+delete from hop_dong where id_hop_dong =1;
 

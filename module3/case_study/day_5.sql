@@ -10,7 +10,7 @@ WHERE
             id
         FROM
             (SELECT 
-                ct.id_dich_vu_di_kem AS id, COUNT(ct.id_dich_vu_di_kem) dem
+                ct.id_dich_vu_di_kem AS id, sum(ct.so_luong) dem
             FROM
                 hop_dong h
             JOIN chi_tiet_hop_dong ct ON ct.id_hop_dong = h.id_hop_dong
@@ -21,7 +21,7 @@ WHERE
                     MAX(dem)
                 FROM
                     (SELECT 
-                        ct.id_dich_vu_di_kem AS id, COUNT(ct.id_dich_vu_di_kem) dem
+                        ct.id_dich_vu_di_kem AS id, sum(ct.so_luong) dem
                     FROM
                         hop_dong h
                     JOIN chi_tiet_hop_dong ct ON ct.id_hop_dong = h.id_hop_dong
