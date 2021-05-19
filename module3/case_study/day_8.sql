@@ -29,7 +29,9 @@ delimiter //
 create procedure sp_2(in `id` int , in `idnv` int, in `idkh` int, in `iddv` int )
 begin
 	if ((`id` not in (select id_hop_dong from hop_dong )) 
-    and( idnv in (select id_nhan_vien from nhan_vien) ) and (idkh in (select id_khach_hang from khach_hang) ) and (iddv in (select id_dich_vu from dich_vu))) then 
+    and( idnv in (select id_nhan_vien from nhan_vien) )
+    and (idkh in (select id_khach_hang from khach_hang) )
+    and (iddv in (select id_dich_vu from dich_vu))) then 
     insert into hop_dong(id_hop_dong,id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong) 
     value (id,idnv,idkh,iddv,date(now()));
     else SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Chưa thêm được';
@@ -37,8 +39,19 @@ begin
 end;
 // delimiter ;
 call sp_2(1111,1,1,1);
--- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại có trong bảng HopDong ra giao diện console của database
--- bỏ
+-- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại có trong bảng HopDong ra giao diện console của database.
+delimiter //
+create trigger tr_1 after delete on hop_dong 
+for each row 
+begin
+declare a int;
+declare b varchar(45);
+set a = (select count(id_hop_dong) from hop_dong );
+set b =concat( 'tổng số lượng bản ghi còn lại : ' , a);
+SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = b ;
+end ;
+// delimiter ;
+delete from hop_dong  where id_hop_dong=1;
 -- 26.	Tạo triggers có tên Tr_2 Khi cập nhật Ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật có phù hợp hay không, với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày. Nếu dữ liệu hợp lệ thì cho phép cập nhật
 
 delimiter //
@@ -50,14 +63,11 @@ declare b date;
 set a = new.ngay_lam_hop_dong;
 set b = new.ngay_ket_thuc;
 if(datediff(b,a)<2) then
-set new.id_hop_dong=old.id_hop_dong;
-set new.id_nhan_vien= old.id_nhan_vien;
-set new.id_khach_hang= old.id_khach_hang;
-set new.ngay_lam_hop_dong= old.ngay_lam_hop_dong;
+SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày';
 end if;
 end ;
 // delimiter ;
-update hop_dong set ngay_lam_hop_dong ='2057-1-1';
+update hop_dong set ngay_lam_hop_dong ='2057-1-1' , ngay_ket_thuc='2007-1-1';
 -- 27.	Tạo user function thực hiện yêu cầu sau:
 -- a.	Tạo user function func_1: Đếm các dịch vụ đã được sử dụng với Tổng tiền là > 2.000.000 VNĐ.
 delimiter //
@@ -103,4 +113,27 @@ return (f_dem);
 end;
 // delimiter ;
  select func_2(1) as 'so_ngay';
--- 28.	Tạo Store procedure Sp_3 để tìm các dịch vụ được thuê bởi khách hàng với loại dịch vụ là “Room” từ đầu năm 2015 đến hết năm 2019 để xóa thông tin của các dịch vụ đó (tức là xóa các bảng ghi trong bảng DichVu) và xóa những HopDong sử dụng dịch vụ liên quan (tức là phải xóa những bản gi trong bảng HopDong) và những bản liên quan khác
+-- 28.	Tạo Store procedure Sp_3 để tìm các dịch vụ được thuê bởi khách hàng với loại dịch vụ là “Room” từ đầu năm 2015 đến hết năm 2019 
+-- để xóa thông tin của các dịch vụ đó (tức là xóa các bảng ghi trong bảng DichVu)
+-- và xóa những HopDong sử dụng dịch vụ liên quan (tức là phải xóa những bản gi trong bảng HopDong) và những bản liên quan khác
+delimiter //
+create procedure p_del_room ()
+begin
+delete from dich_vu where id_dich_vu in (
+select id from (
+	SELECT 
+    h.id_dich_vu 'id'
+FROM
+    hop_dong h
+        JOIN
+    dich_vu d ON d.id_dich_vu = h.id_dich_vu
+        JOIN
+    loai_dich_vu ldv  ON  ldv. id_loai_dich_vu = d.id_loai_dich_vu
+WHERE
+    ldv.ten_loai_dich_vu = 'Room'
+        AND YEAR(h.ngay_lam_hop_dong) BETWEEN 2015 AND 2019) as t);
+end;
+//delimiter ;
+
+drop procedure p_del_room;
+call  p_del_room ;
