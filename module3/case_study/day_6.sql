@@ -37,7 +37,7 @@ UPDATE khach_hang
 SET 
     id_loai_khach = 1
 WHERE
-    id_khach_hang IN (SELECT 
+ ( id_loai_khach = 2) and   (id_khach_hang IN (SELECT 
             id
         FROM
             (SELECT 
@@ -50,7 +50,7 @@ WHERE
             WHERE
                 YEAR(h.ngay_lam_hop_dong) = 2019
             GROUP BY h.id_khach_hang
-            HAVING SUM(d.chi_phi_thue + ct.so_luong * gia) > 5000) AS t);
+            HAVING SUM(d.chi_phi_thue + ct.so_luong * gia) > 5000) AS t));
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
 DELETE FROM khach_hang 
 WHERE
