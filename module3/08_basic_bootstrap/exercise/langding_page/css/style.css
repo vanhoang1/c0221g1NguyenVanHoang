@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+
+.nav a{
+    font-size: 1em !important;
+}
+
+#see{
+    background-color: yellow;
+    display: inline-block;
+}
+picture{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.new-style{
+    position: relative;
+    background-color: #E6E6E6;
+
+}
+.nav-item{
+
+}
+.s-m{
+    text-align: center;
+    justify-content: center;
+}
+img{
+    max-width: 100%;
+}
+@media (min-width: 768px){
+
+    .new-style{
+        position: absolute;
+        z-index: 1;
+        top: calc(25%);
+        padding: 50px;
+        background: none;
+    }
+    .s-m{
+        position: relative;
+        padding: 0;
+        text-align: left;
+    }
+
+}

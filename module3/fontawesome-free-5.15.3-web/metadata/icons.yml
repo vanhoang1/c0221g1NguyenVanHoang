@@ -13263,7 +13263,7 @@ nimblr:
 node:
   changes:
     - 5.0.0
-  label: Node.js
+  label: Node.jquery
   search:
     terms: []
   styles:
@@ -13274,7 +13274,7 @@ node-js:
   changes:
     - 5.0.0
     - 5.0.3
-  label: Node.js JS
+  label: Node.jquery JS
   search:
     terms: []
   styles:
@@ -21044,7 +21044,7 @@ vr-cardboard:
 vuejs:
   changes:
     - 5.0.0
-  label: Vue.js
+  label: Vue.jquery
   search:
     terms: []
   styles:
