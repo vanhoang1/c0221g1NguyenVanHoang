@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\web\view\product\delete.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

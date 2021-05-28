@@ -18,8 +18,37 @@
     <p>
         <a href="/products?action=create">Create new product</a>
     </p>
-</div>
 
+</div>
+<div class="container">
+    <div class="row">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                <form class="d-flex" action="/products" method="get">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                    <c:if test='${message != null}'>
+                        <a href="/products" class="text-decoration-none d-flex" >  <button class="btn btn-outline-success "  >Back to product list </button></a>
+                    </c:if>
+                </div>
+            </div>
+        </nav>
+        <c:if test='${message != null&&!err}'>
+            <div class="alert alert-success" role="alert">
+                    ${message}
+            </div>
+        </c:if>
+        <c:if test='${message != null&&err}'>
+            <div class="alert alert-danger" role="alert">
+                    ${message}
+            </div>
+        </c:if>
+    </div>
+
+
+</div>
 <div class="container">
     <table border="1" class="table">
         <tr>
@@ -28,9 +57,11 @@
             <td>Price</td>
             <td>Description</td>
             <td>Manufacturer</td>
+            <td colspan="2">Thao tác</td>
         </tr>
-        <c:forEach items='${requestScope["products"]}' var="product">
+        <c:forEach items='${products}' var="product" varStatus="count">
             <tr>
+                <td>${count.count}</td>
                 <td><a href="/products?action=view&id=${product.getId()}">${product.getProductName()}</a></td>
                 <td>${product.getProductPrice()}</td>
                 <td>${product.getProductDescription()}</td>
