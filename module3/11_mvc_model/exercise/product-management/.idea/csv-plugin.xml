@@ -3,14 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\src\model\Customer.java">
+        <entry key="\src\model\Product.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
             </Attribute>
           </value>
         </entry>
-        <entry key="\web\index.jsp">
+        <entry key="\web\product\list.jsp">
           <value>
             <Attribute>
               <option name="separator" value=":" />
