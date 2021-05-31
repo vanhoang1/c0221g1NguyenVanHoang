@@ -13,4 +13,5 @@ public interface UserService {
     boolean updateUser(User user);
     List<User> findByCountry(String country);
     void printSQLException(SQLException ex);
+    List<User> sortByName();
 }

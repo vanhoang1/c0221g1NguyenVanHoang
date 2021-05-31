@@ -19,6 +19,7 @@ public class UserRepository {
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     private static final String FIND_USER_BY_COUNTRY = "select * from users where country = ?;";
+    private static final String SORT_BY_NAME = "select * from users ORDER BY name;";
 
     public void add(User user){
        Connection connection = baseRepository.getConnection();
@@ -105,11 +106,20 @@ public class UserRepository {
         return check;
     }
     public List<User> findByCountry(String country){
+        List <User> list = getList();
+        List <User> listByCountry = new ArrayList<>();
+        for (User u :
+                list) {
+            if (u.getCountry().contains(country)) listByCountry.add(u);
+        }
+
+        return listByCountry;
+    }
+    public List<User> sortByName(){
         List <User> list = new ArrayList<>();
         Connection connection =baseRepository.getConnection();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_COUNTRY);
-            preparedStatement.setString(1,country);
+            PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME);
             ResultSet resultSet =preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt(1);
@@ -118,7 +128,6 @@ public class UserRepository {
                 String countryU = resultSet.getString(4);
                 User user = new User(id,name,email,countryU);
                 list.add(user);
-
             }
             preparedStatement.close();
             connection.close();
@@ -127,4 +136,5 @@ public class UserRepository {
         }
         return list;
     }
+
 }

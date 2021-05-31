@@ -43,4 +43,9 @@ public class IUserService implements UserService {
     public void printSQLException(SQLException ex) {
 
     }
+
+    @Override
+    public List<User> sortByName() {
+        return userRepository.sortByName();
+    }
 }

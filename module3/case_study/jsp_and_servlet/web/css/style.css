@@ -6,7 +6,7 @@ body {
   position: relative;
   padding-top: 7px;
   padding-bottom: 7px;
-  background-color: #007bff
+  background-image: url("../img/download.jpg");
 }
 
 .logo {

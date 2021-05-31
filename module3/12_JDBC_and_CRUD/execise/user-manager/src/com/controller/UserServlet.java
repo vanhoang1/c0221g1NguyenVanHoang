@@ -52,9 +52,24 @@ public class UserServlet extends HttpServlet {
             case "search":
                 searchByCountry(request,response);
                 break;
+            case "sort":
+                    sortByName(request,response);
+                    break;
             default :
                 listUser(request,response);
                 break;
+        }
+    }
+
+    private void sortByName(HttpServletRequest request, HttpServletResponse response) {
+        List<User> list =   userService.sortByName();
+        request.setAttribute("listUser",list);
+        try {
+            request.getRequestDispatcher("user/list.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

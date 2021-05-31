@@ -25,14 +25,14 @@
             </form>
         </div>
         <c:if test="${message}">
-            <p> update thành công</p>
+            <p> delete thành công</p>
         </c:if>
         <table border="1" cellpadding="5" id="tableUser" class="table table-striped table-bordered">
             <caption><h2>List of Users</h2></caption>
             <thead>
             <tr>
                 <th>ID</th>
-                <th><a>Name</a></th>
+                <th><a href="/users?action=sort">Name</a></th>
                 <th>Email</th>
                 <th>Country</th>
                 <th>Actions</th>
@@ -56,17 +56,6 @@
         </table>
     </div>
 </div>
-<script src="jquery/jquery-3.5.1.min.js"></script>
-<script src="datatables/js/jquery.dataTables.min.js"></script>
-<script src="bootstrap413/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#tableUser').dataTable({
-            "dom" :'lrtip',
-            "lengthChange":false,
-            "pageLength":5
-        });
-    });
-</script>
+
 </body>
 </html>
