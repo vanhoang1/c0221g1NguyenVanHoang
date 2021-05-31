@@ -34,7 +34,7 @@
         <table>
             <tr>
                 <td>ID: </td>
-                <td><input disabled type="text" name="id" id="id" value="${product.getId()}"></td>
+                <td><input disabled type="text"  value="${product.getId()}"></td>
             </tr>
             <tr>
                 <td>Name: </td>

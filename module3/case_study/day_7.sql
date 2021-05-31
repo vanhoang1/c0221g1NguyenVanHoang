@@ -22,10 +22,11 @@ SELECT
     email,
     sdt,
     ngay_sinh,
-    dia_chi
+    dia_chi,
+    1 as `type`
 FROM
     khach_hang h 
-UNION SELECT 
-    id_nhan_vien, ho_ten, email, sdt, ngay_sinh, dia_chi
+UNION all SELECT 
+    id_nhan_vien, ho_ten, email, sdt, ngay_sinh, dia_chi, 0 as `type`
 FROM
     nhan_vien n;
