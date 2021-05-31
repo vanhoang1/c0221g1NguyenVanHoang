@@ -80,7 +80,7 @@
                                 <div class="col-md-6 pl-1">
                                     <div class="form-group">
                                         <label>ID number</label>
-                                        <input type="text" class="form-control" placeholder="ID number" value="">
+                                        <input type="text" class="form-control" placeholder="ID number" value="${customer.getSoCMND()}" name="soCMND">
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <input type="text" class="form-control" placeholder="Home Address" value=""
+                                        <input type="text" class="form-control" placeholder="Home Address" value="${customer.getSoCMND()}"
                                                name="address">
                                     </div>
                                 </div>
@@ -98,21 +98,21 @@
                                     <div class="form-group">
                                         <label>Phone</label>
                                         <input type="text" class="form-control" placeholder="Phone" name="phone"
-                                               value="">
+                                               value="${customer.getSoCMND()}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
                                         <label>Id Card</label>
                                         <input type="text" class="form-control" placeholder="Id Card" name="idCard"
-                                               value="">
+                                               value="${customer.getSoCMND()}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <label>Type of Customer</label>
                                         <input type="number" class="form-control" placeholder="Type of Customer"
-                                               name="typeOfCustomer" value="">
+                                               name="typeOfCustomer" value="${customer.getSoCMND()}">
                                     </div>
                                 </div>
                             </div>

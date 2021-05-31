@@ -4,6 +4,9 @@
 <html>
 <head>
     <title>User Management Application</title>
+    <link href="bootstrap413/css/bootstrap.css" rel="stylesheet">
+    <link href="datatables/js/dataTables.bootstrap4.js" rel="stylesheet">
+
 </head>
 <body>
 <div style="text-align: center;">

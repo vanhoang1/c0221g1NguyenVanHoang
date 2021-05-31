@@ -10,7 +10,6 @@ class Header extends HTMLElement {
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-sm-4 col-md-4 col-5"><a href="#" class="brand-wrap" data-abc="true">
-<!--                     <img class="logo" src="http://ampexamples.com/data/upload/2017/08/bootstrap2_logo.png">-->
                     <span class="logo">FURAMA</span> </a></div>
                 <div class="col-lg-4 col-xl-4 col-sm-8 col-md-4 col-7 ml-auto">
                     <div class="d-flex justify-content-end"><a target="_blank" href="#" data-abc="true"
@@ -90,7 +89,7 @@ class Header extends HTMLElement {
                     aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
             <div class="navbar-collapse collapse" id="dropdown6" style="">
                 <ul class="navbar-nav mx-auto ">
-                    <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Home </a></li>
+                    <li class="nav-item px-4"><a class="nav-link" href="../index.jsp" data-abc="true">Home </a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Employee</a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="../customer/" data-abc="true">Customer</a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Service</a></li>
