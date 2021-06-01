@@ -4,10 +4,7 @@ import model.bean.Customer;
 import model.repository.CustomerRepository;
 import model.service.api.CustomerService;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ICustomerService implements CustomerService {
     CustomerRepository customerRepository = new CustomerRepository();
@@ -28,8 +25,8 @@ public class ICustomerService implements CustomerService {
     }
 
     @Override
-    public void update(int id, Customer customer) {
-
+    public boolean update(int id, Customer customer) {
+        return customerRepository.updateCustomer(id, customer);
     }
 
     @Override

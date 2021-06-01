@@ -21,7 +21,11 @@
     <script src="../../jquery/header.js"></script>
 </head>
 <body>
+
 <header-component></header-component>
+<c:if test='${message != null}'>
+    <input type="image" onload="demo.showNotification('top','left',' ${message}')" >
+</c:if>
 <div class="content">
     <div class="container-fluid">
         <div class="row ">
@@ -31,7 +35,7 @@
                         <h4 class="card-title">Edit Profile</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="post">
                             <div class="row">
                                 <div class="col-md-8 pr-1">
                                     <div class="form-group">
@@ -50,37 +54,13 @@
 
                             </div>
                             <div class="row">
-                                <div class="col-md-6 pr-1  ">
-                                    <label> Gender :</label>
-                                    <div class="d-flex">
-                                        <div class="form-check px-4 ">
-                                            <label class="form-check-label">
 
-                                                <input type="radio" class="form-check-input" name="gender" id="male"
-                                                       value="male"
-                                                <c:if test="${customer.getGender()=='Male'}">
-                                                checked
-                                                </c:if> >
-                                                Male
-                                            </label>
-                                        </div>
-                                        <div class="form-check px-4 ">
-                                            <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="gender" id="female"
-                                                <c:if test="${customer.getGender()=='Female'}">
-                                                       checked
-                                                </c:if>
-                                                       value="female">
-                                                Female
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6 pl-1">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>ID number</label>
-                                        <input type="text" class="form-control" placeholder="ID number" value="${customer.getSoCMND()}" name="soCMND">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" placeholder=" Email" value="${customer.getEmail()}"
+                                               name="email">
+
                                     </div>
                                 </div>
                             </div>
@@ -103,16 +83,15 @@
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="text" class="form-control" placeholder="Email" name="email"
-                                               value="${customer.getEmail()}">
+                                        <label>ID number</label>
+                                        <input type="text" class="form-control" placeholder="ID number" value="${customer.getSoCMND()}" name="soCMND">
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <label>Type of Customer</label>
                                         <input type="number" class="form-control" placeholder="Type of Customer"
-                                               name="typeOfCustomer" value="${customer.getSoCMND()}">
+                                               name="typeOfCustomer" value="${customer.getTypeOfCustomer()}">
                                     </div>
                                 </div>
                             </div>
@@ -125,6 +104,10 @@
         </div>
     </div>
 </div>
+
+<script src="../../jquery/core/popper.min.js"></script>
+<script src="../../jquery/plugins/bootstrap-notify.js"></script>
+
 </body>
 </html>
 
