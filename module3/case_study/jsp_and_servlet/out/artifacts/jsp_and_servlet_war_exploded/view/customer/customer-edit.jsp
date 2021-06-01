@@ -88,7 +88,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <input type="text" class="form-control" placeholder="Home Address" value="${customer.getSoCMND()}"
+                                        <input type="text" class="form-control" placeholder="Home Address" value="${customer.getAddress()}"
                                                name="address">
                                     </div>
                                 </div>
@@ -98,14 +98,14 @@
                                     <div class="form-group">
                                         <label>Phone</label>
                                         <input type="text" class="form-control" placeholder="Phone" name="phone"
-                                               value="${customer.getSoCMND()}">
+                                               value="${customer.getSoDT()}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
-                                        <label>Id Card</label>
-                                        <input type="text" class="form-control" placeholder="Id Card" name="idCard"
-                                               value="${customer.getSoCMND()}">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" placeholder="Email" name="email"
+                                               value="${customer.getEmail()}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">

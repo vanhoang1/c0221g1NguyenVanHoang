@@ -1,10 +1,10 @@
 function validate(val) {
-    v1 = document.getElementById("fname");
-    v2 = document.getElementById("lname");
+    v1 = document.getElementById("name");
+    v2 = document.getElementById("date");
     v3 = document.getElementById("email");
-    v4 = document.getElementById("mob");
-    v5 = document.getElementById("job");
-    v6 = document.getElementById("ans");
+    v4 = document.getElementById("phone");
+    v5 = document.getElementById("idCard");
+    v6 = document.getElementById("typeOfCustomer");
 
     flag1 = true;
     flag2 = true;

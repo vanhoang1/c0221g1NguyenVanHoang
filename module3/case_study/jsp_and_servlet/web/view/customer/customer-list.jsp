@@ -65,10 +65,10 @@
                         <th class="text-center">#</th>
                         <th>Name</th>
                         <th>BirthDay</th>
-                        <th>Gender</th>
+
                         <th>SoCMND</th>
                         <th>SDT</th>
-                        <th>IdCard</th>
+                        <th>Address</th>
                         <th>Email</th>
                         <th>TypeCustomer</th>
                         <%--                             thao tác--%>
@@ -83,10 +83,9 @@
 
                             <td>${customer.getNameCustomer()}</td>
                             <td>${customer.getDateOfBirth()}</td>
-                            <td>${customer.getGender()}</td>
                             <td>${customer.getSoCMND()}</td>
                             <td>${customer.getSoDT()}</td>
-                            <td>${customer. getIdCard()}</td>
+                            <td>${customer.getAddress()}</td>
                             <td>${customer.getEmail()}</td>
                             <td>${customer.getTypeOfCustomer()}</td>
 
@@ -155,7 +154,6 @@
 <script>
     $('#confirm-delete').on('show.bs.modal', function (e) {
         let currow= $(this).closest('tr');
-        let col1 =currow.find('td:eq(1)').html();
         $('.debug-url').html('Delete URL: <strong>' + col1+ '</strong>');
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
     });

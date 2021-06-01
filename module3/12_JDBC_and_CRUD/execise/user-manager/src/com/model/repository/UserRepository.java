@@ -18,7 +18,7 @@ public class UserRepository {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
-    private static final String FIND_USER_BY_COUNTRY = "select * from users where country = ?;";
+    private static final String FIND_USER_BY_COUNTRY = "select * from users where country like ?;";
     private static final String SORT_BY_NAME = "select * from users ORDER BY name;";
 
     public void add(User user){
@@ -106,14 +106,27 @@ public class UserRepository {
         return check;
     }
     public List<User> findByCountry(String country){
-        List <User> list = getList();
-        List <User> listByCountry = new ArrayList<>();
-        for (User u :
-                list) {
-            if (u.getCountry().contains(country)) listByCountry.add(u);
-        }
+        List <User> list = new ArrayList<>();
+        Connection connection =baseRepository.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_COUNTRY);
+            preparedStatement.setString(1,'%'+country+'%');
+            ResultSet resultSet =preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt(1);
+                String name = resultSet.getString(2);
+                String email = resultSet.getString(3);
+                String countryU = resultSet.getString(4);
+                User user = new User(id,name,email,countryU);
+                list.add(user);
 
-        return listByCountry;
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
     public List<User> sortByName(){
         List <User> list = new ArrayList<>();

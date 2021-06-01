@@ -1,15 +1,16 @@
 package model.bean;
 
-public class Customer implements Comparable<Customer> {
+import java.util.Date;
+
+public class Customer {
     private int id;
     private String nameCustomer;
-    private String dateOfBirth;
-    private String gender;
-    private Integer soCMND;
-    private Integer soDT;
-    private String idCard;
+    private Date dateOfBirth;
+    private String soCMND;
+    private String soDT;
+    private String address;
     private String email;
-    private String typeOfCustomer;
+    private int typeOfCustomer;
 
     public int getId() {
         return id;
@@ -19,13 +20,7 @@ public class Customer implements Comparable<Customer> {
         this.id = id;
     }
 
-    public String getIdCard() {
-        return idCard;
-    }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
-    }
 
     public String getNameCustomer() {
         return nameCustomer;
@@ -35,35 +30,28 @@ public class Customer implements Comparable<Customer> {
         this.nameCustomer = nameCustomer;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getGender() {
-        return gender;
-    }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Integer getSoCMND() {
+    public String getSoCMND() {
         return soCMND;
     }
 
-    public void setSoCMND(Integer soCMND) {
+    public void setSoCMND(String soCMND) {
         this.soCMND = soCMND;
     }
 
-    public Integer getSoDT() {
+    public String getSoDT() {
         return soDT;
     }
 
-    public void setSoDT(Integer soDT) {
+    public void setSoDT(String soDT) {
         this.soDT = soDT;
     }
 
@@ -75,46 +63,44 @@ public class Customer implements Comparable<Customer> {
         this.email = email;
     }
 
-    public String getTypeOfCustomer() {
+    public int getTypeOfCustomer() {
         return typeOfCustomer;
     }
 
-    public void setTypeOfCustomer(String typeOfCustomer) {
+    public void setTypeOfCustomer(int typeOfCustomer) {
         this.typeOfCustomer = typeOfCustomer;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
-    public Customer(int id, String nameCustomer, String dateOfBirth, String gender, Integer soCMND, Integer soDT, String idCard, String email, String typeOfCustomer) {
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Customer(int id, String nameCustomer, Date dateOfBirth, String soCMND, String soDT, String address, String email, int typeOfCustomer) {
         this.id = id;
         this.nameCustomer = nameCustomer;
         this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
         this.soCMND = soCMND;
         this.soDT = soDT;
-        this.idCard = idCard;
+        this.address = address;
         this.email = email;
         this.typeOfCustomer = typeOfCustomer;
+    }
 
+    public Customer(String nameCustomer, Date dateOfBirth, String soCMND, String soDT, String address, String email, int typeOfCustomer) {
+        this.nameCustomer = nameCustomer;
+        this.dateOfBirth = dateOfBirth;
+        this.soCMND = soCMND;
+        this.soDT = soDT;
+        this.address = address;
+        this.email = email;
+        this.typeOfCustomer = typeOfCustomer;
     }
 
     public Customer() {
     }
 
-
-
-    @Override
-    public int compareTo(Customer o) {
-        String[] x = o.getDateOfBirth().split("/");
-        int year = Integer.parseInt(x[2]);
-        x = this.getDateOfBirth().split("/");
-        int year2 = Integer.parseInt(x[2]);
-        if (year > year2) {
-            return -1;
-        } else
-            return 1;
-    }
-
-    public int hashCode() {
-        return 31 + nameCustomer.hashCode();
-    }
 }
