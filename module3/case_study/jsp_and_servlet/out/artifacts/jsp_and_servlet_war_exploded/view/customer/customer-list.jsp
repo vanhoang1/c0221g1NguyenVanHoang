@@ -15,6 +15,7 @@
 
 
     <link rel="stylesheet" href="../../bootstrap-4.6.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../jquery/datatables/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/all.css">
     <script src="../../jquery/header.js"></script>
@@ -24,53 +25,51 @@
 <header-component></header-component>
 <div class="container pt-3">
     <div class="title text-center">
-        <h3>Tables</h3>
+        <h3>Customer</h3>
     </div>
     <div class="row ">
         <div class="mx-auto ">
             <div class="d-grid gap-2 d-md-flex justify-content-md-between my-3">
-                <button type="button" class="btn btn-outline-secondary"><i class="fa fa-plus-circle"></i> Thêm mới
-                </button>
+                <a href="/customers?action=create">
+                    <button type="button" class="btn btn-outline-secondary"><i class="fa fa-plus-circle"></i> Thêm mới
+                    </button>
+                </a>
                 <div class="col-lg-4 col-xl-4 col-sm-8 col-md-4 d-none d-md-flex ">
-                    <form action="#" class="search-wrap">
+                    <form action="/customers" class="search-wrap">
+                        <input hidden name="action" value="search">
                         <div class="input-group w-100"><input type="text" class="form-control search-form"
-                                                              style="width:55%;" placeholder="Search">
+                                                              style="width:55%;" placeholder="Search" name="search">
                             <div class="input-group-append">
                                 <button class="btn btn-primary search-button" type="submit"><i class="fa fa-search"></i>
                                 </button>
                             </div>
                         </div>
                     </form>
-                    <c:if test='${message != null}'>
-                        <a href="/customers" class="text-decoration-none d-flex">
-                            <button class="btn btn-outline-success ">Back to customer list</button>
-                        </a>
-                    </c:if>
                 </div>
                 <c:if test='${message != null&&!err}'>
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert alert-success fixed-top col-4" role="alert">
                             ${message}
                     </div>
                 </c:if>
                 <c:if test='${message != null&&err}'>
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-danger fixed-top col-4" role="alert">
                             ${message}
                     </div>
                 </c:if>
             </div>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped table-bordered" id="tableList">
                     <thead class="thead-dark">
                     <tr>
                         <th class="text-center">#</th>
                         <th>Name</th>
                         <th>BirthDay</th>
-
                         <th>SoCMND</th>
+                        <th>Gender</th>
                         <th>SDT</th>
                         <th>Address</th>
                         <th>Email</th>
-                        <th>TypeCustomer</th>
+
                         <%--                             thao tác--%>
                         <th class="text-right">Actions</th>
                     </tr>
@@ -84,27 +83,37 @@
                             <td>${customer.getNameCustomer()}</td>
                             <td>${customer.getDateOfBirth()}</td>
                             <td>${customer.getSoCMND()}</td>
+                            <td>
+                                <c:if test="${customer.getGender()==0}"> Male</c:if>
+                                <c:if test="${customer.getGender()==1}"> Female</c:if>
+                            </td>
                             <td>${customer.getSoDT()}</td>
                             <td>${customer.getAddress()}</td>
                             <td>${customer.getEmail()}</td>
-                            <td>${customer.getTypeOfCustomer()}</td>
 
 
                                 <%--                        thao tac--%>
                             <td class="td-actions text-right">
 
-                                    <a href="/customers?action=view&id=${customer.getId()}" class="text-light"> <button type="button" rel="tooltip" class="btn btn-info btn-round btn-just-icon btn-sm"
-                                                                                                                        data-original-title="" title="info"> <i
-                                            class="fa fa-user"></i> </button> </a>
+                                <a href="/customers?action=view&id=${customer.getId()}" class="text-light">
+                                    <button type="button" rel="tooltip"
+                                            class="btn btn-info btn-round btn-just-icon btn-sm"
+                                            data-original-title="" title="info"><i
+                                            class="fa fa-user"></i></button>
+                                </a>
 
 
-                                    <a href="/customers?action=edit&id=${customer.getId()} " class="text-light"> <button type="button" rel="tooltip"
-                                                                                                                         class="btn btn-success btn-round btn-just-icon btn-sm" data-original-title=""
-                                                                                                                         title="edit"> <i
-                                            class="fa fa-edit"></i>             </button></a>
+                                <a href="/customers?action=edit&id=${customer.getId()} " class="text-light">
+                                    <button type="button" rel="tooltip"
+                                            class="btn btn-success btn-round btn-just-icon btn-sm"
+                                            data-original-title=""
+                                            title="edit"><i
+                                            class="fa fa-edit"></i></button>
+                                </a>
 
 
-                                <a  data-href="/customers?action=delete&id=${customer.getId()}"
+                                <a data-href="/customers?action=delete&id=${customer.getId()}"
+                                   data-record-title="${customer.getNameCustomer()}"
                                    data-toggle="modal" data-target="#confirm-delete" class="text-light ">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-danger btn-round btn-just-icon btn-sm" data-original-title=""
@@ -120,16 +129,17 @@
                             <div class="modal-content">
 
                                 <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                         &times;
                                     </button>
-                                    <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+
                                 </div>
 
                                 <div class="modal-body">
-                                    <p>You are about to delete one track, this procedure is irreversible.</p>
-                                    <p>Do you want to proceed?</p>
-                                    <p class="debug-url"></p>
+
+                                    Do you want to delete <strong> <span class="debug-url"></span></strong> ?
+
                                 </div>
 
                                 <div class="modal-footer">
@@ -139,7 +149,6 @@
                             </div>
                         </div>
                     </div>
-
                     </tbody>
                 </table>
             </div>
@@ -148,14 +157,23 @@
 </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="../../jquery/jquery-3.6.0.min.js"></script>
 <script src="../../bootstrap-4.6.0-dist/js/jquery-3.6.0.min.js"></script>
+<script src="../../jquery/datatables/js/jquery.dataTables.min.js"></script>
 <script src="../../bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
 <script>
+    $(document).ready(function () {
+        $('#tableList').dataTable({"dom" :'lrtip',"lengthChange":false,"pageLength":5})
+    });
+    setTimeout(function () {
+        $('.alert').fadeOut('fast');
+    }, 1000);
     $('#confirm-delete').on('show.bs.modal', function (e) {
-        let currow= $(this).closest('tr');
-        $('.debug-url').html('Delete URL: <strong>' + col1+ '</strong>');
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+        var data = $(e.relatedTarget).data();
+        $('.debug-url').text(data.recordTitle);
+
     });
 </script>
 

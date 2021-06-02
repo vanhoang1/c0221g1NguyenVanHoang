@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +24,18 @@
 <body>
 
 <header-component></header-component>
-<c:if test='${message != null}'>
-    <input type="image" onload="demo.showNotification('top','left',' ${message}')" >
-</c:if>
+
+    <c:if test='${message != null&&!err}'>
+        <div class="alert alert-success fixed-top col-4" role="alert">
+                ${message}
+        </div>
+    </c:if>
+    <c:if test='${message != null&&err}'>
+        <div class="alert alert-danger fixed-top col-4" role="alert">
+                ${message}
+        </div>
+    </c:if>
+
 <div class="content">
     <div class="container-fluid">
         <div class="row ">
@@ -48,7 +58,7 @@
                                     <div class="form-group">
                                         <label>Date</label>
                                         <input class="form-control" type="date" id="date-input" name="birthDay"
-                                               value="${customer.getDateOfBirth()}">
+                                               value="<fmt:formatDate value="${customer.getDateOfBirth()}" pattern="yyyy-MM-dd" />">
                                     </div>
                                 </div>
 
@@ -65,11 +75,31 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label>Address</label>
                                         <input type="text" class="form-control" placeholder="Home Address" value="${customer.getAddress()}"
                                                name="address">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4 flex-column d-flex">
+                                    <label class="form-control-label px-3">Gender
+                                        <span class="text-danger"> *</span></label>
+                                    <div class="form-check d-flex px-5">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Male
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="0"
+                                        <c:if test="${customer.getGender()==0}">checked</c:if>   >
+
+                                    </div>
+                                    <div class="form-check d-flex px-5">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Female
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="1"
+                                        <c:if test="${customer.getGender()==1}">checked</c:if>>
+
                                     </div>
                                 </div>
                             </div>
@@ -89,9 +119,21 @@
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
-                                        <label>Type of Customer</label>
-                                        <input type="number" class="form-control" placeholder="Type of Customer"
-                                               name="typeOfCustomer" value="${customer.getTypeOfCustomer()}">
+                                        <label>Type of Customer
+
+                                        </label>
+                                        <select class="form-control"
+                                                name="typeOfCustomer">
+                                            <c:if test="${customer.getTypeOfCustomer()!=null}">
+                                                <option selected value="${customer.getTypeOfCustomer()}">Diamond</option>
+                                            </c:if>
+                                            <c:if test="${customer.getTypeOfCustomer()==null}">
+                                                <option value="1" selected >Diamond</option>
+                                            </c:if>
+
+                                            <option value="2">Gold</option>
+                                            <option value="3">Silver</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -104,10 +146,12 @@
         </div>
     </div>
 </div>
-
-<script src="../../jquery/core/popper.min.js"></script>
-<script src="../../jquery/plugins/bootstrap-notify.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    setTimeout(function() {
+        $('.alert').fadeOut('fast');
+    }, 1000);
+</script>
 </body>
 </html>
 

@@ -15,8 +15,8 @@ public class ICustomerService implements CustomerService {
     }
 
     @Override
-    public void save(Customer customer) {
-
+    public boolean save(Customer customer) {
+        return customerRepository.addCustomer(customer);
     }
 
     @Override
@@ -30,7 +30,12 @@ public class ICustomerService implements CustomerService {
     }
 
     @Override
-    public void remove(int id) {
+    public boolean remove(int id) {
+        return customerRepository.deleteCustomer(id);
+    }
 
+    @Override
+    public List<Customer> findByName(String search) {
+        return customerRepository.findCustomer(search);
     }
 }

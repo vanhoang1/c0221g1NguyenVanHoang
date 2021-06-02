@@ -6,8 +6,9 @@ import java.util.List;
 
 public interface CustomerService {
     List<Customer> findAll();
-    void save(Customer customer);
+    boolean save(Customer customer);
     Customer findById(int id);
     boolean update(int id, Customer customer);
-    void  remove(int id);
+    boolean  remove(int id);
+    List<Customer> findByName(String search);
 }

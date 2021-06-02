@@ -7,6 +7,7 @@ public class Customer {
     private String nameCustomer;
     private Date dateOfBirth;
     private String soCMND;
+    private int gender;
     private String soDT;
     private String address;
     private String email;
@@ -20,7 +21,13 @@ public class Customer {
         this.id = id;
     }
 
+    public int getGender() {
+        return gender;
+    }
 
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
 
     public String getNameCustomer() {
         return nameCustomer;
@@ -79,21 +86,23 @@ public class Customer {
         this.address = address;
     }
 
-    public Customer(int id, String nameCustomer, Date dateOfBirth, String soCMND, String soDT, String address, String email, int typeOfCustomer) {
-        this.id = id;
+    public Customer(String nameCustomer, Date dateOfBirth, String soCMND, int gender, String soDT, String address, String email, int typeOfCustomer) {
         this.nameCustomer = nameCustomer;
         this.dateOfBirth = dateOfBirth;
         this.soCMND = soCMND;
+        this.gender = gender;
         this.soDT = soDT;
         this.address = address;
         this.email = email;
         this.typeOfCustomer = typeOfCustomer;
     }
 
-    public Customer(String nameCustomer, Date dateOfBirth, String soCMND, String soDT, String address, String email, int typeOfCustomer) {
+    public Customer(int id, String nameCustomer, Date dateOfBirth, String soCMND, int gender, String soDT, String address, String email, int typeOfCustomer) {
+        this.id = id;
         this.nameCustomer = nameCustomer;
         this.dateOfBirth = dateOfBirth;
         this.soCMND = soCMND;
+        this.gender = gender;
         this.soDT = soDT;
         this.address = address;
         this.email = email;

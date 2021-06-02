@@ -1,30 +1,47 @@
 package model.bean;
 
-public abstract class Services implements Comparable<Services> {
-    protected String id;
-    protected String serviceName;
-    protected Double areaOfUse;
-    protected Integer rentalCosts;
-    protected Integer MaxNumOfPeople;
-    protected String rentType;
+public  class Services {
+    private int id;
+    private String serviceName;
+    private int areaOfUse;
+    private  int numberOfFloors;
+    private int maxNumOfPeople;
+    private int rentalCosts;
+    private int idRentType;
+    private int idServiceType;
+    private String status;
+
+    public Services(int id, String serviceName, int areaOfUse, int numberOfFloors, int maxNumOfPeople, int rentalCosts, int idRentType, int idServiceType, String status) {
+        this.id = id;
+        this.serviceName = serviceName;
+        this.areaOfUse = areaOfUse;
+        this.numberOfFloors = numberOfFloors;
+        this.maxNumOfPeople = maxNumOfPeople;
+        this.rentalCosts = rentalCosts;
+        this.idRentType = idRentType;
+        this.idServiceType = idServiceType;
+        this.status = status;
+    }
 
     public Services() {
     }
 
-    public Services(String id, String serviceName, Double areaOfUse, Integer rentalCosts, Integer maxNumOfPeople, String rentType) {
-        this.id = id;
+    public Services(String serviceName, int areaOfUse, int numberOfFloors, int maxNumOfPeople, int rentalCosts, int idRentType, int idServiceType, String status) {
         this.serviceName = serviceName;
         this.areaOfUse = areaOfUse;
+        this.numberOfFloors = numberOfFloors;
+        this.maxNumOfPeople = maxNumOfPeople;
         this.rentalCosts = rentalCosts;
-        this.MaxNumOfPeople = maxNumOfPeople;
-        this.rentType = rentType;
+        this.idRentType = idRentType;
+        this.idServiceType = idServiceType;
+        this.status = status;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -36,45 +53,59 @@ public abstract class Services implements Comparable<Services> {
         this.serviceName = serviceName;
     }
 
-    public Double getAreaOfUse() {
+    public int getAreaOfUse() {
         return areaOfUse;
     }
 
-    public void setAreaOfUse(Double areaOfUse) {
+    public void setAreaOfUse(int areaOfUse) {
         this.areaOfUse = areaOfUse;
     }
 
-    public Integer getRentalCosts() {
+    public int getNumberOfFloors() {
+        return numberOfFloors;
+    }
+
+    public void setNumberOfFloors(int numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public int getMaxNumOfPeople() {
+        return maxNumOfPeople;
+    }
+
+    public void setMaxNumOfPeople(int maxNumOfPeople) {
+        this.maxNumOfPeople = maxNumOfPeople;
+    }
+
+    public int getRentalCosts() {
         return rentalCosts;
     }
 
-    public void setRentalCosts(Integer rentalCosts) {
+    public void setRentalCosts(int rentalCosts) {
         this.rentalCosts = rentalCosts;
     }
 
-    public Integer getMaxNumOfPeople() {
-        return MaxNumOfPeople;
+    public int getIdRentType() {
+        return idRentType;
     }
 
-    public void setMaxNumOfPeople(Integer maxNumOfPeople) {
-        MaxNumOfPeople = maxNumOfPeople;
+    public void setIdRentType(int idRentType) {
+        this.idRentType = idRentType;
     }
 
-    public String getRentType() {
-        return rentType;
+    public int getIdServiceType() {
+        return idServiceType;
     }
 
-    public void setRentType(String rentType) {
-        this.rentType = rentType;
+    public void setIdServiceType(int idServiceType) {
+        this.idServiceType = idServiceType;
     }
 
-    public abstract void showInfor();
-
-    public int hashCode() {
-        return 31 + serviceName.hashCode();
+    public String getStatus() {
+        return status;
     }
-    @Override
-    public int compareTo(Services o) {
-        return this.getServiceName().compareTo(o.getServiceName());
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

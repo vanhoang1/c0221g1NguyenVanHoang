@@ -89,18 +89,23 @@ class Header extends HTMLElement {
                     aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
             <div class="navbar-collapse collapse" id="dropdown6" style="">
                 <ul class="navbar-nav mx-auto ">
-                    <li class="nav-item px-4"><a class="nav-link" href="index.jsp" data-abc="true">Home </a></li>
-                    <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Employee</a></li>
+                    <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Home </a></li>
+                    <li class="nav-item px-4"><a class="nav-link" href="/employees" data-abc="true">Employee</a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="/customers" data-abc="true">Customer</a></li>
-                    <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Service</a></li>
+                    <li class="nav-item px-4"><a class="nav-link" href="/services" data-abc="true">Service</a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Contract</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
     `;
     }
 }
 
 customElements.define('header-component', Header);
+
+    setTimeout(function() {
+        $(".alert").hide('blind', {}, 500)
+    }, 3000);
