@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="packaging_Java_libraries-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../packaging_Java_libraries/build/libs/packaging_Java_libraries-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

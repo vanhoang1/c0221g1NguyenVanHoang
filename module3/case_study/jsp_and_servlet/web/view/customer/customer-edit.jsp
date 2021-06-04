@@ -13,17 +13,9 @@
 <html lang="en">
 <head>
     <title>Customer Edit</title>
-    <script src="../../bootstrap-4.6.0-dist/js/jquery-3.6.0.min.js"></script>
-    <script src="../../bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
-
-    <link rel="stylesheet" href="../../bootstrap-4.6.0-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/all.css">
-    <script src="../../jquery/header.js"></script>
 </head>
 <body>
-
-<header-component></header-component>
+<jsp:include page="../common/header.jsp"/>
 
     <c:if test='${message != null&&!err}'>
         <div class="alert alert-success fixed-top col-4" role="alert">
@@ -146,12 +138,7 @@
         </div>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-    setTimeout(function() {
-        $('.alert').fadeOut('fast');
-    }, 1000);
-</script>
+<jsp:include page="../common/header.jsp"/>
 </body>
 </html>
 

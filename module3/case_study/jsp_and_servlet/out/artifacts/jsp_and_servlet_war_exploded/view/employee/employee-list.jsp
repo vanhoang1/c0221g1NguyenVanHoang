@@ -12,18 +12,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Service List</title>
-
-
-    <link rel="stylesheet" href="../../bootstrap-4.6.0-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../jquery/datatables/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/all.css">
-    <script src="../../jquery/header.js"></script>
+    <title>Employee List</title>
 
 </head>
 <body>
-<header-component></header-component>
+<jsp:include page="../common/header.jsp"/>
 <div class="container pt-3">
     <div class="title text-center">
         <h3>Employee</h3>
@@ -61,12 +54,12 @@
                     <thead class="thead-dark">
                     <tr>
                         <th class="text-center">#</th>
-                        <th>Service Name</th>
-                        <th>Area</th>
-                        <th>Number Of Floors</th>
-                        <th>Max Num Of People</th>
-                        <th>Rental Costs</th>
-                        <th>Status</th>
+                        <th>Name</th>
+                        <th>Birth Day</th>
+                        <th>ID card</th>
+                        <th>Salary</th>
+                        <th>Phone</th>
+                        <th>Address</th>
                         <%--                             thao tác--%>
                         <th class="text-right">Actions</th>
                     </tr>
@@ -141,24 +134,5 @@
 </div>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="../../jquery/jquery-3.6.0.min.js"></script>
-<script src="../../bootstrap-4.6.0-dist/js/jquery-3.6.0.min.js"></script>
-<script src="../../jquery/datatables/js/jquery.dataTables.min.js"></script>
-<script src="../../bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#tableList').dataTable({"dom" :'lrtip',"lengthChange":false,"pageLength":5})
-    });
-    setTimeout(function() {
-        $('.alert').fadeOut('fast');
-    }, 1000);
-    $('#confirm-delete').on('show.bs.modal', function(e) {
-        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-        var data = $(e.relatedTarget).data();
-        $('.debug-url').text(data.recordTitle);
-
-    });
-</script>
 
 </html>

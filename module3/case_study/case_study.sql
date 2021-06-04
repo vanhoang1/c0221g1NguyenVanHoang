@@ -16,6 +16,27 @@ CREATE TABLE bo_phan (
     ten_bo_phan VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_bo_phan)
 );
+create table vai_tro(
+	id_vai_tro INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ten_vai_tro VARCHAR(45) NOT NULL,
+     PRIMARY KEY (id_vai_tro)
+);
+create table tai_khoan(
+    ten_tai_khoan VARCHAR(45) NOT NULL,
+    mat_khau VARCHAR(45) NOT NULL,
+    primary key (ten_tai_khoan)
+);
+create table chi_tiet_tai_khoan(
+	id_vai_tro INT NOT NULL,
+    ten_tai_khoan VARCHAR(45) NOT NULL,
+    PRIMARY KEY (id_vai_tro,ten_tai_khoan),
+     CONSTRAINT fk_ct_vt FOREIGN KEY (id_vai_tro)
+        REFERENCES vai_tro (id_vai_tro)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_ct_tk FOREIGN KEY (ten_tai_khoan)
+        REFERENCES tai_khoan (ten_tai_khoan)
+        ON DELETE CASCADE
+);
 CREATE TABLE nhan_vien (
     id_nhan_vien INT NOT NULL UNIQUE AUTO_INCREMENT,
     ho_ten VARCHAR(45) NOT NULL,
@@ -24,10 +45,11 @@ CREATE TABLE nhan_vien (
     id_bo_phan INT NOT NULL,
     ngay_sinh DATE NOT NULL,
     so_cmtdn VARCHAR(45),
-    luong VARCHAR(45),
+    luong Double,
     sdt VARCHAR(45),
     email VARCHAR(45),
     dia_chi VARCHAR(45) NOT NULL,
+    ten_tai_khoan VARCHAR(45) ,
     PRIMARY KEY (id_nhan_vien),
     CONSTRAINT fk_nv_vt FOREIGN KEY (id_vi_tri)
         REFERENCES vi_tri (id_vi_tri)
@@ -37,6 +59,9 @@ CREATE TABLE nhan_vien (
         ON DELETE CASCADE,
     CONSTRAINT fk_nv_bp FOREIGN KEY (id_bo_phan)
         REFERENCES bo_phan (id_bo_phan)
+        ON DELETE CASCADE,
+        CONSTRAINT fk_nv_tk FOREIGN KEY (ten_tai_khoan)
+        REFERENCES tai_khoan (ten_tai_khoan)
         ON DELETE CASCADE
 );
 CREATE TABLE dich_vu_di_kem (
@@ -57,7 +82,8 @@ CREATE TABLE khach_hang (
     id_loai_khach INT NOT NULL,
     ho_ten VARCHAR(45) NOT NULL,
     ngay_sinh DATE NOT NULL,
-    so_cmtdn VARCHAR(45) UNIQUE,
+    so_cmtdn VARCHAR(45) UNIQUE  NOT NULL,
+    gioi_tinh BIT  NOT NULL,
     sdt VARCHAR(45),
     email VARCHAR(45),
     dia_chi VARCHAR(45),
@@ -147,12 +173,19 @@ value("Lễ tân"),
 ("giám sát"),
 ("quản lý"),
 ("giám đốc");
-insert into nhan_vien(ho_ten,id_vi_tri,id_trinh_do,id_bo_phan,ngay_sinh,so_cmtdn,luong,sdt,email,dia_chi)
-value ("Hoàng",1,1,1,"1996-8-2",88898990,2000,1111,'abc@gmail.com','An Giang'),
-("Tấn",2,2,2,"1996-8-2",88898990,2000,1112,'abc@gmail.com','Hải Dương'),
-("Thúy",3,3,3,"1991-1-2",88898990,2000,1113,'abc@gmail.com','Hải Dương'),
-("Trang",1,2,3,"1996-5-2",88898990,2000,1114,'abc@gmail.com','Đà Nẵng'),
-("Khanh",3,2,1,"1988-7-2",88898990,2000,1115,'abc@gmail.com','Hải Phòng');
+INSERT INTO `case_study`.`vai_tro` (`ten_vai_tro`) VALUES ('nhan vien');
+INSERT INTO `case_study`.`vai_tro` (`ten_vai_tro`) VALUES ('giam doc');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('abc', '123');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('xyz', '456');
+INSERT INTO `case_study`.`chi_tiet_tai_khoan` (`id_vai_tro`, `ten_tai_khoan`) VALUES ('1', 'abc');
+INSERT INTO `case_study`.`chi_tiet_tai_khoan` (`id_vai_tro`, `ten_tai_khoan`) VALUES ('2', 'xyz');
+
+insert into nhan_vien(ho_ten,id_vi_tri,id_trinh_do,id_bo_phan,ngay_sinh,so_cmtdn,luong,sdt,email,dia_chi,ten_tai_khoan)
+value ("Hoàng",1,1,1,"1996-8-2",88898990,2000,1111,'abc@gmail.com','An Giang','abc'),
+("Tấn",2,2,2,"1996-8-2",188898990,2000,1112,'abc@gmail.com','Hải Dương','xyz'),
+("Thúy",3,3,3,"1991-1-2",88898990,2000,1113,'abc@gmail.com','Hải Dương',null),
+("Trang",1,2,3,"1996-5-2",88898990,2000,1114,'abc@gmail.com','Đà Nẵng',null),
+("Khanh",3,2,1,"1988-7-2",88898990,2000,1115,'abc@gmail.com','Hải Phòng',null);
 insert into loai_khach(ten_loai_khach)
  value("Diamond"),
  ("Platinium"),
@@ -160,15 +193,15 @@ insert into loai_khach(ten_loai_khach)
  ("sivel"),
  ("Gold")
  ;
- insert into khach_hang (id_loai_khach,ho_ten,ngay_sinh,so_cmtdn,sdt,email,dia_chi)
- value(1,'nhung',"1996-8-2",12345122,1221,'aaa@gmail.com','Đà Nẵng'),
- (1,'trang',"1946-8-2",123456,213,'aaa@gmail.com','Đà Nẵng'),
- (2,'hung',"1997-3-5",234567,123,'aaa@gmail.com','Quảng Trị'),
- (2,'abc',"1986-3-5",345678,123,'aaa@gmail.com','Quảng Trị'),
- (2,'xyz',"1946-3-5",22,567890,'aa2a@gmail.com','HCM'),
- (3,'xyz',"1956-3-5",33,233413,'aa2a@gmail.com','Hải Phòng'),
- (4,'xyz',"1966-3-5",44,12123,'aa2a@gmail.com','Gia lai'),
- (5,'xyz',"1976-3-5",55,111111,'aa2a@gmail.com','Kom tum');
+ insert into khach_hang (id_loai_khach,ho_ten,ngay_sinh,so_cmtdn,gioi_tinh,sdt,email,dia_chi)
+ value(1,'nhung',"1996-8-2",12345122,0,1221,'aaa@gmail.com','Đà Nẵng'),
+ (1,'trang',"1946-8-2",123456,0,213,'aaa@gmail.com','Đà Nẵng'),
+ (2,'hung',"1997-3-5",234567,0,123,'aaa@gmail.com','Quảng Trị'),
+ (2,'abc',"1986-3-5",345678,0,123,'aaa@gmail.com','Quảng Trị'),
+ (2,'xyz',"1946-3-5",22,0,567890,'aa2a@gmail.com','HCM'),
+ (3,'xyz',"1956-3-5",33,0,233413,'aa2a@gmail.com','Hải Phòng'),
+ (4,'xyz',"1966-3-5",44,0,12123,'aa2a@gmail.com','Gia lai'),
+ (5,'xyz',"1976-3-5",55,0,111111,'aa2a@gmail.com','Kom tum');
 insert into kieu_thue(ten_kieu_thue,gia)
 value ('năm',10000),
 ('tháng',5000),

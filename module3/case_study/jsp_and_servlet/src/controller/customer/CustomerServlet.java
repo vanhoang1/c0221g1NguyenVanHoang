@@ -1,7 +1,7 @@
 package controller.customer;
 
 import model.bean.Customer;
-import model.service.api.CustomerService;
+import model.service.api.Service;
 import model.service.impl.ICustomerService;
 
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ import java.util.List;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
-    private CustomerService customerService = new ICustomerService();
+    private Service<Customer> customerService = new ICustomerService();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -117,7 +117,7 @@ public class CustomerServlet extends HttpServlet {
 
     private void delCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-     boolean check = customerService.remove(id);
+        boolean check = customerService.remove(id);
         if (check) request.setAttribute("message", "Xóa thành công");
         else {request.setAttribute("message", "Xóa thất bại");request.setAttribute("err", true);}
        listCustomer(request,response);

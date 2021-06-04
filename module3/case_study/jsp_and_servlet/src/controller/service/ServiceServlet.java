@@ -2,7 +2,7 @@ package controller.service;
 
 import model.bean.Customer;
 import model.bean.Services;
-import model.service.api.ServiceManager;
+import model.service.api.Service;
 import model.service.impl.IServiceManager;
 
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @WebServlet(name = "ServiceServlet" ,urlPatterns = "/services")
 public class ServiceServlet extends HttpServlet {
-    ServiceManager serviceManager = new IServiceManager();
+    Service<Services> serviceManager = new IServiceManager();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");

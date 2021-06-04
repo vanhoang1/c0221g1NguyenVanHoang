@@ -93,7 +93,10 @@ class Header extends HTMLElement {
                     <li class="nav-item px-4"><a class="nav-link" href="/employees" data-abc="true">Employee</a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="/customers" data-abc="true">Customer</a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="/services" data-abc="true">Service</a></li>
-                    <li class="nav-item px-4"><a class="nav-link" href="" data-abc="true">Contract</a></li>
+                    <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/contracts" data-abc="true">List Contract</a>
+                            <a class="dropdown-item" href="" data-abc="true">Contract Detail</a>
+                     </div>
                 </ul>
             </div>
         </div>
