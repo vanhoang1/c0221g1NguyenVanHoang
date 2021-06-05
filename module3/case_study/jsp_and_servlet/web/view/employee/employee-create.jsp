@@ -12,10 +12,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Customer Create</title>
+    <title>Create Employee </title>
+
 </head>
 <body>
-
 <jsp:include page="../common/header.jsp"/>
 
 <c:if test='${message != null&&!err}'>
@@ -44,7 +44,7 @@
                                     <div class="form-group">
                                         <label>Name </label>
                                         <input type="text" class="form-control" placeholder="Name" name="name"
-                                               value="${employee.getNameEmployee()}">
+                                               value="${employee.nameEmployee}">
                                     </div>
                                 </div>
 
@@ -56,15 +56,15 @@
                                     </label>
                                     <select class="form-control"
                                             name="idPosition">
-                                        <c:if test="${employee. getIdPosition() !=null}">
-                                            <option selected value="${employee. getIdPosition() }">Lễ tân</option>
+                                        <c:if test="${employee.position !=null}">
+                                            <option selected value="${employee.position.id }">${employee.position.name }</option>
                                         </c:if>
-                                        <c:if test="${employee. getIdPosition() ==null}">
-                                            <option value="1" selected >Lễ tân</option>
-                                        </c:if>
-
-                                        <option value="2">phục vụ</option>
-                                        <option value="3">chuyên viên</option>
+                                        <c:forEach var="position" items="${positionList}">
+                                            <c:if test="${employee.position.id != position.id}">
+                                                <option value="${position.id }"
+                                                > ${position.name}</option>
+                                            </c:if>
+                                        </c:forEach>
                                     </select>
                                 </div>
                                 <div class="col-md-4 px-1">
@@ -74,15 +74,16 @@
                                         </label>
                                         <select class="form-control"
                                                 name="idEducation">
-                                            <c:if test="${employee.getIdEducation()!=null}">
-                                                <option selected value="${employee.getIdEducation()}">Trung cấp</option>
+                                            <c:if test="${employee.education!=null}">
+                                                <option selected value="${employee.education.id}">${employee.education.name}</option>
                                             </c:if>
-                                            <c:if test="${employee.getIdEducation()==null}">
-                                                <option value="1" selected >Trung cấp</option>
-                                            </c:if>
+                                            <c:forEach var="education" items="${educationList}">
+                                                <c:if test="${employee.education.id != education.id}">
+                                                    <option value="${education.id }"
+                                                    > ${education.name}</option>
+                                                </c:if>
+                                            </c:forEach>
 
-                                            <option value="2">Đại học </option>
-                                            <option value="3">sau đại học</option>
                                         </select>
                                     </div>
                                 </div>
@@ -93,15 +94,15 @@
                                         </label>
                                         <select class="form-control"
                                                 name="idDivision">
-                                            <c:if test="${employee.getIdDivision()!=null}">
-                                                <option selected value="${employee.getIdDivision()}">Sale – Marketing</option>
+                                            <c:if test="${employee.division!=null}">
+                                                <option selected value="${employee.division.id}">${employee.division.name}</option>
                                             </c:if>
-                                            <c:if test="${employee.getIdDivision()==null}">
-                                                <option value="1" selected >Sale – Marketing</option>
-                                            </c:if>
-
-                                            <option value="2">Hành Chính</option>
-                                            <option value="3">Phục vụ</option>
+                                            <c:forEach var="division" items="${divisionList}">
+                                                <c:if test="${employee.division.id != division.id}">
+                                                    <option value="${division.id }"
+                                                    > ${division.name}</option>
+                                                </c:if>
+                                            </c:forEach>
                                         </select>
                                     </div>
                                 </div>
@@ -111,21 +112,21 @@
                                     <div class="form-group">
                                         <label>Date</label>
                                         <input class="form-control" type="date" id="date-input" name="birthDay"
-                                               value="<fmt:formatDate value="${employee.getBirthDay()}" pattern="yyyy-MM-dd" />">
+                                               value="<fmt:formatDate value="${employee.birthDay}" pattern="yyyy-MM-dd" />">
                                     </div>
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label>ID card</label>
-                                            <input type="text" class="form-control" placeholder="" value="${employee.getIdCard()}" name="idCard">
+                                            <input type="text" class="form-control" placeholder="" value="${employee.idCard}" name="idCard">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <label>Salary</label>
-                                        <input type="text" class="form-control" placeholder="Salary" value="${employee.getSalary()}" name="salary">
+                                        <input type="text" class="form-control" placeholder="Salary" value="${employee.salary}" name="salary">
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +134,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <input type="text" class="form-control" placeholder="" value="${employee.getAddress()}"
+                                        <input type="text" class="form-control" placeholder="" value="${employee.address}"
                                                name="address">
                                     </div>
                                 </div>
@@ -141,20 +142,20 @@
                             <div class="row">
                                 <div class="col-md-4 pr-1">
                                     <label>Status</label>
-                                    <input type="text" class="form-control" placeholder="phone" value="${employee.getPhone()}" name="phone">
+                                    <input type="text" class="form-control" placeholder="" value="${employee.phone}" name="phone">
 
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="text" class="form-control" placeholder="ID number" value="${employee.getEmail()}" name="email">
+                                        <input type="text" class="form-control" placeholder="" value="${employee.email}" name="email">
 
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input type="text" class="form-control" placeholder="Username" value="${employee.getUsername()}" name="username">
+                                        <input type="text" class="form-control" placeholder="Username" value="${employee.username}" name="username">
                                     </div>
                                 </div>
                             </div>

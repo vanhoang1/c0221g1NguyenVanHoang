@@ -69,17 +69,17 @@
                     <c:forEach items='${list}' var="contractDetail" varStatus="count">
                         <tr>
                             <td class="text-center">${count.count}</td>
-                            <td class="text-center">${contractDetail.getId()}</td>
-                            <td class="text-center">${contractDetail.getContract().getIdContract()}</td>
-                            <td class="text-center">${contractDetail.getAttachService().getId()}</td>
-                            <td>${contractDetail.getAttachService().getAttachName()}</td>
+                            <td class="text-center">${contractDetail.id}</td>
+                            <td class="text-center">${contractDetail.contract.idContract}</td>
+                            <td class="text-center">${contractDetail.attachService.id}</td>
+                            <td>${contractDetail.attachService.attachName}</td>
 
-                            <td>${contractDetail.getQuantity()}</td>
+                            <td>${contractDetail.quantity}</td>
 
                                 <%--                        thao tac--%>
                             <td class="td-actions text-right">
 
-                                <a href="/contract-detail?action=view&id=${contractDetail.getId()}" class="text-light">
+                                <a href="/contract-detail?action=view&id=${contractDetail.id}" class="text-light">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-info btn-round btn-just-icon btn-sm"
                                             data-original-title="" title="info"><i
@@ -87,7 +87,7 @@
                                 </a>
 
 
-                                <a href="/contract-detail?action=edit&id=${contractDetail.getId()} " class="text-light">
+                                <a href="/contract-detail?action=edit&id=${contractDetail.id} " class="text-light">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-success btn-round btn-just-icon btn-sm"
                                             data-original-title=""
@@ -96,7 +96,7 @@
                                 </a>
 
 
-                                <a data-href="/contract-detail?action=delete&id=${contractDetail.getId()}"
+                                <a data-href="/contract-detail?action=delete&id=${contractDetail.id}"
                                    data-record-title="row ${count.count}"
                                    data-toggle="modal" data-target="#confirm-delete" class="text-light ">
                                     <button type="button" rel="tooltip"

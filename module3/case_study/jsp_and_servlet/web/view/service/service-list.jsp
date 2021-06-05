@@ -17,7 +17,7 @@
 </head>
 <body>
 <jsp:include page="../common/header.jsp"/>
-<div class="container pt-3">
+<div class="container-fluid pt-3">
     <div class="title text-center">
         <h3>Service</h3>
     </div>
@@ -59,6 +59,8 @@
                         <th>Number Of Floors</th>
                         <th>Max Num Of People</th>
                         <th>Rental Costs</th>
+                        <th>Type Rent</th>
+                        <th>Type Service</th>
                         <th>Status</th>
                         <%--                             thao tác--%>
                         <th class="text-right">Actions</th>
@@ -70,30 +72,32 @@
                         <tr >
                             <td class="text-center">${count.count}</td>
 
-                            <td>${service.getServiceName()}</td>
-                            <td class="text-center">${service.getAreaOfUse()}</td>
-                            <td class="text-center">${service.getNumberOfFloors()}</td>
-                            <td class="text-center">${service.getMaxNumOfPeople()}</td>
-                            <td class="text-center">${service.getRentalCosts()}</td>
-                            <td class="text-center">${service.getStatus()}</td>
+                            <td>${service.serviceName}</td>
+                            <td class="text-center">${service.areaOfUse}</td>
+                            <td class="text-center">${service.numberOfFloors}</td>
+                            <td class="text-center">${service.maxNumOfPeople}</td>
+                            <td class="text-center">${service.rentalCosts}</td>
+                            <td>${service.rentType.name}</td>
+                            <td>${service.serviceType.name}</td>
+                            <td class="text-center">${service.status}</td>
 
 
                                 <%--                        thao tac--%>
                             <td class="td-actions text-right">
 
-                                    <a href="/services?action=view&id=${service.getId()}" class="text-light"> <button type="button" rel="tooltip" class="btn btn-info btn-round btn-just-icon btn-sm"
+                                    <a href="/services?action=view&id=${service.id}" class="text-light"> <button type="button" rel="tooltip" class="btn btn-info btn-round btn-just-icon btn-sm"
                                                                                                                        data-original-title="" title="info"> <i
                                             class="fa fa-user"></i> </button> </a>
 
 
-                                    <a href="/services?action=edit&id=${service.getId()} " class="text-light"> <button type="button" rel="tooltip"
+                                    <a href="/services?action=edit&id=${service.id} " class="text-light"> <button type="button" rel="tooltip"
                                                                                                                         class="btn btn-success btn-round btn-just-icon btn-sm" data-original-title=""
                                                                                                                         title="edit"> <i
                                             class="fa fa-edit"></i>             </button></a>
 
 
-                                <a  data-href="/services?action=delete&id=${service.getId()}"
-                                    data-record-title="${service.getServiceName()}"
+                                <a  data-href="/services?action=delete&id=${service.id}"
+                                    data-record-title="${service.serviceName}"
                                    data-toggle="modal" data-target="#confirm-delete" class="text-light ">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-danger btn-round btn-just-icon btn-sm" data-original-title=""

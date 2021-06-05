@@ -1,7 +1,10 @@
 package controller.service;
 
-import model.bean.Customer;
-import model.bean.Services;
+import model.bean.service.RentType;
+import model.bean.service.ServiceType;
+import model.bean.service.Services;
+import model.repository.service.RentTypeRepository;
+import model.repository.service.ServiceTypeRepository;
 import model.service.api.Service;
 import model.service.impl.IServiceManager;
 
@@ -13,9 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ServiceServlet" ,urlPatterns = "/services")
+@WebServlet(name = "ServiceServlet", urlPatterns = "/services")
 public class ServiceServlet extends HttpServlet {
     Service<Services> serviceManager = new IServiceManager();
+    RentTypeRepository rentTypeRepository = new RentTypeRepository();
+    ServiceTypeRepository serviceTypeRepository = new ServiceTypeRepository();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -35,7 +40,6 @@ public class ServiceServlet extends HttpServlet {
                 break;
         }
     }
-
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -64,7 +68,8 @@ public class ServiceServlet extends HttpServlet {
                 break;
         }
     }
-// do get
+
+    // do get
     private void listService(HttpServletRequest request, HttpServletResponse response) {
         List<Services> list = serviceManager.findAll();
         request.setAttribute("list", list);
@@ -76,8 +81,8 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void searchService(HttpServletRequest request, HttpServletResponse response) {
-        String name=request.getParameter("search");
-        List<Services> list =serviceManager.findByName(name);
+        String name = request.getParameter("search");
+        List<Services> list = serviceManager.findByName(name);
         request.setAttribute("list", list);
         try {
             request.getRequestDispatcher("view/service/service-list.jsp").forward(request, response);
@@ -90,19 +95,27 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void delService(HttpServletRequest request, HttpServletResponse response) {
-        int id= Integer.parseInt(request.getParameter("id"));
-        boolean check= serviceManager.remove(id);
+        int id = Integer.parseInt(request.getParameter("id"));
+        boolean check = serviceManager.remove(id);
         if (check) request.setAttribute("message", "xóa thành công");
-        else {request.setAttribute("message", "xóa thất bại");request.setAttribute("err", true);}
-        listService(request,response);
+        else {
+            request.setAttribute("message", "xóa thất bại");
+            request.setAttribute("err", true);
+        }
+        listService(request, response);
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
-     int id= Integer.parseInt(request.getParameter("id"));
-     Services services = serviceManager.findById(id);
-     request.setAttribute("service",services);
+        List<RentType> rentTypeList = rentTypeRepository.getAll();
+        List<ServiceType> serviceTypeList = serviceTypeRepository.getAll();
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        Services services = serviceManager.findById(id);
+        request.setAttribute("service", services);
+        request.setAttribute("rentTypeList", rentTypeList);
+        request.setAttribute("serviceTypeList", serviceTypeList);
         try {
-            request.getRequestDispatcher("view/service/service-edit.jsp").forward(request,response);
+            request.getRequestDispatcher("view/service/service-edit.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -111,9 +124,12 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
-
+        List<RentType> rentTypeList = rentTypeRepository.getAll();
+        List<ServiceType> serviceTypeList = serviceTypeRepository.getAll();
+        request.setAttribute("rentTypeList", rentTypeList);
+        request.setAttribute("serviceTypeList", serviceTypeList);
         try {
-            request.getRequestDispatcher("view/service/service-create.jsp").forward(request,response);
+            request.getRequestDispatcher("view/service/service-create.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -122,21 +138,27 @@ public class ServiceServlet extends HttpServlet {
 
 
     }
+
     // do post
     private void createService(HttpServletRequest request, HttpServletResponse response) {
-        String name=request.getParameter("name");
+        String name = request.getParameter("name");
         int areaOfUse = Integer.parseInt(request.getParameter("areaOfUse"));
         int numberOfFloors = Integer.parseInt(request.getParameter("numberOfFloors"));
         int maxNumOfPeople = Integer.parseInt(request.getParameter("maxNumOfPeople"));
         int rentalCosts = Integer.parseInt(request.getParameter("rentalCosts"));
         int idRentType = Integer.parseInt(request.getParameter("idRentType"));
         int idServiceType = Integer.parseInt(request.getParameter("idServiceType"));
+        RentType rentType = rentTypeRepository.get(idRentType);
+        ServiceType serviceType = serviceTypeRepository.get(idServiceType);
         String status = request.getParameter("status");
-        Services services = new Services(name,areaOfUse,numberOfFloors,maxNumOfPeople,rentalCosts,idRentType,idServiceType,status);
-        boolean check= serviceManager.save(services);
+        Services services = new Services(name, areaOfUse, numberOfFloors, maxNumOfPeople, rentalCosts, rentType, serviceType, status);
+        boolean check = serviceManager.save(services);
         request.setAttribute("service", services);
         if (check) request.setAttribute("message", "thêm mới thành công");
-        else {request.setAttribute("message", "thêm mới thất bại");request.setAttribute("err", true);}
+        else {
+            request.setAttribute("message", "thêm mới thất bại");
+            request.setAttribute("err", true);
+        }
         try {
             request.getRequestDispatcher("view/service/service-create.jsp").forward(request, response);
         } catch (ServletException e) {
@@ -147,20 +169,25 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void editService(HttpServletRequest request, HttpServletResponse response) {
-        int id= Integer.parseInt(request.getParameter("id"));
-        String name=request.getParameter("name");
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
         int areaOfUse = Integer.parseInt(request.getParameter("areaOfUse"));
         int numberOfFloors = Integer.parseInt(request.getParameter("numberOfFloors"));
         int maxNumOfPeople = Integer.parseInt(request.getParameter("maxNumOfPeople"));
         int rentalCosts = Integer.parseInt(request.getParameter("rentalCosts"));
         int idRentType = Integer.parseInt(request.getParameter("idRentType"));
         int idServiceType = Integer.parseInt(request.getParameter("idServiceType"));
+        RentType rentType = rentTypeRepository.get(idRentType);
+        ServiceType serviceType = serviceTypeRepository.get(idServiceType);
         String status = request.getParameter("status");
-        Services services = new Services(name,areaOfUse,numberOfFloors,maxNumOfPeople,rentalCosts,idRentType,idServiceType,status);
-        boolean check= serviceManager.update(id,services);
+        Services services = new Services(name, areaOfUse, numberOfFloors, maxNumOfPeople, rentalCosts, rentType, serviceType, status);
+        boolean check = serviceManager.update(id, services);
         request.setAttribute("service", services);
         if (check) request.setAttribute("message", "Cập nhật thành công");
-        else {request.setAttribute("message", "Cập nhật thất bại");request.setAttribute("err", true);}
+        else {
+            request.setAttribute("message", "Cập nhật thất bại");
+            request.setAttribute("err", true);
+        }
         try {
             request.getRequestDispatcher("view/service/service-edit.jsp").forward(request, response);
         } catch (ServletException e) {

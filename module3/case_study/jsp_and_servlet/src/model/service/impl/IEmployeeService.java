@@ -1,7 +1,7 @@
 package model.service.impl;
 
-import model.bean.Employee;
-import model.repository.EmployeeRepository;
+import model.bean.employee.Employee;
+import model.repository.employee.EmployeeRepository;
 import model.service.api.Service;
 
 import java.util.List;

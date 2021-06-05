@@ -119,7 +119,13 @@
                 <ul class="navbar-nav mx-auto ">
                     <li class="nav-item px-4"><a class="nav-link" href="/home" data-abc="true">Home </a></li>
                     <li class="nav-item px-4"><a class="nav-link" href="/employees" data-abc="true">Employee</a></li>
-                    <li class="nav-item px-4"><a class="nav-link" href="/customers" data-abc="true">Customer</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
+                                                     data-abc="true" aria-expanded="false">Customer</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/customers" data-abc="true">List Customer</a>
+                        <a class="dropdown-item" href="/summary" data-abc="true">Customers are using the service </a>
+                    </div>
+                    </li>
                     <li class="nav-item px-4"><a class="nav-link" href="/services" data-abc="true">Service</a></li>
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
                                                      data-abc="true" aria-expanded="false">Contract</a>

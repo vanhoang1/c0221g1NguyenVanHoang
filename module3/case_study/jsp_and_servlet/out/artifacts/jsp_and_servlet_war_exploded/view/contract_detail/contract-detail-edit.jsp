@@ -12,11 +12,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Edit Contract </title>
+    <title>Create Contract </title>
 </head>
 <body>
 <jsp:include page="../common/header.jsp"/>
-
 <c:if test='${message != null&&!err}'>
     <div class="alert alert-success fixed-top col-4" role="alert">
             ${message}
@@ -34,7 +33,7 @@
             <div class="col-md-8 mx-auto">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Edit Contract Detail</h4>
+                        <h4 class="card-title">Create Contract Detail</h4>
                     </div>
                     <div class="card-body">
                         <form method="post">
@@ -45,14 +44,14 @@
                                     </label>
                                     <select class="form-control"
                                             name="idContract">
-                                        <c:if test="${contractDetail. getContract()!=null}">
+                                        <c:if test="${contractDetail. contract!=null}">
                                             <option selected
-                                                    value="${contractDetail.getContract().getIdContract() }">${contractDetail.getContract().getIdContract() }</option>
+                                                    value="${contractDetail.contract.idContract }">${contractDetail.contract.idContract }</option>
                                         </c:if>
                                         <c:forEach var="contract" items="${contractList}">
-                                            <c:if test="${contractDetail.getContract().getIdContract()!= contract.getIdContract()}">
-                                                <option value="${contract.getIdContract() }"
-                                                >${contract.getIdContract() }</option>
+                                            <c:if test="${contractDetail.contract.idContract!= contract.idContract}">
+                                                <option value="${contract.idContract }"
+                                                >${contract.idContract }</option>
                                             </c:if>
                                         </c:forEach>
                                     </select>
@@ -64,15 +63,15 @@
                                         </label>
                                         <select class="form-control"
                                                 name="idAttachService">
-                                            <c:if test="${contractDetail.getAttachService()!=null}">
+                                            <c:if test="${contractDetail.attachService!=null}">
                                                 <option selected
-                                                        value="${contractDetail.getAttachService().getId() }">${contractDetail.getAttachService().getId() }
-                                                    : ${contractDetail.getAttachService().getAttachName()}</option>
+                                                        value="${contractDetail.attachService.id }">${contractDetail.attachService.id }
+                                                    : ${contractDetail.attachService.attachName}</option>
                                             </c:if>
                                             <c:forEach var="attachService" items="${attachServiceList}">
-                                                <c:if test="${contractDetail.getAttachService().getId()!= attachService.getId()}">
-                                                    <option value="${attachService.getId()}" >${attachService.getId()}
-                                                        : ${attachService.getAttachName()}</option>
+                                                <c:if test="${contractDetail.attachService.id!= attachService.id}">
+                                                    <option value="${attachService.id}" >${attachService.id}
+                                                        : ${attachService.attachName}</option>
                                                 </c:if>
                                             </c:forEach>
                                         </select>
@@ -85,7 +84,7 @@
                                         <div class="form-group">
                                             <label>Quantity</label>
                                             <input type="text" class="form-control" placeholder=""
-                                                   value="${contractDetail.getQuantity()}" name="quantity">
+                                                   value="${contractDetail.quantity}" name="quantity">
                                         </div>
                                     </div>
                                 </div>

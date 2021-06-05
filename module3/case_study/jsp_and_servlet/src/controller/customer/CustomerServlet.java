@@ -1,6 +1,8 @@
 package controller.customer;
 
-import model.bean.Customer;
+import model.bean.customer.Customer;
+import model.bean.customer.CustomerType;
+import model.repository.customer.CustomerTypeRepository;
 import model.service.api.Service;
 import model.service.impl.ICustomerService;
 
@@ -18,6 +20,7 @@ import java.util.List;
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
     private Service<Customer> customerService = new ICustomerService();
+    private CustomerTypeRepository customerTypeRepository= new CustomerTypeRepository();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -97,6 +100,8 @@ public class CustomerServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = customerService.findById(id);
+        List<CustomerType> typeList= customerTypeRepository.getAll();
+        request.setAttribute("typeList" ,typeList);
         request.setAttribute("customer", customer);
         try {
             request.getRequestDispatcher("view/customer/customer-edit.jsp").forward(request, response);
@@ -106,6 +111,8 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
+        List<CustomerType> typeList= customerTypeRepository.getAll();
+        request.setAttribute("typeList" ,typeList);
         try {
             request.getRequestDispatcher("view/customer/customer-create.jsp").forward(request, response);
         } catch (Exception e) {
@@ -138,10 +145,13 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
         String email = request.getParameter("email");
         int typeOfCustomer = Integer.parseInt(request.getParameter("typeOfCustomer"));
+        CustomerType customerType = customerTypeRepository.get(typeOfCustomer);
         int gender = Integer.parseInt(request.getParameter("gender"));
-        Customer customer = new Customer(id, nameCustomer, dateOfBirth, soCMND,gender, soDT, address, email, typeOfCustomer);
+        Customer customer = new Customer(id, nameCustomer, dateOfBirth, soCMND,gender, soDT, address, email, customerType);
         boolean check = customerService.update(id, customer);
         request.setAttribute("customer", customer);
+        List<CustomerType> typeList= customerTypeRepository.getAll();
+        request.setAttribute("typeList" ,typeList);
         if (check) request.setAttribute("message", "Cập nhật thành công");
         else {request.setAttribute("message", "Cập nhật thất bại");request.setAttribute("err", true);}
         try {
@@ -169,8 +179,11 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
         String email = request.getParameter("email");
         int typeOfCustomer = Integer.parseInt(request.getParameter("typeOfCustomer"));
-        Customer customer = new Customer(nameCustomer, dateOfBirth, soCMND,gender, soDT, address, email, typeOfCustomer);
+        CustomerType customerType = customerTypeRepository.get(typeOfCustomer);
+        Customer customer = new Customer(nameCustomer, dateOfBirth, soCMND,gender, soDT, address, email, customerType);
         boolean check = customerService.save(customer);
+        List<CustomerType> typeList= customerTypeRepository.getAll();
+        request.setAttribute("typeList" ,typeList);
         if (check) request.setAttribute("message", "Tạo mới thành công");
         else {
             request.setAttribute("err", true);

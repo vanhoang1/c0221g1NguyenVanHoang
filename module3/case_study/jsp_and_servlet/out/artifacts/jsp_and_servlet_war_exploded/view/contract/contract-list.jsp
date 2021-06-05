@@ -73,20 +73,20 @@
                         <tr>
                             <td class="text-center">${count.count}</td>
 
-                            <td class="text-center">${contract.getCustomer().getNameCustomer()}</td>
-                            <td class="text-center">${contract.getEmployee() .getNameEmployee()}</td>
-                            <td class="text-center">${contract.getService().getServiceName()}</td>
-                            <td>${contract.getStartDate()}</td>
+                            <td class="text-center">${contract.customer.nameCustomer}</td>
+                            <td class="text-center">${contract.employee .nameEmployee}</td>
+                            <td class="text-center">${contract.service.serviceName}</td>
+                            <td>${contract.startDate}</td>
 
-                            <td>${contract.getEndDate()}</td>
-                            <td>${contract.getDeposit()}</td>
-                            <td>${contract.getTotalMoney()}</td>
+                            <td>${contract.endDate}</td>
+                            <td>${contract.deposit}</td>
+                            <td>${contract.totalMoney}</td>
 
 
                                 <%--                        thao tac--%>
                             <td class="td-actions text-right">
 
-                                <a href="/contracts?action=view&id=${contract. getIdContract()}" class="text-light">
+                                <a href="/contracts?action=view&id=${contract. idContract}" class="text-light">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-info btn-round btn-just-icon btn-sm"
                                             data-original-title="" title="info"><i
@@ -94,7 +94,7 @@
                                 </a>
 
 
-                                <a href="/contracts?action=edit&id=${contract. getIdContract()} " class="text-light">
+                                <a href="/contracts?action=edit&id=${contract. idContract} " class="text-light">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-success btn-round btn-just-icon btn-sm"
                                             data-original-title=""
@@ -103,7 +103,7 @@
                                 </a>
 
 
-                                <a data-href="/contracts?action=delete&id=${contract. getIdContract()}"
+                                <a data-href="/contracts?action=delete&id=${contract. idContract}"
                                    data-record-title="row ${count.count}"
                                    data-toggle="modal" data-target="#confirm-delete" class="text-light ">
                                     <button type="button" rel="tooltip"

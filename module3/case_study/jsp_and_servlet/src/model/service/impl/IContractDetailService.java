@@ -1,9 +1,9 @@
 package model.service.impl;
 
-import model.bean.ContractDetail;
-import model.repository.AttachServiceRepository;
-import model.repository.ContractDetailRepository;
-import model.repository.ContractRepository;
+import model.bean.contract.ContractDetail;
+import model.repository.contract.AttachServiceRepository;
+import model.repository.contract.ContractDetailRepository;
+import model.repository.contract.ContractRepository;
 import model.service.api.Service;
 
 import java.util.List;

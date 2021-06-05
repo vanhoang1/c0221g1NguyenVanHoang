@@ -1,7 +1,5 @@
 package model.repository;
 
-import model.bean.Customer;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

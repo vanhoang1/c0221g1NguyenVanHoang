@@ -1,8 +1,8 @@
 package model.service.impl;
 
-import model.bean.Customer;
+import model.bean.customer.Customer;
 import model.repository.BaseRepository;
-import model.repository.CustomerRepository;
+import model.repository.customer.CustomerRepository;
 import model.service.api.Service;
 
 import java.util.List;

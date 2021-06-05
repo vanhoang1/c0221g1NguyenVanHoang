@@ -1,7 +1,5 @@
 package model.service.api;
 
-import model.bean.Customer;
-
 import java.util.List;
 
 public interface Service<E> {

@@ -1,8 +1,8 @@
 package model.service.impl;
 
-import model.bean.Services;
+import model.bean.service.Services;
 import model.repository.BaseRepository;
-import model.repository.ServiceRepository;
+import model.repository.service.ServiceRepository;
 import model.service.api.Service;
 
 

@@ -11,8 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Customer Create</title>
-
+    <title>Service Create</title>
 </head>
 <body>
 
@@ -35,7 +34,7 @@
             <div class="col-md-8 mx-auto">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Create Service</h4>
+                        <h4 class="card-title">Service Create</h4>
                     </div>
                     <div class="card-body">
                         <form method="post">
@@ -44,7 +43,7 @@
                                     <div class="form-group">
                                         <label>Name </label>
                                         <input type="text" class="form-control" placeholder="Name" name="name"
-                                               value="${service.getServiceName()}">
+                                               value="${service.serviceName}">
                                     </div>
                                 </div>
 
@@ -53,7 +52,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Area Of Use </label>
-                                        <input type="text" class="form-control" placeholder="" value="${service.getAreaOfUse()}"
+                                        <input type="text" class="form-control" placeholder="" value="${service.areaOfUse}"
                                                name="areaOfUse">
 
                                     </div>
@@ -62,7 +61,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Number Of Floors</label>
-                                        <input type="text" class="form-control" placeholder=" " value="${service.getNumberOfFloors()}"
+                                        <input type="text" class="form-control" placeholder=" " value="${service.numberOfFloors}"
                                                name="numberOfFloors">
 
                                     </div>
@@ -71,7 +70,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Max Num Of People</label>
-                                        <input type="text" class="form-control" placeholder=" " value="${service.getMaxNumOfPeople()}"
+                                        <input type="text" class="form-control" placeholder=" " value="${service.maxNumOfPeople}"
                                                name="maxNumOfPeople">
 
                                     </div>
@@ -82,7 +81,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Rental Costs</label>
-                                        <input type="text" class="form-control" placeholder="" value="${service.getRentalCosts()}"
+                                        <input type="text" class="form-control" placeholder="" value="${service.rentalCosts}"
                                                name="rentalCosts">
                                     </div>
                                 </div>
@@ -94,15 +93,15 @@
                                     </label>
                                     <select class="form-control"
                                             name="idRentType">
-                                        <c:if test="${service.getIdRentType()!=null}">
-                                            <option selected value="${service.getIdRentType()}">Theo ngày</option>
+                                        <c:if test="${service.rentType!=null}">
+                                            <option selected value="${service.rentType.id}">${service.rentType.name}</option>
                                         </c:if>
-                                        <c:if test="${service.getIdRentType()==null}">
-                                            <option value="1" selected >Theo ngày</option>
-                                        </c:if>
-
-                                        <option value="2">Theo tháng</option>
-                                        <option value="3">Theo năm</option>
+                                        <c:forEach var="rentType" items="${rentTypeList}">
+                                            <c:if test="${service.rentType.id != rentType.id}">
+                                                <option value="${rentType.id }"
+                                                > ${rentType.name}</option>
+                                            </c:if>
+                                        </c:forEach>
                                     </select>
                                 </div>
                                 <div class="col-md-4 px-1">
@@ -112,22 +111,22 @@
                                         </label>
                                         <select class="form-control"
                                                 name="idServiceType">
-                                            <c:if test="${service. getIdServiceType()!=null}">
-                                                <option selected value="${service.getIdServiceType()}">Villa</option>
+                                            <c:if test="${service.serviceType!=null}">
+                                                <option selected value="${service.serviceType.id}">${service.serviceType.name}</option>
                                             </c:if>
-                                            <c:if test="${service. getIdServiceType()==null}">
-                                                <option value="1" selected >Villa</option>
-                                            </c:if>
-
-                                            <option value="2">Home</option>
-                                            <option value="3">Room</option>
+                                            <c:forEach var="serviceType" items="${serviceTypeList}">
+                                                <c:if test="${service.serviceType.id != serviceType.id}">
+                                                    <option value="${serviceType.id }"
+                                                    > ${serviceType.name}</option>
+                                                </c:if>
+                                            </c:forEach>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <label>Status</label>
-                                        <input type="text" class="form-control" placeholder="ID number" value="${service.getStatus()}" name="status">
+                                        <input type="text" class="form-control" placeholder="Status" value="${service.status}" name="status">
                                     </div>
                                 </div>
                             </div>

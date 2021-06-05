@@ -62,6 +62,7 @@
                         <th>SDT</th>
                         <th>Address</th>
                         <th>Email</th>
+                        <th>Type Customer</th>
 
                         <%--                             thao tác--%>
                         <th class="text-right">Actions</th>
@@ -73,22 +74,23 @@
                         <tr>
                             <td class="text-center">${count.count}</td>
 
-                            <td>${customer.getNameCustomer()}</td>
-                            <td>${customer.getDateOfBirth()}</td>
-                            <td>${customer.getSoCMND()}</td>
+                            <td>${customer.nameCustomer}</td>
+                            <td>${customer.dateOfBirth}</td>
+                            <td>${customer.soCMND}</td>
                             <td>
-                                <c:if test="${customer.getGender()==0}"> Male</c:if>
-                                <c:if test="${customer.getGender()==1}"> Female</c:if>
+                                <c:if test="${customer.gender==0}"> Male</c:if>
+                                <c:if test="${customer.gender==1}"> Female</c:if>
                             </td>
-                            <td>${customer.getSoDT()}</td>
-                            <td>${customer.getAddress()}</td>
-                            <td>${customer.getEmail()}</td>
+                            <td>${customer.soDT}</td>
+                            <td>${customer.address}</td>
+                            <td>${customer.email}</td>
+                            <td>${customer.customerType.name}</td>
 
 
                                 <%--                        thao tac--%>
                             <td class="td-actions text-right">
 
-                                <a href="/customers?action=view&id=${customer.getId()}" class="text-light">
+                                <a href="/customers?action=view&id=${customer.id}" class="text-light">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-info btn-round btn-just-icon btn-sm"
                                             data-original-title="" title="info"><i
@@ -96,7 +98,7 @@
                                 </a>
 
 
-                                <a href="/customers?action=edit&id=${customer.getId()} " class="text-light">
+                                <a href="/customers?action=edit&id=${customer.id} " class="text-light">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-success btn-round btn-just-icon btn-sm"
                                             data-original-title=""
@@ -105,8 +107,8 @@
                                 </a>
 
 
-                                <a data-href="/customers?action=delete&id=${customer.getId()}"
-                                   data-record-title="${customer.getNameCustomer()}"
+                                <a data-href="/customers?action=delete&id=${customer.id}"
+                                   data-record-title="${customer.nameCustomer}"
                                    data-toggle="modal" data-target="#confirm-delete" class="text-light ">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-danger btn-round btn-just-icon btn-sm" data-original-title=""

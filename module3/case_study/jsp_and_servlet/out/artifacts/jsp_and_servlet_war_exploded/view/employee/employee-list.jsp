@@ -17,15 +17,17 @@
 </head>
 <body>
 <jsp:include page="../common/header.jsp"/>
-<div class="container pt-3">
+<div class="container-fluid pt-3">
     <div class="title text-center">
         <h3>Employee</h3>
     </div>
     <div class="row ">
         <div class="mx-auto ">
             <div class="d-grid gap-2 d-md-flex justify-content-md-between my-3">
-                <a href="/employees?action=create"> <button type="button" class="btn btn-outline-secondary"><i class="fa fa-plus-circle"></i> Thêm mới
-                </button></a>
+                <a href="/employees?action=create">
+                    <button type="button" class="btn btn-outline-secondary"><i class="fa fa-plus-circle"></i> Thêm mới
+                    </button>
+                </a>
                 <div class="col-lg-4 col-xl-4 col-sm-8 col-md-4 d-none d-md-flex ">
                     <form action="/employees" class="search-wrap">
                         <input hidden name="action" value="search">
@@ -60,6 +62,9 @@
                         <th>Salary</th>
                         <th>Phone</th>
                         <th>Address</th>
+                        <th>Position</th>
+                        <th>Education</th>
+                        <th>Division</th>
                         <%--                             thao tác--%>
                         <th class="text-right">Actions</th>
                     </tr>
@@ -67,34 +72,43 @@
                     <tbody>
 
                     <c:forEach items='${list}' var="employee" varStatus="count">
-                        <tr >
+                        <tr>
                             <td class="text-center">${count.count}</td>
 
-                            <td>${employee.getNameEmployee()}</td>
-                            <td class="text-center">${employee.getBirthDay()}</td>
-                            <td class="text-center">${employee.getIdCard() }</td>
-                            <td class="text-center">${employee.getSalary()}</td>
-                            <td class="text-center">${employee.getPhone()}</td>
-                            <td class="text-center">${employee. getAddress() }</td>
+                            <td>${employee.nameEmployee}</td>
+                            <td class="text-center">${employee.birthDay}</td>
+                            <td class="text-center">${employee.idCard }</td>
+                            <td class="text-center">${employee.salary}</td>
+                            <td class="text-center">${employee.phone}</td>
+                            <td class="text-center">${employee.address }</td>
+                            <td class="text-center">${employee.position.name }</td>
+                            <td class="text-center">${employee.education.name }</td>
+                            <td class="text-center">${employee.division.name }</td>
 
 
                                 <%--                        thao tac--%>
                             <td class="td-actions text-right">
 
-                                <a href="/employees?action=view&id=${employee.getIdEmployee()}" class="text-light"> <button type="button" rel="tooltip" class="btn btn-info btn-round btn-just-icon btn-sm"
-                                                                                                                  data-original-title="" title="info"> <i
-                                        class="fa fa-user"></i> </button> </a>
+                                <a href="/employees?action=view&id=${employee.idEmployee}" class="text-light">
+                                    <button type="button" rel="tooltip"
+                                            class="btn btn-info btn-round btn-just-icon btn-sm"
+                                            data-original-title="" title="info"><i
+                                            class="fa fa-user"></i></button>
+                                </a>
 
 
-                                <a href="/employees?action=edit&id=${employee.getIdEmployee()} " class="text-light"> <button type="button" rel="tooltip"
-                                                                                                                   class="btn btn-success btn-round btn-just-icon btn-sm" data-original-title=""
-                                                                                                                   title="edit"> <i
-                                        class="fa fa-edit"></i>             </button></a>
+                                <a href="/employees?action=edit&id=${employee.idEmployee} " class="text-light">
+                                    <button type="button" rel="tooltip"
+                                            class="btn btn-success btn-round btn-just-icon btn-sm"
+                                            data-original-title=""
+                                            title="edit"><i
+                                            class="fa fa-edit"></i></button>
+                                </a>
 
 
-                                <a  data-href="/employees?action=delete&id=${employee.getIdEmployee()}"
-                                    data-record-title="${employee.getNameEmployee()}"
-                                    data-toggle="modal" data-target="#confirm-delete" class="text-light ">
+                                <a data-href="/employees?action=delete&id=${employee.idEmployee}"
+                                   data-record-title="${employee.nameEmployee}"
+                                   data-toggle="modal" data-target="#confirm-delete" class="text-light ">
                                     <button type="button" rel="tooltip"
                                             class="btn btn-danger btn-round btn-just-icon btn-sm" data-original-title=""
                                             title="delete"><i class="fas fa-trash"></i></button>
@@ -103,13 +117,16 @@
                             </td>
                         </tr>
                     </c:forEach>
-                    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
 
                                 <div class="modal-header">
                                     <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
 
                                 </div>
 

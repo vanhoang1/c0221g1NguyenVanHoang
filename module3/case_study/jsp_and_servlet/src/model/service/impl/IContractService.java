@@ -1,13 +1,10 @@
 package model.service.impl;
 
-import model.bean.Contract;
-import model.bean.Customer;
-import model.bean.Employee;
-import model.bean.Services;
-import model.repository.ContractRepository;
-import model.repository.CustomerRepository;
-import model.repository.EmployeeRepository;
-import model.repository.ServiceRepository;
+import model.bean.contract.Contract;
+import model.repository.contract.ContractRepository;
+import model.repository.customer.CustomerRepository;
+import model.repository.employee.EmployeeRepository;
+import model.repository.service.ServiceRepository;
 import model.service.api.Service;
 
 import java.util.List;

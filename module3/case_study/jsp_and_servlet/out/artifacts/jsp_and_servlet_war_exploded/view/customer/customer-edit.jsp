@@ -43,14 +43,14 @@
                                     <div class="form-group">
                                         <label>Name </label>
                                         <input type="text" class="form-control" placeholder="Name Customer" name="name"
-                                               value="${customer.getNameCustomer()}">
+                                               value="${customer.nameCustomer}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
                                         <label>Date</label>
                                         <input class="form-control" type="date" id="date-input" name="birthDay"
-                                               value="<fmt:formatDate value="${customer.getDateOfBirth()}" pattern="yyyy-MM-dd" />">
+                                               value="<fmt:formatDate value="${customer.dateOfBirth}" pattern="yyyy-MM-dd" />">
                                     </div>
                                 </div>
 
@@ -60,7 +60,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="text" class="form-control" placeholder=" Email" value="${customer.getEmail()}"
+                                        <input type="text" class="form-control" placeholder=" Email" value="${customer.email}"
                                                name="email">
 
                                     </div>
@@ -70,7 +70,7 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <input type="text" class="form-control" placeholder="Home Address" value="${customer.getAddress()}"
+                                        <input type="text" class="form-control" placeholder="Home Address" value="${customer.address}"
                                                name="address">
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                             Male
                                         </label>
                                         <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="0"
-                                        <c:if test="${customer.getGender()==0}">checked</c:if>   >
+                                        <c:if test="${customer.gender==0}">checked</c:if>   >
 
                                     </div>
                                     <div class="form-check d-flex px-5">
@@ -90,7 +90,7 @@
                                             Female
                                         </label>
                                         <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="1"
-                                        <c:if test="${customer.getGender()==1}">checked</c:if>>
+                                        <c:if test="${customer.gender==1}">checked</c:if>>
 
                                     </div>
                                 </div>
@@ -100,13 +100,13 @@
                                     <div class="form-group">
                                         <label>Phone</label>
                                         <input type="text" class="form-control" placeholder="Phone" name="phone"
-                                               value="${customer.getSoDT()}">
+                                               value="${customer.soDT}">
                                     </div>
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
                                         <label>ID number</label>
-                                        <input type="text" class="form-control" placeholder="ID number" value="${customer.getSoCMND()}" name="soCMND">
+                                        <input type="text" class="form-control" placeholder="ID number" value="${customer.soCMND}" name="soCMND">
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
@@ -116,15 +116,15 @@
                                         </label>
                                         <select class="form-control"
                                                 name="typeOfCustomer">
-                                            <c:if test="${customer.getTypeOfCustomer()!=null}">
-                                                <option selected value="${customer.getTypeOfCustomer()}">Diamond</option>
+                                            <c:if test="${customer.customerType!=null}">
+                                                <option selected value="${customer.customerType.id}">${customer.customerType.name}</option>
                                             </c:if>
-                                            <c:if test="${customer.getTypeOfCustomer()==null}">
-                                                <option value="1" selected >Diamond</option>
-                                            </c:if>
-
-                                            <option value="2">Gold</option>
-                                            <option value="3">Silver</option>
+                                            <c:forEach var="type" items="${typeList}">
+                                                <c:if test="${customer.customerType.id != type.id}">
+                                                    <option value="${type.id }"
+                                                    > ${type.name}</option>
+                                                </c:if>
+                                            </c:forEach>
                                         </select>
                                     </div>
                                 </div>
@@ -138,7 +138,6 @@
         </div>
     </div>
 </div>
-<jsp:include page="../common/header.jsp"/>
 </body>
 </html>
 

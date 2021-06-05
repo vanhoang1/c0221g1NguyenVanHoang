@@ -45,14 +45,14 @@
                                     <div class="form-group">
                                         <label>Start Date</label>
                                         <input class="form-control" type="date" name="startDate"
-                                               value="<fmt:formatDate value="${contract.getStartDate()}" pattern="yyyy-MM-dd" />">
+                                               value="<fmt:formatDate value="${contract.startDate}" pattern="yyyy-MM-dd" />">
                                     </div>
                                 </div>
                                 <div class="col-md-6 pl-1">
                                     <div class="form-group">
                                         <label>End Date</label>
                                         <input class="form-control" type="date" name="endDate"
-                                               value="<fmt:formatDate value="${contract.getEndDate()}" pattern="yyyy-MM-dd" />">
+                                               value="<fmt:formatDate value="${contract.endDate}" pattern="yyyy-MM-dd" />">
                                     </div>
                                 </div>
 
@@ -64,16 +64,16 @@
                                     </label>
                                     <select class="form-control"
                                             name="idEmployee">
-                                        <c:if test="${contract. getEmployee()!=null}">
+                                        <c:if test="${contract. employe!=null}">
                                             <option selected
-                                                    value="${contract.getEmployee().getIdEmployee() }">${contract.getEmployee().getIdEmployee() }
-                                                : ${contract.getEmployee().getNameEmployee()}</option>
+                                                    value="${contract.employee.idEmployee }">${contract.employee.idEmployee }
+                                                : ${contract.employee.nameEmployee}</option>
                                         </c:if>
                                         <c:forEach var="employee" items="${employeeList}">
-                                            <c:if test="${contract.getEmployee().getIdEmployee()!= employee.getIdEmployee()}">
-                                                <option value="${employee.getIdEmployee() }"
-                                                >${employee.getIdEmployee() }
-                                                    : ${employee.getNameEmployee()}</option>
+                                            <c:if test="${contract.employee.idEmployee!= employee.idEmployee}">
+                                                <option value="${employee.idEmployee }"
+                                                >${employee.idEmployee }
+                                                    : ${employee.nameEmployee}</option>
                                             </c:if>
                                         </c:forEach>
                                     </select>
@@ -85,15 +85,15 @@
                                         </label>
                                         <select class="form-control"
                                                 name="idCustomer">
-                                            <c:if test="${contract.getCustomer()!=null}">
+                                            <c:if test="${contract.customer!=null}">
                                                 <option selected
-                                                        value="${contract.getCustomer().getId()}">${contract.getCustomer().getId() }
-                                                    : ${contract.getCustomer().getNameCustomer()}</option>
+                                                        value="${contract.customer.id}">${contract.customer.id }
+                                                    : ${contract.customer.nameCustomer}</option>
                                             </c:if>
                                             <c:forEach var="customer" items="${customerList}">
-                                                <c:if test="${contract.getCustomer().getId()!= customer.getId()}">
-                                                    <option value="${customer.getId()}" >${customer.getId()}
-                                                        : ${customer.getNameCustomer()}</option>
+                                                <c:if test="${contract.customer.id!= customer.id}">
+                                                    <option value="${customer.id}" >${customer.id}
+                                                        : ${customer.nameCustomer}</option>
                                                 </c:if>
                                             </c:forEach>
                                         </select>
@@ -106,15 +106,15 @@
                                         </label>
                                         <select class="form-control"
                                                 name="idService">
-                                            <c:if test="${contract.getService()!=null}">
+                                            <c:if test="${contract.service!=null}">
                                                 <option selected
-                                                        value="${contract.getService().getId() }">${contract.getService().getId() }
-                                                    : ${contract.getService().getServiceName()}</option>
+                                                        value="${contract.service.id }">${contract.service.id }
+                                                    : ${contract.service.serviceName}</option>
                                             </c:if>
                                             <c:forEach var="service" items="${servicesList}">
-                                                <c:if test="${contract.getCustomer().getId()!= service.getId()}">
-                                                    <option value="${service.getId()}" >${service.getId()}
-                                                        : ${service.getServiceName()}</option>
+                                                <c:if test="${contract.customer.id!= service.id}">
+                                                    <option value="${service.id}" >${service.id}
+                                                        : ${service.serviceName}</option>
                                                 </c:if>
                                             </c:forEach>
                                         </select>
@@ -127,7 +127,7 @@
                                         <div class="form-group">
                                             <label>Deposit</label>
                                             <input type="text" class="form-control" placeholder=""
-                                                   value="${contract.getDeposit()}" name="deposit">
+                                                   value="${contract.deposit}" name="deposit">
                                         </div>
                                     </div>
                                 </div>
@@ -136,12 +136,12 @@
                                         <div class="form-group">
                                             <label>Total Money</label>
                                             <input type="text" class="form-control" placeholder=""
-                                                   value="${contract.getTotalMoney()}" name="totalMoney">
+                                                   value="${contract.totalMoney}" name="totalMoney">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Edit</button>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Create</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

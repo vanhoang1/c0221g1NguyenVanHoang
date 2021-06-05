@@ -1,9 +1,9 @@
 package controller.contract;
 
-import model.bean.Contract;
-import model.bean.Customer;
-import model.bean.Employee;
-import model.bean.Services;
+import model.bean.contract.Contract;
+import model.bean.customer.Customer;
+import model.bean.employee.Employee;
+import model.bean.service.Services;
 import model.service.impl.IContractService;
 
 import javax.servlet.ServletException;
