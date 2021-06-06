@@ -142,13 +142,13 @@
                             <div class="row">
                                 <div class="col-md-4 pr-1">
                                     <label>Status</label>
-                                    <input type="text" class="form-control" placeholder="phone" value="${employee.phone}" name="phone">
+                                    <input type="text" class="form-control" placeholder="" value="${employee.phone}" name="phone">
 
                                 </div>
                                 <div class="col-md-4 px-1">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="text" class="form-control" placeholder="ID number" value="${employee.email}" name="email">
+                                        <input type="text" class="form-control" placeholder="" value="${employee.email}" name="email">
 
                                     </div>
                                 </div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Admin
@@ -20,7 +21,6 @@
 
 </head>
 <body>
-
 <header class="section-header">
     <section class="header-main border-bottom">
         <div class="container-fluid">
@@ -40,64 +40,16 @@
                     </form>
                 </div>
                 <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
-                    <div class="d-flex justify-content-end"><a target="_blank" href="#" data-abc="true"
-                                                               class="nav-link widget-header"> <i
-                            class="fas fa fa-whatsapp"></i></a> <span class="vl"></span>
-                        <div class="dropdown btn-group"><a class="nav-link nav-icons" href="#"
-                                                           id="navbarDropdownMenuLink1" data-toggle="dropdown"
-                                                           aria-haspopup="true" aria-expanded="false" data-abc="true"><i
-                                class="fas fa fa-bell"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
-                                <li>
-                                    <div class="notification-title">More Info</div>
-                                    <div class="notification-list">
-                                        <div class="list-group"><a href="affiliates"
-                                                                   class="list-group-item list-group-item-action active"
-                                                                   data-abc="true">
-                                            <div class="notification-info">
-                                                <div class="notification-list-user-img"><img
-                                                        src="https://img.icons8.com/nolan/100/000000/helping-hand.png"
-                                                        alt="" class="user-avatar-md rounded-circle"></div>
-                                                <div class="notification-list-user-block"><span
-                                                        class="notification-list-user-name">Affiliate program</span>
-                                                </div>
-                                            </div>
-                                        </a> <a href="redemption-center"
-                                                class="list-group-item list-group-item-action active" data-abc="true">
-                                            <div class="notification-info">
-                                                <div class="notification-list-user-img"><img
-                                                        src="https://img.icons8.com/bubbles/100/000000/prize.png" alt=""
-                                                        class="user-avatar-md rounded-circle"></div>
-                                                <div class="notification-list-user-block"><span
-                                                        class="notification-list-user-name">Redemption Center</span>
-                                                </div>
-                                            </div>
-                                        </a> <a href="#" class="list-group-item list-group-item-action active"
-                                                data-abc="true">
-                                            <div class="notification-info">
-                                                <div class="notification-list-user-img"><img
-                                                        src="https://img.icons8.com/ultraviolet/100/000000/medal.png"
-                                                        alt="" class="user-avatar-md rounded-circle"></div>
-                                                <div class="notification-list-user-block"><span
-                                                        class="notification-list-user-name">Achievements</span></div>
-                                            </div>
-                                        </a> <a href="#" class="list-group-item list-group-item-action active"
-                                                data-abc="true">
-                                            <div class="notification-info">
-                                                <div class="notification-list-user-img"><img
-                                                        src="https://img.icons8.com/bubbles/100/000000/call-female.png"
-                                                        alt="" class="user-avatar-md rounded-circle"></div>
-                                                <div class="notification-list-user-block"><span
-                                                        class="notification-list-user-name">Contact us</span></div>
-                                            </div>
-                                        </a></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <span class="vl"></span> <a class="nav-link nav-user-img" href="#" data-toggle="modal"
-                                                    data-target="#login-modal" data-abc="true"><span
-                                class="login">LOGIN</span></a>
+                    <div class="d-flex justify-content-end"><c:if test="${sessionScope.acc!=null}">
+                        <a target="_blank" href="#" data-abc="true"
+                           class="nav-link widget-header text-light"> <i
+                                class="fas fa fa-whatsapp"></i> ${sessionScope.acc.username}</a>
+
+                    </c:if>
+                        <c:if test="${sessionScope.acc == null}">
+                            <a class="nav-link nav-user-img" href="/login" data-abc="true"><span
+                                    class="login">LOGIN</span></a>
+                        </c:if>
                     </div>
                 </div>
             </div>
@@ -121,10 +73,11 @@
                     <li class="nav-item px-4"><a class="nav-link" href="/employees" data-abc="true">Employee</a></li>
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
                                                      data-abc="true" aria-expanded="false">Customer</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/customers" data-abc="true">List Customer</a>
-                        <a class="dropdown-item" href="/summary" data-abc="true">Customers are using the service </a>
-                    </div>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/customers" data-abc="true">List Customer</a>
+                            <a class="dropdown-item" href="/summary" data-abc="true">Customers are using the
+                                service </a>
+                        </div>
                     </li>
                     <li class="nav-item px-4"><a class="nav-link" href="/services" data-abc="true">Service</a></li>
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
@@ -191,6 +144,11 @@
         </a>
     </div><!-- /.carousel -->
 </div><!-- /.container -->
-<script src="jquery/header.js"></script>
+<script>
+    setTimeout(function () {
+        $('.alert').fadeOut('fast');
+    }, 1000);
+
+</script>
 </body>
 </html>

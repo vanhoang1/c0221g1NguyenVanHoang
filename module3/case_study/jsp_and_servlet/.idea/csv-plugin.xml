@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="C:\Users\Admin\Desktop\contact-form-v3\ContactFrom_v3\index.html">
+          <value>
+            <Attribute>
+              <option name="separator" value="&#9;" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\controller\home\LoginServlet.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\model\bean\AttachService.java">
           <value>
             <Attribute>
@@ -67,6 +81,20 @@
           </value>
         </entry>
         <entry key="\src\model\bean\TypeOfCustomer.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\model\bean\account\Role.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\model\bean\account\User.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
