@@ -6,6 +6,7 @@ import model.bean.service.Services;
 import model.repository.service.RentTypeRepository;
 import model.repository.service.ServiceTypeRepository;
 import model.service.api.Service;
+import model.service.common.PrintErr;
 import model.service.impl.IServiceManager;
 
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "ServiceServlet", urlPatterns = "/services")
 public class ServiceServlet extends HttpServlet {
@@ -141,29 +143,29 @@ public class ServiceServlet extends HttpServlet {
 
     // do post
     private void createService(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("name");
-        int areaOfUse = Integer.parseInt(request.getParameter("areaOfUse"));
-        int numberOfFloors = Integer.parseInt(request.getParameter("numberOfFloors"));
-        int maxNumOfPeople = Integer.parseInt(request.getParameter("maxNumOfPeople"));
-        int rentalCosts = Integer.parseInt(request.getParameter("rentalCosts"));
-        int idRentType = Integer.parseInt(request.getParameter("idRentType"));
-        int idServiceType = Integer.parseInt(request.getParameter("idServiceType"));
-        RentType rentType = rentTypeRepository.get(idRentType);
-        ServiceType serviceType = serviceTypeRepository.get(idServiceType);
-        String status = request.getParameter("status");
-        String maDichVu = request.getParameter("maDichVu");
-        Services services = new Services(name, areaOfUse, numberOfFloors, maxNumOfPeople, rentalCosts, rentType, serviceType, status,maDichVu);
-        boolean check = false;
         try {
-            check = serviceManager.save(services);
+            String name = request.getParameter("name");
+            int areaOfUse = Integer.parseInt(request.getParameter("areaOfUse"));
+            int numberOfFloors = Integer.parseInt(request.getParameter("numberOfFloors"));
+            int maxNumOfPeople = Integer.parseInt(request.getParameter("maxNumOfPeople"));
+            int rentalCosts = Integer.parseInt(request.getParameter("rentalCosts"));
+            int idRentType = Integer.parseInt(request.getParameter("idRentType"));
+            int idServiceType = Integer.parseInt(request.getParameter("idServiceType"));
+            RentType rentType = rentTypeRepository.get(idRentType);
+            ServiceType serviceType = serviceTypeRepository.get(idServiceType);
+            String status = request.getParameter("status");
+            String maDichVu = request.getParameter("maDichVu");
+            Services services = new Services(name, areaOfUse, numberOfFloors, maxNumOfPeople, rentalCosts, rentType, serviceType, status, maDichVu);
+            Map<String, String> map = serviceManager.save(services);
+
+            request.setAttribute("service", services);
+            if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
+            else {
+                throw new Exception(PrintErr.printErr(map));
+            }
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        request.setAttribute("service", services);
-        if (check) request.setAttribute("message", "thêm mới thành công");
-        else {
-            request.setAttribute("message", "thêm mới thất bại");
             request.setAttribute("err", true);
+            request.setAttribute("message", e.getMessage());
         }
         try {
             request.getRequestDispatcher("view/service/service-create.jsp").forward(request, response);
@@ -175,25 +177,30 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void editService(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        int areaOfUse = Integer.parseInt(request.getParameter("areaOfUse"));
-        int numberOfFloors = Integer.parseInt(request.getParameter("numberOfFloors"));
-        int maxNumOfPeople = Integer.parseInt(request.getParameter("maxNumOfPeople"));
-        int rentalCosts = Integer.parseInt(request.getParameter("rentalCosts"));
-        int idRentType = Integer.parseInt(request.getParameter("idRentType"));
-        int idServiceType = Integer.parseInt(request.getParameter("idServiceType"));
-        RentType rentType = rentTypeRepository.get(idRentType);
-        ServiceType serviceType = serviceTypeRepository.get(idServiceType);
-        String status = request.getParameter("status");
-        String maDichVu = request.getParameter("maDichVu");
-        Services services = new Services(name, areaOfUse, numberOfFloors, maxNumOfPeople, rentalCosts, rentType, serviceType, status,maDichVu);
-        boolean check = serviceManager.update(id, services);
-        request.setAttribute("service", services);
-        if (check) request.setAttribute("message", "Cập nhật thành công");
-        else {
-            request.setAttribute("message", "Cập nhật thất bại");
+        try {
+            int id = Integer.parseInt(request.getParameter("id"));
+            String name = request.getParameter("name");
+            int areaOfUse = Integer.parseInt(request.getParameter("areaOfUse"));
+            int numberOfFloors = Integer.parseInt(request.getParameter("numberOfFloors"));
+            int maxNumOfPeople = Integer.parseInt(request.getParameter("maxNumOfPeople"));
+            int rentalCosts = Integer.parseInt(request.getParameter("rentalCosts"));
+            int idRentType = Integer.parseInt(request.getParameter("idRentType"));
+            int idServiceType = Integer.parseInt(request.getParameter("idServiceType"));
+            RentType rentType = rentTypeRepository.get(idRentType);
+            ServiceType serviceType = serviceTypeRepository.get(idServiceType);
+            String status = request.getParameter("status");
+            String maDichVu = request.getParameter("maDichVu");
+            Services services = new Services(name, areaOfUse, numberOfFloors, maxNumOfPeople, rentalCosts, rentType, serviceType, status, maDichVu);
+            Map<String, String> map = serviceManager.update(id, services);
+
+            request.setAttribute("service", services);
+            if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
+            else {
+                throw new Exception(PrintErr.printErr(map));
+            }
+        } catch (Exception e) {
             request.setAttribute("err", true);
+            request.setAttribute("message", e.getMessage());
         }
         try {
             request.getRequestDispatcher("view/service/service-edit.jsp").forward(request, response);

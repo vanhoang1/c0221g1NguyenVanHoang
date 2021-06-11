@@ -1,7 +1,9 @@
 package controller.home;
 
 import model.bean.account.User;
+import model.bean.account.UserRole;
 import model.repository.user.UserRepository;
+import model.repository.user.UserRoleRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,12 +13,13 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet" ,urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     UserRepository userRepository = new UserRepository();
+    UserRoleRepository userRoleRepository = new UserRoleRepository();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 String remember = request.getParameter("remember");
                 String username = request.getParameter("username");
                 String password = request .getParameter("password");
                User user =  userRepository.login(username,password);
-               if(user == null){request.setAttribute("message", "Đăng nhập thất bại");
+               if(user == null){request.setAttribute("message", "Login fail");
                                 request.setAttribute("err", true);
                    request.getRequestDispatcher("/view/login/login.jsp").forward(request,response);
                }
@@ -24,7 +27,8 @@ public class LoginServlet extends HttpServlet {
                else {
                    request.setAttribute("message", "Đăng nhập thành công");
                    HttpSession session = request.getSession();
-                   session.setAttribute("acc",user);
+                   UserRole userRole = userRoleRepository.get(username);
+                   session.setAttribute("acc",userRole);
                    //--cookie
                    Cookie u = new Cookie("user",username);
                    Cookie p = new Cookie("pass",password);

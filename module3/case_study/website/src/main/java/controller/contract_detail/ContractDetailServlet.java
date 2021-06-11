@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "ContractDetailServlet" ,urlPatterns = "/contract-detail")
 public class ContractDetailServlet extends HttpServlet {
@@ -120,13 +121,13 @@ public class ContractDetailServlet extends HttpServlet {
         AttachService attachService = contractDetailService.attachServiceRepository().get(idAttachService);
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         ContractDetail contractDetail = new ContractDetail(contract,attachService,quantity);
-        boolean check = contractDetailService.save(contractDetail);
+        Map<String,String> check = contractDetailService.save(contractDetail);
         List<Contract> contractList =contractDetailService.contractRepository().getAll();
         List<AttachService> attachServiceList = contractDetailService.attachServiceRepository().getAll();
         request.setAttribute("contractList",contractList);
         request.setAttribute("attachServiceList",attachServiceList);
         request.setAttribute("contractDetail",contractDetail);
-        if (check) request.setAttribute("message", "Tạo mới thành công");
+        if (check.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
         else {request.setAttribute("message", "Tạo mới thất bại");request.setAttribute("err", true);}
 
         try {

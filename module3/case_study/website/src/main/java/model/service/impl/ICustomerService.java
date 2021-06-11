@@ -6,7 +6,10 @@ import model.repository.customer.CustomerRepository;
 import model.service.api.Service;
 import model.service.common.Validate;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ICustomerService implements Service<Customer> {
     BaseRepository<Customer> customerRepository = new CustomerRepository();
@@ -17,10 +20,10 @@ public class ICustomerService implements Service<Customer> {
     }
 
     @Override
-    public boolean save(Customer customer) throws Exception {
-             if(!Validate.checkPhoneNumber(customer.getSoDT())) throw new Exception("Wrong phone number format . Example: 090XXXXXX");
-             if(!Validate.checkEmail(customer.getEmail())) throw  new Exception("Wrong phone number format .Example:  abc@xyz.com.vn");
-             return customerRepository.insert(customer);
+    public Map<String, String> save(Customer customer) {
+        Map<String, String> map = findErr(customer);
+        if (map.isEmpty()) customerRepository.insert(customer);
+        return map;
     }
 
     @Override
@@ -29,8 +32,10 @@ public class ICustomerService implements Service<Customer> {
     }
 
     @Override
-    public boolean update(int id, Customer customer) {
-        return customerRepository.update(id, customer);
+    public Map<String, String> update(int id, Customer customer) {
+        Map<String, String> map = findErr(customer);
+        if (map.isEmpty()) customerRepository.update(id, customer);
+        return map;
     }
 
     @Override
@@ -41,5 +46,17 @@ public class ICustomerService implements Service<Customer> {
     @Override
     public List<Customer> findByName(String search) {
         return customerRepository.search(search);
+    }
+
+    @Override
+    public Map<String, String> findErr(Customer customer) {
+        Map<String, String> map = new HashMap<>();
+        if (!Validate.checkPhoneNumber(customer.getSoDT()))
+            map.put("phone", "Wrong phone number format . Example: 090XXXXXXX <br>");
+        if (!Validate.checkEmail(customer.getEmail()))
+            map.put("email", "Wrong phone number format .Example:  abcd@xyz.com.vn <br>");
+        if (!Validate.checkCustomerId(customer.getMaKhachHang()))
+            map.put("id", "Wrong ID Customer format .Example:  KH-1234 <br>");
+        return map;
     }
 }

@@ -7,7 +7,9 @@ import model.repository.employee.EmployeeRepository;
 import model.repository.service.ServiceRepository;
 import model.service.api.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class IContractService implements Service<Contract> {
    ContractRepository contractRepository = new ContractRepository();
@@ -17,8 +19,10 @@ public class IContractService implements Service<Contract> {
     }
 
     @Override
-    public boolean save(Contract contract) {
-        return contractRepository.insert(contract);
+    public Map<String,String>  save(Contract contract)  {
+        Map<String,String> map= findErr(contract);
+        if(map.isEmpty())   contractRepository.insert(contract);
+      return map;
     }
 
     @Override
@@ -27,8 +31,10 @@ public class IContractService implements Service<Contract> {
     }
 
     @Override
-    public boolean update(int id, Contract contract) {
-        return contractRepository.update(id,contract);
+    public Map<String,String>  update(int id, Contract contract) {
+        Map<String,String> map= findErr(contract);
+        if(map.isEmpty()) contractRepository.update(id,contract);
+        return map;
     }
 
     @Override
@@ -41,7 +47,15 @@ public class IContractService implements Service<Contract> {
         return contractRepository.search(search);
     }
 
-   public EmployeeRepository employeeRepository (){
+    @Override
+    public  Map<String,String>  findErr(Contract contract) {
+        Map<String,String> map = new HashMap<>();
+        if(contract.getTotalMoney()<0)map.put("money","Total amount must be positive ");
+        if(contract.getDeposit()<0)map.put("deposit","Deposit must be positive ");
+        return map;
+    }
+
+    public EmployeeRepository employeeRepository (){
         return contractRepository.getEmployeeRepository();
    }
    public CustomerRepository customerRepository(){

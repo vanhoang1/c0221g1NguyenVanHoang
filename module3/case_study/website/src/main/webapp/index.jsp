@@ -40,7 +40,7 @@
           <div class="d-flex justify-content-end"><c:if test="${sessionScope.acc!=null}">
             <a target="_blank" href="/login?action=logout" data-abc="true"
                class="nav-link widget-header text-light"> <i
-                    class="fas fa fa-whatsapp"></i> ${sessionScope.acc.username}</a>
+                    class="fas fa fa-whatsapp"></i> ${sessionScope.acc.user.username}</a>
 
           </c:if>
             <c:if test="${sessionScope.acc == null}">
@@ -89,6 +89,16 @@
     </div>
   </nav>
 </header>
+<c:if test='${message != null&&!err}'>
+  <div class="alert alert-success fixed-top col-4" role="alert">
+      ${message}
+  </div>
+</c:if>
+<c:if test='${message != null&&err}'>
+  <div class="alert alert-danger fixed-top col-4" role="alert">
+      ${message}
+  </div>
+</c:if>
 <div class="container">
   <div class="carousel slide" id="main-carousel" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -147,8 +157,8 @@
 
 <script>
   setTimeout(function () {
-    $('.alert').fadeOut('fast');
-  }, 1000);
+    $('.alert').fadeOut('slow');
+  }, 3000);
 
 </script>
 </body>

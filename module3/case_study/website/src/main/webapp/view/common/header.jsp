@@ -21,7 +21,7 @@
                         <c:if test="${sessionScope.acc!=null}">
                             <a target="_blank" href="/login?action=logout" data-abc="true"
                                class="nav-link widget-header  text-light"> <i
-                                    class="fas fa fa-whatsapp"></i> ${sessionScope.acc.username}</a>
+                                    class="fas fa fa-whatsapp"></i> ${sessionScope.acc.user.username}</a>
 
                         </c:if>
                         <c:if test="${sessionScope.acc == null}">
@@ -87,8 +87,8 @@
         })
     });
     setTimeout(function () {
-        $('.alert').fadeOut('fast');
-    }, 1000);
+        $('.alert').fadeOut('slow');
+    }, 3000);
 
 </script>
 </body>

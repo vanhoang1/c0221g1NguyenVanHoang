@@ -8,6 +8,7 @@ import model.repository.employee.DivisionRepository;
 import model.repository.employee.EducationRepository;
 import model.repository.employee.PositionRepository;
 import model.service.api.Service;
+import model.service.common.PrintErr;
 import model.service.impl.IEmployeeService;
 
 import javax.servlet.ServletException;
@@ -20,6 +21,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "EmployeeServlet", urlPatterns = "/employees")
 public class EmployeeServlet extends HttpServlet {
@@ -90,40 +92,44 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void editEmployee(HttpServletRequest request, HttpServletResponse response) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-        int id = Integer.parseInt(request.getParameter("id"));
-        String nameEmployee = request.getParameter("name");
-        int idPosition = Integer.parseInt(request.getParameter("idPosition"));
-        int idEducation = Integer.parseInt(request.getParameter("idEducation"));
-        int idDivision = Integer.parseInt(request.getParameter("idDivision"));
-        Date birthDay = null;
         try {
-            birthDay = formatter.parse(request.getParameter("birthDay"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        String idCard = request.getParameter("idCard");
-        double salary = Double.parseDouble(request.getParameter("salary"));
-        String phone = request.getParameter("phone");
-        String address = request.getParameter("address");
-        String email = request.getParameter("email");
-        String username = request.getParameter("username");
-        Position position = positionRepository.get(idPosition);
-        Education education = educationRepository.get(idEducation);
-        Division division = divisionRepository.get(idDivision);
-        Employee employee = new Employee(nameEmployee, position, education, division, birthDay, idCard, salary, phone, address, email, username);
-        boolean check = employeeService.update(id, employee);
-        request.setAttribute("employee", employee);
-        List<Position> positionList = positionRepository.getAll();
-        List<Education> educationList = educationRepository.getAll();
-        List<Division> divisionList = divisionRepository.getAll();
-        request.setAttribute("positionList", positionList);
-        request.setAttribute("educationList", educationList);
-        request.setAttribute("divisionList", divisionList);
-        if (check) request.setAttribute("message", "Cập nhật thành công");
-        else {
-            request.setAttribute("message", "Cập nhật thất bại");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+            int id = Integer.parseInt(request.getParameter("id"));
+            String nameEmployee = request.getParameter("name");
+            int idPosition = Integer.parseInt(request.getParameter("idPosition"));
+            int idEducation = Integer.parseInt(request.getParameter("idEducation"));
+            int idDivision = Integer.parseInt(request.getParameter("idDivision"));
+            Date birthDay = null;
+            try {
+                birthDay = formatter.parse(request.getParameter("birthDay"));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            String idCard = request.getParameter("idCard");
+            double salary = Double.parseDouble(request.getParameter("salary"));
+            String phone = request.getParameter("phone");
+            String address = request.getParameter("address");
+            String email = request.getParameter("email");
+            String username = request.getParameter("username");
+            Position position = positionRepository.get(idPosition);
+            Education education = educationRepository.get(idEducation);
+            Division division = divisionRepository.get(idDivision);
+            Employee employee = new Employee(nameEmployee, position, education, division, birthDay, idCard, salary, phone, address, email, username);
+            Map<String, String> map = employeeService.update(id, employee);
+            request.setAttribute("employee", employee);
+            List<Position> positionList = positionRepository.getAll();
+            List<Education> educationList = educationRepository.getAll();
+            List<Division> divisionList = divisionRepository.getAll();
+            request.setAttribute("positionList", positionList);
+            request.setAttribute("educationList", educationList);
+            request.setAttribute("divisionList", divisionList);
+            if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
+            else {
+                throw new Exception(PrintErr.printErr(map));
+            }
+        } catch (Exception e) {
             request.setAttribute("err", true);
+            request.setAttribute("message", e.getMessage());
         }
         try {
             request.getRequestDispatcher("view/employee/employee-edit.jsp").forward(request, response);
@@ -135,6 +141,7 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void createEmployee(HttpServletRequest request, HttpServletResponse response) {
+        try {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
         String nameEmployee = request.getParameter("name");
         int idPosition = Integer.parseInt(request.getParameter("idPosition"));
@@ -156,12 +163,7 @@ public class EmployeeServlet extends HttpServlet {
         Education education = educationRepository.get(idEducation);
         Division division = divisionRepository.get(idDivision);
         Employee employee = new Employee(nameEmployee, position, education, division, birthDay, idCard, salary, phone, address, email, username);
-        boolean check = false;
-        try {
-            check = employeeService.save(employee);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Map<String, String> map = employeeService.save(employee);
         request.setAttribute("employee", employee);
         List<Position> positionList = positionRepository.getAll();
         List<Education> educationList = educationRepository.getAll();
@@ -169,11 +171,14 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("positionList", positionList);
         request.setAttribute("educationList", educationList);
         request.setAttribute("divisionList", divisionList);
-        if (check) request.setAttribute("message", "tạo thành công");
+        if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
         else {
-            request.setAttribute("message", "tạo thất bại");
-            request.setAttribute("err", true);
+            throw new Exception(PrintErr.printErr(map));
         }
+    } catch (Exception e) {
+        request.setAttribute("err", true);
+        request.setAttribute("message", e.getMessage());
+    }
         try {
             request.getRequestDispatcher("view/employee/employee-create.jsp").forward(request, response);
         } catch (ServletException e) {

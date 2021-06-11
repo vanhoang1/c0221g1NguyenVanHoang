@@ -27,7 +27,28 @@ public class UserRepository extends BaseRepository<User> {
         }
         return null;
     }
+    public  User get(String name){
+        Connection connection = getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT);
+            preparedStatement.setString(1, name);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                return get(resultSet);
+            }
+            preparedStatement.close();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    };
     @Override
     public void set(User user, PreparedStatement preparedStatement) {
 

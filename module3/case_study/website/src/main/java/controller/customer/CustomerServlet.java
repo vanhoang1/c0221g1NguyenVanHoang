@@ -4,6 +4,7 @@ import model.bean.customer.Customer;
 import model.bean.customer.CustomerType;
 import model.repository.customer.CustomerTypeRepository;
 import model.service.api.Service;
+import model.service.common.PrintErr;
 import model.service.impl.ICustomerService;
 
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
@@ -131,6 +133,7 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
+        try {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
         int id = Integer.parseInt(request.getParameter("id"));
         String nameCustomer = request.getParameter("name");
@@ -149,12 +152,19 @@ public class CustomerServlet extends HttpServlet {
         CustomerType customerType = customerTypeRepository.get(typeOfCustomer);
         int gender = Integer.parseInt(request.getParameter("gender"));
         Customer customer = new Customer(id, nameCustomer, dateOfBirth, soCMND,gender, soDT,maKhachHang, address, email, customerType);
-        boolean check = customerService.update(id, customer);
         request.setAttribute("customer", customer);
         List<CustomerType> typeList= customerTypeRepository.getAll();
         request.setAttribute("typeList" ,typeList);
-        if (check) request.setAttribute("message", "Cập nhật thành công");
-        else {request.setAttribute("message", "Cập nhật thất bại");request.setAttribute("err", true);}
+            Map<String, String> map =   customerService.update(id, customer);
+         if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
+           else {
+             throw new Exception(PrintErr.printErr(map));
+         }
+        } catch (Exception e) {
+            request.setAttribute("err", true);
+            request.setAttribute("message", e.getMessage());
+        }
+
         try {
             request.getRequestDispatcher("view/customer/customer-edit.jsp").forward(request, response);
         } catch (ServletException e) {
@@ -179,10 +189,13 @@ public class CustomerServlet extends HttpServlet {
             int typeOfCustomer = Integer.parseInt(request.getParameter("typeOfCustomer"));
             CustomerType customerType = customerTypeRepository.get(typeOfCustomer);
             Customer customer = new Customer(nameCustomer, dateOfBirth, soCMND,gender, soDT,maKhachHang, address, email, customerType);
-            boolean check = customerService.save(customer);
+            Map<String, String> map =  customerService.save(customer);
             List<CustomerType> typeList= customerTypeRepository.getAll();
             request.setAttribute("typeList" ,typeList);
-            if (check) request.setAttribute("message", "Tạo mới thành công");
+            if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
+            else {
+                throw new Exception(PrintErr.printErr(map));
+            }
         }catch (Exception e){
             request.setAttribute("err", true);
             request.setAttribute("message", e.getMessage());

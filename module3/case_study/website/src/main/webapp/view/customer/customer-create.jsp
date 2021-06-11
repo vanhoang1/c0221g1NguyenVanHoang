@@ -62,15 +62,14 @@
                                         <label>Email</label>
                                         <input type="text" class="form-control" placeholder=" Email" value="${customer.email}"
                                                name="email">
-
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>ID Customer</label>
-                                            <input type="text" class="form-control" placeholder=" Email" value="${customer.maKhachHang}"
-                                                   name="maKhachHang">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>ID Customer</label>
+                                        <input type="text" class="form-control" placeholder=" Email" value="${customer.maKhachHang}"
+                                               name="maKhachHang">
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -4,6 +4,7 @@ import model.bean.contract.Contract;
 import model.bean.customer.Customer;
 import model.bean.employee.Employee;
 import model.bean.service.Services;
+import model.service.common.PrintErr;
 import model.service.impl.IContractService;
 
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "ContractServlet", urlPatterns = "/contracts")
 public class ContractServlet extends HttpServlet {
@@ -88,9 +90,9 @@ public class ContractServlet extends HttpServlet {
         List<Employee> employeeList = contractService.employeeRepository().getAll();
         List<Customer> customerList = contractService.customerRepository().getAll();
         List<Services> servicesList = contractService.serviceRepository().getAll();
-        request.setAttribute("employeeList",employeeList);
-        request.setAttribute("customerList",customerList);
-        request.setAttribute("servicesList",servicesList);
+        request.setAttribute("employeeList", employeeList);
+        request.setAttribute("customerList", customerList);
+        request.setAttribute("servicesList", servicesList);
         request.setAttribute("contract", contract);
         try {
             request.getRequestDispatcher("view/contract/contract-edit.jsp").forward(request, response);
@@ -105,9 +107,9 @@ public class ContractServlet extends HttpServlet {
         List<Employee> employeeList = contractService.employeeRepository().getAll();
         List<Customer> customerList = contractService.customerRepository().getAll();
         List<Services> servicesList = contractService.serviceRepository().getAll();
-        request.setAttribute("employeeList",employeeList);
-        request.setAttribute("customerList",customerList);
-        request.setAttribute("servicesList",servicesList);
+        request.setAttribute("employeeList", employeeList);
+        request.setAttribute("customerList", customerList);
+        request.setAttribute("servicesList", servicesList);
         try {
             request.getRequestDispatcher("view/contract/contract-create.jsp").forward(request, response);
         } catch (ServletException e) {
@@ -131,6 +133,7 @@ public class ContractServlet extends HttpServlet {
     }
 
     private void editContract(HttpServletRequest request, HttpServletResponse response) {
+        try {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
         int id = Integer.parseInt(request.getParameter("id"));
         Date startDate = null;
@@ -142,27 +145,30 @@ public class ContractServlet extends HttpServlet {
             e.printStackTrace();
         }
         int idEmployee = Integer.parseInt(request.getParameter("idEmployee"));
-        Employee employee= contractService.employeeRepository().get(idEmployee);
+        Employee employee = contractService.employeeRepository().get(idEmployee);
         int idCustomer = Integer.parseInt(request.getParameter("idCustomer"));
         Customer customer = contractService.customerRepository().get(idCustomer);
         int idService = Integer.parseInt(request.getParameter("idService"));
-        Services services  = contractService.serviceRepository().get(idService);
+        Services services = contractService.serviceRepository().get(idService);
         double deposit = Double.parseDouble(request.getParameter("deposit"));
         double totalMoney = Double.parseDouble(request.getParameter("totalMoney"));
         Contract contract = new Contract(startDate, endDate, deposit, totalMoney, employee, customer, services);
-        boolean check = contractService.update(id, contract);
+        Map<String, String> map = contractService.update(id, contract);
         List<Employee> employeeList = contractService.employeeRepository().getAll();
         List<Customer> customerList = contractService.customerRepository().getAll();
         List<Services> servicesList = contractService.serviceRepository().getAll();
-        request.setAttribute("employeeList",employeeList);
-        request.setAttribute("customerList",customerList);
-        request.setAttribute("servicesList",servicesList);
+        request.setAttribute("employeeList", employeeList);
+        request.setAttribute("customerList", customerList);
+        request.setAttribute("servicesList", servicesList);
         request.setAttribute("contract", contract);
-        if (check) request.setAttribute("message", "Cập nhật thành công");
+        if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
         else {
-            request.setAttribute("message", "Cập nhật thất bại");
-            request.setAttribute("err", true);
+            throw new Exception(PrintErr.printErr(map));
         }
+    } catch (Exception e) {
+        request.setAttribute("err", true);
+        request.setAttribute("message", e.getMessage());
+    }
         try {
             request.getRequestDispatcher("view/contract/contract-edit.jsp").forward(request, response);
         } catch (ServletException e) {
@@ -173,36 +179,41 @@ public class ContractServlet extends HttpServlet {
     }
 
     private void createContract(HttpServletRequest request, HttpServletResponse response) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-        Date startDate = null;
-        Date endDate = null;
         try {
-            startDate = formatter.parse(request.getParameter("startDate"));
-            endDate = formatter.parse(request.getParameter("endDate"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        int idEmployee = Integer.parseInt(request.getParameter("idEmployee"));
-        Employee employee= contractService.employeeRepository().get(idEmployee);
-        int idCustomer = Integer.parseInt(request.getParameter("idCustomer"));
-        Customer customer = contractService.customerRepository().get(idCustomer);
-        int idService = Integer.parseInt(request.getParameter("idService"));
-        Services services  = contractService.serviceRepository().get(idService);
-        double deposit = Double.parseDouble(request.getParameter("deposit"));
-        double totalMoney = Double.parseDouble(request.getParameter("totalMoney"));
-        Contract contract = new Contract(startDate, endDate, deposit, totalMoney, employee, customer, services);
-        boolean check = contractService.save(contract);
-        List<Employee> employeeList = contractService.employeeRepository().getAll();
-        List<Customer> customerList = contractService.customerRepository().getAll();
-        List<Services> servicesList = contractService.serviceRepository().getAll();
-        request.setAttribute("employeeList",employeeList);
-        request.setAttribute("customerList",customerList);
-        request.setAttribute("servicesList",servicesList);
-        request.setAttribute("contract", contract);
-        if (check) request.setAttribute("message", "Tạo mới thành công");
-        else {
-            request.setAttribute("message", "Tạo mới thất bại");
+
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+            Date startDate = null;
+            Date endDate = null;
+            try {
+                startDate = formatter.parse(request.getParameter("startDate"));
+                endDate = formatter.parse(request.getParameter("endDate"));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            int idEmployee = Integer.parseInt(request.getParameter("idEmployee"));
+            Employee employee = contractService.employeeRepository().get(idEmployee);
+            int idCustomer = Integer.parseInt(request.getParameter("idCustomer"));
+            Customer customer = contractService.customerRepository().get(idCustomer);
+            int idService = Integer.parseInt(request.getParameter("idService"));
+            Services services = contractService.serviceRepository().get(idService);
+            double deposit = Double.parseDouble(request.getParameter("deposit"));
+            double totalMoney = Double.parseDouble(request.getParameter("totalMoney"));
+            Contract contract = new Contract(startDate, endDate, deposit, totalMoney, employee, customer, services);
+            Map<String, String> map = contractService.save(contract);
+            List<Employee> employeeList = contractService.employeeRepository().getAll();
+            List<Customer> customerList = contractService.customerRepository().getAll();
+            List<Services> servicesList = contractService.serviceRepository().getAll();
+            request.setAttribute("employeeList", employeeList);
+            request.setAttribute("customerList", customerList);
+            request.setAttribute("servicesList", servicesList);
+            request.setAttribute("contract", contract);
+            if (map.isEmpty()) request.setAttribute("message", "Tạo mới thành công");
+            else {
+                throw new Exception(PrintErr.printErr(map));
+            }
+        } catch (Exception e) {
             request.setAttribute("err", true);
+            request.setAttribute("message", e.getMessage());
         }
         try {
             request.getRequestDispatcher("view/contract/contract-create.jsp").forward(request, response);

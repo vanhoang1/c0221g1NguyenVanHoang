@@ -7,6 +7,7 @@ import model.repository.contract.ContractRepository;
 import model.service.api.Service;
 
 import java.util.List;
+import java.util.Map;
 
 public class IContractDetailService implements Service<ContractDetail> {
     ContractDetailRepository contractDetailRepository = new ContractDetailRepository();
@@ -16,8 +17,10 @@ public class IContractDetailService implements Service<ContractDetail> {
     }
 
     @Override
-    public boolean save(ContractDetail contractDetail) {
-        return contractDetailRepository.insert(contractDetail);
+    public Map<String,String> save(ContractDetail contractDetail) {
+        Map<String,String> map= findErr(contractDetail);
+        if(map.isEmpty())contractDetailRepository.insert(contractDetail);
+        return map;
     }
 
     @Override
@@ -26,8 +29,9 @@ public class IContractDetailService implements Service<ContractDetail> {
     }
 
     @Override
-    public boolean update(int id, ContractDetail contractDetail) {
-        return contractDetailRepository.update(id,contractDetail);
+    public Map<String,String> update(int id, ContractDetail contractDetail) {
+        if(findErr(contractDetail).isEmpty()) contractDetailRepository.update(id,contractDetail);
+        return null;
     }
 
     @Override
@@ -39,7 +43,14 @@ public class IContractDetailService implements Service<ContractDetail> {
     public List<ContractDetail> findByName(String search) {
         return contractDetailRepository.search(search);
     }
-     public AttachServiceRepository attachServiceRepository(){
+
+    @Override
+    public Map<String,String> findErr(ContractDetail contractDetail) {
+        return null;
+    }
+
+
+    public AttachServiceRepository attachServiceRepository(){
         return contractDetailRepository.getAttachServiceRepository();
      }
 

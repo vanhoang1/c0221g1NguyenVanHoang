@@ -5,6 +5,7 @@ import model.repository.SummaryRepository;
 import model.service.api.Service;
 
 import java.util.List;
+import java.util.Map;
 
 public class ISummaryService implements Service<Summary> {
     SummaryRepository summaryRepository= new SummaryRepository()   ;
@@ -14,8 +15,8 @@ public class ISummaryService implements Service<Summary> {
     }
 
     @Override
-    public boolean save(Summary summary) {
-        return false;
+    public Map<String, String> save(Summary summary) {
+        return null;
     }
 
     @Override
@@ -24,8 +25,8 @@ public class ISummaryService implements Service<Summary> {
     }
 
     @Override
-    public boolean update(int id, Summary summary) {
-        return false;
+    public Map<String, String> update(int id, Summary summary) {
+        return null;
     }
 
     @Override
@@ -37,4 +38,9 @@ public class ISummaryService implements Service<Summary> {
     public List<Summary> findByName(String search) {
         return summaryRepository.search(search);
 }
+
+    @Override
+    public Map<String, String> findErr(Summary summary) {
+        return null;
+    }
 }

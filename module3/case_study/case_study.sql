@@ -85,6 +85,7 @@ CREATE TABLE khach_hang (
     so_cmtdn VARCHAR(45) UNIQUE  NOT NULL,
     gioi_tinh BIT  NOT NULL,
     sdt VARCHAR(45),
+     ma_khach_hang VARCHAR(45) UNIQUE  NOT NULL,
     email VARCHAR(45),
     dia_chi VARCHAR(45),
     PRIMARY KEY (id_khach_hang),
@@ -113,6 +114,7 @@ CREATE TABLE dich_vu (
     id_kieu_thue INT NOT NULL,
     id_loai_dich_vu INT NOT NULL,
     TrangThai VARCHAR(45),
+    ma_dich_vu VARCHAR(45) NOT NULL UNIQUE ,
     PRIMARY KEY (id_dich_vu),
     CONSTRAINT fk_dv_kt FOREIGN KEY (id_kieu_thue)
         REFERENCES kieu_thue (id_kieu_thue)
@@ -158,9 +160,8 @@ CREATE TABLE chi_tiet_hop_dong (
 
 insert into trinh_do(trinh_do)
 value("Trung cấp"),
-("Trung cấp"),
 ("Đại học "),
-("sau đại học");
+("Sau đại học");
 insert into bo_phan(ten_bo_phan)
 value ("Sale – Marketing"),
 ("Hành Chính"),
@@ -193,15 +194,15 @@ insert into loai_khach(ten_loai_khach)
  ("sivel"),
  ("Gold")
  ;
- insert into khach_hang (id_loai_khach,ho_ten,ngay_sinh,so_cmtdn,gioi_tinh,sdt,email,dia_chi)
- value(1,'nhung',"1996-8-2",12345122,0,1221,'aaa@gmail.com','Đà Nẵng'),
- (1,'trang',"1946-8-2",123456,0,213,'aaa@gmail.com','Đà Nẵng'),
- (2,'hung',"1997-3-5",234567,0,123,'aaa@gmail.com','Quảng Trị'),
- (2,'abc',"1986-3-5",345678,0,123,'aaa@gmail.com','Quảng Trị'),
- (2,'xyz',"1946-3-5",22,0,567890,'aa2a@gmail.com','HCM'),
- (3,'xyz',"1956-3-5",33,0,233413,'aa2a@gmail.com','Hải Phòng'),
- (4,'xyz',"1966-3-5",44,0,12123,'aa2a@gmail.com','Gia lai'),
- (5,'xyz',"1976-3-5",55,0,111111,'aa2a@gmail.com','Kom tum');
+ insert into khach_hang (id_loai_khach,ho_ten,ngay_sinh,so_cmtdn,gioi_tinh,sdt,ma_khach_hang,email,dia_chi)
+ value(1,'nhung',"1996-8-2",12345122,0,1221,'KH-1239','aaa@gmail.com','Đà Nẵng'),
+ (1,'trang',"1946-8-2",123456,0,213,'KH-1235','aaa@gmail.com','Đà Nẵng'),
+ (2,'hung',"1997-3-5",234567,0,123,'KH-1231','aaa@gmail.com','Quảng Trị'),
+ (2,'abc',"1986-3-5",345678,0,123,'KH-1232','aaa@gmail.com','Quảng Trị'),
+ (2,'xyz',"1946-3-5",22,0,567890,'KH-1233','aa2a@gmail.com','HCM'),
+ (3,'xyz',"1956-3-5",33,0,233413,'KH-1236','aa2a@gmail.com','Hải Phòng'),
+ (4,'xyz',"1966-3-5",44,0,12123,'KH-1237','aa2a@gmail.com','Gia lai'),
+ (5,'xyz',"1976-3-5",55,0,111111,'KH-1238','aa2a@gmail.com','Kom tum');
 insert into kieu_thue(ten_kieu_thue,gia)
 value ('năm',10000),
 ('tháng',5000),
@@ -211,16 +212,16 @@ insert into loai_dich_vu(ten_loai_dich_vu)
 value('Villa'),
 ('House'),
 ('Room');
-insert into dich_vu(ten_dich_vu,dien_tich,so_tang,so_nguoi_toi_da,chi_phi_thue,id_kieu_thue,id_loai_dich_vu,TrangThai)
-value('villaBig',123,3,12,'123422',1,1,'off'),
-('villaMedium',111,4,12,'3333',1,1,'off'),
-('villaSmall',111,4,12,'111',1,1,'on'),
-('houseBig',1111,4,12,'12223422',2,2,'on'),
-('houseMedium',111,4,12,'123422',1,2,'off'),
-('houseSmall',111,4,12,'1111',3,2,'off'),
-('roomBig',12314,4,12,'55555',3,3,'ob'),
-('roomMedium',111,4,12,'1111',1,3,'off'),
-('roomSmall',111,4,12,'323',1,3,'off');
+insert into dich_vu(ten_dich_vu,dien_tich,so_tang,so_nguoi_toi_da,chi_phi_thue,id_kieu_thue,id_loai_dich_vu,TrangThai,ma_dich_vu)
+value('villaBig',123,3,12,'123422',1,1,'off','DV-1111'),
+('villaMedium',111,4,12,'3333',1,1,'off','DV-1112'),
+('villaSmall',111,4,12,'111',1,1,'on','DV-1113'),
+('houseBig',1111,4,12,'12223422',2,2,'on','DV-1114'),
+('houseMedium',111,4,12,'123422',1,2,'off','DV-1115'),
+('houseSmall',111,4,12,'1111',3,2,'off','DV-1116'),
+('roomBig',12314,4,12,'55555',3,3,'ob','DV-1117'),
+('roomMedium',111,4,12,'1111',1,3,'off','DV-1118'),
+('roomSmall',111,4,12,'323',1,3,'off','DV-1119');
 insert into dich_vu_di_kem(ten_dich_vu_di_kem,gia,don_vi,trang_thai_kha_dung)
 value ('massage',123123,1,'ok'),
 ('karaoke',123123,1,'ok'),
@@ -229,15 +230,15 @@ value ('massage',123123,1,'ok'),
 ('car',123123,1,'ok');
 insert into hop_dong(id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc)
 value(1,1,7,'2021-05-1','2021-06-1',111111),
-(2,2,8,'2021-05-1','2021-06-01',111111),
-(1,2,6,'2020-11-1','2021-06-01',111111),
-(1,2,6,'2020-10-1','2021-06-01',111111),
-(3,3,7,'2019-11-1','2021-06-01',111111),
-(3,1,8,'2019-11-1','2021-06-01',111111),
-(1,2,6,'2019-11-1','2021-06-01',111111),
-(1,2,7,'2019-11-1','2021-06-01',111111),
-(1,2,8,'2018-05-1','2021-06-01',111111),
-(3,1,6,'2018-05-1','2021-06-01',111111),
+(2,2,8,'2021-05-1','2021-12-01',111111),
+(1,2,6,'2020-11-1','2021-12-01',111111),
+(1,2,6,'2020-10-1','2021-12-01',111111),
+(3,3,7,'2019-11-1','2021-12-01',111111),
+(3,1,8,'2019-11-1','2021-12-01',111111),
+(1,2,6,'2019-11-1','2021-12-01',111111),
+(1,2,7,'2019-11-1','2021-12-01',111111),
+(1,2,8,'2018-05-1','2021-12-01',111111),
+(3,1,6,'2018-05-1','2021-12-01',111111),
 (3,3,7,'2020-01-1','2021-06-01',111111),
 (3,3,8,'2020-02-1','2021-06-01',111111),
 (3,3,7,'2020-03-1','2021-06-01',111111),
@@ -255,10 +256,15 @@ value(1,1,123),
 (6,4,123),
 (8,2,456);
 
-insert into dich_vu(ten_dich_vu,dien_tich,so_tang,so_nguoi_toi_da,chi_phi_thue,id_kieu_thue,id_loai_dich_vu,TrangThai)
-value('nhà lá',123,3,12,'123422',1,1,'off');
 INSERT INTO `case_study`.`hop_dong` (`id_nhan_vien`, `id_khach_hang`, `id_dich_vu`, `ngay_lam_hop_dong`, `ngay_ket_thuc`, `tien_dat_coc`) VALUES ('4', '4', '4', '2019-01-01', '2021-06-01', '111111');
 INSERT INTO `case_study`.`hop_dong` (`id_nhan_vien`, `id_khach_hang`, `id_dich_vu`, `ngay_lam_hop_dong`, `ngay_ket_thuc`, `tien_dat_coc`) VALUES ('5', '5', '5', '2019-02-01', '2021-06-01', '222222');
 INSERT INTO `case_study`.`chi_tiet_hop_dong` (`id_hop_dong`, `id_dich_vu_di_kem`, `so_luong`) VALUES ('11', '1', '12');
 INSERT INTO `case_study`.`chi_tiet_hop_dong` (`id_hop_dong`, `id_dich_vu_di_kem`, `so_luong`) VALUES ('12', '3', '3');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('gacon', 'sss');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('khoass', 'xczxc');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('tomi', '67ui67');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('nokia', 'sssa');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('samsung', 'zxzxc');
+INSERT INTO `case_study`.`tai_khoan` (`ten_tai_khoan`, `mat_khau`) VALUES ('tkl', 'szxc');
+
 SET FOREIGN_KEY_CHECKS=1;
