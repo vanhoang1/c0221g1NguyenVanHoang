@@ -1,6 +1,6 @@
 package controller.product;
 
-import model.bean.customer.Customer;
+
 import model.bean.exam.Category;
 import model.bean.exam.Product;
 import model.repository.product.CategogyRepository;

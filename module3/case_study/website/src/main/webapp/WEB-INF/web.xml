@@ -21,14 +21,14 @@
     </filter>
     <filter-mapping>
         <filter-name>AdminFilter</filter-name>
-        <url-pattern>/customers</url-pattern>
+        <url-pattern>/customers/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>AdminFilter</filter-name>
-        <url-pattern>/employees</url-pattern>
+        <url-pattern>/employees/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>AdminFilter</filter-name>
-        <url-pattern>/services</url-pattern>
+        <url-pattern>/services/*</url-pattern>
     </filter-mapping>
 </web-app>

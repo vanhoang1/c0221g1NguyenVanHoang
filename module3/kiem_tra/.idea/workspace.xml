@@ -2,145 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e919e56-efaf-4df5-9b52-1a2c3a74c70d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/config/AdminFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/common/PrintErr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/config/CharsetFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controller/student/customer/CustomerServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/bean/customer/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/bean/customer/CustomerType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/repository/BaseRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/repository/customer/CustomerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/repository/customer/CustomerTypeRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/service/api/Service.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/service/common/Validate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/ICustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/kiem_tra-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/AdminFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/CharsetFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/employee/EmployeeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/home/HomeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/product/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/student/customer/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/exam/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/exam/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/exam/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/product/CategogyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/product/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/api/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/common/Validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/impl/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/impl/IEmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/impl/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-4.6.0-dist/js/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.foundation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.foundation.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.jqueryui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.semanticui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.jqueryui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.semanticui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/datatables/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/common/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/product/product-create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/product/product-edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/product/product-list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/case_study.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/case_study.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/modules/Currency_converter_app.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/java/controller/ConverterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/java/controller/DictionaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/modules/Create_Spring_Greeting_Application.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/modules/Sandwich.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/java/controller/SandwichController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/.idea/modules/Current_time_of_cities.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/build/libs/Current_time_of_cities-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/java/controller/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/.idea/modules/validate_email.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/build/classes/java/main/controller/DictionaryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/build/classes/java/main/controller/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/java/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -148,38 +105,52 @@
       <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/contract/ContractServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/contract/ContractServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/contract_detail/ContractDetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/contract_detail/ContractDetailServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/customer/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/customer/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/employee/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/employee/EmployeeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/home/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/home/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/service/ServiceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/service/ServiceServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/api/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/api/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IContractDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IContractDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IContractService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IContractService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IEmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IEmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IServiceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/IServiceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/ISummaryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/model/service/impl/ISummaryService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/build/libs/website-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/libs/website-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/contract/ContractServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/contract/ContractServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/contract_detail/ContractDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/contract_detail/ContractDetailServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/customer/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/customer/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/employee/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/employee/EmployeeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/home/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/home/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/service/ServiceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/service/ServiceServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/api/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/api/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IContractDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IContractDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IContractService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/IServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/ISummaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/model/service/impl/ISummaryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/webapp/view/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/webapp/view/common/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/webapp/view/customer/customer-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/webapp/view/customer/customer-create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/employee/EmployeeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/student/customer/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/customer/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/customer/CustomerType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/exam/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/customer/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/customer/CustomerTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/employee/EmployeeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/common/Validate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/ICustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/IEmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/kiem_tra-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/kiem_tra-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/AdminFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/employee/EmployeeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/product/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/product/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/student/customer/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/customer/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/customer/CustomerType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/exam/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/customer/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/customer/CustomerTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/employee/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/common/Validate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/IEmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/product/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/product/product-list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +199,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../case_study/website" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -360,6 +331,9 @@
       <workItem from="1623201990407" duration="10713000" />
       <workItem from="1623287840909" duration="8540000" />
       <workItem from="1623374886870" duration="3248000" />
+      <workItem from="1623637694930" duration="4128000" />
+      <workItem from="1623643920633" duration="3054000" />
+      <workItem from="1623662284953" duration="304000" />
     </task>
     <servers />
   </component>
@@ -390,69 +364,69 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1623378441428" />
-    <state width="1069" height="222" key="GridCell.Tab.0.bottom" timestamp="1623300878103">
+    <state width="1069" height="222" key="GridCell.Tab.0.bottom" timestamp="1623647790633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623300878103" />
-    <state width="1069" height="222" key="GridCell.Tab.0.center" timestamp="1623300878103">
+    <state width="1069" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623647790633" />
+    <state width="1069" height="222" key="GridCell.Tab.0.center" timestamp="1623647790632">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623300878103" />
-    <state width="1069" height="222" key="GridCell.Tab.0.left" timestamp="1623300878103">
+    <state width="1069" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623647790632" />
+    <state width="1069" height="222" key="GridCell.Tab.0.left" timestamp="1623647790632">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623300878103" />
-    <state width="1069" height="222" key="GridCell.Tab.0.right" timestamp="1623300878103">
+    <state width="1069" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623647790632" />
+    <state width="1069" height="222" key="GridCell.Tab.0.right" timestamp="1623647790632">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623300878103" />
-    <state width="1069" height="222" key="GridCell.Tab.1.bottom" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623647790632" />
+    <state width="1069" height="222" key="GridCell.Tab.1.bottom" timestamp="1623647790634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.1.center" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623647790634" />
+    <state width="1069" height="222" key="GridCell.Tab.1.center" timestamp="1623647790634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.1.left" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1623647790634" />
+    <state width="1069" height="222" key="GridCell.Tab.1.left" timestamp="1623647790633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.1.right" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1623647790633" />
+    <state width="1069" height="222" key="GridCell.Tab.1.right" timestamp="1623647790634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.2.bottom" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1623647790634" />
+    <state width="1069" height="222" key="GridCell.Tab.2.bottom" timestamp="1623647790633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.2.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.2.center" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.2.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623647790633" />
+    <state width="1069" height="222" key="GridCell.Tab.2.center" timestamp="1623647790633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.2.center/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.2.left" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.2.center/0.0.1600.860@0.0.1600.860" timestamp="1623647790633" />
+    <state width="1069" height="222" key="GridCell.Tab.2.left" timestamp="1623647790633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.2.left/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.2.right" timestamp="1623300878104">
+    <state width="1069" height="222" key="GridCell.Tab.2.left/0.0.1600.860@0.0.1600.860" timestamp="1623647790633" />
+    <state width="1069" height="222" key="GridCell.Tab.2.right" timestamp="1623647790633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.2.right/0.0.1600.860@0.0.1600.860" timestamp="1623300878104" />
-    <state width="1069" height="222" key="GridCell.Tab.3.bottom" timestamp="1623210893259">
+    <state width="1069" height="222" key="GridCell.Tab.2.right/0.0.1600.860@0.0.1600.860" timestamp="1623647790633" />
+    <state width="1069" height="222" key="GridCell.Tab.3.bottom" timestamp="1623640133827">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.3.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623210893259" />
-    <state width="1069" height="222" key="GridCell.Tab.3.center" timestamp="1623210893259">
+    <state width="1069" height="222" key="GridCell.Tab.3.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623640133827" />
+    <state width="1069" height="222" key="GridCell.Tab.3.center" timestamp="1623640133827">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.3.center/0.0.1600.860@0.0.1600.860" timestamp="1623210893259" />
-    <state width="1069" height="222" key="GridCell.Tab.3.left" timestamp="1623210893258">
+    <state width="1069" height="222" key="GridCell.Tab.3.center/0.0.1600.860@0.0.1600.860" timestamp="1623640133827" />
+    <state width="1069" height="222" key="GridCell.Tab.3.left" timestamp="1623640133827">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.3.left/0.0.1600.860@0.0.1600.860" timestamp="1623210893258" />
-    <state width="1069" height="222" key="GridCell.Tab.3.right" timestamp="1623210893259">
+    <state width="1069" height="222" key="GridCell.Tab.3.left/0.0.1600.860@0.0.1600.860" timestamp="1623640133827" />
+    <state width="1069" height="222" key="GridCell.Tab.3.right" timestamp="1623640133827">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1069" height="222" key="GridCell.Tab.3.right/0.0.1600.860@0.0.1600.860" timestamp="1623210893259" />
+    <state width="1069" height="222" key="GridCell.Tab.3.right/0.0.1600.860@0.0.1600.860" timestamp="1623640133827" />
   </component>
 </project>

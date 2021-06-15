@@ -19,7 +19,8 @@ public class LoginServlet extends HttpServlet {
                 String username = request.getParameter("username");
                 String password = request .getParameter("password");
                User user =  userRepository.login(username,password);
-               if(user == null){request.setAttribute("message", "Login fail");
+               if(user == null){
+                   request.setAttribute("message", "Login fail");
                                 request.setAttribute("err", true);
                    request.getRequestDispatcher("/view/login/login.jsp").forward(request,response);
                }

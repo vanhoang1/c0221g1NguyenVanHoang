@@ -66,7 +66,7 @@
                     </tr>
                     </thead>
                     <tbody>
-
+                    <input type="hidden" id="currentRow"/>
                     <c:forEach items='${list}' var="product" varStatus="count">
 
                         <tr>
@@ -86,13 +86,13 @@
 
 
 
-                                <a href="/products?action=edit&id=${product.id} " class="text-light">
+
                                     <button type="button" rel="tooltip"
-                                            class="btn btn-success btn-round btn-just-icon btn-sm"
-                                            data-original-title=""
-                                            title="edit"><i
+                                            class="btn btn-success btn-round btn-just-icon btn-sm text-light edit"
+                                            data-original-title="${product.id}"
+                                            title="edit" ><i
                                             class="fa fa-edit"></i></button>
-                                </a>
+
 
 
                                 <a data-href="/products?action=delete&id=${product.id}"
@@ -139,4 +139,20 @@
     </div>
 </div>
 </body>
+<script>
+    $( ".edit" ).click(function() {
+    let row=    $( this ).closest("tr");
+    row.replaceWith( '<tr>' +
+            ' <td class="text-center">'+row.find('td:eq(0)').html()+'</td>' +
+            ' <td>'+row.find('td:eq(1)').html()+'</td>' +
+            ' <td>'+row.find('td:eq(2)').html()+'</td>' +
+            ' <td>'+row.find('td:eq(3)').html()+'</td>' +
+            ' <td>'+row.find('td:eq(4)').html()+'</td>' +
+            ' <td>'+row.find('td:eq(5)').html()+'</td>' +
+            ' <td>'+row.find('td:eq(6)').html()+'</td>' +
+            ' <td> <a data-href="/products?action=edit&id="></a></td>' +
+
+            '</tr>' );
+    });
+</script>
 </html>

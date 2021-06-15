@@ -37,7 +37,8 @@
           </form>
         </div>
         <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
-          <div class="d-flex justify-content-end"><c:if test="${sessionScope.acc!=null}">
+          <div class="d-flex justify-content-end">
+              <c:if test="${sessionScope.acc!=null}">
             <a target="_blank" href="/login?action=logout" data-abc="true"
                class="nav-link widget-header text-light"> <i
                     class="fas fa fa-whatsapp"></i> ${sessionScope.acc.user.username}</a>
