@@ -1,27 +1,85 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Greeting</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../resources/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container mt-5 ">
-<div class="row"></div>
-<form class="" method="post">
-    <div class="form-group col-4">
-        <label for="eng" class="">English</label>
-        <input type="text" name="eng"  class="form-control" id="eng" placeholder="enter english word">
+<div class="container">
+    <div class="row mt-5 justify-content-center ">
+        <h2>
+            Settings
+        </h2>
     </div>
-    <button type="submit" class="btn btn-primary mb-2">Dictionary lookup</button>
+    <div class="row">
+        <div class="col-6 mx-auto">
 
-</form>
-    <div class="col-4 ">
-        <h2>Vietnamese :${vn}</h2>
+
+            <form:form method="POST" action="configSetting" modelAttribute="setting">
+                <div class="form-group row">
+                    <form:label path="language" cssClass="col-sm-2 col-form-label">Language</form:label>
+                    <div class="col-sm-10">
+                        <form:select cssClass="form-control" path="language">
+
+                            <form:option value="English">English</form:option>
+                            <form:option value="Vietnamese">Vietnamese</form:option>
+                            <form:option value="Japanese">Japanese</form:option>
+                            <form:option value="Chinese">Chinese</form:option>
+                        </form:select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <form:label path="pageSite" cssClass="col-sm-2 col-form-label">Page Site</form:label>
+                    <div class="col-sm-10">
+                        <span>Show</span>
+                        <form:select cssClass="form-check-inline" path="pageSite">
+                            <form:option value="5">5</form:option>
+                            <form:option value="10">10</form:option>
+                            <form:option value="15">15</form:option>
+                            <form:option value="25">25</form:option>
+                            <form:option value="100">100</form:option>
+                        </form:select>
+                        <span>email per page</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2"> Spams filter</div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <form:checkbox path="spamFiler" value="${true}" cssClass="form-check-input"/>
+                            <form:label path="spamFiler" cssClass=" d-flex col-form-label">
+                                Enable spams filter
+                            </form:label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">Signature</div>
+                    <div class="col-sm-10">
+                        <form:input path="signature" cssClass="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-between align-content-between">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <a href="/">
+                                <button type="button" class="btn btn-primary ">Cancel</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </form:form>
+        </div>
     </div>
-
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
