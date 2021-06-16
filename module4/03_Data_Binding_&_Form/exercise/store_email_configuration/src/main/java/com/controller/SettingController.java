@@ -16,8 +16,6 @@ public class SettingController {
         this.settingService = settingService;
     }
 
-
-
     @GetMapping(value = {"","/edit"})
     public ModelAndView showIndex(){
         return new ModelAndView("index","setting",settingService .findSetting());
