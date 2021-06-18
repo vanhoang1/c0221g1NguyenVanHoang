@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SettingController {
+
     private final ISettingService settingService;
 
     @Autowired

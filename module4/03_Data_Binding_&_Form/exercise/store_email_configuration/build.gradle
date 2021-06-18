@@ -28,6 +28,7 @@ dependencies {
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
     }
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
     compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.5.2'
     compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
 }

@@ -2,155 +2,113 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e919e56-efaf-4df5-9b52-1a2c3a74c70d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/modules/Currency_converter_app.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/java/controller/ConverterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/java/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/modules/Create_Spring_Greeting_Application.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/modules/Sandwich.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/java/controller/SandwichController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/Sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/.idea/modules/Current_time_of_cities.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/build/libs/Current_time_of_cities-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/java/controller/TimeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/Current_time_of_cities/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/.idea/modules/validate_email.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/build/classes/java/main/controller/DictionaryController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/build/classes/java/main/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/java/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/practice/validate_email/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/home/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/classes/java/main/controller/home/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/build/libs/website-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/build/libs/website-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/home/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/java/controller/home/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/website/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/website/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/employee/EmployeeServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/student/customer/CustomerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/customer/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/customer/CustomerType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/exam/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/customer/CustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/customer/CustomerTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/employee/EmployeeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/common/Validate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/ICustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/IEmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/kiem_tra-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/kiem_tra-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AdminFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/employee/EmployeeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/product/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/product/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/student/customer/CustomerServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/customer/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/customer/CustomerType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/exam/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/customer/CustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/customer/CustomerTypeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/employee/EmployeeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/common/Validate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/ICustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/IEmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/customer-list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/employee/employee-list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/product/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/product/product-list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/modules/thymeleaf_product.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/classes/java/main/com/configuration/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/classes/java/main/com/configuration/AppConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/classes/java/main/com/configuration/AppInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/classes/java/main/com/controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/resources/main/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/model/bean/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/model/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/java/com/model/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/resources/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/exercise/thymeleaf_product/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/01_Spring_MVC_Overview/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/sandwich_order/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/02_Spring_Controller/exercise/sandwich_order/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/build/classes/java/main/com/controller/SettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/build/classes/java/main/com/controller/SettingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/build/libs/store_email_configuration-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/build/libs/store_email_configuration-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/src/main/java/com/controller/SettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/src/main/java/com/controller/SettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/03_Data_Binding_&amp;_Form/exercise/store_email_configuration/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/build/classes/java/main/com/codegym/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/build/classes/java/main/com/codegym/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/build/libs/customer-managemen-thymeleaf-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/build/libs/customer-managemen-thymeleaf-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/04_Views_&amp;_Thymeleaf/practice/customer-managemen-thymeleaf/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,6 +292,7 @@
       <workItem from="1623637694930" duration="4128000" />
       <workItem from="1623643920633" duration="3054000" />
       <workItem from="1623662284953" duration="304000" />
+      <workItem from="1623919427670" duration="638000" />
     </task>
     <servers />
   </component>

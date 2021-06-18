@@ -15,14 +15,11 @@
     </div>
     <div class="row">
         <div class="col-6 mx-auto">
-
-
             <form:form method="POST" action="configSetting" modelAttribute="setting">
                 <div class="form-group row">
                     <form:label path="language" cssClass="col-sm-2 col-form-label">Language</form:label>
                     <div class="col-sm-10">
                         <form:select cssClass="form-control" path="language">
-
                             <form:option value="English">English</form:option>
                             <form:option value="Vietnamese">Vietnamese</form:option>
                             <form:option value="Japanese">Japanese</form:option>
@@ -59,14 +56,13 @@
                 <div class="form-group row">
                     <div class="col-sm-2">Signature</div>
                     <div class="col-sm-10">
-                        <form:input path="signature" cssClass="form-control"/>
+                        <form:textarea path="signature" cssClass="form-control" rows="5" cols="60"/>
                     </div>
                 </div>
                 <div class="form-group row justify-content-between align-content-between">
                     <div>
                         <button type="submit" class="btn btn-primary">Update</button>
                     </div>
-
                     <div>
                         <div>
                             <a href="/">
@@ -74,11 +70,10 @@
                             </a>
                         </div>
                     </div>
-
-
                 </div>
             </form:form>
         </div>
+
     </div>
 </div>
 </body>

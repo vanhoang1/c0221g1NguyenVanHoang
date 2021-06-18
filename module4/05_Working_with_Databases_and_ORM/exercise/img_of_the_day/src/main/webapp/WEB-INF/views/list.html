@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll</title>
+    <link rel="stylesheet" href="../../../resources/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<h2 class="text-center">Img of the Day</h2>
+<div class="container">
+    <div class="card-group">
+    <div class="card w-50 " >
+        <img id="img-of-the-day">
+        <div class="card-body">
+           <form>
+               <div class="box-body"> <select id="example-square" name="rating" autocomplete="off">
+                   <option value=""></option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+               </select> </div>
+           </form>
+        </div>
+    </div>
+    <div class="card w-50 " >
+        <div></div>
+    <table class="table">
+        <caption>Poll List</caption>
+        <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Evaluate</th>
+            <th>Author</th>
+            <th>Feedback</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p,count : ${pollList}">
+            <td th:text="${count.count}"></td>
+            <td>
+                <a th:href="@{/edit/{id}(id=${p.id})}" th:text="${p.evaluate}"></a>
+            </td>
+            <td th:text="${p.author}"></td>
+            <td th:text="${p.feedback}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    let query = 'https://api.nasa.gov/planetary/apod?api_key=0rPcBcm56bFim1Gg5lbwTlqvZGQ317pvB5imRTtt';
+    let request = new XMLHttpRequest();
+    request.open('GET', query);
+    request.onload = function() {
+        if (request.status === 200) {
+            let response = JSON.parse(request.responseText);
+            document.getElementById('img-of-the-day').setAttribute('src', response.url);
+        }
+    };
+    request.send();
+</script>
+</html>
