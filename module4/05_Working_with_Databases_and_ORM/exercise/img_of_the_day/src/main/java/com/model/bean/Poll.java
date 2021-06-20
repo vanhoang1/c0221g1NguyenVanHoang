@@ -1,62 +1,25 @@
 package com.model.bean;
 
+import lombok.Data;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
-@Table
+@Table(name = "poll")
+@Data
 public class Poll {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "evaluate")
     private long evaluate;
+    @Column(name = "author")
     private String author;
+    @Column(name = "feedback")
     private String feedback;
-
-    public Poll() {
-    }
-
-    public Poll(long evaluate, String author, String feedback) {
-        this.evaluate = evaluate;
-        this.author = author;
-        this.feedback = feedback;
-    }
-
-    public Poll(long id, long evaluate, String author, String feedback) {
-        this.id = id;
-        this.evaluate = evaluate;
-        this.author = author;
-        this.feedback = feedback;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getEvaluate() {
-        return evaluate;
-    }
-
-    public void setEvaluate(long evaluate) {
-        this.evaluate = evaluate;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getFeedback() {
-        return feedback;
-    }
-
-    public void setFeedback(String feedback) {
-        this.feedback = feedback;
-    }
+    @Column(name = "date_created")
+    private LocalDate dateCreate;
+    @Column(name = "count_like")
+    private int countLike;
 }

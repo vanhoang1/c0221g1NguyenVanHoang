@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2a3e900e-46e7-42b1-83e4-d1b6c8707690" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/IGeneralRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01_Spring_MVC_Overview/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01_Spring_MVC_Overview/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/modules/img_of_the_day.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/modules/img_of_the_day.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/controller/PollController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/controller/PollController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/bean/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/bean/Poll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/poll/PollService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/poll/PollService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/libs/img_of_the_day-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/libs/img_of_the_day-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/controller/PollController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/controller/PollController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/bean/Poll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/bean/Poll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/poll/PollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/poll/PollService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1uCRc2vm5fWvUsBHe2jZBEM70JH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0221G1_NguyenVanHoang\module4\06_JPA\practice\customer-management\src\main\webapp\WEB-INF\views\customer" />
+      <recent name="D:\C0221G1_NguyenVanHoang\module4\06_JPA\practice\customer-management\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.461" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.461" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.codegym : customer-management-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_customer-management" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64238" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.codegym : customer-management-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a3e900e-46e7-42b1-83e4-d1b6c8707690" name="Default Changelist" comment="" />
+      <created>1624167659534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624167659534</updated>
+      <workItem from="1624167675040" duration="362000" />
+      <workItem from="1624180484908" duration="4246000" />
+      <workItem from="1624192884046" duration="1464000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="89" key="#Assign_Data_Sources" timestamp="1624189729685">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="89" key="#Assign_Data_Sources/0.0.1600.860@0.0.1600.860" timestamp="1624189729685" />
+    <state x="392" y="89" key="#Inspections" timestamp="1624189771720">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="89" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1624189771720" />
+    <state x="392" y="89" key="#Notifications" timestamp="1624192977085">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="89" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1624192977085" />
+    <state x="392" y="89" key="#SQL_Dialects" timestamp="1624193836446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="89" key="#SQL_Dialects/0.0.1600.860@0.0.1600.860" timestamp="1624193836446" />
+    <state x="254" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624189367058">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="254" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1624189367058" />
+    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1624193085903">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1624193085903" />
+    <state width="1069" height="222" key="GridCell.Tab.0.bottom" timestamp="1624189867380">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624189867380" />
+    <state width="1069" height="222" key="GridCell.Tab.0.center" timestamp="1624189867380">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624189867380" />
+    <state width="1069" height="222" key="GridCell.Tab.0.left" timestamp="1624189867380">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624189867380" />
+    <state width="1069" height="222" key="GridCell.Tab.0.right" timestamp="1624189867380">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624189867380" />
+    <state width="1069" height="222" key="GridCell.Tab.1.bottom" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.1.center" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.1.left" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.1.right" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.2.bottom" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.2.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.2.center" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.2.center/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.2.left" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.2.left/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state width="1069" height="222" key="GridCell.Tab.2.right" timestamp="1624189867176">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1069" height="222" key="GridCell.Tab.2.right/0.0.1600.860@0.0.1600.860" timestamp="1624189867176" />
+    <state x="301" y="73" key="SettingsEditor" timestamp="1624193080139">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624193080139" />
+    <state x="182" y="43" key="new project wizard" timestamp="1624194377604">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="182" y="43" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1624194377604" />
+  </component>
+</project>

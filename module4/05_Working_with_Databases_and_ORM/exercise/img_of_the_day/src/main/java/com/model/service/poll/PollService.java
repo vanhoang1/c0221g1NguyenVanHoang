@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.time.LocalDate;
 import java.util.List;
 @Service
 public class PollService implements IPollService {
@@ -42,6 +43,14 @@ public class PollService implements IPollService {
     }
 
     @Override
+    public List<Poll> findAllOnCurrentDate() {
+        String queryStr = "SELECT p FROM Poll AS p WHERE p.dateCreate = :date";
+        TypedQuery<Poll> query = entityManager.createQuery(queryStr, Poll.class);
+        query.setParameter("date", LocalDate.now());
+        return query.getResultList();
+    }
+
+    @Override
     public Poll save(Poll poll) {
         Session session = null;
         Transaction transaction = null;
@@ -52,6 +61,8 @@ public class PollService implements IPollService {
             origin.setAuthor(poll.getAuthor());
             origin.setEvaluate(poll.getEvaluate());
             origin.setFeedback(poll.getFeedback());
+            origin.setDateCreate(poll.getDateCreate());
+            origin.setCountLike(poll.getCountLike());
             session.saveOrUpdate(origin);
             transaction.commit();
             return origin;
@@ -106,5 +117,53 @@ public class PollService implements IPollService {
     @Override
     public void deleteAll() {
 
+    }
+
+    @Override
+    public Poll add(Poll poll) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.save(poll);
+            transaction.commit();
+            return  poll;
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void like(long id) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            Poll origin = findOne(id);
+            origin.setCountLike(origin.getCountLike()+1);
+            session.saveOrUpdate(origin);
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 }

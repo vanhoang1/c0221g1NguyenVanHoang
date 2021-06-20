@@ -7,6 +7,10 @@ public interface Service<E> {
 
     E findOne(Long id);
 
+    List<E> findAllOnCurrentDate();
+
+
+
     E save(E e);
 
     List<E> save(List<E> e);
@@ -24,4 +28,9 @@ public interface Service<E> {
     void delete(List<E> e);
 
     void deleteAll();
+
+    E add(E e);
+
+    void like(long id);
+
 }

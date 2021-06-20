@@ -17,7 +17,7 @@ public class ProductController {
     }
 
     @GetMapping( path="")
-    public ModelAndView showForm(){
+    public ModelAndView showList(){
         return new ModelAndView("/index","productList",productService.findAll());
     }
     @GetMapping("/create")
