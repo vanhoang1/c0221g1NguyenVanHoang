@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:replace="~{index::link}">
+</head>
+<body>
+<div class="container px-4 py-5 mx-auto">
+    <form th:object="${blog}" action="/save" method="post">
+        <input hidden  class="form-control" th:field="*{id}">
+    <div class="row d-flex justify-content-center">
+        <div class="card col-6">
+            <div class="row px-3">
+                <div class="flex-column">
+                    <label >Author</label>
+                    <input  class="form-control" th:field="*{author}">
+                </div>
+                <div class="flex-column mx-3">
+                    <label> Topic</label>
+                    <input   class="form-control" th:field="*{topic}">
+                </div>
+                <div class="flex-column ">
+                    <label> Status</label>
+                    <select   class="form-control" th:field="*{status}">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+
+                    </select>
+                </div>
+
+            </div>
+            <div class="row px-3">
+                <label >Title</label>
+                <input class="form-control" th:field="*{title}">
+            </div>
+            <div class="row px-3 form-group">
+                <label>Content </label>
+                <textarea th:field="*{content}" class="text-muted bg-light mt-4 mb-3 form-control" placeholder="input content"></textarea> </div>
+            <div class="row px-3">
+                <p class="fa fa-user options mb-0 mr-4"></p>
+                <p class="fa fa-map-marker options mb-0 mr-4"></p>
+                <p class="fa fa-image options mb-0 mr-4"></p>
+                <button type="submit" class="btn btn-success ml-auto mb-2">Save</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+<script th:replace="~{index::script}"></script>
+</html>

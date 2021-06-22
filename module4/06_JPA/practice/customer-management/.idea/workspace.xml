@@ -2,74 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a3e900e-46e7-42b1-83e4-d1b6c8707690" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/IGeneralRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/IGeneralService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/java/com/blogspring/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/java/com/blogspring/model/entity/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/java/com/blogspring/model/repository/blog/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/java/com/blogspring/model/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/java/com/blogspring/model/service/blog/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/java/com/blogspring/model/service/blog/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/static/bootstrap/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/templates/create-or-edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise/blog-spring/src/main/resources/templates/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/customer-management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/controller/ProvinceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/repository/IProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/service/IProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/java/com/codegym/cms/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/resources/templates/province/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/resources/templates/province/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/resources/templates/province/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms/src/main/resources/templates/province/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../01_Spring_MVC_Overview/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01_Spring_MVC_Overview/practice/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/csv-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/modules/img_of_the_day.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/.idea/modules/img_of_the_day.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/controller/PollController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/controller/PollController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/bean/Poll.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/bean/Poll.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/poll/PollService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/classes/java/main/com/model/service/poll/PollService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/libs/img_of_the_day-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/build/libs/img_of_the_day-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/controller/PollController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/controller/PollController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/bean/Poll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/bean/Poll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/poll/PollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/java/com/model/service/poll/PollService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/resources/bootstrap/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_Data_Binding_&amp;_Form/exercise/store_email_configuration/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_Data_Binding_&amp;_Form/exercise/store_email_configuration/src/main/java/com/model/bean/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_Data_Binding_&amp;_Form/exercise/store_email_configuration/src/main/java/com/model/bean/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,17 +112,17 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../05_Working_with_Databases_and_ORM/exercise/img_of_the_day" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../07_Spring_Data_Repository/practice/cms" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -205,23 +211,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -235,11 +224,14 @@
       <workItem from="1624167675040" duration="362000" />
       <workItem from="1624180484908" duration="4246000" />
       <workItem from="1624192884046" duration="1464000" />
+      <workItem from="1624249256515" duration="1388000" />
+      <workItem from="1624260374858" duration="558000" />
+      <workItem from="1624366447923" duration="685000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -265,10 +257,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1624189367058" />
-    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1624193085903">
+    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1624371516952">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1624193085903" />
+    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1624371516952" />
     <state width="1069" height="222" key="GridCell.Tab.0.bottom" timestamp="1624189867380">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

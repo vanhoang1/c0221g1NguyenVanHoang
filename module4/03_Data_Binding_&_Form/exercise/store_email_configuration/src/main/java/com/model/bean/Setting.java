@@ -1,5 +1,4 @@
 package com.model.bean;
-
 public class Setting {
     String language;
     Integer pageSite;

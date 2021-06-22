@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:replace="~{index::link}">
+</head>
+<body>
+<div class="container px-4 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="card col-6">
+                <div class="row px-3">
+                    <div class="row">
+                        <p >Author :
+                        <span  class="" th:text="${blog.author}"></span></p>
+                    </div>
+                    <div class="row">
+                        <p> Topic :
+                        <span   class="" th:text="${blog.topic}"></span></p>
+                    </div>
+                    <div class="row ">
+                        <p> Status :
+                        <span   class="" th:text="${blog.status}">
+                        </span></p>
+                    </div>
+
+                </div>
+                <div class="row px-3">
+                    <P >Title</P>
+                    <span class="form-control" th:field="${blog.title}"></span>
+                </div>
+                <div class="row px-3 form-group">
+                    <P>Content : </P>
+                    <textarea th:text="${blog.content}" class="text-area bg-light mt-4 mb-3 form-control" placeholder="input content"></textarea> </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script th:replace="~{index::script}"></script>
+</html>
