@@ -22,11 +22,11 @@ public class BlogController {
     }
     @GetMapping(path = "")
     public ModelAndView showBlog(){
-        return new ModelAndView("index","blogList",blogService.findAll());
+        return new ModelAndView("/blog/index","blogList",blogService.findAll());
     }
     @GetMapping(path = "/create")
     public ModelAndView showFormCreate(){
-        return new ModelAndView("create-or-edit","blog",new Blog());
+        return new ModelAndView("/blog/create-or-edit","blog",new Blog());
     }
 
     @PostMapping(path = "/save")
@@ -37,7 +37,7 @@ public class BlogController {
     }
     @GetMapping(path = "edit/{id}")
     public ModelAndView showEditForm(@PathVariable Long id ){
-        return new ModelAndView("create-or-edit","blog", blogService.findById(id).orElse(new Blog()));
+        return new ModelAndView("/blog/create-or-edit","blog", blogService.findById(id).orElse(new Blog()));
     }
     @GetMapping(path = "delete/{id}")
     public String delete(@PathVariable Long id ){
@@ -46,6 +46,6 @@ public class BlogController {
     }
     @GetMapping(path = "view/{id}")
     public ModelAndView showView(@PathVariable Long id ){
-        return new ModelAndView("view","blog", blogService.findById(id).orElse(new Blog()));
+        return new ModelAndView("/blog/view","blog", blogService.findById(id).orElse(new Blog()));
     }
 }
