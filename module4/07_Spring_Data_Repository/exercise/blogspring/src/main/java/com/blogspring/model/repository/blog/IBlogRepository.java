@@ -12,4 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface IBlogRepository extends JpaRepository<Blog,Long> {
     @Query("select b from  Blog  b where b.title like %:title% ")
     Page<Blog> findAllByTitle(@Param("title")String title, Pageable pageable);
+
+
+    Page<Blog> findAllByCategory_Id(Long category_id, Pageable pageable);
 }
