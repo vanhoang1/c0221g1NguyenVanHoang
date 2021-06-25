@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <p>Đăng kí</p>
+    <div class="col-8 mx-auto">
+<form th:object="${user}" class="" method="post">
+    <div class="row p-2" >
+        <label >First name :</label> <input class="form-control" th:field="*{firstName}">
+        <p class="text-danger" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">firstName Error</p>
+    </div>
+    <div class="row  p-2" >
+        <label>Last name :</label> <input class="form-control" th:field="*{lastName}">
+        <p class="text-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">lastName Error</p>
+    </div>
+    <div class="row  p-2" >
+        <label>Age :</label> <input class="form-control" th:field="*{age}">
+        <p class="text-danger" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">lastName Error</p>
+    </div>
+    <div class="row  p-2" >
+        <label>Email : </label><input class="form-control" th:field="*{email}">
+        <p class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">lastName Error</p>
+    </div>
+    <div class="row  p-2" >
+        <label>Phone : </label><input class="form-control" th:field="*{phoneNumber}">
+        <p class="text-danger" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">lastName Error</p>
+    </div>
+    <div class="row justify-content-between px-3">
+        <input type="submit" value="Submit" >
+        <input type="reset"  value="Reset">
+
+    </div>
+</form>
+    </div>
+</div>
+</body>
+</html>
