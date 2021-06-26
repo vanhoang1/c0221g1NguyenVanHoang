@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="alert alert-success fixed-top" role="alert" th:if="${success}">
+    <!--/*@thymesVar id="success" type="java.lang.String"*/-->
+    <span th:text="${success}"></span>
+</div>
+
+<div class="container pt-5">
+    <h2>List Product</h2>
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a th:href="@{/create}"><button type="button" class="btn btn-primary">Create new Product</button></a>
+        <form class="form-inline" th:action="@{/}">
+            <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+<div class="row">
+    <table class="table ">
+        <thead class="thead-light">
+        <tr>
+            <th> #</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>View</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="row,count : ${productList}">
+                <td th:text="${count.count}"></td>
+                <td th:text="${row.name}"></td>
+                <td th:text="${row.price}"></td>
+                <td th:text="${row.amount}"></td>
+                <td th:text="${row.description}"></td>
+                <td><a th:href="@{/{id}/edit(id=${row.id})}">Edit</a></td>
+                <td><a th:href="@{/{id}/delete(id=${row.id})}">Delete</a></td>
+                <td><a th:href="@{/{id}/view(id=${row.id})}">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <div class="row px-3 ">
+
+        <a th:href="@{/(page=${productList.number - 1},keyword=${keyword})}" th:if="${productList.hasPrevious()}" >Previous</a>
+        <a class="px-1" th:each="pageNo : ${#numbers.sequence(1,productList.totalPages )}" th:text="${pageNo}" th:href="@{/(page=${pageNo -1})}"></a>
+        <a th:href="@{/(page=${productList.number + 1},keyword=${keyword})}" th:if="${productList.hasNext()}">Next</a>
+
+    </div>
+</div>
+</body>
+<script th:replace="/layout::bundle"></script>
+<script th:replace="/layout::min"></script>
+<script>
+</script>
+</html>

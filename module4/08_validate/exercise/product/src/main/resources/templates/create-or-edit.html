@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout::head">
+
+</head>
+<body>
+<div></div>
+
+<div class="container">
+    <h3>Product </h3>
+    <p>
+        <a th:href="@{/}">
+            Back to product list
+        </a>
+    </p>
+    <form action="/save" th:object="${productDto}" method="POST" novalidate="novalidate">
+        <input hidden th:field="*{id}">
+        <div class="row">
+            <div class="form-group col-8">
+                <label for="name">Name Product</label>
+                <input type="text" class="form-control " id="name" placeholder="Input Name" th:field="*{name}">
+            </div>
+            <p class="col-4 text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-8">
+                <label for="price">Price </label>
+                <input type="text" class="form-control" id="price" placeholder="Input Price" th:field="*{price}">
+            </div>
+            <p class="col-4 text-danger" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-8">
+                <label for="amount">Amount</label>
+                <input type="text" class="form-control" id="amount" placeholder="Input Price" th:field="*{amount}">
+            </div>
+            <p class="col-4 text-danger" th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></p>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-8">
+                <label for="description">Description</label>
+                <input type="text" class="form-control " id="description" placeholder="Input Price"
+                       th:field="*{description}">
+            </div>
+            <p class="col-4 text-danger" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+</div>
+</body>
+</html>
