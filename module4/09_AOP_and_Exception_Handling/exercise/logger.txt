@@ -1,0 +1,105 @@
+2021-06-28 10:41:57.480  INFO 9208 --- [main] com.borrow_book.BorrowBookApplication    : Starting BorrowBookApplication using Java 1.8.0_251 on Admin with PID 9208 (D:\C0221G1_NguyenVanHoang\module4\08_validate\exercise\borrow_book\build\classes\java\main started by Admin in D:\C0221G1_NguyenVanHoang\module4\08_validate\exercise\borrow_book)
+2021-06-28 10:41:57.512  INFO 9208 --- [main] com.borrow_book.BorrowBookApplication    : No active profile set, falling back to default profiles: default
+2021-06-28 10:42:01.479  INFO 9208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 10:42:01.764  INFO 9208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 242 ms. Found 2 JPA repository interfaces.
+2021-06-28 10:42:05.606  INFO 9208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-28 10:42:05.639  INFO 9208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 10:42:05.640  INFO 9208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-06-28 10:42:06.210  INFO 9208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 10:42:06.211  INFO 9208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8281 ms
+2021-06-28 10:42:07.351  INFO 9208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 10:42:07.807  INFO 9208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-28 10:42:08.601  INFO 9208 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 10:42:09.025  INFO 9208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 10:42:15.670  INFO 9208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 10:42:15.858  INFO 9208 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-06-28 10:42:21.422  INFO 9208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 10:42:21.504  INFO 9208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 10:42:23.111  WARN 9208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 10:42:28.633  INFO 9208 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-28 10:42:30.065  INFO 9208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-28 10:42:30.247  INFO 9208 --- [main] com.borrow_book.BorrowBookApplication    : Started BorrowBookApplication in 34.396 seconds (JVM running for 42.395)
+2021-06-28 10:43:07.731  INFO 9208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 10:43:07.732  INFO 9208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 10:43:07.734  INFO 9208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-28 10:43:30.345 ERROR 9208 --- [http-nio-8080-exec-5] c.b.controller.logger.LoggerBook         : class name :LibraryCardService
+2021-06-28 10:43:30.345 ERROR 9208 --- [http-nio-8080-exec-5] c.b.controller.logger.LoggerBook         : method :findById
+2021-06-28 10:43:30.346 ERROR 9208 --- [http-nio-8080-exec-5] c.b.controller.logger.LoggerBook         : args :[801]
+2021-06-28 10:57:56.817  INFO 8940 --- [main] com.borrow_book.BorrowBookApplication    : Starting BorrowBookApplication using Java 1.8.0_251 on Admin with PID 8940 (D:\C0221G1_NguyenVanHoang\module4\08_validate\exercise\borrow_book\build\classes\java\main started by Admin in D:\C0221G1_NguyenVanHoang\module4\08_validate\exercise\borrow_book)
+2021-06-28 10:57:56.827  INFO 8940 --- [main] com.borrow_book.BorrowBookApplication    : No active profile set, falling back to default profiles: default
+2021-06-28 10:57:59.965  INFO 8940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 10:58:00.263  INFO 8940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 258 ms. Found 2 JPA repository interfaces.
+2021-06-28 10:58:03.718  INFO 8940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-28 10:58:03.748  INFO 8940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 10:58:03.749  INFO 8940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-06-28 10:58:04.348  INFO 8940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 10:58:04.349  INFO 8940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7230 ms
+2021-06-28 10:58:05.032  INFO 8940 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 10:58:05.404  INFO 8940 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-28 10:58:06.348  INFO 8940 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 10:58:06.669  INFO 8940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 10:58:08.388  INFO 8940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 10:58:08.484  INFO 8940 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-06-28 10:58:11.563  INFO 8940 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 10:58:11.624  INFO 8940 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 10:58:12.875  WARN 8940 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 10:58:13.322  INFO 8940 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-28 10:58:13.789  INFO 8940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-28 10:58:13.810  INFO 8940 --- [main] com.borrow_book.BorrowBookApplication    : Started BorrowBookApplication in 19.234 seconds (JVM running for 23.41)
+2021-06-28 10:58:25.739  INFO 8940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 10:58:25.739  INFO 8940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 10:58:25.742  INFO 8940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-28 10:58:35.244 ERROR 8940 --- [http-nio-8080-exec-10] c.b.controller.logger.LoggerBook         : class name :LibraryCardService
+2021-06-28 10:58:35.246 ERROR 8940 --- [http-nio-8080-exec-10] c.b.controller.logger.LoggerBook         : method :findById
+2021-06-28 10:58:35.247 ERROR 8940 --- [http-nio-8080-exec-10] c.b.controller.logger.LoggerBook         : args :[8016]
+2021-06-28 11:22:42.221  INFO 11024 --- [main] com.borrow_book.BorrowBookApplication    : Starting BorrowBookApplication using Java 1.8.0_251 on Admin with PID 11024 (D:\C0221G1_NguyenVanHoang\module4\08_validate\exercise\borrow_book\build\classes\java\main started by Admin in D:\C0221G1_NguyenVanHoang\module4\08_validate\exercise\borrow_book)
+2021-06-28 11:22:42.227  INFO 11024 --- [main] com.borrow_book.BorrowBookApplication    : No active profile set, falling back to default profiles: default
+2021-06-28 11:22:43.737  INFO 11024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 11:22:43.994  INFO 11024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 235 ms. Found 2 JPA repository interfaces.
+2021-06-28 11:22:46.306  INFO 11024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-28 11:22:46.338  INFO 11024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 11:22:46.339  INFO 11024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-06-28 11:22:46.662  INFO 11024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 11:22:46.662  INFO 11024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4346 ms
+2021-06-28 11:22:47.090  INFO 11024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 11:22:47.275  INFO 11024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-06-28 11:22:47.902  INFO 11024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 11:22:48.165  INFO 11024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 11:22:50.421  INFO 11024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 11:22:50.715  INFO 11024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-06-28 11:22:54.345  INFO 11024 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 11:22:54.388  INFO 11024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 11:22:55.471  WARN 11024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 11:22:55.974  INFO 11024 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-28 11:22:56.407  INFO 11024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-28 11:22:56.425  INFO 11024 --- [main] com.borrow_book.BorrowBookApplication    : Started BorrowBookApplication in 15.109 seconds (JVM running for 16.461)
+2021-06-28 11:23:30.950  INFO 11024 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 11:23:30.951  INFO 11024 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 11:23:30.954  INFO 11024 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-28 11:23:34.769  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:23:34.770  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : method :listBook
+2021-06-28 11:23:34.770  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : args :[]
+2021-06-28 11:23:34.813  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:23:34.813  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : method :showLibrary
+2021-06-28 11:23:34.813  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : args :[]
+2021-06-28 11:23:49.281  INFO 11024 --- [http-nio-8080-exec-9] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:23:49.282  INFO 11024 --- [http-nio-8080-exec-9] c.b.controller.logger.LoggerBook         : method :listBook
+2021-06-28 11:23:49.282  INFO 11024 --- [http-nio-8080-exec-9] c.b.controller.logger.LoggerBook         : args :[]
+2021-06-28 11:23:49.397  INFO 11024 --- [http-nio-8080-exec-9] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:23:49.398  INFO 11024 --- [http-nio-8080-exec-9] c.b.controller.logger.LoggerBook         : method :showFormReturn
+2021-06-28 11:23:49.398  INFO 11024 --- [http-nio-8080-exec-9] c.b.controller.logger.LoggerBook         : args :[null]
+2021-06-28 11:24:06.464  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:24:06.464  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : method :listBook
+2021-06-28 11:24:06.464  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : args :[]
+2021-06-28 11:24:06.678 ERROR 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : class name :LibraryCardService
+2021-06-28 11:24:06.679 ERROR 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : method :findById
+2021-06-28 11:24:06.679 ERROR 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : args :[8016]
+2021-06-28 11:24:06.687  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:24:06.687  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : method :handleException
+2021-06-28 11:24:06.687  INFO 11024 --- [http-nio-8080-exec-2] c.b.controller.logger.LoggerBook         : args :[{}, java.lang.Exception: LibraryCard not found!]
+2021-06-28 11:24:06.802  INFO 11024 --- [http-nio-8080-exec-4] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:24:06.803  INFO 11024 --- [http-nio-8080-exec-4] c.b.controller.logger.LoggerBook         : method :listBook
+2021-06-28 11:24:06.803  INFO 11024 --- [http-nio-8080-exec-4] c.b.controller.logger.LoggerBook         : args :[]
+2021-06-28 11:24:06.804  INFO 11024 --- [http-nio-8080-exec-4] c.b.controller.logger.LoggerBook         : class name :BorrowBookController
+2021-06-28 11:24:06.804  INFO 11024 --- [http-nio-8080-exec-4] c.b.controller.logger.LoggerBook         : method :showLibrary
+2021-06-28 11:24:06.805  INFO 11024 --- [http-nio-8080-exec-4] c.b.controller.logger.LoggerBook         : args :[]

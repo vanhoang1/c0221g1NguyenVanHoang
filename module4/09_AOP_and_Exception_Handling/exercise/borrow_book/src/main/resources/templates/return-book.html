@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/return" method="post">
+    <div class="form-group col-8">
+        <label>Input number</label>
+        <input class="form-control" name="id" th:value="${id}" >
+        <input class="btn btn-outline-primary border-0  px-5 me-2" type="submit" value="submit">
+    </div>
+
+</form>
+
+</body>
+</html>

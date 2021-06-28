@@ -11,7 +11,7 @@ public class ProductApplication {
     @Bean("messageSource")
     public MessageSource productMessageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasename("static/messages/messages");
+        messageSource.setBasename("messages/messages.");
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
     }
