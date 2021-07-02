@@ -1,6 +1,7 @@
 package com.springsecurity.config;
 
-import codegym.danang.demo.service.UserDetailsServiceImpl;
+
+import com.springsecurity.model.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -74,7 +75,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Cấu hình Remember Me.
         http.authorizeRequests().and() //
                 .rememberMe().tokenRepository(this.persistentTokenRepository()) //
-                .tokenValiditySeconds(1 * 24 * 60 * 60); // 24h
+                .tokenValiditySeconds(24 * 60 * 60); // 24h
 
     }
 

@@ -1,6 +1,7 @@
 package com.springsecurity.controller;
 
-import codegym.danang.demo.util.WebUtils;
+
+import com.springsecurity.util.WebUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
