@@ -19,6 +19,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin
 public class BlogApiController {
     private final IBlogService blogService;
     private  final ICategoryService categoryService;

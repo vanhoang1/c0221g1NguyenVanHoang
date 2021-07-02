@@ -7,8 +7,12 @@
     <script type="text/javascript">
         function getSmartphone(smartphone) {
             return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
-                `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td></tr>`;
+                `<td><a class="editSmartphone" href="${smartphone.id}">Edit</a></td> </td>`+
+                `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td>`+
+
+                `</tr>`;
         }
+
         function addNewSmartPhone() {
             //lay du lieu
             let producer = $('#producer').val();
@@ -36,6 +40,7 @@
             //chặn sự kiện mặc định của thẻ
             event.preventDefault();
         }
+
         function successHandler() {
             $.ajax({
                 type: "GET",
@@ -48,6 +53,7 @@
                         '        <td>Producer</td>\n' +
                         '        <td>Model</td>\n' +
                         '        <td>Price</td>\n' +
+                        '        <td>Edit</td>\n' +
                         '        <td>Delete</td>\n' +
                         '    </tr>';
                     for (let i = 0; i < data.length; i++) {
@@ -57,6 +63,7 @@
                 }
             });
         }
+
         $(document).ready(function () {
             //sư kiện nào thực hiện Ajax
             $('.deleteSmartphone').click(function (event) {
@@ -78,6 +85,78 @@
                 event.preventDefault();
             });
         })
+
+        $(document).ready(function () {
+            //sư kiện nào thực hiện Ajax
+            $('.editSmartphone').click(function (event) {
+                //lay du lieu
+                let a = $(this);
+                let smartphoneId = a.attr("href");
+                // goi ajax
+                $.ajax({
+                    type: "GET",
+                    //tên API
+                    url: `/smartphones/${smartphoneId}`,
+                    //xử lý khi thành công
+                    success: function (data) {
+                        let content = '<form id="edit-smartphone">\n' +
+                            '    <table>\n' +
+                            '        <tr>\n' +
+                            '            <td>Producer:</td>\n' +'<input type="text" hidden id="edit-id" placeholder="producer" value="'+data.id+'">'+
+                            '            <td><input type="text" id="edit-producer" placeholder="producer" value="'+data.producer+'"></td>\n' +
+                            '        </tr>\n' +
+                            '        <tr>\n' +
+                            '            <td>Model:</td>\n' +
+                            '            <td><input type="text" id="edit-model" placeholder="model" value="'+data.model+'"></td>\n' +
+                            '        </tr>\n' +
+                            '        <tr>\n' +
+                            '            <td>Price:</td>\n' +
+                            '            <td><input type="text" id="edit-price" placeholder="price" value="'+data.price+'"></td>\n' +
+                            '        </tr>\n' +
+                            '        <tr>\n' +
+                            '            <td></td>\n' +
+                            '            <td><input type="submit" value="edit" onclick="editSmartPhone('+data.id+')"></td>\n' +
+                            '        </tr>\n' +
+                            '    </table>\n' +
+                            '</form>';
+                        $('#editForm').html(content);
+                    }
+
+                });
+                //chặn sự kiện mặc định của thẻ
+                event.preventDefault();
+            });
+        })
+        function editSmartPhone(id){
+            //lay du lieu
+
+            let producer = $('#edit-producer').val();
+            let model = $('#edit-model').val();
+            let price = $('#edit-price').val();
+            let editSmartphone = {
+                id: id,
+                producer: producer,
+                model: model,
+                price: price
+            };
+            // goi ajax
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "PUT",
+                data: JSON.stringify(editSmartphone),
+                //tên API
+                url: `/smartphones/${id}`,
+                //xử lý khi thành công
+                success: successHandler
+
+            });
+            $('#editForm').html('');
+            //chặn sự kiện mặc định của thẻ
+            event.preventDefault();
+        }
     </script>
 </head>
 <body>
@@ -114,9 +193,15 @@
             <td th:text="${smartphone.producer}"></td>
             <td th:text="${smartphone.model}"></td>
             <td th:text="${smartphone.price}"></td>
+            <td><a class="editSmartphone" th:href="${smartphone.getId()}">Edit</a></td>
             <td><a class="deleteSmartphone" th:href="${smartphone.getId()}">Delete</a></td>
+
         </tr>
     </th:block>
 </table>
+
+<div id="editForm">
+
+</div>
 </body>
 </html>

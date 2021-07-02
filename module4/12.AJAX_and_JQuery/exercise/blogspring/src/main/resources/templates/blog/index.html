@@ -155,8 +155,44 @@
     }
 
     function morePage(page) {
-        document.getElementById('page').value = page;
-        searchByTitle()
+        let title = $('#search').val();
+
+        // goi ajax
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            data: {
+                title: title,
+                page: page
+            },
+            //tên API
+            url: "/api/search",
+            //xử lý khi thành công
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                // hien thi danh sach o day
+                let content = '';
+                for (let i = 0; i < data.content.length; i++) {
+                    content += getBlog(data.content[i]);
+                }
+                console.log(content);
+             document.getElementById('blogContent').innerHTML = content;
+
+                let pageNav = '';
+                let nextPage=data.number - -1;
+                if(!(nextPage === data.totalPages))
+                    pageNav += '<a onclick="morePage('+ (data.number - -1) +')"  >Load more</a>';
+                document.getElementById('pageNav').innerHTML = pageNav;
+
+
+            }
+        });
+        //chặn sự kiện mặc định của thẻ
+        event.preventDefault();
     }
 
 </script>
