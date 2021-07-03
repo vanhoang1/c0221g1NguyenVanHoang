@@ -1,77 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6db69733-6326-4a61-9ddf-e6029f567b12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/modules/Currency_converter_app.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/java/controller/ConverterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/Currency_converter_app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/java/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/exercise/dictionary/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/modules/Create_Spring_Greeting_Application.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/Create_Spring_Greeting_Application/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/ContractDetailKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Education.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/ServiceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/customer/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/service/IRentTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/service/IServiceTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/service/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/home/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/home/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/website-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/website-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/home/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/home/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +86,11 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -281,23 +256,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -326,11 +284,23 @@
       <workItem from="1623406389352" duration="853000" />
       <workItem from="1623471735412" duration="592000" />
       <workItem from="1623554162270" duration="648000" />
+      <workItem from="1625278124982" duration="1816000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface IRoleRepository extends CrudRepository<AppRole,Long> {
-    @Query(value="select r.Role_Name from App_Role r where  r.Role_Id = :userId",nativeQuery=true)
+    @Query(value="select r.Role_Name from User_Role ur join App_Role r  where  ur.Role_Id = :userId",nativeQuery=true)
     List<String> getRoleNames(@Param(value="userId") Long userId);
 }
