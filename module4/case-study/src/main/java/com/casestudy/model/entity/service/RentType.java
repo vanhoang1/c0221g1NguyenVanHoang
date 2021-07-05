@@ -13,11 +13,15 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "kieu_thue")
 public class RentType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_kieu_thue")
     private Long id;
+    @Column(name = "ten_kieu_thue")
     private String name;
+    @Column(name = "gia")
     private Double cost;
     @OneToMany(mappedBy = "rentType")
     @JsonBackReference

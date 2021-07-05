@@ -20,24 +20,30 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="hop_dong")
 public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idContract;
+    @Column(name = "id_hop_dong")
+    private Long id;
+    @Column(name = "ngay_lam_hop_dong")
     private LocalDate startDate;
+    @Column(name = "ngay_ket_thuc")
     private LocalDate endDate;
+    @Column(name = "tien_dat_coc")
     private Double deposit;
+    @Column(name = "tong_tien")
     private Double totalMoney;
     @ManyToOne
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "id_nhan_vien")
     @JsonManagedReference
     private Employee employee;
     @ManyToOne
-    @JoinColumn(name = "customer_id")
+    @JoinColumn(name = "id_khach_hang")
     @JsonManagedReference
     private Customer customer;
     @ManyToOne
-    @JoinColumn(name = "service_id")
+    @JoinColumn(name = "id_dich_vu")
     @JsonManagedReference
     private Services service;
 

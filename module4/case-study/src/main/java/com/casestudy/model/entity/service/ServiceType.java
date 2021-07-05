@@ -13,10 +13,13 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="loai_dich_vu")
 public class ServiceType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_loai_dich_vu")
     private Long id;
+    @Column(name = "ten_loai_dich_vu")
     private String name;
     @OneToMany(mappedBy = "serviceType")
     @JsonBackReference

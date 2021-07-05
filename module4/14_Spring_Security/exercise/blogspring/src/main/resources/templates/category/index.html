@@ -1,0 +1,40 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link th:rel="stylesheet" th:href="@{bootstrap/css/bootstrap.min.css}">
+    <link th:rel="stylesheet" th:href="@{bootstrap/css/main.css}">
+    <link th:rel="stylesheet" th:href="@{bootstrap/css/all.css}">
+</head>
+<body>
+<th:block th:include="/_menu"></th:block>
+<div class="container-fluid mt-100">
+    <div class="d-flex flex-wrap justify-content-between">
+        <div><a href="/category/create"> <button type="button" class="btn btn-shadow btn-wide btn-primary"> <span class="btn-icon-wrapper pr-2 opacity-7"> <i class="fa fa-plus fa-w-20"></i> </span> New category </button> </a></div>
+        <div class="col-12 col-md-3 p-0 mb-3"> <input type="text" class="form-control" placeholder="Search..."> </div>
+    </div>
+   <table class="table">
+      <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Name Category</th>
+                <th>Description</th>
+                <th>Manipulation</th>
+            </tr>
+      </thead>
+       <tbody>
+       <tr th:each="category,count:${categoryList}">
+           <td><span th:text="${count.count}"></span></td>
+           <td><span th:text="${category.name}"></span></td>
+           <td><span th:text="${category.description}"></span></td>
+           <td><a th:href="@{/category/edit/{id}(id=${category.id})}"> <i class="far fa-edit"></i></a><a th:href="@{/category/delete/{id}(id=${category.id})}"><i class="far fa-trash-alt"></i></a></td>
+       </tr>
+       </tbody>
+   </table>
+</div>
+</body>
+<script th:src="@{bootstrap/js/main.js}"></script>
+<script th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+</html>

@@ -9,14 +9,16 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "customer_type")
+@Table(name = "loai_khach")
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
 public class CustomerType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_loai_khach")
     Long id;
+    @Column(name = "ten_loai_khach")
     String name;
     @OneToMany(mappedBy = "customerType")
     @JsonBackReference

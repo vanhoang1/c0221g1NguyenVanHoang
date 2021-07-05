@@ -7,26 +7,25 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User_Role", //
+@Table(name = "chi_tiet_tai_khoan", //
         uniqueConstraints = { //
-                @UniqueConstraint(name = "USER_ROLE_UK", columnNames = { "User_Id", "Role_Id" }) })
+                @UniqueConstraint(name = "USER_ROLE_UK", columnNames = { "id_vai_tro", "id_tai_khoan" }) })
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserRole {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "Id", nullable = false)
-    private Long id;
+    @EmbeddedId
+    private UserRoleKey id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "User_Id", nullable = false)
+    @MapsId("userId")
+    @JoinColumn(name = "id_tai_khoan", nullable = false)
     private AppUser appUser;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Role_Id", nullable = false)
+    @MapsId("roleId")
+    @JoinColumn(name = "id_vai_tro", nullable = false)
     private AppRole appRole;
-
 
 }

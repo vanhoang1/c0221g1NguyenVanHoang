@@ -20,33 +20,187 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6db69733-6326-4a61-9ddf-e6029f567b12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/AttachService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/ContractDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/ContractDetailKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/CustomerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Division.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Education.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/RentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/ServiceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/Services.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/customer/ICustomerTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/service/IRentTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/service/IServiceTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/service/ServiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/model/entity/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/model/entity/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/model/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/model/repository/IRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/model/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/model/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/util/EncrytedPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/java/com/blogspring/util/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/resources/templates/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/blogspring/src/main/resources/templates/logoutSuccessfulPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/UserRoleKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/dto/annotation/IdCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/dto/annotation/IdCardValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/dto/annotation/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/dto/annotation/PhoneValidate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/contract/IAttachServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/contract/IContractDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/contract/IContractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/customer/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/employee/IDivisionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/employee/IEducationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/employee/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/employee/IPositionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/user/IRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/repository/user/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/service/employee/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/service/employee/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/service/user/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/util/EncrytedPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/util/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/bootstrap-4.6.0-dist/js/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/fonts/poppins/Poppins-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/img/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/img/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/create.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/static/jquery/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/templates/common/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/templates/common/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/templates/customer/customer-create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/templates/customer/customer-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/01_Spring_MVC_Overview/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/09_AOP_and_Exception_Handling/practice/customer-management1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/model/repository/IRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/model/repository/IRoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/model/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/14_Spring_Security/exercise/spring-security/src/main/java/com/springsecurity/model/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/AppRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/AppRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/account/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/AttachService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/ContractDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/contract/ContractDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Division.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/employee/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/RentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/RentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/ServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/ServiceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/java/com/casestudy/model/entity/service/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/case-study/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +211,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="website" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -285,6 +436,10 @@
       <workItem from="1623471735412" duration="592000" />
       <workItem from="1623554162270" duration="648000" />
       <workItem from="1625278124982" duration="1816000" />
+      <workItem from="1625319932313" duration="2220000" />
+      <workItem from="1625361859488" duration="2862000" />
+      <workItem from="1625459790297" duration="725000" />
+      <workItem from="1625472114516" duration="2135000" />
     </task>
     <servers />
   </component>
@@ -301,6 +456,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -334,10 +490,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="411" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1623379673399" />
-    <state x="580" y="172" key="FileChooserDialogImpl" timestamp="1623378977058">
+    <state x="580" y="172" key="FileChooserDialogImpl" timestamp="1625369723549">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1623378977058" />
+    <state x="580" y="172" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1625369723493" />
     <state width="1069" height="249" key="GridCell.Tab.0.bottom" timestamp="1623407925717">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IUserRepository extends CrudRepository<AppUser, Long> {
-    @Query( value= "select * from User_Role ur inner JOIN app_role ar on ur.ROLE_ID = ar.ROLE_ID WHERE ur.USER_ID = :userName ",nativeQuery=true)
+    @Query( value= "select * from app_user u WHERE u.USER_NAME = :userName;",nativeQuery=true)
     AppUser findUserAccount(@Param("userName") String userName);
 }

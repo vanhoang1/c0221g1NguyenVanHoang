@@ -12,10 +12,13 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="vi_tri")
 public class Position {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_vi_tri")
     private Long id;
+    @Column(name = "ten_vi_tri")
     private String name;
     @OneToMany(mappedBy = "position")
     @JsonBackReference

@@ -12,10 +12,13 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="trinh_do")
 public class Education {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_trinh_do")
     private Long id;
+    @Column(name = "trinh_do")
     private String name;
     @OneToMany(mappedBy = "education")
     @JsonBackReference

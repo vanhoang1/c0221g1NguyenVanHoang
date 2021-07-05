@@ -1,0 +1,200 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link th:fragment="bootstrap" rel="stylesheet" type="text/css" th:href="@{bootstrap/css/bootstrap.min.css}">
+    <link th:fragment="main" rel="stylesheet" type="text/css" th:href="@{bootstrap/css/main.css}">
+    <link th:fragment="all" rel="stylesheet" type="text/css" th:href="@{bootstrap/css/all.css}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<th:block th:include="/_menu"></th:block>
+<div class="container-fluid mt-100">
+    <div class="d-flex flex-wrap justify-content-between">
+        <div><a href="/create">
+            <button type="button" class="btn btn-shadow btn-wide btn-primary"><span
+                    class="btn-icon-wrapper pr-2 opacity-7"> <i class="fa fa-plus fa-w-20"></i> </span> New thread
+            </button>
+        </a></div>
+        <div class="col-12 col-md-3 p-0 mb-3 d-flex">
+            <form action="/search" class="form-inline"><input type="text" id="search" name="title" class="form-control"
+                                                              placeholder="Search...">
+                <button type="submit" onclick="searchByTitle()" class="btn btn-light">search</button>
+            </form>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-header pl-0 pr-0">
+            <div class="row no-gutters w-100 align-items-center">
+                <div class="col ml-3">Topics</div>
+                <div class="col-3 text-muted">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-3">Replies</div>
+                        <div class="col-6"><a href="/sort">Last update</a></div>
+                        <div class="col-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="blogContent">
+            <th:block th:each="b,count:${blogList}">
+                <div class="card-body py-3">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col"><a href="javascript:void(0)" th:href="@{/view/{id}(id=${b.id})}"
+                                            class="text-big" data-abc="true"><span th:text="${b.title}"></span></a>
+                            <div class="text-muted small mt-1"><a href="javascript:void(0)" class="text-muted"
+                                                                  data-abc="true"><span
+                                    th:text="${b.category.name}"></span></a></div>
+                        </div>
+                        <div class="d-none d-md-block col-3">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-3"><span th:text="${b.status}"></span></div>
+                                <div class="media col-6 align-items-center"><img
+                                        th:src="@{https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg}"
+                                        alt="" class="d-block ui-w-30 rounded-circle">
+                                    <div class="media-body flex-truncate ml-2">
+                                        <div class="line-height-1 text-truncate"><span th:text="${b.createDate}"></span>
+                                        </div>
+                                        <a href="javascript:void(0)" class="text-muted small text-truncate"
+                                           data-abc="true">by <span th:text="${b.author}"></span></a>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-6"><a th:href="@{/edit/{id}(id=${b.id})}"> <i
+                                                class="far fa-edit"></i></a></div>
+                                        <div class="col-6"><a th:href="@{/delete/{id}(id=${b.id})}"><i
+                                                class="far fa-trash-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+    <div id="pageNav">
+        <a th:onclick="|morePage(${blogList.number + 1})|" th:if="${blogList.hasNext()}" th:text="|Load more|"></a>
+    </div>
+    <input id="page" hidden type="text" th:value="${blogList.number }">
+</div>
+</body>
+
+<script th:fragment="mscrip" type="text/javascript" th:src="@{bootstrap/js/main.js}"></script>
+<script th:fragment="btscrip" type="text/javascript" th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript">
+
+    function searchByTitle() {
+        //lay du lieu
+        let title = $('#search').val();
+        let page = $('#page').val();
+        // goi ajax
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            data: {
+                title: title,
+                page: page
+            },
+            //tên API
+            url: "/api/search",
+            //xử lý khi thành công
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                // hien thi danh sach o day
+                let content = '';
+                for (let i = 0; i < data.content.length; i++) {
+                    content += getBlog(data.content[i]);
+                }
+                document.getElementById('blogContent').innerHTML = content;
+
+                let pageNav = '';
+                let nextPage=data.number - -1;
+                if(!(nextPage === data.totalPages))
+                pageNav += '<a onclick="morePage('+ (data.number - -1) +')"  >Load more</a>';
+                document.getElementById('pageNav').innerHTML = pageNav;
+
+
+            }
+        });
+        //chặn sự kiện mặc định của thẻ
+        event.preventDefault();
+    }
+
+
+
+    function getBlog(b) {
+        return `       <div class="card-body py-3">
+            <div class="row no-gutters align-items-center">
+                <div class="col"> <a href="javascript:void(0)" class="text-big" data-abc="true"><span >${b.title}</span></a>
+                    <div class="text-muted small mt-1"> <a href="javascript:void(0)" class="text-muted" data-abc="true"><span>${b.category.name}</span></a></div>
+                </div>
+                <div class="d-none d-md-block col-3">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-3"><span >${b.status}</span></div>
+                        <div class="media col-6 align-items-center"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg" alt="" class="d-block ui-w-30 rounded-circle">
+                            <div class="media-body flex-truncate ml-2">
+                                <div class="line-height-1 text-truncate"><span>${b.createDate}</span></div> <a href="javascript:void(0)" class="text-muted small text-truncate" data-abc="true">by <span >${b.author}</span></a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-6"><a href="/edit/${b.id}"> <i class="far fa-edit"></i></a></div>
+                                <div class="col-6"><a href="/delete/${b.id}"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    }
+
+    function morePage(page) {
+        let title = $('#search').val();
+
+        // goi ajax
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            data: {
+                title: title,
+                page: page
+            },
+            //tên API
+            url: "/api/search",
+            //xử lý khi thành công
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                // hien thi danh sach o day
+                let content = '';
+                for (let i = 0; i < data.content.length; i++) {
+                    content += getBlog(data.content[i]);
+                }
+                console.log(content);
+             document.getElementById('blogContent').innerHTML = content;
+
+                let pageNav = '';
+                let nextPage=data.number - -1;
+                if(!(nextPage === data.totalPages))
+                    pageNav += '<a onclick="morePage('+ (data.number - -1) +')"  >Load more</a>';
+                document.getElementById('pageNav').innerHTML = pageNav;
+
+
+            }
+        });
+        //chặn sự kiện mặc định của thẻ
+        event.preventDefault();
+    }
+
+</script>
+</html>

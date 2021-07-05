@@ -14,28 +14,33 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="dich_vu")
 public class Services {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_dich_vu")
     private Long id;
+    @Column(name = "ten_dich_vu")
     private String name;
-    @Column(name = "area_of_use")
+    @Column(name = "dien_tich")
     private Double areaOfUse;
-    @Column(name = "number_of_floors")
+    @Column(name = "so_tang")
     private Integer numberOfFloors;
-    @Column(name = "max_num_of_people")
+    @Column(name = "so_nguoi_toi_da")
     private Integer maxNumOfPeople;
-    @Column(name = "rental_costs")
+    @Column(name = "chi_phi_thue")
     private Integer rentalCosts;
     @ManyToOne
-    @JoinColumn(name = "rent_type_id")
+    @JoinColumn(name = "id_kieu_thue")
     @JsonManagedReference
     private RentType rentType;
     @ManyToOne
-    @JoinColumn(name = "service_type_id")
+    @JoinColumn(name = "id_loai_dich_vu")
     @JsonManagedReference
     private ServiceType serviceType;
+    @Column(name = "TrangThai")
     private String status;
+    @Column(name = "ma_dich_vu")
     private String maDichVu;
 
     @OneToMany(mappedBy = "service")
