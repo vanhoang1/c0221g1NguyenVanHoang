@@ -71,6 +71,14 @@
 <script src="/jquery/jquery-3.6.0.min.js"></script>
 <script src="/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
 <script>
+    $(document).ready(function () {
+        $('#confirm-delete').on('show.bs.modal', function (e) {
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+            var data = $(e.relatedTarget).data();
+            $('.debug-url').text(data.recordTitle);
+
+        })
+    });
     setTimeout(function () {
         $('.alert').fadeOut('slow');
     }, 3000);

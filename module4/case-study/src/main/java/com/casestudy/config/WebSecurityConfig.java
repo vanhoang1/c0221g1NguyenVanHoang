@@ -48,21 +48,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Các trang không yêu cầu login
         http.authorizeRequests().antMatchers("/", "/login", "/logout").permitAll()
                 .antMatchers("/resources/**").permitAll()
+                .antMatchers("/webfonts/**").permitAll()
                 .antMatchers("/*.js").permitAll()
                 .antMatchers("/*.css").permitAll()
                 .antMatchers("/api/**").authenticated();
 
-        // Trang /userInfo yêu cầu phải login với vai trò ROLE_USER hoặc ROLE_ADMIN.
-        // Nếu chưa login, nó sẽ redirect tới trang /login.
-        http.authorizeRequests().antMatchers("/customers/**").access("hasAnyRole('giam doc', 'nhan vien')");
 
-        // Trang chỉ dành cho ADMIN
-        http.authorizeRequests().antMatchers("/employees/**").access("hasRole('giam doc')");
+//        http.authorizeRequests().antMatchers("/customers/**").access("hasAnyRole('giam doc', 'nhan vien')");
 
-        // Khi người dùng đã login, với vai trò XX.
-        // Nhưng truy cập vào trang yêu cầu vai trò YY,
-        // Ngoại lệ AccessDeniedException sẽ ném ra.
-        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
+
+//        http.authorizeRequests().antMatchers("/employees/**").access("hasRole('giam doc')");
+
+
+//        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
         // Cấu hình cho Login Form.
         http.authorizeRequests().and().formLogin()//

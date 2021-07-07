@@ -49,10 +49,13 @@ public class Employee {
     private String address;
     @Column(name = "email")
     private String email;
+
     @OneToOne
     @JoinColumn(name="id_tai_khoan")
     private AppUser appUser;
     @OneToMany(mappedBy = "employee")
     @JsonBackReference
     Set<Contract> contracts;
+    @Column(name = "co")
+    private Boolean flag;
 }

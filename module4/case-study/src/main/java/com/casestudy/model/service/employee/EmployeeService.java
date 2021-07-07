@@ -1,5 +1,6 @@
 package com.casestudy.model.service.employee;
 
+import com.casestudy.model.entity.account.AppUser;
 import com.casestudy.model.entity.employee.Division;
 import com.casestudy.model.entity.employee.Education;
 import com.casestudy.model.entity.employee.Employee;
@@ -8,7 +9,10 @@ import com.casestudy.model.repository.employee.IDivisionRepository;
 import com.casestudy.model.repository.employee.IEducationRepository;
 import com.casestudy.model.repository.employee.IEmployeeRepository;
 import com.casestudy.model.repository.employee.IPositionRepository;
+import com.casestudy.model.repository.user.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -19,12 +23,14 @@ public class EmployeeService implements IEmployeeService {
     private final IPositionRepository positionRepository;
     private  final IEducationRepository educationRepository;
     private final IEmployeeRepository employeeRepository;
+    private final IUserRepository userRepository;
     @Autowired
-    public EmployeeService(IDivisionRepository divisionRepository, IPositionRepository positionRepository, IEducationRepository educationRepository, IEmployeeRepository employeeRepository) {
+    public EmployeeService(IDivisionRepository divisionRepository, IPositionRepository positionRepository, IEducationRepository educationRepository, IEmployeeRepository employeeRepository, IUserRepository userRepository) {
         this.divisionRepository = divisionRepository;
         this.positionRepository = positionRepository;
         this.educationRepository = educationRepository;
         this.employeeRepository = employeeRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -43,13 +49,23 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public Iterable<Employee> findAll() {
-        return employeeRepository.findAll();
+    public Iterable<AppUser> findAllUser() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public Page<Employee> findAll(Pageable pageable,String keyword) {
+        return employeeRepository.findAllEmployee(pageable,'%'+keyword+'%');
     }
 
     @Override
     public Optional<Employee> findById(Long id) {
         return employeeRepository.findById(id);
+    }
+
+    @Override
+    public Iterable<Employee> findAllNormal() {
+        return employeeRepository.findAll();
     }
 
     @Override
@@ -59,6 +75,6 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void remove(Long id) {
-        employeeRepository.deleteById(id);
+        employeeRepository.deleteEmployee(id);
     }
 }

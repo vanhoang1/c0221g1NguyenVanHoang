@@ -10,16 +10,20 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "chi_tiet_hop_dong")
+
+@Table(name = "chi_tiet_hop_dong", //
+        uniqueConstraints = { //
+                @UniqueConstraint(name = "u_hd_dvdk", columnNames = { "id_hop_dong", "id_dich_vu_di_kem" }) })
+
 public class ContractDetail {
-    @EmbeddedId
-    private ContractDetailKey id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_chi_tiet_hop_dong")
+    private Long id;
     @ManyToOne
-    @MapsId("contractId")
     @JoinColumn(name = "id_hop_dong")
     private Contract contract;
     @ManyToOne
-    @MapsId("attachServiceId")
     @JoinColumn(name = "id_dich_vu_di_kem")
     private AttachService attachService;
     @Column(name = "so_luong")

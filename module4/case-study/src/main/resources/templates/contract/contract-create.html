@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Contract</title>
+    <link th:replace="~{/common/header::link}">
+</head>
+<body>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Create Contract</h4>
+                    </div>
+                    <div class="card-body">
+                        <form th:object="${contractDto}" method="post">
+                            <div class="row">
+                                <div class="col-md-6 pr-1">
+                                    <div class="form-group">
+                                        <label>Start Date</label>
+                                        <input class="form-control" type="date" name="startDate"
+                                               th:value="${#temporals.format (contractDto.startDate, 'yyyy-MM-dd')}"
+                                               th:field="*{startDate}">
+                                    </div>
+                                    <div class=" alert alert-danger error-alert" role="alert"
+                                         th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></div>
+
+                                </div>
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <label>End Date</label>
+                                        <input class="form-control" type="date" name="endDate"
+                                               th:value="${#temporals.format (contractDto.endDate, 'yyyy-MM-dd')}"
+                                               th:field="*{endDate}">
+                                    </div>
+                                    <div class=" alert alert-danger error-alert" role="alert"
+                                         th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></div>
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 pr-1">
+                                    <label> Employee
+
+                                    </label>
+                                    <select class="form-control"
+                                            th:field="*{employee.id}" name="idEmployee">
+
+
+                                        <option th:each="employee:${employees}" th:text="${employee.name}"
+                                                th:value="${employee.id}"></option>
+
+
+                                    </select>
+                                </div>
+                                <div class="col-md-4 px-1">
+                                    <div class="form-group">
+                                        <label> Customer
+
+                                        </label>
+                                        <select class="form-control"
+                                                th:field="*{customer.id}" name="idCustomer">
+
+                                            <option th:each="customer:${customers}" th:text="${customer.name}"
+                                                    th:value="${customer.id}"></option>
+
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pl-1">
+                                    <div class="form-group">
+                                        <label>id Service
+
+                                        </label>
+                                        <select class="form-control"
+                                                th:field="*{service.id}" name="idService">
+                                            <option th:each="service:${services}" th:text="${service.name}"
+                                                    th:value="${service.id}"></option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pr-1">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label>Deposit</label>
+                                            <input type="text" class="form-control" placeholder=""
+                                                   th:field="*{deposit}" name="deposit">
+                                        </div>
+                                        <div class=" alert alert-danger error-alert" role="alert"
+                                             th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label>Total Money</label>
+                                            <input type="text" class="form-control" placeholder=""
+                                                   th:field="*{totalMoney}" name="totalMoney">
+                                        </div>
+                                    </div>
+                                    <div class=" alert alert-danger error-alert" role="alert"
+                                         th:if="${#fields.hasErrors('totalMoney')}" th:errors="*{totalMoney}"></div>
+
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Create Contract</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

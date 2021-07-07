@@ -5,6 +5,8 @@ import com.casestudy.model.entity.customer.CustomerType;
 import com.casestudy.model.repository.customer.ICustomerRepository;
 import com.casestudy.model.repository.customer.ICustomerTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -26,13 +28,18 @@ public class CustomerService implements ICustomerService{
     }
 
     @Override
-    public Iterable<Customer> findAll() {
-        return customerRepository.findAllCustomer();
+    public Page<Customer> findAll(Pageable pageable,String keyword) {
+        return customerRepository.findAllCustomer(pageable,'%'+keyword+'%');
     }
 
     @Override
     public Optional<Customer> findById(Long id) {
         return customerRepository.findById(id);
+    }
+
+    @Override
+    public Iterable<Customer> findAllNormal() {
+        return customerRepository.findAll();
     }
 
     @Override

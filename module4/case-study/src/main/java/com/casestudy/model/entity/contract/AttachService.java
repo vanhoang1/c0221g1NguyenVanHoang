@@ -20,11 +20,11 @@ public class AttachService {
     @Column(name = "id_dich_vu_di_kem")
     private Long id;
     @Column(name = "ten_dich_vu_di_kem")
-    private String attachName;
+    private String name;
     @Column(name = "gia")
-    private Double attachCost;
+    private Double cost;
     @Column(name = "don_vi")
-    private Integer attachUnit;
+    private Integer unit;
     @Column(name = "trang_thai_kha_dung")
     private String status;
 
