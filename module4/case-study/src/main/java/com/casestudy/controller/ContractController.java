@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("contracts")
@@ -46,7 +50,13 @@ public class ContractController {
 
     @GetMapping("")
     public ModelAndView showListContract(){
-        return new ModelAndView("contract/contract-list","contracts",contractService.findAllNormal());
+        Iterable<Contract> contracts=contractService.findAllNormal();
+//        for (Contract contract: contracts
+//             ) {
+//            Double totalMoney= ChronoUnit.DAYS.between(contract.getStartDate(),contract.getEndDate()) * contract.getService().getRentalCosts() - contract.getDeposit();
+//        }
+        Iterable<Double> totalMoneys =contractService.findTotalMoney();
+        return new ModelAndView("contract/contract-list","contracts",contracts).addObject("totalMoneys",totalMoneys);
     }
     @GetMapping("/create")
     public ModelAndView createContract(){

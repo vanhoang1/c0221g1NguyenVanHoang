@@ -45,6 +45,11 @@ public class ContractService implements IContractService {
     }
 
     @Override
+    public Iterable<Double> findTotalMoney() {
+        return contractRepository.findTotalMoney();
+    }
+
+    @Override
     public Page<Contract> findAll(Pageable pageable, String keyword) {
         return null;
     }

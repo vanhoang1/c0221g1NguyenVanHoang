@@ -10,4 +10,5 @@ public interface IContractService extends IGeneralService<Contract> {
     Iterable<Customer> findAllCustomer();
     Iterable<Employee> findAllEmployee();
     Iterable<Services> findAllService();
+    Iterable<Double> findTotalMoney();
 }

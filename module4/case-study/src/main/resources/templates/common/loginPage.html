@@ -17,6 +17,9 @@
                 Static summary
          </span>
 </div>
+<div class="alert alert-success fixed-top col-4" th:if="${message != null}" role="alert">
+    <span th:text="${message}"></span>
+</div>
     <div class="bg-contact3" style="background-image: url('/img/download.jpg');">
         <div class="container-contact3">
             <div class="wrap-contact3">
@@ -56,4 +59,10 @@
     </div>
 
 </body>
+<script>
+    setTimeout(function () {
+        $('.alert').fadeOut('slow');
+    }, 3000);
+
+</script>
 </html>

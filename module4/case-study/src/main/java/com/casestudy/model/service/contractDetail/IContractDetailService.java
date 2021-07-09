@@ -8,4 +8,5 @@ import com.casestudy.model.service.IGeneralService;
 public interface IContractDetailService extends IGeneralService<ContractDetail> {
     Iterable<AttachService> findAllAttachService();
     Iterable<Contract> findAllContract();
+
 }

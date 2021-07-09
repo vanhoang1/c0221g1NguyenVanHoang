@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -41,6 +42,7 @@ public class EmployeeController {
         Page<Employee> employees = employeeService.findAll(pageable,keyword);
         return new ModelAndView("employee/employee-list","employees",employees).addObject("keyword",keyword);
     }
+    @PreAuthorize("hasRole('giam doc')")
     @GetMapping("/create")
     public ModelAndView showFormCreate(){
         return new ModelAndView("employee/employee-create","employeeDto",new EmployeeDto());
