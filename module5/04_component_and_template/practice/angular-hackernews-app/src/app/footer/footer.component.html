@@ -1,0 +1,16 @@
+<div class="justify-content-center text-center py-2">
+  <div>
+    <p>Apply early for the YC Winter 2022 batch</p>
+  </div>
+  <div class="py-2">
+  <span *ngFor="let f of footerLists" ><a class="px-2 text-black" href="{{f.url}}">| {{f.name}} |</a></span>
+  </div>
+  <div class="col-3 mx-auto">
+  <div class="input-group">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+           aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-primary">search</button>
+  </div>
+  </div>
+</div>
+

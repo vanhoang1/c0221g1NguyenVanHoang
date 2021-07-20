@@ -54,6 +54,11 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
+    public Employee findEmployeeByIdAppUser(Long id) {
+        return employeeRepository.findEmployeeByIdAppUser(id);
+    }
+
+    @Override
     public Page<Employee> findAll(Pageable pageable,String keyword) {
         return employeeRepository.findAllEmployee(pageable,'%'+keyword+'%');
     }

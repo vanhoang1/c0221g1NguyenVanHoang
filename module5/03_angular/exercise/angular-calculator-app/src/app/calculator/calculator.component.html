@@ -1,0 +1,16 @@
+
+<div>
+  <label>Máy tính casio</label>
+  <p>Số thứ nhất</p>
+  <input type="text" [(ngModel)]="numFist">
+  <p>Số thứ hai</p>
+  <input type="text" [(ngModel)]="numSecond">
+  <p>Phép tính</p>
+  <input type="button" value="+" (click)="calculation('+')">
+  <input type="button" value="-" (click)="calculation('-')">
+  <input type="button" value="x" (click)="calculation('x')">
+  <input type="button" value="/" (click)="calculation('/')">
+  <p>Kết quả</p>
+  <input type="text" [(ngModel)]="result">
+
+</div>

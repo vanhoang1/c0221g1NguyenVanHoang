@@ -1,0 +1,8 @@
+<div class="d-flex">
+<div *ngFor=" let rating of ratingBar" class="col-1 d-flex">
+<app-rating-unit [value]="rating.value" [active]="rating.active" (changeColor)="changeColor($event)"></app-rating-unit>
+</div>
+  <div>
+      <p> Bạn đã vote :<span> {{vote}}</span> Điểm</p>
+  </div>
+</div>

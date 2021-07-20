@@ -12,4 +12,5 @@ public interface IEmployeeService extends IGeneralService<Employee> {
     Iterable<Position> findAllPosition();
     Iterable<Education> findAllEducation();
     Iterable<AppUser> findAllUser();
+    Employee findEmployeeByIdAppUser(Long id);
 }

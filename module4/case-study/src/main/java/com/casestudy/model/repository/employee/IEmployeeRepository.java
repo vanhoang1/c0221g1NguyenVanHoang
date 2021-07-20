@@ -22,5 +22,7 @@ public interface IEmployeeRepository extends JpaRepository<Employee, Long> {
     @Query( value="UPDATE  nhan_vien nv SET nv.co = 0 WHERE nv.id_nhan_vien = :id",nativeQuery=true)
     int deleteEmployee(@Param(value="id") Long id);
 
+    @Query( value="select * from nhan_vien nv where nv.id_tai_khoan = :id ",nativeQuery=true)
+    Employee findEmployeeByIdAppUser(@Param(value="id") Long id);
 
 }

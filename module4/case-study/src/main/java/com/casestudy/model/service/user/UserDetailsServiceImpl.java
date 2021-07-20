@@ -1,8 +1,11 @@
 package com.casestudy.model.service.user;
 
 import com.casestudy.model.entity.account.AppUser;
+import com.casestudy.model.entity.account.AppUserDetail;
+import com.casestudy.model.entity.employee.Employee;
 import com.casestudy.model.repository.user.IRoleRepository;
 import com.casestudy.model.repository.user.IUserRepository;
+import com.casestudy.model.service.employee.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,6 +20,9 @@ import java.util.List;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+    @Autowired
+    private  IEmployeeService employeeService;
+
 
     @Autowired
     private IUserRepository userRepository;
@@ -47,10 +53,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             }
         }
 
-        UserDetails userDetails = (UserDetails) new User(appUser.getUserName(), //
-                appUser.getEncrytedPassword(), grantList);
+        Employee employee =employeeService.findEmployeeByIdAppUser(appUser.getUserId());
 
-        return userDetails;
+        return new AppUserDetail(appUser.getUserName(), appUser.getEncrytedPassword(), grantList,employee);
+
     }
 
 }

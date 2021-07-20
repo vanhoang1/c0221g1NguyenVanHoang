@@ -1,0 +1,6 @@
+<p>chọn màu</p>
+<div style="width: 100px; height: 50px">
+  <input type="color" id="html5colorpicker" style="width:85%;" (change)="showColor($event)" >
+</div>
+<p>Màu vừa chọn</p>
+<div style="width: 300px; height: 100px" [style.backgroundColor]="color"></div>

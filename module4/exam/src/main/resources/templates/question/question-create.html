@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <link th:replace="~{/common/header::link}">
+</head>
+<body>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Create Question</h4>
+                    </div>
+                    <div class="card-body">
+                        <form th:object="${questionDto}" method="post">
+                            <div class="row">
+                                <div class="col-md-8 pr-1  position-relative">
+                                    <div class="form-group">
+                                        <label>Title </label>
+                                        <input type="text" class="form-control" placeholder="Title" name="name"
+                                               th:field="*{title}">
+                                    </div>
+
+                                    <div class="  sticky-top alert error-alert alert-danger col-md-4  " role="alert" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-8  position-relative">
+                                    <div class="form-group">
+                                        <label>Question</label>
+                                        <input type="text" class="form-control" placeholder=" Question" th:field="*{question}"
+                                               name="email">
+                                    </div>
+                                    <div class="sticky-top alert error-alert alert-danger col-md-4   " role="alert" th:if="${#fields.hasErrors('question')}" th:errors="*{question}"></div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 pl-1  position-relative">
+                                    <div class="form-group">
+                                        <label>Type of Question
+
+                                        </label>
+                                        <select class="form-control" th:field="*{questionType.id}" name="typeOfCustomer">
+                                            <option th:each="type:${questionTypes}" th:text="${type.name}" th:value="${type.id}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Create </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script th:replace ="~{/common/header::script}"></script>
+</html>
