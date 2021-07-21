@@ -1,0 +1,27 @@
+<div class="container">
+<form (ngSubmit)="onSubmit()" [formGroup]="userForm"
+      class="row justify-content-md-center">
+  <div>
+  <label>email</label>
+  <input class="form-control" type="text" id="email" formControlName="email">
+  </div>
+  <div>
+    <label>age</label>
+  <input class="form-control" type="text" id="age" formControlName="age">
+  </div>
+    <div>
+      <p>gender</p>
+    <label> male</label>
+    <input class="form-check-input" type="radio" value="male" formControlName="gender">
+    <label> female</label>
+    <input class="form-check-input" type="radio" value="female" formControlName="gender">
+    </div>
+  <button type="submit">submit</button>
+</form>
+<div *ngIf="userForm.valid">
+  <p>Thông tin đã đăng kí</p>
+  <p>{{user.email}}</p>
+  <p>{{user.age}}</p>
+  <p>{{user.gender}}</p>
+</div>
+</div>
