@@ -1,0 +1,25 @@
+<div class="container">
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="userForm"
+      class="row justify-content-md-center">
+  <div>
+    <label>email</label>
+    <input class="form-control" type="text" id="email" formControlName="email">
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="userForm.controls.email?.errors
+         && userForm.controls.email?.touched">
+    Email is required!
+  </div>
+  <div>
+    <label>password</label>
+    <input class="form-control" type="text" formControlName="password">
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="userForm.controls.password?.errors
+         && userForm.controls.password?.touched">
+    Password is required!
+  </div>
+
+  <button class="btn btn-primary" type="submit">submit</button>
+</form>
+</div>

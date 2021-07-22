@@ -1,27 +1,82 @@
 <div class="container">
-<form (ngSubmit)="onSubmit()" [formGroup]="userForm"
-      class="row justify-content-md-center">
-  <div>
-  <label>email</label>
-  <input class="form-control" type="text" id="email" formControlName="email">
-  </div>
-  <div>
-    <label>age</label>
-  <input class="form-control" type="text" id="age" formControlName="age">
-  </div>
+  <form novalidate (ngSubmit)="onSubmit()" [formGroup]="userForm"
+        class="row justify-content-md-center">
+    <div>
+      <label>email</label>
+      <input class="form-control" type="text" id="email" formControlName="email">
+    </div>
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="userForm.controls.email?.errors
+         && userForm.controls.email?.touched">
+      Invalid Email !
+    </div>
+      <div>
+        <label>password</label>
+        <input class="form-control" type="text" formControlName="password">
+      </div>
+      <div class="col alert alert-danger" role="alert"
+           *ngIf="userForm.controls.password?.errors
+         && userForm.controls.password?.touched">
+        Invalid Password !
+      </div>
+      <div>
+        <label>password confirm</label>
+        <input class="form-control" type="text" formControlName="passwordConfirm">
+      </div>
+      <div class="col alert alert-danger" role="alert"
+           *ngIf="userForm.controls.passwordConfirm?.errors
+         && userForm.controls.passwordConfirm?.touched">
+        Invalid Password !
+      </div>
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="userForm.errors
+         && userForm.controls.passwordConfirm?.touched">
+      Password and confirm password must match
+    </div>
+    <div>
+      <label>age</label>
+      <input class="form-control" type="text" id="age" formControlName="age">
+    </div>
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="userForm.controls.age?.errors
+         && userForm.controls.age?.touched">
+      Invalid age !
+    </div>
+    <div>
+      <label>country</label>
+      <select formControlName="country" role="listbox" class="form-control select-input placeholder-active active">
+        <option class="form-control"  value="Việt nam" >Việt nam</option>
+        <option class="form-control"  value="America">America</option>
+        <option class="form-control"  value="Japan">Japan</option>
+      </select>
+      <div class="col alert alert-danger" role="alert"
+           *ngIf="userForm.controls.country?.errors
+         && userForm.controls.country?.touched">
+        Invalid country!
+      </div>
+    </div>
+    <div>
+      <label>phone</label>
+      <input class="form-control" type="text" id="phone" formControlName="phone">
+      <div class="col alert alert-danger" role="alert"
+           *ngIf="userForm.controls.phone?.errors
+         && userForm.controls.phone?.touched">
+        Invalid phone !
+      </div>
+    </div>
     <div>
       <p>gender</p>
-    <label> male</label>
-    <input class="form-check-input" type="radio" value="male" formControlName="gender">
-    <label> female</label>
-    <input class="form-check-input" type="radio" value="female" formControlName="gender">
+      <label> male </label>
+      <input class="form-check-inline" type="radio" value="male" name="gender" formControlName="gender">
+      <label> female </label>
+      <input class="form-check-inline" type="radio" value="female" name="gender" formControlName="gender">
     </div>
-  <button type="submit">submit</button>
-</form>
-<div *ngIf="userForm.valid">
-  <p>Thông tin đã đăng kí</p>
-  <p>{{user.email}}</p>
-  <p>{{user.age}}</p>
-  <p>{{user.gender}}</p>
-</div>
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="userForm.controls.gender?.errors
+         && userForm.controls.gender?.touched">
+      Invalid gender !
+    </div>
+    <button class="btn btn-primary" type="submit">submit</button>
+  </form>
+
 </div>
