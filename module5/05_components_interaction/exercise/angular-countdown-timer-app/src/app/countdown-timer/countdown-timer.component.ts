@@ -7,19 +7,24 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class CountdownTimerComponent implements OnInit {
   @Input() timeCount;
-  count: number;
+  count = 0;
   id ;
   @Output() countdownTime = new EventEmitter();
+  private isPaused = true;
   constructor() { }
 
   ngOnInit(): void {
   }
   startCount() {
-    this.count = this.timeCount;
+    if (this.count === 0) {
+      this.count = this.timeCount;
+    }
+    this.isPaused = false;
     this.countTime();
   }
   stopCount() {
-    clearInterval(this.id);
+   this.isPaused = true;
+   clearInterval(this.id);
   }
   resetCount() {
     this.count = this.timeCount;
@@ -32,11 +37,16 @@ export class CountdownTimerComponent implements OnInit {
     } else {
       this.countdownTime.emit('Time out');
       this.stopCount();
+      clearInterval(this.id);
     }
   }
   countTime() {
-    this.id = setInterval(() => {
-      this.outTime();
-    } , 1000);
+    if (!this.isPaused) {
+      this.id = setInterval(() => {
+        this.outTime();
+      }, 1000);
+    } else {
+      clearInterval(this.id);
+    }
   }
 }
