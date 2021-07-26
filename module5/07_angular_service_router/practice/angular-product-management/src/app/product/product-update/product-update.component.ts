@@ -34,6 +34,7 @@ export class ProductUpdateComponent implements OnInit {
 
   submit() {
     const product = this.productForm.value;
+    product.id = this.product.id;
     this.productService.updateProduct(product);
     this.productForm.reset(this.productForm.value);
     this.router.navigate(['/product/list']);

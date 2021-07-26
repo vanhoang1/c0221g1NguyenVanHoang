@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-countdown-timer',
@@ -6,24 +6,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./countdown-timer.component.css']
 })
 export class CountdownTimerComponent implements OnInit {
-  count = 0;
+  @Input() timeCount;
+  count: number;
   id ;
+  @Output() countdownTime = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
   startCount() {
-    this.id = setInterval(() => {
+    this.count = this.timeCount;
     this.countTime();
-    } , 1000);
-  }
-  countTime() {
-    this.count++;
   }
   stopCount() {
     clearInterval(this.id);
   }
   resetCount() {
-    this.count = 0;
+    this.count = this.timeCount;
+    this.startCount();
+  }
+  outTime() {
+    if (this.count !== 0) {
+    this.countdownTime.emit(this.count);
+    this.count--;
+    } else {
+      this.countdownTime.emit('Time out');
+      this.stopCount();
+    }
+  }
+  countTime() {
+    this.id = setInterval(() => {
+      this.outTime();
+    } , 1000);
   }
 }

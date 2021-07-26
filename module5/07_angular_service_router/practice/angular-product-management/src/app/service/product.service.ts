@@ -40,10 +40,16 @@ export class ProductService {
     this.products.push(product);
   }
   updateProduct(product) {
-  const id = this.products.findIndex((value) => {value.id = product.id; } );
-  this.products[id] = product;
+  const index = this.products.findIndex((value) =>  value.id === product.id );
+  this.products[index] = product;
+
   }
   getProductById(id: number): Product {
     return this.products.find(value => value.id === id);
+  }
+  deleteProduct(id: number) {
+    const index = this.products.findIndex((value) =>  value.id === id );
+    this.products.splice(index, 1);
+    console.log(this.products);
   }
 }

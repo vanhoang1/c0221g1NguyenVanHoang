@@ -25,6 +25,9 @@
                     <input class="form-control" type="date" id="date-input" formControlName="birthDay">
                   </div>
                   <!--                  <div class="sticky-top alert error-alert alert-danger   " role="alert" th:if="${#fields.hasErrors('birthDay')}" th:errors="*{birthDay}"></div>-->
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.birthDay?.errors && customerForm.controls.birthDay.touched"> Birth Day Invalid
+                  </div>
                 </div>
 
               </div>
@@ -36,6 +39,9 @@
                     <input type="text" class="form-control" placeholder=" Email"
                            formControlName="email">
                   </div>
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.email?.errors && customerForm.controls.email.touched"> Email Invalid
+                  </div>
                   <!--                  <div class="sticky-top alert error-alert alert-danger   " role="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>-->
                 </div>
                 <div class="col-md-6  position-relative">
@@ -43,6 +49,9 @@
                     <label>ID Customer</label>
                     <input type="text" class="form-control" placeholder=" ID Customer" formControlName="maKhachHang">
 
+                  </div>
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.maKhachHang?.errors && customerForm.controls.maKhachHang.touched"> ID Customer Invalid
                   </div>
                   <!--                  <div class="sticky-top alert error-alert alert-danger   " role="alert" th:if="${#fields.hasErrors('maKhachHang')}" th:errors="*{maKhachHang}"></div>-->
                 </div>
@@ -53,7 +62,9 @@
                     <label>Address</label>
                     <input type="text" class="form-control" placeholder="Home Address" formControlName="address">
                   </div>
-
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.address?.errors && customerForm.controls.address.touched"> Address Invalid
+                  </div>
                 </div>
                 <div class="form-group  position-relative col-md-4 flex-column d-flex">
                   <label class="form-control-label px-3">Gender
@@ -79,12 +90,18 @@
                     <label>Phone</label>
                     <input type="text" class="form-control" placeholder="Phone" formControlName="phone">
                   </div>
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.phone?.errors && customerForm.controls.phone.touched"> Phone Invalid
+                  </div>
                   <!--                  <div class=" alert  alert-danger error-alert " role="alert" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>-->
                 </div>
                 <div class="col-md-4 px-1 position-relative">
                   <div class="form-group">
                     <label>ID Card</label>
                     <input type="text" class="form-control" placeholder="ID number" formControlName="idCard">
+                  </div>
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.idCard?.errors && customerForm.controls.idCard.touched"> ID number Invalid
                   </div>
                   <!--                  <div class=" alert alert-danger error-alert" role="alert" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></div>-->
                 </div>
@@ -93,9 +110,10 @@
                     <label>Type of Customer
 
                     </label>
-                    <!--                    <select class="form-control" th:field="*{customerType.id}" name="typeOfCustomer">-->
-                    <!--                      <option th:each="type:${customerTypes}" th:text="${type.name}" th:value="${type.id}"></option>-->
-                    <!--                    </select>-->
+                    <select class="form-control" formControlName="customerType" #element (change)="changeCustomerType($event.target)">
+                      <option *ngFor="let customerType of customerTypes" [value]="customerType.id">{{customerType.name}}</option>
+                    </select>
+
                   </div>
                 </div>
               </div>

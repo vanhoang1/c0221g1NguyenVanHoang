@@ -1,0 +1,5 @@
+<h2>Countdown Time</h2>
+<input type="text" [(ngModel)]="timeIn" >
+<app-countdown-timer (countdownTime)="outTime($event)" [timeCount]="timeIn"></app-countdown-timer>
+time :
+<p>{{timeOut}}</p>

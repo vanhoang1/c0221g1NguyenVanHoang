@@ -1,1 +1,3 @@
-<p>customer-type works!</p>
+<select #element (change)="choice(element.value)">
+  <option *ngFor="let customerType of customerTypes" [value]="customerType">{{customerType.name}}</option>
+</select>
