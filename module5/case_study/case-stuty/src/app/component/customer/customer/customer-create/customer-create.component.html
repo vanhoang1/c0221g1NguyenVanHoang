@@ -1,0 +1,110 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-md-8 mx-auto">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Create Customer</h4>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" [formGroup]="customerForm" method="post">
+              <div class="row">
+                <div class="col-md-8 pr-1  position-relative">
+                  <div class="form-group">
+                    <label>Name </label>
+                    <input type="text" class="form-control" placeholder="Name Customer" formControlName="name">
+                  </div>
+
+                  <div class=" sticky-top alert error-alert alert-danger  " role="alert"
+                       *ngIf="customerForm.controls.name?.errors && customerForm.controls.name.touched"> Name Invalid
+                  </div>
+                </div>
+                <div class="col-md-4 px-1  position-relative">
+                  <div class="form-group">
+                    <label>Date</label>
+                    <input class="form-control" type="date" id="date-input" formControlName="birthDay">
+                  </div>
+                  <!--                  <div class="sticky-top alert error-alert alert-danger   " role="alert" th:if="${#fields.hasErrors('birthDay')}" th:errors="*{birthDay}"></div>-->
+                </div>
+
+              </div>
+              <div class="row">
+
+                <div class="col-md-6  position-relative">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" placeholder=" Email"
+                           formControlName="email">
+                  </div>
+                  <!--                  <div class="sticky-top alert error-alert alert-danger   " role="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>-->
+                </div>
+                <div class="col-md-6  position-relative">
+                  <div class="form-group">
+                    <label>ID Customer</label>
+                    <input type="text" class="form-control" placeholder=" ID Customer" formControlName="maKhachHang">
+
+                  </div>
+                  <!--                  <div class="sticky-top alert error-alert alert-danger   " role="alert" th:if="${#fields.hasErrors('maKhachHang')}" th:errors="*{maKhachHang}"></div>-->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8  position-relative">
+                  <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" placeholder="Home Address" formControlName="address">
+                  </div>
+
+                </div>
+                <div class="form-group  position-relative col-md-4 flex-column d-flex">
+                  <label class="form-control-label px-3">Gender
+                    <span class="text-danger"> *</span></label>
+                  <div class="form-check d-flex px-5">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Male
+                    </label>
+                    <input class="form-check-input" type="radio" formControlName="gender" id="exampleRadios1" value="0">
+
+                  </div>
+                  <div class="form-check d-flex px-5">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Female
+                    </label>
+                    <input class="form-check-input" type="radio" formControlName="gender" id="exampleRadios2" value="1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 pr-1  position-relative">
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" placeholder="Phone" formControlName="phone">
+                  </div>
+                  <!--                  <div class=" alert  alert-danger error-alert " role="alert" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>-->
+                </div>
+                <div class="col-md-4 px-1 position-relative">
+                  <div class="form-group">
+                    <label>ID Card</label>
+                    <input type="text" class="form-control" placeholder="ID number" formControlName="idCard">
+                  </div>
+                  <!--                  <div class=" alert alert-danger error-alert" role="alert" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></div>-->
+                </div>
+                <div class="col-md-4 pl-1  position-relative">
+                  <div class="form-group">
+                    <label>Type of Customer
+
+                    </label>
+                    <!--                    <select class="form-control" th:field="*{customerType.id}" name="typeOfCustomer">-->
+                    <!--                      <option th:each="type:${customerTypes}" th:text="${type.name}" th:value="${type.id}"></option>-->
+                    <!--                    </select>-->
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-info btn-fill pull-right">Create</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

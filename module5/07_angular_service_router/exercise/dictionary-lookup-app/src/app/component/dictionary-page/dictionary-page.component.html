@@ -1,0 +1,17 @@
+<h1>Dictionary Page</h1>
+<input  (change)="findWord($event)" >
+<table>
+  <tr>
+    <th>#</th>
+    <th>Word</th>
+    <th>Mean</th>
+    <th>Detail</th>
+  </tr>
+  <tr *ngFor="let wm of dictionary; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{wm.word}}</td>
+    <td>{{wm.mean}}</td>
+    <td><a [routerLink]="['/dictionary',wm.word]">detail</a></td>
+  </tr>
+</table>
+<router-outlet></router-outlet>
