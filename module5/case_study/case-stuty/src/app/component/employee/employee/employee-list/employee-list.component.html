@@ -1,1 +1,70 @@
-<p>employee-list works!</p>
+<app-header xmlns="http://www.w3.org/1999/html"></app-header>
+<div class="container-fluid pt-3">
+  <div class="title text-center">
+    <h1>Employee</h1>
+  </div>
+  <div class="row ">
+    <div class="mx-auto ">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-between my-3">
+        <button type="button" (click)="openDialog('create',null)" class="btn btn-outline-secondary"><i
+          class="fa fa-plus-circle"></i> Thêm mới
+        </button>
+        <div class="col-lg-4 col-xl-4 col-sm-8 col-md-4 d-none d-md-flex ">
+          <div (keyup)="applyFilter($event)" class="input-group w-100"><input type="text"
+                                                                              class="form-control search-form"
+                                                                              style="width:55%;" placeholder="Search"
+                                                                              name="keyword">
+          </div>
+        </div>
+      </div>
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 w-100 table table-striped">
+        <ng-container matColumnDef="id">
+          <th *matHeaderCellDef mat-sort-header> ID</th>
+          <td *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th *matHeaderCellDef mat-sort-header> ID</th>
+          <td *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="position">
+          <th *matHeaderCellDef mat-sort-header> Position</th>
+          <td *matCellDef="let row"> {{row.position.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="education">
+          <th *matHeaderCellDef mat-sort-header> Education</th>
+          <td *matCellDef="let row"> {{row.education.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="division">
+          <th *matHeaderCellDef mat-sort-header> Division</th>
+          <td *matCellDef="let row"> {{row.division.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="birthDay">
+          <th *matHeaderCellDef mat-sort-header> Birth Day</th>
+          <td *matCellDef="let row"> {{row.birthDay}} </td>
+        </ng-container>
+        <ng-container matColumnDef="idCard">
+          <th *matHeaderCellDef mat-sort-header> ID Card</th>
+          <td *matCellDef="let row"> {{row.idCard}} </td>
+        </ng-container>
+        <ng-container matColumnDef="salary">
+          <th *matHeaderCellDef mat-sort-header> Salary</th>
+          <td *matCellDef="let row"> {{row.salary}} </td>
+        </ng-container>
+        <ng-container matColumnDef="action">
+          <th *matHeaderCellDef> Action</th>
+          <td *matCellDef="let element" class="action-link">
+            <a (click)="openDialog('update',element)">Edit</a> |
+            <a (click)="openDialog('delete',element)">Delete</a>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columndefs"></tr>
+        <tr mat-row *matRowDef="let row; columns: columndefs;"></tr>
+      </table>
+      <div>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+

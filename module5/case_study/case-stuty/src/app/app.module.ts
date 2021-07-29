@@ -15,8 +15,16 @@ import { EmployeeEditComponent } from './component/employee/employee/employee-ed
 import { EmployeeListComponent } from './component/employee/employee/employee-list/employee-list.component';
 import { EmployeeCreateComponent } from './component/employee/employee/employee-create/employee-create.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import {CustomerService} from './model/service/customer/customer.service';
+import {MatButtonModule} from '@angular/material/button';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,9 +45,22 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule,
+        MatPaginatorModule,
+        NgbModule,
+        MatTableModule,
+        MatSortModule,
+        MatInputModule,
+        MatDialogModule,
+        MatButtonModule,
+        HttpClientModule
     ],
-  providers: [],
+  providers: [ {
+    provide: MatDialogRef,
+    useValue: {}
+  },
+    CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,7 +10,6 @@ export class CountdownTimerComponent implements OnInit {
   count = 0;
   id ;
   @Output() countdownTime = new EventEmitter();
-  private isPaused = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,11 +18,9 @@ export class CountdownTimerComponent implements OnInit {
     if (this.count === 0) {
       this.count = this.timeCount;
     }
-    this.isPaused = false;
     this.countTime();
   }
   stopCount() {
-   this.isPaused = true;
    clearInterval(this.id);
   }
   resetCount() {
@@ -41,12 +38,8 @@ export class CountdownTimerComponent implements OnInit {
     }
   }
   countTime() {
-    if (!this.isPaused) {
-      this.id = setInterval(() => {
+    this.id = setInterval(() => {
         this.outTime();
       }, 1000);
-    } else {
-      clearInterval(this.id);
-    }
   }
 }

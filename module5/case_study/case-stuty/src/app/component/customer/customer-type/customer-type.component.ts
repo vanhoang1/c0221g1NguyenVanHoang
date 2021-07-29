@@ -28,9 +28,8 @@ export class CustomerTypeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  choice(element) {
-    this.customerTypeChoice = element;
+  choice(id) {
+    this.customerTypeChoice = this.customerTypes[id];
     this.newItemEvent.emit(this.customerTypeChoice);
-    console.log(this.customerTypeChoice);
   }
 }

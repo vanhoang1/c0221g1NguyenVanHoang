@@ -1,10 +1,7 @@
-<div class="content">
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-md-8 mx-auto">
+
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Create Customer</h4>
+            <h4 class="card-title">{{title}} Customer</h4>
           </div>
           <div class="card-body">
             <form (ngSubmit)="onSubmit()" [formGroup]="customerForm" method="post">
@@ -110,19 +107,21 @@
                     <label>Type of Customer
 
                     </label>
-                    <select class="form-control" formControlName="customerType" #element (change)="changeCustomerType($event.target)">
+                    <ng-container formGroupName="customerType">
+                    <select class="form-control" #element formControlName="id">
                       <option *ngFor="let customerType of customerTypes" [value]="customerType.id">{{customerType.name}}</option>
                     </select>
-
+                    </ng-container>
+<!--                    <app-customer-type (newItemEvent)="changeCustomerType($event)"></app-customer-type>-->
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-info btn-fill pull-right">Create</button>
+              <div class="align-content-between">
+                <button type="reset" class="btn btn-info btn-fill pull-left">Reset</button>
+              <button type="submit" class="btn btn-info btn-fill pull-right">{{title}}</button>
+              </div>
               <div class="clearfix"></div>
             </form>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+

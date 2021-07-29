@@ -1,1 +1,7 @@
-<p>customer-edit works!</p>
+<mat-dialog-content>
+  <p>Bạn có muốn xóa <b>{{name}}</b></p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onConfirmClick()" tabindex="1">OK</button>
+  <button mat-raised-button mat-dialog-close tabindex="-1">Cancel</button>
+</mat-dialog-actions>
