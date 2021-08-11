@@ -24,27 +24,4 @@ public class Payment {
     @JsonManagedReference
     ImportBill importBill;
 
-    public Long getPaymentId() {
-        return paymentId;
-    }
-
-    public Double getTotalMoney() {
-        return totalMoney;
-    }
-
-    public Double getPrepayment() {
-        return prepayment;
-    }
-
-    public Integer getDiscount() {
-        return discount;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public ImportBill getImportBill() {
-        return importBill;
-    }
 }

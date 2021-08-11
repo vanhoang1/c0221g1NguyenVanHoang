@@ -1,6 +1,6 @@
 package com.backend.pharmacy_management.model.entity.employee;
 
-import com.backend.pharmacy_management.model.entity.bill_wholesale.BillWholesale;
+import com.backend.pharmacy_management.model.entity.bill_sale.BillSale;
 import com.backend.pharmacy_management.model.entity.export_bill.ExportBill;
 import com.backend.pharmacy_management.model.entity.import_bill_payment.ImportBill;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -35,5 +35,5 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     List<ExportBill> exportBills;
     @OneToMany(mappedBy = "employee")
-    List<BillWholesale> billWholesales;
+    List<BillSale> billWholesales;
 }

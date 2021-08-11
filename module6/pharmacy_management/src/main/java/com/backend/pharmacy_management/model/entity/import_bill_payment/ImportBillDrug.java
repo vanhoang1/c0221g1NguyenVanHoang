@@ -1,4 +1,5 @@
 package com.backend.pharmacy_management.model.entity.import_bill_payment;
+import com.backend.pharmacy_management.model.entity.drug.Drug;
 import com.backend.pharmacy_management.model.entity.employee.Employee;
 import com.backend.pharmacy_management.model.entity.manufacturer.Manufacturer;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -19,6 +20,8 @@ public class ImportBillDrug {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long ImportBillDrugId;
+    Long ImportBillId;
+    Long DrugId;
     Integer importAmount;
     Double importPrice;
     Integer discountRate;
@@ -27,4 +30,8 @@ public class ImportBillDrug {
     @JoinColumn(name = "import_bill_id")
     @JsonManagedReference
     ImportBill importBill;
+    @ManyToOne
+    @JoinColumn(name = "import_bill_id")
+    @JsonManagedReference
+    Drug drug;
 }

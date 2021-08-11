@@ -1,6 +1,8 @@
 package com.backend.pharmacy_management.model.entity.drug;
 
+import com.backend.pharmacy_management.model.entity.bill_sale.DrugOfBill;
 import com.backend.pharmacy_management.model.entity.export_bill.ExportBillDetail;
+import com.backend.pharmacy_management.model.entity.import_bill_payment.ImportBillDrug;
 import com.backend.pharmacy_management.model.entity.indicative_prescription.Indicative;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
@@ -46,7 +48,7 @@ public class Drug {
     private String drugSideEffect;
     @Column(name = "drug_user_manual", columnDefinition = "TEXT")
     private  String drugUserManual;
-    private Integer flag = 1;
+    private Boolean flag = true;
     @ManyToOne
     @JoinColumn(name = "drug_group_id", referencedColumnName = "drug_group_id")
     private DrugGroup drugGroup;
@@ -54,10 +56,12 @@ public class Drug {
     private List<DrugImageDetail> drugImageDetails;
     @OneToMany(mappedBy = "drug")
     private List<DrugOfBill> drugOfBills;
-    @OneToMany(mappedBy = "drug")
-    private List<DrugOfBillRetail> drugOfBillRetails;
+//    @OneToMany(mappedBy = "drug")
+//    private List<DrugOfBillRetail> drugOfBillRetails;
     @OneToMany(mappedBy = "drug")
     private List<Indicative> indicatives;
     @OneToMany(mappedBy = "drug")
     private List<ExportBillDetail> exportBillDetails;
+    @OneToMany(mappedBy = "drug")
+    private List<ImportBillDrug> importBillDrugs;
 }

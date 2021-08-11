@@ -28,6 +28,7 @@ public class ImportBill {
     private Long manufacturerId;
     private String accountingVoucher;
     private LocalDateTime invoiceDate;
+    private Boolean flag = true;
     @OneToOne
     @JoinColumn(name = "payment_id")
     @JsonManagedReference
@@ -44,4 +45,51 @@ public class ImportBill {
     @JsonBackReference
     private List<ImportBillDrug> importBillDrugs;
 
+    public void setImportBillId(Long importBillId) {
+        this.importBillId = importBillId;
+    }
+
+    public void setImportSystemCode(String importSystemCode) {
+        this.importSystemCode = importSystemCode;
+    }
+
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public void setPaymentId(Long paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public void setManufacturerId(Long manufacturerId) {
+        this.manufacturerId = manufacturerId;
+    }
+
+    public void setAccountingVoucher(String accountingVoucher) {
+        this.accountingVoucher = accountingVoucher;
+    }
+
+    public void setInvoiceDate(LocalDateTime invoiceDate) {
+        this.invoiceDate = invoiceDate;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public void setImportBillDrugs(List<ImportBillDrug> importBillDrugs) {
+        this.importBillDrugs = importBillDrugs;
+    }
 }
