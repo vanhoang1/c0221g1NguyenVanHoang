@@ -1,0 +1,82 @@
+{
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "silver"
+    },
+    {
+      "id": 2,
+      "name": "gold"
+    },
+    {
+      "id": 3,
+      "name": "platinum"
+    },
+    {
+      "id": 4,
+      "name": "diamond"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hoàn",
+      "birthDay": "1995-08-02",
+      "idCard": "111111",
+      "gender": "0",
+      "phone": "(090)0987890",
+      "maKhachHang": "KH-1224",
+      "address": "Đà Nẵng",
+      "email": "abc@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "gold"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tâm",
+      "address": "Đà Nẵng",
+      "birthDay": "1995-08-02",
+      "email": "abc@gmail.com",
+      "gender": "0",
+      "maKhachHang": "KH-1224",
+      "idCard": "111111",
+      "phone": "(090)0987890",
+      "customerType": {
+        "id": 2,
+        "name": "gold"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Minh",
+      "address": "Quảng Nam",
+      "birthDay": "1997-08-02",
+      "email": "abc@gmail.com",
+      "gender": "0",
+      "maKhachHang": "KH-1224",
+      "idCard": "111111",
+      "phone": "(090)0987890",
+      "customerType": {
+        "id": 1,
+        "name": "silver"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Thúy",
+      "address": "Quảng Nam",
+      "birthDay": "1997-08-02",
+      "email": "abc@gmail.com",
+      "gender": "1",
+      "maKhachHang": "KH-1224",
+      "idCard": "111111",
+      "phone": "(090)0987890",
+      "customerType": {
+        "id": 1,
+        "name": "silver"
+      }
+    }
+  ]
+}
