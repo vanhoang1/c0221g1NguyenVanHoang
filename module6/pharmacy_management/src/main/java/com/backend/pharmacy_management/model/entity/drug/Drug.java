@@ -50,14 +50,12 @@ public class Drug {
     private  String drugUserManual;
     private Boolean flag = true;
     @ManyToOne
-    @JoinColumn(name = "drug_group_id", referencedColumnName = "drug_group_id")
+    @JoinColumn(name = "drug_group_id")
     private DrugGroup drugGroup;
     @OneToMany(mappedBy = "drug")
     private List<DrugImageDetail> drugImageDetails;
     @OneToMany(mappedBy = "drug")
     private List<DrugOfBill> drugOfBills;
-//    @OneToMany(mappedBy = "drug")
-//    private List<DrugOfBillRetail> drugOfBillRetails;
     @OneToMany(mappedBy = "drug")
     private List<Indicative> indicatives;
     @OneToMany(mappedBy = "drug")

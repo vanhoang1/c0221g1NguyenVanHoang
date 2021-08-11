@@ -15,8 +15,6 @@ public class PrescriptionIndicative {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long prescriptionIndicativeId;
-    private Long prescriptionId;
-    private Long indicativeId;
     @ManyToOne(targetEntity = Prescription.class)
     @JoinColumn(name = "prescription_id")
     private  Prescription prescription;

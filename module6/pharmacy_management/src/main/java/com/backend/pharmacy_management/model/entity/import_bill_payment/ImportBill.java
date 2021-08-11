@@ -23,9 +23,6 @@ public class ImportBill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long importBillId;
     private String importSystemCode;
-    private Long employeeId;
-    private Long paymentId;
-    private Long manufacturerId;
     private String accountingVoucher;
     private LocalDateTime invoiceDate;
     private Boolean flag = true;
@@ -44,52 +41,4 @@ public class ImportBill {
     @OneToMany(mappedBy = "importBill",fetch = FetchType.LAZY)
     @JsonBackReference
     private List<ImportBillDrug> importBillDrugs;
-
-    public void setImportBillId(Long importBillId) {
-        this.importBillId = importBillId;
-    }
-
-    public void setImportSystemCode(String importSystemCode) {
-        this.importSystemCode = importSystemCode;
-    }
-
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public void setPaymentId(Long paymentId) {
-        this.paymentId = paymentId;
-    }
-
-    public void setManufacturerId(Long manufacturerId) {
-        this.manufacturerId = manufacturerId;
-    }
-
-    public void setAccountingVoucher(String accountingVoucher) {
-        this.accountingVoucher = accountingVoucher;
-    }
-
-    public void setInvoiceDate(LocalDateTime invoiceDate) {
-        this.invoiceDate = invoiceDate;
-    }
-
-    public void setFlag(Boolean flag) {
-        this.flag = flag;
-    }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
-    public void setImportBillDrugs(List<ImportBillDrug> importBillDrugs) {
-        this.importBillDrugs = importBillDrugs;
-    }
 }

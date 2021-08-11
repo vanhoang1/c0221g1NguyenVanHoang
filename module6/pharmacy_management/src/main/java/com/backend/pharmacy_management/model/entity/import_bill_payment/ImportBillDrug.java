@@ -20,8 +20,6 @@ public class ImportBillDrug {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long ImportBillDrugId;
-    Long ImportBillId;
-    Long DrugId;
     Integer importAmount;
     Double importPrice;
     Integer discountRate;
@@ -31,7 +29,7 @@ public class ImportBillDrug {
     @JsonManagedReference
     ImportBill importBill;
     @ManyToOne
-    @JoinColumn(name = "import_bill_id")
+    @JoinColumn(name = "drug_id")
     @JsonManagedReference
     Drug drug;
 }

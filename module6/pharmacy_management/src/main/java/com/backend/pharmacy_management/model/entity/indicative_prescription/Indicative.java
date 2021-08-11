@@ -17,7 +17,6 @@ public class Indicative {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long  indicativeId;
-    private Long drugId;
     private  Long totalPill;
     private  Long drinkDay;
     private  Long drinkTime;

@@ -19,7 +19,7 @@ public class DrugGroup {
     private Long drugGroupId;
     private String drugGroupCode;
     private String drugGroupName;
-    @OneToMany(mappedBy = "drug",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "drugGroup")
     @JsonBackReference
     private List<Drug> drugs;
 }
