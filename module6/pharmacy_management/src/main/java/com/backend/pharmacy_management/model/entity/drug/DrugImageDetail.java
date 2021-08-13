@@ -20,8 +20,8 @@ public class DrugImageDetail {
     @Column(name = "drug_image_detail_id")
     private Long drugImageDetailId;
     @Column(name = "drug_image_detail_url", columnDefinition = "BLOB")
-    private Long drugImageDetailUrl;
-    private boolean flag;
+    private String drugImageDetailUrl;
+    private Boolean flag;
     @ManyToOne
     @JoinColumn(name = "drug_id", referencedColumnName = "drug_id")
     private Drug drug;
