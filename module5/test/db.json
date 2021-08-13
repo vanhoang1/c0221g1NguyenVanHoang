@@ -1,0 +1,15 @@
+{
+  "patients": [
+    {
+      "medicalRecordId": "BA-sfsd",
+      "patientCode": "BN-33sf",
+      "patientName": "hoang",
+      "hospitalizedDate": "2020-01-30",
+      "hospitalDischargeDate": "2020-02-04",
+      "reason": "đau bụng",
+      "treatments": "mổ",
+      "doctor": "tam",
+      "id": 3
+    }
+  ]
+}
