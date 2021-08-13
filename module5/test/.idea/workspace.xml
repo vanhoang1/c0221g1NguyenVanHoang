@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb34ef81-7733-42e2-b54f-add0c6d29be7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/delete/delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/delete/delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/delete/delete.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/delete/delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/header/header.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/header/header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/header/header.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/header/header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/header/img/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/header/img/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/model/category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/model/patient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/model/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/service/patient.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/service/patient.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/service/product.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/service/product.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/controller/RestPatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/controller/ValidationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/entity/dto/PatientDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/entity/dto/validate/ValidDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/entity/patient/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/repository/patient/IPatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/service/patient/IPatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/test/test/src/main/java/com/example/test/model/service/patient/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../abc/bb/.idea/bb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../abc/bb/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../abc/bb/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../abc/bb/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../abc/bb/sdf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/case-stuty/src/app/model/service/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/case-stuty/src/app/model/service/customer/customer.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1w8Hmi1B15fUUzNq0YKwxZBN8B3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../project/angular/project-software-requirements-specification" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Users\Admin\Desktop\C0221G1\c0221g1NguyenVanHoang\module5\test\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\C0221G1\c0221g1NguyenVanHoang\module5\test\src\app\component\header" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (test)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (test)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb34ef81-7733-42e2-b54f-add0c6d29be7" name="Default Changelist" comment="" />
+      <created>1627833455706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627833455706</updated>
+      <workItem from="1627833456943" duration="2940000" />
+      <workItem from="1627832824675" duration="2792000" />
+      <workItem from="1627867631937" duration="9947000" />
+      <workItem from="1627886636407" duration="1316000" />
+      <workItem from="1627894312435" duration="15000" />
+      <workItem from="1628041649398" duration="9364000" />
+      <workItem from="1628142257969" duration="231000" />
+      <workItem from="1628145987794" duration="5119000" />
+      <workItem from="1628237958883" duration="297000" />
+      <workItem from="1628254573562" duration="65000" />
+      <workItem from="1628503460628" duration="1126000" />
+      <workItem from="1628585235451" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
