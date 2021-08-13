@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Data
@@ -24,8 +23,6 @@ public class ImportBillDrug {
     Integer importAmount;
     Double importPrice;
     Integer discountRate;
-    Integer lotNumber ;
-    Date expiry ;
     Integer vat;
     @ManyToOne
     @JoinColumn(name = "import_bill_id")
