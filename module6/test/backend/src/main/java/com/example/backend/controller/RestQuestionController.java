@@ -59,4 +59,9 @@ public class RestQuestionController {
         this.questionService.update(question);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Question> del(@PathVariable Long id) {
+        this.questionService.remove(id);
+        return new ResponseEntity<>( HttpStatus.OK);
     }
+}
