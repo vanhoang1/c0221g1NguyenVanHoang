@@ -9,6 +9,7 @@
           <button type="button" class="btn btn-outline-secondary"><i class="fa fa-plus-circle"></i> Thêm mới
           </button>
         </a>
+        <button (click)="login()">Đăng nhập</button>
         <div class="col-lg-4 col-xl-4 col-sm-8 col-md-4 d-none d-md-flex ">
           <div class="search-wrap">
 
@@ -58,7 +59,7 @@
                       data-original-title=""
                       title="edit"><i
                 class="fa fa-edit "></i></button>
-              <button (click)="del()" type="button" rel="tooltip"
+              <button (click)="del(question.questionId)" type="button" rel="tooltip"
                       class="btn btn-danger btn-round btn-just-icon btn-sm mx-2" data-original-title=""
                       title="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
 

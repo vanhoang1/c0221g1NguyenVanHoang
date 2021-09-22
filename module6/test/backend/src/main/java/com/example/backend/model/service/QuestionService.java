@@ -2,6 +2,7 @@ package com.example.backend.model.service;
 
 import com.example.backend.model.entity.Question;
 import com.example.backend.model.entity.QuestionType;
+import com.example.backend.model.entity.User;
 import com.example.backend.model.repository.IQuestionRepository;
 import com.example.backend.model.repository.IQuestionTypeRepository;
 import com.example.backend.model.repository.IUserRepository;
@@ -36,6 +37,11 @@ public class QuestionService implements IQuestionService {
     @Override
     public List<QuestionType> getAllQuestionsTypes() {
         return this.questionTypeRepository.findAll();
+    }
+
+    @Override
+    public Optional<User> login(User u) {
+        return this.userRepository.login(u.getUserName(), u.getPassword());
     }
 
     @Override

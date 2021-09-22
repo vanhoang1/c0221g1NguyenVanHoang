@@ -11,12 +11,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {ToastrModule} from 'ngx-toastr';
 import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DatePipe} from '@angular/common';
-
+import {LocalStorageService, NgxWebstorageModule} from 'ngx-webstorage';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListQuestionComponent,
-    CreateQuestionComponent
+    CreateQuestionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import {DatePipe} from '@angular/common';
     ToastrModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
+    NgxWebstorageModule.forRoot(),
   ],
   providers: [FormBuilder, DatePipe],
   bootstrap: [AppComponent]

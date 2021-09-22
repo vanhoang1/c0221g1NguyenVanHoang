@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Question} from '../model/question';
 import {QuestionService} from '../question.service';
 import Swal from 'sweetalert2';
+import {LoginComponent} from '../login/login.component';
+import {MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-list-question',
   templateUrl: './list-question.component.html',
@@ -11,7 +13,8 @@ export class ListQuestionComponent implements OnInit {
   questions: Question[] = [];
   pages: Array<any> = [];
   page = 0;
-  constructor(private questionService: QuestionService,) {
+  constructor(private questionService: QuestionService,
+              public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -65,5 +68,14 @@ export class ListQuestionComponent implements OnInit {
       this.page = this.page + 1;
       this.getAllQuestion();
     }
+  }
+
+  login() {
+    const dialogRef = this.dialog.open(LoginComponent, {
+      autoFocus: false,
+      maxHeight: '90vh',
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
   }
 }

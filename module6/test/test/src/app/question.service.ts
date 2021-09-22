@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Question} from './model/question';
 import {QuestionType} from './model/question-type';
+import {User} from './model/user';
 const API_URL = `${environment.apiUrl}`;
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,9 @@ export class QuestionService {
 
   delete(id): Observable<any> {
     return this.http.delete<Question>(`${API_URL}/questions/${id}`);
+  }
+
+  checkLogin(value): Observable<any> {
+    return this.http.post<User>(`${API_URL}/questions/login`, value);
   }
 }

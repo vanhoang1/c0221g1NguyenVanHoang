@@ -19,6 +19,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     private String userName;
+    private String password;
+    private String role;
     @OneToMany(mappedBy = "userCreated",cascade = {CascadeType.ALL})
     @JsonBackReference(value = "userCreatedJs")
     List<Question> questionsCreated;
