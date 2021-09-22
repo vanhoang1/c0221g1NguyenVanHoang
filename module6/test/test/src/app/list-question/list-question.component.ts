@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Question} from '../model/question';
 import {QuestionService} from '../question.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-list-question',
   templateUrl: './list-question.component.html',
@@ -11,7 +11,7 @@ export class ListQuestionComponent implements OnInit {
   questions: Question[] = [];
   pages: Array<any> = [];
   page = 0;
-  constructor(private questionService: QuestionService) {
+  constructor(private questionService: QuestionService,) {
   }
 
   ngOnInit(): void {
@@ -25,19 +25,45 @@ export class ListQuestionComponent implements OnInit {
 
   }
 
-  del() {
-
+  del(id) {
+    Swal.fire({
+      title: 'Bạn có muốn xóa không',
+      text: 'ok xóa',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ok',
+      cancelButtonText: 'Không'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.questionService.delete(id).subscribe(value => {
+          this.ngOnInit();
+        });
+      }
+    });
   }
 
   previous() {
-
+    if (this.page === 0) {
+      this.page = 0;
+    } else {
+      this.page = this.page - 1;
+      this.getAllQuestion();
+    }
   }
 
   setPage(i: number) {
-
+    this.page = i;
+    this.getAllQuestion();
   }
 
   next() {
-
+    if (this.page > this.pages.length - 2) {
+      // this.page = this.pages.length - 1;
+    } else {
+      this.page = this.page + 1;
+      this.getAllQuestion();
+    }
   }
 }

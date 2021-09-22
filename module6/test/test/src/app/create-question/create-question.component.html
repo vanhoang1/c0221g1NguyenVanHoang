@@ -1,79 +1,79 @@
 <div class="content">
   <div class="container">
     <div class="row ">
-        <div class="card w-100">
-          <div class="card-header">
-            <h4 class="card-title">Create Question</h4>
-          </div>
-          <div class="card-body">
-            <form [formGroup]="formQuestion" (ngSubmit)="save()">
-              <div class="form-row">
-                <div class="col-md-4 mb-3">
-                  <label for="userCreate">Tên người viết</label>
-                  <input type="text" class="form-control is-valid"  id="userCreate" readonly
-                         [value]="userCreate.userName">
-                </div>
-                <div class="col-md-4 mb-3">
-                  <label for="userUpdate">Tên người trả lời</label>
-                  <input type="text" class="form-control is-valid" id="userUpdate" readonly
-                         [value]="userUpdate.userName">
-                </div>
-                <div class="col-md-4 mb-3">
-                  <label for="dateWrites">Ngày viết </label>
-                  <input type='date' id="dateWrites" class="form-control is-valid"
-                            formControlName="dateQuestion" readonly>
-                  <span class="input-group-addon">
+      <div class="card w-100">
+        <div class="card-header">
+          <h4 class="card-title">Create Question</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formQuestion" (ngSubmit)="save()">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="userCreate">Tên người viết</label>
+                <input type="text" class="form-control is-valid"  id="userCreate" readonly
+                       [value]="userCreate.userName">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="userUpdate">Tên người trả lời</label>
+                <input type="text" class="form-control is-valid" id="userUpdate" readonly
+                       [value]="userUpdate.userName">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="dateWrites">Ngày viết </label>
+                <input type='date' id="dateWrites" class="form-control is-valid"
+                       formControlName="dateQuestion" readonly>
+                <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                      </span>
-                </div>
               </div>
-              <div class="row" >
-                <div class="col-md-12  position-relative">
-                  <div class="form-group">
-                    <label>Tiêu đề </label>
-                    <input type="text" class="form-control" placeholder="Title" name="name" formControlName="questionTitle">
-                  </div>
-
+            </div>
+            <div class="row" >
+              <div class="col-md-12  position-relative">
+                <div class="form-group">
+                  <label>Tiêu đề </label>
+                  <input type="text" class="form-control" placeholder="Title" name="name" formControlName="questionTitle">
                 </div>
 
               </div>
-              <div class="row">
 
-                <div class="col-md-12  position-relative">
-                  <div class="form-group">
-                    <label>Câu hỏi</label>
-                    <input type="text" class="form-control" placeholder=" Question"
-                           name="question" formControlName="questionContent">
-                  </div>
-                </div>
+            </div>
+            <div class="row">
 
-              </div>
-              <div class="row" *ngIf="typeQ !='create'">
-
-                <div class="col-md-12  position-relative">
-                  <div class="form-group">
-                    <label>Trả lời</label>
-                    <input type="text" class="form-control" placeholder="Answer"
-                           name="questionAnswer" formControlName="questionAnswer">
-                  </div>
-                </div>
-
-              </div>
-              <div class="row">
-                <div class="col-md-12  position-relative">
-                  <div class="form-group" formGroupName="questionType">
-                    <label>Type of Question</label>
-                      <select class="form-control" formControlName="questionTypeId" >
-                        <option class="" *ngFor="let q of questionTypes" [ngValue]="q.questionTypeId">{{q.questionTypeName}}</option>
-                      </select>
-                  </div>
+              <div class="col-md-12  position-relative">
+                <div class="form-group">
+                  <label>Câu hỏi</label>
+                  <input type="text" class="form-control" placeholder=" Question"
+                         name="question" formControlName="questionContent">
                 </div>
               </div>
-              <button type="button" (click)="save()" class="btn btn-info btn-fill pull-right">Đặt câu hỏi </button>
-              <div class="clearfix"></div>
-            </form>
-          </div>
+
+            </div>
+            <div class="row" *ngIf="typeQ !='create'">
+
+              <div class="col-md-12  position-relative">
+                <div class="form-group">
+                  <label>Trả lời</label>
+                  <input type="text" class="form-control" placeholder="Answer"
+                         name="questionAnswer" formControlName="questionAnswer">
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-12  position-relative">
+                <div class="form-group" formGroupName="questionType">
+                  <label>Type of Question</label>
+                  <select class="form-control" formControlName="questionTypeId" >
+                    <option class="" *ngFor="let q of questionTypes" [ngValue]="q.questionTypeId">{{q.questionTypeName}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button type="button" (click)="save()" class="btn btn-info btn-fill pull-right">{{typeQ == 'create'? 'Đặt câu hỏi': 'Trả lời'}} </button>
+            <div class="clearfix"></div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+</div>

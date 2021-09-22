@@ -36,4 +36,8 @@ export class QuestionService {
   getAllQuestions(page: number): Observable<any> {
     return this.http.get<any>(API_URL + '/questions?page=' + page);
   }
+
+  delete(id): Observable<any> {
+    return this.http.delete<Question>(`${API_URL}/questions/${id}`);
+  }
 }
